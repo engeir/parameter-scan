@@ -1,7 +1,7 @@
 %% Version 5.0, 2 January 2020
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% TemplateV5.tex --  LaTeX-based template for submissions to the 
+% TemplateV5.tex --  LaTeX-based template for submissions to the
 % American Meteorological Society
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -25,7 +25,11 @@
 \usepackage{mathptmx}%{times}
 \usepackage{newtxtext}
 \usepackage{newtxmath}
+\usepackage{mhchem}
+\usepackage[acronym]{glossaries}
 
+\makeglossary
+\input{./definitions/acronyms.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -33,7 +37,10 @@
 
 %% May use \\ to break lines in title:
 
-\title{Title here}
+\title{
+  Parameter Scan: Volcanic influence on climate across multiple magnitudes and injected
+  altitudes
+}
 
 %%% Enter authors' names, as you see in this example:
 %%% Use \correspondingauthor{} and \thanks{Current Affiliation:...}
@@ -42,18 +49,18 @@
 %%% Note that the \correspondingauthor{} command is NECESSARY.
 %%% The \thanks{} commands are OPTIONAL.
 
-    %\authors{Author One\correspondingauthor{Author name, email address}
-% and Author Two\thanks{Current affiliation: American Meteorological Society, 
-    % Boston, Massachusetts.}}
+%\authors{Author One\correspondingauthor{Author name, email address}
+% and Author Two\thanks{Current affiliation: American Meteorological Society,
+% Boston, Massachusetts.}}
 
-    \authors{Eirik Rolland Enger\correspondingauthor{Eirik Rolland Enger, eirik.r.enger@uit.no}
-    %\thanks{Current affiliation: NCAR, Boulder, Colorado.}
-    }
+\authors{Eirik Rolland Enger\correspondingauthor{Eirik Rolland Enger, eirik.r.enger@uit.no}
+  %\thanks{Current affiliation: NCAR, Boulder, Colorado.}
+}
 
 %% Follow this form:
-    % \affiliation{American Meteorological Society, 
-    % Boston, Massachusetts}
-    \affiliation{UiT The Arctic University of Norway, Tromsø, Norway}
+% \affiliation{American Meteorological Society,
+% Boston, Massachusetts}
+\affiliation{UiT The Arctic University of Norway, Tromsø, Norway}
 
 % \affiliation{}
 
@@ -78,9 +85,11 @@
 % Enter your abstract here
 % Abstracts should not exceed 250 words in length!
 %
- 
 
-\abstract{Volcanoes affect Earth's climate. What happens when the climate is forced with volcanoes of different size and injected at different heights?}
+\abstract{
+  Volcanoes affect Earth's climate. What happens when the climate is forced with
+  volcanoes of different size and injected at different heights?
+}
 
 \begin{document}
 
@@ -91,8 +100,8 @@
 % SIGNIFICANCE STATEMENT/CAPSULE SUMMARY
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% If you are including an optional significance statement for a journal article or a required capsule summary for BAMS 
-% (see www.ametsoc.org/ams/index.cfm/publications/authors/journal-and-bams-authors/formatting-and-manuscript-components for details), 
+% If you are including an optional significance statement for a journal article or a required capsule summary for BAMS
+% (see www.ametsoc.org/ams/index.cfm/publications/authors/journal-and-bams-authors/formatting-and-manuscript-components for details),
 % please apply the necessary command as shown below:
 %
 % \statement
@@ -108,7 +117,7 @@
 %
 
 %% In all cases, if there is only one entry of this type within
-%% the higher level heading, use the star form: 
+%% the higher level heading, use the star form:
 %%
 % \section{Section title}
 % \subsection*{subsection}
@@ -126,33 +135,112 @@
 % \section{Section title}
 
 %%%
-\section{Introduction}
+\section{Outline}
 
-This is the introduction.
+The paper should be about the volcanic simulations that compare magnitude and model
+complexity (dynamic ocean against slab ocean). If there is no big difference, we may
+also run more experiments to test for other things:
+\begin{itemize}
+	\item How does the climate response change based on the state of the climate: what
+	      if we run a \ce{CO2} doubling or quadrupling simulation until close to
+	      equilibrium, and let the volcanoes erupt then?
+	\item How much does it matter how high in the atmosphere the initial \ce{SO2} is
+	      injected?
+\end{itemize}
+
+\section{Method}
+
+Let us first introduce some figures.
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.95\textwidth]{figures/aod_vs_toa_avg_full.png}
+	\end{center}
+	\caption{AOD versus TOA, full size. Same type as \cite{gregory2016}}
+	\label{fig:aod_vs_toa_full}
+\end{figure}
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.95\textwidth]{figures/aod_vs_toa_avg_inset.png}
+	\end{center}
+	\caption{AOD versus TOA, inset. Same type as \cite{gregory2016}}
+	\label{fig:aod_vs_toa_inset}
+\end{figure}
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.95\textwidth]{figures/aod_vs_toa_avg_scaled.png}
+	\end{center}
+	\caption{AOD versus TOA, scaled so the peak values of the different volcano
+		magnitudes are aligned. Same type as \cite{gregory2016}}
+	\label{fig:aod_vs_toa_scaled}
+\end{figure}
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.95\textwidth]{figures/injection_vs_aod.png}
+	\end{center}
+	\caption{Injected \ce{SO2} versus AOD}
+	\label{fig:so2_vs_aod}
+\end{figure}
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.95\textwidth]{figures/injection_vs_toa.png}
+	\end{center}
+	\caption{Injected \ce{SO2} versus TOA radiative imbalance}
+	\label{fig:so2_vs_toa}
+\end{figure}
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.95\textwidth]{figures/injection_vs_temperature.png}
+	\end{center}
+	\caption{Injected \ce{SO2} versus temperature}
+	\label{fig:so2_vs_temp}
+\end{figure}
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.95\textwidth]{figures/aod_vs_temperature.png}
+	\end{center}
+	\caption{AOD versus temperature}
+	\label{fig:aod_vs_temp}
+\end{figure}
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.95\textwidth]{figures/toa_vs_temperature.png}
+	\end{center}
+	\caption{TOA versus temperature}
+	\label{fig:toa_vs_temp}
+\end{figure}
+
+\clearpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ACKNOWLEDGMENTS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\acknowledgments
+% \acknowledgments
 
-Keep acknowledgments (note correct spelling: no ``e'' between the ``g'' and
-``m'') as brief as possible. In general, acknowledge only direct help in
-writing or research. Financial support (e.g., grant numbers) for the work
-done, for an author, or for the laboratory where the work was performed is
-best acknowledged here rather than as footnotes to the title or to an
-author's name. Contribution numbers (if the work has been published by the
-author's institution or organization) should be included as footnotes on the title page,
-not in the acknowledgments.
+% Keep acknowledgments (note correct spelling: no ``e'' between the ``g'' and ``m'') as
+% brief as possible. In general, acknowledge only direct help in writing or research.
+% Financial support (e.g., grant numbers) for the work done, for an author, or for the
+% laboratory where the work was performed is best acknowledged here rather than as
+% footnotes to the title or to an author's name. Contribution numbers (if the work has
+% been published by the author's institution or organization) should be included as
+% footnotes on the title page, not in the acknowledgments.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % DATA AVAILABILITY STATEMENT
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\datastatement
+% \datastatement
 
-The data availability statement is where authors should describe how the data underlying 
-the findings within the article can be accessed and reused. Authors should attempt to 
-provide unrestricted access to all data and materials underlying reported findings. 
-If data access is restricted, authors must mention this in the statement.
+% The data availability statement is where authors should describe how the data underlying
+% the findings within the article can be accessed and reused. Authors should attempt to
+% provide unrestricted access to all data and materials underlying reported findings. If
+% data access is restricted, authors must mention this in the statement.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % APPENDIXES
@@ -175,7 +263,7 @@ If data access is restricted, authors must mention this in the statement.
 % \paragraph{First tertiary heading}
 
 %% Important!
-%\appendcaption{<appendix letter and number>}{<caption>} 
+%\appendcaption{<appendix letter and number>}{<caption>}
 %must be used for figures and tables in appendixes, e.g.,
 %
 %\begin{figure}
@@ -189,8 +277,8 @@ If data access is restricted, authors must mention this in the statement.
 % REFERENCES
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Make your BibTeX bibliography by using these commands:
-% \bibliographystyle{ametsoc2014}
-% \bibliography{references}
+\bibliographystyle{ametsoc2014}
+\bibliography{references}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -231,3 +319,4 @@ If data access is restricted, authors must mention this in the statement.
 %\end{figure}
 
 \end{document}
+
