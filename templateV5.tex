@@ -1,28 +1,24 @@
-%% Version 5.0, 2 January 2020
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% TemplateV5.tex --  LaTeX-based template for submissions to the
-% American Meteorological Society
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% PREAMBLE
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Version 5.0, 2 January 2020
 
-%% Start with one of the following:
-% DOUBLE-SPACED VERSION FOR SUBMISSION TO THE AMS
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TemplateV5.tex -- LaTeX-based template for submissions to the American Meteorological
+% Society
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PREAMBLE
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Start with one of the following: DOUBLE-SPACED VERSION FOR SUBMISSION TO THE AMS
 \documentclass{ametsocV5}
 
 % TWO-COLUMN JOURNAL PAGE LAYOUT---FOR AUTHOR USE ONLY
 % \documentclass[twocol]{ametsocV5}
 
-
-% Enter packages here. If too many math alphabets are used,
-% remove unnecessary packages or define hmmax and bmmax as necessary.
-
+% Enter packages here. If too many math alphabets are used, remove unnecessary packages
+% or define hmmax and bmmax as necessary.
 %\newcommand{\hmmax}{0}
 %\newcommand{\bmmax}{0}
 \usepackage{amsmath,amsfonts,amssymb,bm}
-\usepackage{mathptmx}%{times}
+\usepackage{mathptmx}% {times}
 \usepackage{newtxtext}
 \usepackage{newtxmath}
 \usepackage{mhchem}
@@ -31,40 +27,30 @@
 \makeglossary
 \input{./definitions/acronyms.tex}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%% To be entered by author:
-
-%% May use \\ to break lines in title:
-
+% To be entered by author:
+% May use \\ to break lines in title:
 \title{
   Parameter Scan: Volcanic influence on climate across multiple magnitudes and injected
   altitudes
 }
 
-%%% Enter authors' names, as you see in this example:
-%%% Use \correspondingauthor{} and \thanks{Current Affiliation:...}
-%%% immediately following the appropriate author.
-%%%
-%%% Note that the \correspondingauthor{} command is NECESSARY.
-%%% The \thanks{} commands are OPTIONAL.
+% Enter authors' names, as you see in this example: Use \correspondingauthor{} and
+% \thanks{Current Affiliation:...} immediately following the appropriate author. Note
+% that the \correspondingauthor{} command is NECESSARY. The \thanks{} commands are
+% OPTIONAL.
 
-%\authors{Author One\correspondingauthor{Author name, email address}
-% and Author Two\thanks{Current affiliation: American Meteorological Society,
-% Boston, Massachusetts.}}
-
-\authors{Eirik Rolland Enger\correspondingauthor{Eirik Rolland Enger, eirik.r.enger@uit.no}
-  %\thanks{Current affiliation: NCAR, Boulder, Colorado.}
+\authors{
+  Eirik Rolland Enger\correspondingauthor{Eirik Rolland Enger, eirik.r.enger@uit.no}
 }
 
-%% Follow this form:
-% \affiliation{American Meteorological Society,
-% Boston, Massachusetts}
+% Follow this form: \affiliation{American Meteorological Society, Boston, Massachusetts}
 \affiliation{UiT The Arctic University of Norway, Tromsø, Norway}
 
 % \affiliation{}
 
-%% If appropriate, add additional authors, different affiliations:
+% If appropriate, add additional authors, different affiliations:
 \extraauthor{Audun Theodorsen}
 \extraaffil{UiT The Arctic University of Norway, Tromsø, Norway}
 \extraauthor{Rune Graversen}
@@ -74,35 +60,30 @@
 \extraauthor{Maria Rugenstein}
 \extraaffil{Colorado State University, Fort Collins, Colorado}
 
-%% May repeat for a additional authors/affiliations:
-
-%\extraauthor{}
-%\extraaffil{}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ABSTRACT
 %
-% Enter your abstract here
-% Abstracts should not exceed 250 words in length!
-%
+% Enter your abstract here. Abstracts should not exceed 250 words in length!
 
 \abstract{
   Volcanoes affect Earth's climate. What happens when the climate is forced with
-  volcanoes of different size and injected at different heights?
+  volcanoes of different size and injected at different heights? Should we expect to see
+  the same climate response for the same volcanoes in a different, warmer climate?
 }
 
 \begin{document}
 
-%% Necessary!
+% Necessary!
 \maketitle
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SIGNIFICANCE STATEMENT/CAPSULE SUMMARY
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% If you are including an optional significance statement for a journal article or a required capsule summary for BAMS
-% (see www.ametsoc.org/ams/index.cfm/publications/authors/journal-and-bams-authors/formatting-and-manuscript-components for details),
-% please apply the necessary command as shown below:
+% If you are including an optional significance statement for a journal article or a
+% required capsule summary for BAMS (see
+% www.ametsoc.org/ams/index.cfm/publications/authors/journal-and-bams-authors/formatting-and-manuscript-components
+% for details), please apply the necessary command as shown below:
 %
 % \statement
 % Significance statement here.
@@ -110,22 +91,20 @@
 % \capsule
 % Capsule summary here.
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % MAIN BODY OF PAPER
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% In all cases, if there is only one entry of this type within
-%% the higher level heading, use the star form:
-%%
+% In all cases, if there is only one entry of this type within the higher level heading,
+% use the star form:
+%
 % \section{Section title}
 % \subsection*{subsection}
 % text...
 % \section{Section title}
-
-%vs
-
+%
+% vs
+%
 % \section{Section title}
 % \subsection{subsection one}
 % text...
@@ -134,94 +113,120 @@
 % \paragraph{First quaternary heading}
 % \section{Section title}
 
-%%%
 \section{Outline}
 
 The paper should be about the volcanic simulations that compare magnitude and model
 complexity (dynamic ocean against slab ocean). If there is no big difference, we may
 also run more experiments to test for other things:
 \begin{itemize}
-	\item How does the climate response change based on the state of the climate: what
-	      if we run a \ce{CO2} doubling or quadrupling simulation until close to
-	      equilibrium, and let the volcanoes erupt then?
-	\item How much does it matter how high in the atmosphere the initial \ce{SO2} is
-	      injected?
+  \item How does the climate response change based on the state of the climate: what if we run
+        a \ce{CO2} doubling or quadrupling simulation until close to equilibrium, and let the
+        volcanoes erupt then?
+  \item How much does it matter how high in the atmosphere the initial \ce{SO2} is injected?
 \end{itemize}
 
 \section{Method}
 
 Let us first introduce some figures.
 
+There are three different forcing magnitudes that has been used. The figures below show
+tow alternative ways of normalising the temperature response to these volcanic events.
+
+First, we have the three temperature responses normalised by setting the peak value
+equal to one, shown in Figure~\ref{fig:temp_norm_max}. The second method of
+normalising, shown in Figure~\ref{fig:temp_norm_int}, is to numerically integrate the
+time series, and divide through such that they integrate to one.
+
 \begin{figure}
-	\begin{center}
-		\includegraphics[width=0.95\textwidth]{figures/aod_vs_toa_avg_full.png}
-	\end{center}
-	\caption{AOD versus TOA, full size. Same type as \cite{gregory2016}}
-	\label{fig:aod_vs_toa_full}
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{figures/compare-waveform-max.png}
+  \end{center}
+  \caption{Normalised temperature response to three different-size volcanic eruptions,
+    by means of setting a maximum peak value}
+  \label{fig:temp_norm_max}
 \end{figure}
 
 \begin{figure}
-	\begin{center}
-		\includegraphics[width=0.95\textwidth]{figures/aod_vs_toa_avg_inset.png}
-	\end{center}
-	\caption{AOD versus TOA, inset. Same type as \cite{gregory2016}}
-	\label{fig:aod_vs_toa_inset}
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{figures/compare-waveform-integrate.png}
+  \end{center}
+  \caption{Normalised temperature response to three different-size volcanic eruptions,
+    by means of integration}
+  \label{fig:temp_norm_int}
 \end{figure}
 
 \begin{figure}
-	\begin{center}
-		\includegraphics[width=0.95\textwidth]{figures/aod_vs_toa_avg_scaled.png}
-	\end{center}
-	\caption{AOD versus TOA, scaled so the peak values of the different volcano
-		magnitudes are aligned. Same type as \cite{gregory2016}}
-	\label{fig:aod_vs_toa_scaled}
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{figures/aod_vs_toa_avg_full.png}
+  \end{center}
+  \caption{AOD versus TOA, full size. Same type as \cite{gregory2016}}
+  \label{fig:aod_vs_toa_full}
 \end{figure}
 
 \begin{figure}
-	\begin{center}
-		\includegraphics[width=0.95\textwidth]{figures/injection_vs_aod.png}
-	\end{center}
-	\caption{Injected \ce{SO2} versus AOD}
-	\label{fig:so2_vs_aod}
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{figures/aod_vs_toa_avg_inset.png}
+  \end{center}
+  \caption{AOD versus TOA, inset. Same type as \cite{gregory2016}}
+  \label{fig:aod_vs_toa_inset}
 \end{figure}
 
 \begin{figure}
-	\begin{center}
-		\includegraphics[width=0.95\textwidth]{figures/injection_vs_toa.png}
-	\end{center}
-	\caption{Injected \ce{SO2} versus TOA radiative imbalance}
-	\label{fig:so2_vs_toa}
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{figures/aod_vs_toa_avg_scaled.png}
+  \end{center}
+  \caption{
+    AOD versus TOA, scaled so the peak values of the different volcano magnitudes
+    are aligned. Same type as \cite{gregory2016}
+  }
+  \label{fig:aod_vs_toa_scaled}
 \end{figure}
 
 \begin{figure}
-	\begin{center}
-		\includegraphics[width=0.95\textwidth]{figures/injection_vs_temperature.png}
-	\end{center}
-	\caption{Injected \ce{SO2} versus temperature}
-	\label{fig:so2_vs_temp}
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{figures/injection_vs_aod.png}
+  \end{center}
+  \caption{Injected \ce{SO2} versus AOD}
+  \label{fig:so2_vs_aod}
 \end{figure}
 
 \begin{figure}
-	\begin{center}
-		\includegraphics[width=0.95\textwidth]{figures/aod_vs_temperature.png}
-	\end{center}
-	\caption{AOD versus temperature}
-	\label{fig:aod_vs_temp}
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{figures/injection_vs_toa.png}
+  \end{center}
+  \caption{Injected \ce{SO2} versus TOA radiative imbalance}
+  \label{fig:so2_vs_toa}
 \end{figure}
 
 \begin{figure}
-	\begin{center}
-		\includegraphics[width=0.95\textwidth]{figures/toa_vs_temperature.png}
-	\end{center}
-	\caption{TOA versus temperature}
-	\label{fig:toa_vs_temp}
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{figures/injection_vs_temperature.png}
+  \end{center}
+  \caption{Injected \ce{SO2} versus temperature}
+  \label{fig:so2_vs_temp}
+\end{figure}
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{figures/aod_vs_temperature.png}
+  \end{center}
+  \caption{AOD versus temperature}
+  \label{fig:aod_vs_temp}
+\end{figure}
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{figures/toa_vs_temperature.png}
+  \end{center}
+  \caption{TOA versus temperature}
+  \label{fig:toa_vs_temp}
 \end{figure}
 
 \clearpage
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ACKNOWLEDGMENTS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \acknowledgments
 
 % Keep acknowledgments (note correct spelling: no ``e'' between the ``g'' and ``m'') as
@@ -232,91 +237,89 @@ Let us first introduce some figures.
 % been published by the author's institution or organization) should be included as
 % footnotes on the title page, not in the acknowledgments.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % DATA AVAILABILITY STATEMENT
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \datastatement
 
-% The data availability statement is where authors should describe how the data underlying
-% the findings within the article can be accessed and reused. Authors should attempt to
-% provide unrestricted access to all data and materials underlying reported findings. If
-% data access is restricted, authors must mention this in the statement.
+% The data availability statement is where authors should describe how the data
+% underlying the findings within the article can be accessed and reused. Authors should
+% attempt to provide unrestricted access to all data and materials underlying reported
+% findings. If data access is restricted, authors must mention this in the statement.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % APPENDIXES
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % Use \appendix if there is only one appendix.
-%\appendix
+% \appendix
 
 % Use \appendix[A], \appendix[B], if you have multiple appendixes.
-%\appendix[A]
+% \appendix[A]
 
-%% Appendix title is necessary! For appendix title:
-%\appendixtitle{}
+% Appendix title is necessary! For appendix title:
+% \appendixtitle{}
 
-%%% Appendix section numbering (note, skip \section and begin with \subsection)
+% Appendix section numbering (note, skip \section and begin with \subsection)
 % \subsection{First primary heading}
 
 % \subsubsection{First secondary heading}
 
 % \paragraph{First tertiary heading}
 
-%% Important!
-%\appendcaption{<appendix letter and number>}{<caption>}
-%must be used for figures and tables in appendixes, e.g.,
+% Important!
+% \appendcaption{<appendix letter and number>}{<caption>}
+% must be used for figures and tables in appendixes, e.g.,
 %
-%\begin{figure}
-%\noindent\includegraphics[width=19pc,angle=0]{figure01.pdf}\\
-%\appendcaption{A1}{Caption here.}
-%\end{figure}
+% \begin{figure}
+% \noindent\includegraphics[width=19pc,angle=0]{figure01.pdf}\\
+% \appendcaption{A1}{Caption here.}
+% \end{figure}
 %
-% All appendix figures/tables should be placed in order AFTER the main figures/tables, i.e., tables, appendix tables, figures, appendix figures.
+% All appendix figures/tables should be placed in order AFTER the main figures/tables,
+% i.e., tables, appendix tables, figures, appendix figures.
 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % REFERENCES
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Make your BibTeX bibliography by using these commands:
 \bibliographystyle{ametsoc2014}
 \bibliography{references}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % TABLES
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Enter tables at the end of the document, before figures.
-%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Enter tables at the end of the document, before figures.
 %
-%\begin{table}[t]
-%\caption{This is a sample table caption and table layout.  Enter as many tables as
-%  necessary at the end of your manuscript. Table from Lorenz (1963).}\label{t1}
-%\begin{center}
-%\begin{tabular}{ccccrrcrc}
-%\hline\hline
-%$N$ & $X$ & $Y$ & $Z$\\
-%\hline
-% 0000 & 0000 & 0010 & 0000 \\
-% 0005 & 0004 & 0012 & 0000 \\
-% 0010 & 0009 & 0020 & 0000 \\
-% 0015 & 0016 & 0036 & 0002 \\
-% 0020 & 0030 & 0066 & 0007 \\
-% 0025 & 0054 & 0115 & 0024 \\
-%\hline
-%\end{tabular}
-%\end{center}
-%\end{table}
+% \begin{table}[t]
+%   \caption{This is a sample table caption and table layout.  Enter as many tables as
+%     necessary at the end of your manuscript. Table from Lorenz (1963).}\label{t1}
+%   \begin{center}
+%     \begin{tabular}{ccccrrcrc}
+%       \hline\hline
+%       $N$  & $X$  & $Y$  & $Z$  \\
+%       \hline
+%       0000 & 0000 & 0010 & 0000 \\
+%       0005 & 0004 & 0012 & 0000 \\
+%       0010 & 0009 & 0020 & 0000 \\
+%       0015 & 0016 & 0036 & 0002 \\
+%       0020 & 0030 & 0066 & 0007 \\
+%       0025 & 0054 & 0115 & 0024 \\
+%       \hline
+%     \end{tabular}
+%   \end{center}
+% \end{table}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % FIGURES
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Enter figures at the end of the document, after tables.
-%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Enter figures at the end of the document, after tables.
 %
-%\begin{figure}[t]
-%  \noindent\includegraphics[width=19pc,angle=0]{figure01.pdf}\\
-%  \caption{Enter the caption for your figure here.  Repeat as
-%  necessary for each of your figures. Figure from \protect\cite{Knutti2008}.}\label{f1}
-%\end{figure}
+% \begin{figure}[t]
+%   \noindent\includegraphics[width=19pc,angle=0]{figure01.pdf}\\
+%   \caption{Enter the caption for your figure here.  Repeat as
+%     necessary for each of your figures. Figure from \protect\cite{Knutti2008}.}\label{f1}
+% \end{figure}
 
 \end{document}
 
