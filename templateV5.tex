@@ -18,13 +18,14 @@
 %\newcommand{\hmmax}{0}
 %\newcommand{\bmmax}{0}
 \usepackage{amsmath,amsfonts,amssymb,bm}
+\usepackage[british]{babel}
 \usepackage{mathptmx}% {times}
 \usepackage{newtxtext}
 \usepackage{newtxmath}
-\usepackage{mhchem}
+\usepackage[version=4]{mhchem}
 \usepackage[acronym]{glossaries}
 
-\makeglossary
+\makeglossaries
 \input{./definitions/acronyms.tex}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -125,24 +126,43 @@ also run more experiments to test for other things:
   \item How much does it matter how high in the atmosphere the initial \ce{SO2} is injected?
 \end{itemize}
 
+\paragraph*{Introduction}
+
+The introduction should go into some detail about:
+
+\begin{itemize}
+  \item Importance of volcanic eruptions for temperature fluctuations
+  \item Refer back to other simulations of volcanoes, for example the \citet{jones2005} paper
+        that ran a super-volcano, or \citet{gregory2016} who looked at historic volcanoes
+        during the last 150 years only
+  \item Argue that the temperature response might be more sensitive to the sign of the forcing,
+        rather than the forcing agent, and as such that a halving of \ce{CO2} should be
+        compared with volcanoes \citep{gunther2022}
+  \item How important is it the \ce{SO2} is injected at a given height?
+\end{itemize}
+
+% TODO: we should have a section for method as well, and maybe also write about what the
+% results and discussion should include
+
 \section{Method}
 
 Let us first introduce some figures.
 
-There are three different forcing magnitudes that has been used. The figures below show
-tow alternative ways of normalising the temperature response to these volcanic events.
+There are three different forcing magnitudes that have been used. The figures below
+show two alternative ways of normalizing the temperature response to these volcanic
+events.
 
-First, we have the three temperature responses normalised by setting the peak value
+First, we have the three temperature responses normalized by setting the peak value
 equal to one, shown in Figure~\ref{fig:temp_norm_max}. The second method of
-normalising, shown in Figure~\ref{fig:temp_norm_int}, is to numerically integrate the
+normalizing, shown in Figure~\ref{fig:temp_norm_int}, is to numerically integrate the
 time series, and divide through such that they integrate to one.
 
 \begin{figure}
   \begin{center}
     \includegraphics[width=0.95\textwidth]{figures/compare-waveform-max.png}
   \end{center}
-  \caption{Normalised temperature response to three different-size volcanic eruptions,
-    by means of setting a maximum peak value}
+  \caption{Normalized temperature response to three different-size volcanic eruptions,
+    by setting a maximum peak value}
   \label{fig:temp_norm_max}
 \end{figure}
 
@@ -150,8 +170,8 @@ time series, and divide through such that they integrate to one.
   \begin{center}
     \includegraphics[width=0.95\textwidth]{figures/compare-waveform-integrate.png}
   \end{center}
-  \caption{Normalised temperature response to three different-size volcanic eruptions,
-    by means of integration}
+  \caption{Normalized temperature response to three different-size volcanic eruptions,
+    by integration}
   \label{fig:temp_norm_int}
 \end{figure}
 
@@ -159,7 +179,7 @@ time series, and divide through such that they integrate to one.
   \begin{center}
     \includegraphics[width=0.95\textwidth]{figures/aod_vs_toa_avg_full.png}
   \end{center}
-  \caption{AOD versus TOA, full size. Same type as \cite{gregory2016}}
+  \caption{\acrshort{aod} versus \acrshort{toa}, full size. Same type as \cite{gregory2016}}
   \label{fig:aod_vs_toa_full}
 \end{figure}
 
@@ -167,7 +187,7 @@ time series, and divide through such that they integrate to one.
   \begin{center}
     \includegraphics[width=0.95\textwidth]{figures/aod_vs_toa_avg_inset.png}
   \end{center}
-  \caption{AOD versus TOA, inset. Same type as \cite{gregory2016}}
+  \caption{\acrshort{aod} versus \acrshort{toa}, inset. Same type as \cite{gregory2016}}
   \label{fig:aod_vs_toa_inset}
 \end{figure}
 
@@ -176,7 +196,7 @@ time series, and divide through such that they integrate to one.
     \includegraphics[width=0.95\textwidth]{figures/aod_vs_toa_avg_scaled.png}
   \end{center}
   \caption{
-    AOD versus TOA, scaled so the peak values of the different volcano magnitudes
+    \acrshort{aod} versus \acrshort{toa}, scaled so the peak values of the different volcano magnitudes
     are aligned. Same type as \cite{gregory2016}
   }
   \label{fig:aod_vs_toa_scaled}
@@ -186,7 +206,7 @@ time series, and divide through such that they integrate to one.
   \begin{center}
     \includegraphics[width=0.95\textwidth]{figures/injection_vs_aod.png}
   \end{center}
-  \caption{Injected \ce{SO2} versus AOD}
+  \caption{Injected \ce{SO2} versus \acrshort{aod}}
   \label{fig:so2_vs_aod}
 \end{figure}
 
@@ -194,7 +214,7 @@ time series, and divide through such that they integrate to one.
   \begin{center}
     \includegraphics[width=0.95\textwidth]{figures/injection_vs_toa.png}
   \end{center}
-  \caption{Injected \ce{SO2} versus TOA radiative imbalance}
+  \caption{Injected \ce{SO2} versus \acrshort{toa} radiative imbalance}
   \label{fig:so2_vs_toa}
 \end{figure}
 
@@ -210,7 +230,7 @@ time series, and divide through such that they integrate to one.
   \begin{center}
     \includegraphics[width=0.95\textwidth]{figures/aod_vs_temperature.png}
   \end{center}
-  \caption{AOD versus temperature}
+  \caption{\acrshort{aod} versus temperature}
   \label{fig:aod_vs_temp}
 \end{figure}
 
@@ -218,7 +238,7 @@ time series, and divide through such that they integrate to one.
   \begin{center}
     \includegraphics[width=0.95\textwidth]{figures/toa_vs_temperature.png}
   \end{center}
-  \caption{TOA versus temperature}
+  \caption{\acrshort{toa} versus temperature}
   \label{fig:toa_vs_temp}
 \end{figure}
 
@@ -285,7 +305,8 @@ time series, and divide through such that they integrate to one.
 % Make your BibTeX bibliography by using these commands:
 \bibliographystyle{ametsoc2014}
 \bibliography{references}
-
+\clearpage
+\printglossary[type=\acronymtype,title=List of Acronyms]
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % TABLES
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
