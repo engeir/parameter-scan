@@ -116,14 +116,17 @@
 
 \section{Outline}
 
-The paper should be about the volcanic simulations that compare magnitude and model
-complexity (dynamic ocean against slab ocean). If there is no big difference, we may
-also run more experiments to test for other things:
+The paper should provide insight about what might happen if a very large (order of
+magnitude or more than Mount Pinatubo) volcanic eruption happened (for example within
+the next 50 years). It should also be about how volcanic simulations compare in
+magnitude and model complexity (dynamic ocean against slab ocean). If there is no big
+difference, we may also run more experiments to test for other things:
 \begin{itemize}
   \item How does the climate response change based on the state of the climate: what if we run
         a \ce{CO2} doubling or quadrupling simulation until close to equilibrium, and let the
         volcanoes erupt then?
   \item How much does it matter how high in the atmosphere the initial \ce{SO2} is injected?
+  \item How far does the linear relation between \acrshort{aod} and \acrshort{toa} go?
 \end{itemize}
 
 \paragraph*{Introduction}
@@ -135,10 +138,12 @@ The introduction should go into some detail about:
   \item Refer back to other simulations of volcanoes, for example the \citet{jones2005} paper
         that ran a super-volcano, or \citet{gregory2016} who looked at historic volcanoes
         during the last 150 years only
-  \item Argue that the temperature response might be more sensitive to the sign of the forcing,
-        rather than the forcing agent, and as such that a halving of \ce{CO2} should be
-        compared with volcanoes \citep{gunther2022}
-  \item How important is it the \ce{SO2} is injected at a given height?
+  \item The temperature response might be more sensitive to the sign of the forcing, rather
+        than the forcing agent, and as such a halving of \ce{CO2} may be compared with
+        volcanoes \citep{gunther2022}
+  \item How important is it that \ce{SO2} is injected at a given height?
+  \item To some extent there should be a literature review of the above, so more citations and
+        references are needed.
 \end{itemize}
 
 % TODO: we should have a section for method as well, and maybe also write about what the
@@ -171,8 +176,18 @@ time series, and divide through such that they integrate to one.
     \includegraphics[width=0.95\textwidth]{figures/compare-waveform-integrate.png}
   \end{center}
   \caption{Normalized temperature response to three different-size volcanic eruptions,
-    by integration}
+    using integration}
   \label{fig:temp_norm_int}
+\end{figure}
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{figures/double-overlap-superpose.png}
+  \end{center}
+  \caption{Double-eruption event, where the temperature responses from the two
+    eruptions overlap. That is, the second equivalent eruption occur as the temperature
+    is still perturbed from the first eruption}
+  \label{fig:double-overlap-superpose}
 \end{figure}
 
 \begin{figure}
