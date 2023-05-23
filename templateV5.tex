@@ -121,12 +121,12 @@
 \section{Outline}
 
 The paper should provide insight about what might happen if a very large (order of
-magnitude or more than Mount Pinatubo) volcanic eruption happened (for example within
-the next 50 years). \emph{Little literature can be found that investigate the effects
-  of eruptions ten times or more than that of Mount Pinatubo, so this should hopefully be
-  worthwhile looking into.} It should also be about how volcanic simulations compare in
-magnitude and model complexity (dynamic ocean against slab ocean). If there is no big
-difference, we may also run more experiments to test for other things:
+magnitude or more than Mount Pinatubo) volcano erupted (for example within the next 50
+years). \emph{Little literature can be found that investigate the effects of eruptions
+  ten times or more than that of Mount Pinatubo, so this should hopefully be worthwhile
+  looking into.} It should also be about how volcanic simulations compare in magnitude
+and model complexity (dynamic ocean against slab ocean). If there is no big difference,
+we may also run more experiments to test for other things:
 \begin{itemize}
   \item How does the climate response change based on the state of the climate: what if we run
         a \ce{CO2} doubling or quadrupling simulation until close to equilibrium, and let the
@@ -135,7 +135,7 @@ difference, we may also run more experiments to test for other things:
   \item How far does the linear relation between \acrshort{aod} and \acrshort{toa} go?
 \end{itemize}
 
-\paragraph*{Introduction}
+\subsection*{Introduction}
 
 The introduction should go into some detail about:
 
@@ -151,6 +151,25 @@ The introduction should go into some detail about:
   \item To some extent there should be a literature review of the above, so more citations and
         references are needed.
 \end{itemize}
+
+\paragraph*{References}
+
+Overview and motivation: \citet{marshall2022}
+
+Related to the feedback parameter and how forcing agents compare: \citet{gunther2022,
+  hansen2005, salvi2022, pauling2021, richardson2019, knutti2017, marvel2016, ollila2016,
+  merlis2014, boer2007, wigley2005, gregory2020}
+
+Related to impact on climate due to volcanic forcing: \citet{yang2019, timmreck2010,
+  timmreck2009, jones2005, ottobliesner2016, santer2016, yokohata2005, zanchettin2019,
+  toohey2016b}
+
+Related to volcanic eruption chemistry and physics: \citet{sukhodolov2018,
+  arfeuille2014, douglass2006, soden2002, lin2022, marshall2021, marshall2020}
+
+Related to other phenomena, e.g., ENSO: \citet{lehner2016, chen2022, marshall2018}
+
+Related to model complexity: \citet{rypdal2012}
 
 % TODO: we should have a section for method as well, and maybe also write about what the
 % results and discussion should include
@@ -182,7 +201,7 @@ time series, and divide through such that they integrate to one.
     \includegraphics[width=0.95\textwidth]{figures/compare-waveform-integrate.png}
   \end{center}
   \caption{Normalized temperature response to three different-size volcanic eruptions,
-    using integration}
+    using integration, i.e., they all integrate to one}
   \label{fig:temp_norm_int}
 \end{figure}
 

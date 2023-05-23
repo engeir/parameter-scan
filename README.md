@@ -1,4 +1,4 @@
-# Parameter Scan
+# Parameter scan
 
 To run the continuous compiler, use the command
 
@@ -6,8 +6,14 @@ To run the continuous compiler, use the command
 latexmk -cd -pvc -pdf templateV5.tex
 ```
 
-Cleaning up files is done with
+You clean up files with
 
 ```bash
 latexmk -c
+```
+
+`tectonic` also works in place of `latexmk`:
+
+```bash
+tectonic templateV5.tex
 ```
