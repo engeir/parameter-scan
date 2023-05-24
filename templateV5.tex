@@ -28,6 +28,7 @@
 \usepackage{newtxmath}
 \usepackage[version=4]{mhchem}
 \usepackage[acronym]{glossaries}
+\usepackage{cleveref}
 
 \makeglossaries
 \input{./definitions/acronyms.tex}
@@ -120,16 +121,16 @@
 
 \section{Outline}
 
-The paper should provide insight about what might happen if a very large (order of
-magnitude or more than Mount Pinatubo) volcano erupted (for example within the next 50
-years). \emph{Little literature can be found that investigate the effects of eruptions
-  ten times or more than that of Mount Pinatubo, so this should hopefully be worthwhile
-  looking into.} It should also be about how volcanic simulations compare in magnitude
-and model complexity (dynamic ocean against slab ocean). If there is no big difference,
-we may also run more experiments to test for other things:
+The paper should provide insight about what might happen if a large (order of magnitude
+or more than Mount Pinatubo) volcano erupted (for example within the next 50 years).
+\emph{Little literature can be found that investigate the effects of eruptions ten times
+  or more than that of Mount Pinatubo, so this should hopefully be worthwhile looking
+  into.} It should also be about how volcanic simulations compare in magnitude and model
+complexity (dynamic ocean against slab ocean). If there is no big difference, we may
+also run more experiments to test for other things:
 \begin{itemize}
-  \item How does the climate response change based on the state of the climate: what if we run
-        a \ce{CO2} doubling or quadrupling simulation until close to equilibrium, and let the
+  \item How does the climate response change based on the state of the climate: what if we run a
+        \ce{CO2} doubling or quadrupling simulation until close to equilibrium, and let the
         volcanoes erupt then?
   \item How much does it matter how high in the atmosphere the initial \ce{SO2} is injected?
   \item How far does the linear relation between \acrshort{aod} and \acrshort{toa} go?
@@ -142,11 +143,11 @@ The introduction should go into some detail about:
 \begin{itemize}
   \item Importance of volcanic eruptions for temperature fluctuations
   \item Refer back to other simulations of volcanoes, for example the \citet{jones2005} paper
-        that ran a super-volcano, or \citet{gregory2016} who looked at historic volcanoes
-        during the last 150 years only
-  \item The temperature response might be more sensitive to the sign of the forcing, rather
-        than the forcing agent, and as such a halving of \ce{CO2} may be compared with
-        volcanoes \citep{gunther2022}
+        that ran a super-volcano, or \citet{gregory2016} who looked at historic volcanoes during
+        the last 150 years only
+  \item The temperature response might be more sensitive to the sign of the forcing, rather than
+        the forcing agent, and as such a halving of \ce{CO2} may be compared with volcanoes
+        \citep{gunther2022}
   \item How important is it that \ce{SO2} is injected at a given height?
   \item To some extent there should be a literature review of the above, so more citations and
         references are needed.
@@ -154,22 +155,17 @@ The introduction should go into some detail about:
 
 \paragraph*{References}
 
-Overview and motivation: \citet{marshall2022}
-
-Related to the feedback parameter and how forcing agents compare: \citet{gunther2022,
-  hansen2005, salvi2022, pauling2021, richardson2019, knutti2017, marvel2016, ollila2016,
-  merlis2014, boer2007, wigley2005, gregory2020}
-
-Related to impact on climate due to volcanic forcing: \citet{yang2019, timmreck2010,
-  timmreck2009, jones2005, ottobliesner2016, santer2016, yokohata2005, zanchettin2019,
-  toohey2016b}
-
-Related to volcanic eruption chemistry and physics: \citet{sukhodolov2018,
-  arfeuille2014, douglass2006, soden2002, lin2022, marshall2021, marshall2020}
-
-Related to other phenomena, e.g., ENSO: \citet{lehner2016, chen2022, marshall2018}
-
-Related to model complexity: \citet{rypdal2012}
+\begin{description}
+  \item[overview] \citet{marshall2022}
+  \item[feedback params] \citet{boer2007, gunther2022, gregory2020, hansen2005, knutti2017,
+      marvel2016, merlis2014, ollila2016, pauling2021, richardson2019, salvi2022, wigley2005}
+  \item[climate impact] \citet{gregory2016, jones2005, ottobliesner2016, santer2016,
+      timmreck2009, timmreck2010, toohey2016b, yang2019, yokohata2005, zanchettin2019}
+  \item[eruptions] \citet{arfeuille2014, douglass2006, lin2022, marshall2020, marshall2021,
+      soden2002, sukhodolov2018}
+  \item[other phenomena] \citet{chen2022, lehner2016, marshall2018}
+  \item[models] \citet{rypdal2012}
+\end{description}
 
 % TODO: we should have a section for method as well, and maybe also write about what the
 % results and discussion should include
@@ -178,14 +174,26 @@ Related to model complexity: \citet{rypdal2012}
 
 Let us first introduce some figures.
 
-There are three different forcing magnitudes that have been used. The figures below
-show two alternative ways of normalizing the temperature response to these volcanic
-events.
+\paragraph*{Forcing magnitudes}
+
+There are three different forcing magnitudes that have been used. The figures below show
+two alternative ways of normalizing the temperature response to these volcanic events.
 
 First, we have the three temperature responses normalized by setting the peak value
-equal to one, shown in Figure~\ref{fig:temp_norm_max}. The second method of
-normalizing, shown in Figure~\ref{fig:temp_norm_int}, is to numerically integrate the
-time series, and divide through such that they integrate to one.
+equal to one, shown in \cref{fig:temp_norm_max}. The second method of normalizing, shown
+in \cref{fig:temp_norm_int}, is to numerically integrate the time series, and divide
+through such that they integrate to one.
+
+When normalizing by setting their amplitude equal to (minus) one, the initial rise
+across all three is comparable. The difference among the three is how much more quickly
+the temperature reverts back to equilibrium in the smallest eruption case.
+
+On the other hand, when normalizing by enforcing all to integrate to the same value, the
+tail where the temperature revert back is the most similar across all three eruptions.
+From these two normalizations, one thing that stays different is the amount of time
+spent at the peak temperature. The temperature from smaller eruption simulation starts
+to revert sooner after it reaches temperatures close to the peak temperature. The shape
+of the initial rise and the tail is more similar across the three.
 
 \begin{figure}
   \begin{center}
@@ -205,15 +213,35 @@ time series, and divide through such that they integrate to one.
   \label{fig:temp_norm_int}
 \end{figure}
 
+\paragraph*{Superposing volcanoes}
+
+Let us now look at how the temperature behave when forced by two eruptions occurring
+close in time (four years apart), shown in \cref{fig:double-overlap-superpose}. The
+temperature is still perturbed as the second eruption happen, but when comparing this
+with the superposition of the temperature time series of two single eruption events,
+their alignment is quite good. Therefore, we cannot from this say that the temperature
+response is sensitive to overlapping eruptions.
+
 \begin{figure}
   \begin{center}
     \includegraphics[width=0.95\textwidth]{figures/double-overlap-superpose.png}
   \end{center}
-  \caption{Double-eruption event, where the temperature responses from the two
-    eruptions overlap. That is, the second equivalent eruption occur as the temperature
-    is still perturbed from the first eruption}
+  \caption{Double-eruption event, where the temperature responses from the two eruptions
+    overlap. That is, the second equivalent eruption occur as the temperature is still
+    perturbed from the first eruption}
   \label{fig:double-overlap-superpose}
 \end{figure}
+
+\paragraph*{Parameter scan}
+
+So far we have been focusing on temperature. We here look more closely into the
+different forcings as well. This comparison is motivated by \citet{gregory2016},
+specifically their figure 4 which compare annual mean aerosol optical depth with
+radiative forcing. \Cref{fig:aod_vs_toa_full} show annual mean values from the three
+simulation cases along with the gradient obtained by \citet{gregory2016} (\(-19\)).
+First off, the \acrshort{toa} values are clearly much smaller compared the
+\acrshort{aod} than what was the case for \citet{gregory2016} and the data used in their
+figure.
 
 \begin{figure}
   \begin{center}
@@ -236,8 +264,8 @@ time series, and divide through such that they integrate to one.
     \includegraphics[width=0.95\textwidth]{figures/aod_vs_toa_avg_scaled.png}
   \end{center}
   \caption{
-    \acrshort{aod} versus \acrshort{toa}, scaled so the peak values of the different volcano magnitudes
-    are aligned. Same type as \cite{gregory2016}
+    \acrshort{aod} versus \acrshort{toa}, scaled so the peak values of the different
+    volcano magnitudes are aligned. Same type as \cite{gregory2016}
   }
   \label{fig:aod_vs_toa_scaled}
 \end{figure}
