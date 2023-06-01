@@ -164,7 +164,7 @@ The introduction should go into some detail about:
   \item[climate impact] \citet{gregory2016, jones2005, ottobliesner2016, santer2016,
       timmreck2009, timmreck2010, toohey2016b, yang2019, yokohata2005, zanchettin2019}
   \item[eruptions] \citet{arfeuille2014, douglass2006, lin2022, marshall2019, marshall2020,
-      marshall2021, soden2002, sukhodolov2018}
+      marshall2021, schmidt2018, soden2002, sukhodolov2018}
   \item[other phenomena] \citet{chen2022, lehner2016, marshall2018}
   \item[models] \citet{rypdal2012}
 \end{description}
@@ -182,9 +182,16 @@ $e$-folding time, but notes that it does change, so they calculate an average ti
 a small range (from a month after the peak until you reach ten percent of the peak).
 They further note that the $e$-folding time is dependent on latitude mostly, but also on
 injected \ce{SO2}. Their eruptions all occur in July, thus winter (February) can be a
-possible avenue. Are their plots mirrored if we use winter eruptions instead? This would
-be hard or likely not possible to answer without creating an emulator myself, for which
-I have too few simulations.
+possible avenue (nope, this is covered by \citet{marshall2020}, which uses the \(41\)
+simulations from \citet{marshall2019}, as well as the exact same ones but starting on 1
+January instead of 1 July). Are their plots mirrored if we use winter eruptions instead?
+This would be hard or likely not possible to answer without creating an emulator myself,
+for which I have too few simulations.
+
+In \citet{marshall2020}, they take the reconstructed \acrshort{saod} from
+\citet{toohey2017}, convert it to radiative forcing based on their conversions, and plot
+the corresponding temperature time series from each radiative forcing using a simple
+climate model. So, can we use this with the \acrfull{fpp} framework?
 
 % TODO: we should have a section for method as well, and maybe also write about what the
 % results and discussion should include
@@ -206,14 +213,16 @@ vertical levels, in the \acrfull{ma} configuration.
 \subsection{Simulations}
 
 The simulations cover three \ce{SO2} injection magnitudes and four seasons; February,
-May, August and November. The magnitudes vary from one that is of the same order of
-magnitude as Mount Pinatubo
+May, August and November. The magnitudes vary across three orders of magnitude:
+\(\SI{26}{\tera\gram}\), \(\SI{400}{\tera\gram}\) and \(\SI{1629}{\tera\gram}\). The
+smallest eruption is of the same order of magnitude as Mount Pinatubo
 \citep[\(\sim10\)--\(\SI{20}{\tera\gram}\);~e.g.,][]{timmreck2018} and Mount Tambora
-\citep[\(\sim\SI{56.2}{\tera\gram}\);~e.g.,][]{zanchettin2016}
-(\(\SI{26}{\tera\gram}\)), one that is one order of magnitude larger
-(\(\SI{400}{\tera\gram}\)), and one that is two orders of magnitude larger
-(\(\SI{1629}{\tera\gram}\)). They are all located at the equator, at \(\SI{0}{\degree
-  N}\), \(\SI{1}{\degree E}\).
+\citep[\(\sim\SI{56.2}{\tera\gram}\);~e.g.,][]{zanchettin2016}, the intermediate is
+similar to the 1257 Samalas eruption
+\citep[\(\sim\SI{119}{\tera\gram}\);][]{toohey2017}, and the largest is similar to the
+Young Toba Tuff eruption
+\citep[\(10\)--\(\SI{10000}{\tera\gram}\);][and~references~therein]{jones2005}. They are
+all located at the equator, at \(\SI{0}{\degree N}\), \(\SI{1}{\degree E}\).
 
 \subsection{Simulation set up}
 
