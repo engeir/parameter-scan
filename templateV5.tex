@@ -193,6 +193,11 @@ In \citet{marshall2020}, they take the reconstructed \acrshort{saod} from
 the corresponding temperature time series from each radiative forcing using a simple
 climate model. So, can we use this with the \acrfull{fpp} framework?
 
+Perhaps focus on why there seems to be a loop in the \acrshort{aod} against
+\acrshort{toa} plots. Can also compare February-August means with May-November means.
+(\citet{marshall2021} discuss Tambora, but mention that it erupted in April, while their
+data consist of January and July eruptions.)
+
 % TODO: we should have a section for method as well, and maybe also write about what the
 % results and discussion should include
 
@@ -209,6 +214,8 @@ as having \acrfull{mosart} \citep{li2013, danabasoglu2020}, \acrfull{clm}
 
 The model atmosphere was run at nominal \(\SI{2}{\degree}\) resolution, with \(70\)
 vertical levels, in the \acrfull{ma} configuration.
+
+\emph{Describe aerosol simulation. How many modes, etc.}
 
 \subsection{Simulations}
 
@@ -310,7 +317,7 @@ figure.
   \begin{center}
     \includegraphics[width=0.95\textwidth]{figures/aod_vs_toa_avg_full.png}
   \end{center}
-  \caption{\acrshort{aod} versus \acrshort{toa}, full size. Same type as \cite{gregory2016}}
+  \caption{\acrshort{aod} versus \acrshort{toa}, full size. Same type as \citet{gregory2016}}
   \label{fig:aod_vs_toa_full}
 \end{figure}
 
@@ -318,7 +325,7 @@ figure.
   \begin{center}
     \includegraphics[width=0.95\textwidth]{figures/aod_vs_toa_avg_inset.png}
   \end{center}
-  \caption{\acrshort{aod} versus \acrshort{toa}, inset. Same type as \cite{gregory2016}}
+  \caption{\acrshort{aod} versus \acrshort{toa}, inset. Same type as \citet{gregory2016}}
   \label{fig:aod_vs_toa_inset}
 \end{figure}
 
@@ -328,9 +335,64 @@ figure.
   \end{center}
   \caption{
     \acrshort{aod} versus \acrshort{toa}, scaled so the peak values of the different
-    volcano magnitudes are aligned. Same type as \cite{gregory2016}
+    volcano magnitudes are aligned. Same type as \citet{gregory2016}
   }
   \label{fig:aod_vs_toa_scaled}
+\end{figure}
+
+\paragraph*{Forcing efficiency}
+
+The ratio between \acrshort{aod} and \acrshort{toa} is not constant, but what is more is
+that their ratio seem to draw a loop. Especially when the eruptions are very large,
+\citet[][see their sections 3.1.2, 3.2.2]{marshall2019} describe how the growth of
+aerosol particles affect both parameters. They introduce a suggested two phases of the
+aerosol evolution, a ``growth'' phase and a ``sedimentation'' phase. In general larger
+aerosols for larger eruptions (more time to grow), such that both \acrshort{aod} and
+\acrshort{toa} will be weaker. In the later phase (``sedimentation'' phase)
+\acrshort{toa} become more weak compared to \acrshort{aod} since, in addition to a
+faster sedimentation rate, the \acrshort{toa} is further reduced due to the larger
+aerosols being less effective at scattering \acrshort{sw} radiation. This is in line
+with the results in
+\cref{fig:aod_vs_toa_avg_loop,fig:aod_vs_toa_avg_loop_scaled,fig:aod_vs_toa_avg_loop_ratio},
+where (1) the larger eruptions have a smaller ratio (scattering is more efficient
+throughout?) and (2) the ratio is decreasing in magnitude as the eruption evolve
+(\acrshort{toa} reverts back faster than \acrshort{aod}).
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{figures/aod_vs_toa_avg_loop.png}
+  \end{center}
+  \caption{
+    \acrshort{aod} versus \acrshort{toa}, with points labelled according to the
+    year it was averaged from. Same type as \citet{gregory2016}
+  }
+  \label{fig:aod_vs_toa_avg_loop}
+\end{figure}
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{figures/aod_vs_toa_avg_loop_scaled.png}
+  \end{center}
+  \caption{
+    \acrshort{aod} versus \acrshort{toa}, with points labelled according to the
+    year it was averaged from, and scaled so the peak values are aligned. Same type as
+    \citet{gregory2016}
+  }
+  \label{fig:aod_vs_toa_avg_loop_scaled}
+\end{figure}
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{figures/aod_vs_toa_avg_loop_ratio.png}
+  \end{center}
+  \caption{
+    Ratio of \acrshort{toa} to \acrshort{aod} as shown in
+    \cref{fig:aod_vs_toa_avg_loop}, with the annotated year as the horizontal axis. A
+    very rough straight gradient line is included for reference, which is drawn close to
+    where the most trustworthy data lies (best signal to noise ratio), with a slope of
+    \(4/5\) per year
+  }
+  \label{fig:aod_vs_toa_avg_loop_ratio}
 \end{figure}
 
 \begin{figure}
