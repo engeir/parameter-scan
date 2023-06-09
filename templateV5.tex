@@ -3,6 +3,12 @@
 % This tex file can be compiled with
 % tectonic templateV5.tex
 % https://tectonic-typesetting.github.io
+%
+% Or simply with the Overleaf latexmkrc configuration: (included in the repo)
+% https://www.overleaf.com/learn/how-to/How_does_Overleaf_compile_my_project%3F
+%
+% A latexindent.yml config file is also included for easier and more consistent
+% formatting.
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % TemplateV5.tex -- LaTeX-based template for submissions to the American Meteorological
@@ -30,6 +36,7 @@
 \usepackage[acronym]{glossaries}
 \usepackage{cleveref}
 \usepackage{siunitx}
+\usepackage{listings}
 % \usepackage{hyperref}
 
 \makeglossaries
@@ -155,7 +162,7 @@ The introduction should go into some detail about:
         references are needed.
 \end{itemize}
 
-\paragraph*{References}
+\subsection*{References}
 
 \begin{description}
   \item[overview] \citet{marshall2022}
@@ -167,6 +174,8 @@ The introduction should go into some detail about:
       marshall2021, schmidt2018, soden2002, sukhodolov2018}
   \item[other phenomena] \citet{chen2022, lehner2016, marshall2018}
   \item[models] \citet{rypdal2012}
+  \item[cesm2] \citet{danabasoglu2020, gettleman2019, lawrence2019, li2013, liu2016, mills2016,
+      smith2010}
 \end{description}
 
 \citet{marshall2022} mention (in the graphic in their figure 1) that the \emph{role of
@@ -215,6 +224,20 @@ as having \acrfull{mosart} \citep{li2013, danabasoglu2020}, \acrfull{clm}
 The model atmosphere was run at nominal \(\SI{2}{\degree}\) resolution, with \(70\)
 vertical levels, in the \acrfull{ma} configuration.
 
+The \acrshort{ma} version of \acrshort{waccm} uses the \acrshort{mam3}
+\citep{gettleman2019}. This was made as a simplified and computationally efficient
+default setting in the \acrshort{cam5} \citep{liu2016}, and is described in
+\citet{liu2012}. The \acrshort{mam3} was created from MAM7 (seven modes) by merging the
+primary carbon mode with the accumulation mode, and assuming instantaneous internal
+mixing of primary carbonaceous aerosols with secondary aerosols \citep{liu2016}.
+Specifically, the three modes are Aitken, accumulation and coarse (MAM7 includes Aitken,
+accumulation, primary carbon, fine dust and fine sea salt, coarse dust and coarse sea
+salt modes) \citep{liu2016}. Instantaneous ageing of primary carbonaceous particles is
+assumed by emitting them in the accumulation mode. There are \( 15 \) transported
+aerosol tracers in \acrshort{mam3} \citep{liu2016}. (\citet{marshall2019, marshall2020,
+  marshall2021} used a code with seven log-normal modes to simulate aerosol mass and
+number concentrations.)
+
 \emph{Describe aerosol simulation. How many modes, etc.}
 
 \subsection{Simulations}
@@ -238,7 +261,18 @@ Simulations was created using the
 % \href{http://svn.code.sf.net/p/codescripts/code/trunk/ncl/emission/createVolcEruptV3.ncl}{\texttt{createVolcEruptV3.ncl}}
 file, via a Python project developed on GitHub:
 \url{https://github.com/engeir/volcano-cooking}, which is also available from the Python
-package manager PyPI, as \texttt{pip install volcano-cooking}.
+package manager PyPI, as \texttt{pip install volcano-cooking}. This creates volcanoes
+with a given \ce{SO2} amount that is injected over six hours (\textbf{source}) at a
+given altitude and latitude, longitude. We are using the \texttt{BWma1850} component
+setup to run the \acrshort{cesm}, and an analogous \acrfull{fsst} simulation to obtain
+estimates of the radiative forcing. The \acrshort{fsst} that is run is not a
+standardised component setup, but is instead specified in full as
+\begin{small}
+  \begin{verbatim}
+    1850_CAM60%WCCM_CLM50%BGC-CROP_CICE%PRES_DOCN%DOM_MOSART_CISM2%NOEVOLVE_SWAV_TEST
+  \end{verbatim}
+\end{small}
+This is an unsupported configuration type as of \acrshort{cesm} (v2.1.3).
 
 \subsection{Figures}
 
@@ -292,6 +326,8 @@ with the superposition of the temperature time series of two single eruption eve
 their alignment is quite good. Therefore, we cannot from this say that the temperature
 response is sensitive to overlapping eruptions.
 
+\emph{Can we say anything that relates to other work and how the physics is described?}
+
 \begin{figure}
   \begin{center}
     \includegraphics[width=0.95\textwidth]{figures/double-overlap-superpose.png}
@@ -342,6 +378,12 @@ figure.
 
 \paragraph*{Forcing efficiency}
 
+\emph{Related to \citet{marshall2020}: ``We find that the conversion between
+  \acrshort{saod} and ERF depends on the time after an eruption, \dots''. ``Forcing per
+  unit \acrshort{saod} is weaker in Year 1 than in Years 2 and 3 \dots'', does this make
+  sense relative to my results? It looks like it is opposite! But they also calculate
+  \acrshort{saod} differently from me: \( 1-\exp(-\mathrm{SAOD}) \).}
+
 The ratio between \acrshort{aod} and \acrshort{toa} is not constant, but what is more is
 that their ratio seem to draw a loop. Especially when the eruptions are very large,
 \citet[][see their sections 3.1.2, 3.2.2]{marshall2019} describe how the growth of
@@ -354,9 +396,10 @@ faster sedimentation rate, the \acrshort{toa} is further reduced due to the larg
 aerosols being less effective at scattering \acrshort{sw} radiation. This is in line
 with the results in
 \cref{fig:aod_vs_toa_avg_loop,fig:aod_vs_toa_avg_loop_scaled,fig:aod_vs_toa_avg_loop_ratio},
-where (1) the larger eruptions have a smaller ratio (scattering is more efficient
-throughout?) and (2) the ratio is decreasing in magnitude as the eruption evolve
-(\acrshort{toa} reverts back faster than \acrshort{aod}).
+where (1) the larger eruptions have a smaller ratio\footnote{Scattering is relatively
+  more efficient throughout? Not sure if this actually makes sense.} and (2) the ratio is
+decreasing in magnitude as the eruption evolve (\acrshort{toa} reverts back faster than
+\acrshort{aod}).
 
 \begin{figure}
   \begin{center}
@@ -536,4 +579,3 @@ throughout?) and (2) the ratio is decreasing in magnitude as the eruption evolve
 % \end{figure}
 
 \end{document}
-
