@@ -28,7 +28,6 @@
 %\newcommand{\hmmax}{0}
 %\newcommand{\bmmax}{0}
 \usepackage{amsmath,amsfonts,amssymb,bm}
-\usepackage[british]{babel}
 \usepackage{mathptmx}% {times}
 \usepackage{newtxtext}
 \usepackage{newtxmath}
@@ -134,8 +133,8 @@
 \section{Outline}
 
 The paper should provide insight about what might happen if a large (order of magnitude
-or more than Mount Pinatubo) volcano erupted (for example within the next 50 years).
-\emph{Little literature can be found that investigate the effects of eruptions ten times
+or more than Mount Pinatubo) volcano erupted for example within the next 50 years.
+\emph{Little literature has be found that investigate the effects of eruptions ten times
   or more than that of Mount Pinatubo, so this should hopefully be worthwhile looking
   into.} It should also be about how volcanic simulations compare in magnitude and model
 complexity (dynamic ocean against slab ocean). If there is no big difference, we may
@@ -154,15 +153,17 @@ The introduction should go into some detail about:
 
 \begin{itemize}
   \item Importance of volcanic eruptions for temperature fluctuations
+  \item Volcanic eruption aerosol evolution (in relation \cref{fig:aod_vs_toa_avg_loop} for
+        example)
   \item Refer back to other simulations of volcanoes, for example the \citet{jones2005} paper
         that ran a super-volcano, or \citet{gregory2016} who looked at historic volcanoes during
         the last 150 years only
   \item The temperature response might be more sensitive to the sign of the forcing, rather than
         the forcing agent, and as such a halving of \ce{CO2} may be compared with volcanoes
         \citep{gunther2022}
-  \item How important is it that \ce{SO2} is injected at a given height?
-  \item To some extent there should be a literature review of the above, so more citations and
-        references are needed.
+  \item How important is it that \ce{SO2} is injected at a given height? (Not very:
+        \citet{marshall2019})
+  \item To some extent a literature review of the above.
 \end{itemize}
 
 \subsection*{References}
@@ -182,28 +183,28 @@ The introduction should go into some detail about:
 \end{description}
 
 \citet{marshall2022} mention (in the graphic in their figure 1) that the \emph{role of
-  initial conditions} is a key outstanding question. This could be a contribution to
-that. Also, when aerosols grow, they scatter radiation less efficiently and also fall
-down faster, so the temperature response should be damped for increasing eruption
-magnitude. Clustering and long term effects are mentioned in its own section
-(Multi-decadal impacts) along with the dependence of the current climate state.
+  initial conditions} is a key outstanding question. This could be a contribution to that.
+Also, when aerosols grow, they scatter radiation less efficiently and also fall down
+faster, so the temperature response should be comparatively weaker for increasing
+eruption magnitude (or the volcanic aerosols are less efficient). Clustering and long
+term effects are mentioned in its own section (Multi-decadal impacts) along with the
+dependence of the current climate state.
 
 \citet{marshall2019} does many similar things to what I have done, but do not focus on
 seasonal variability. This is however mentioned as one other direction to dig into, and
 is somewhat covered by \citet{marshall2020}. Assumes that there is an $e$-folding time,
 but notes that it does change, so they calculate an average time over a small range
-(from a month after the peak until you reach ten percent of the peak). They further note
+(from a month after the peak until reaching ten percent of the peak). They further note
 that the $e$-folding time is dependent on latitude mostly, but also on injected
-\ce{SO2}. Their eruptions all occur in July, thus winter (February) can be a possible
-avenue (nope, this is covered by \citet{marshall2020}, which uses the \(41\) simulations
-from \citet{marshall2019}, as well as the exact same ones but starting on 1 January
-instead of 1 July). This would be hard or likely not possible to answer without creating
-an emulator myself, for which I have too few simulations.
+\ce{SO2}. Their eruptions all occur in July, but with the equivalent winter (January)
+eruptions covered by \citet{marshall2020}.
 
 In \citet{marshall2020}, they take the reconstructed \acrshort{saod} from
 \citet{toohey2017}, convert it to radiative forcing based on their conversions, and plot
 the corresponding temperature time series from each radiative forcing using a simple
 climate model. So, can we use this with the \acrfull{fpp} framework?
+% TODO: check the data if it can be used for FPP.
+(Noisy data? Check this.)
 
 Perhaps focus on why there seems to be a loop in the \acrshort{aod} against
 \acrshort{toa} plots. Can also compare February-August means with May-November means.
@@ -215,17 +216,70 @@ data consist of January and July eruptions.)
 
 \section{Method}
 
+\subsection{Background}
+
+Radiative forcing is calculated as the difference in the net \( \acrshort{fsnt} +
+\acrshort{flnt} \) all-sky \acrshort{toa} energy imbalance between volcanic simulations
+and a control simulation (definition as in \citet{marshall2020}). The \acrshort{cesm2}
+provide the output variables \acrfull{flnt} and \acrfull{fsnt}. The \acrshort{aod} is
+obtained from the \acrfull{aodm}, while global temperature is saved by \acrshort{cesm2}
+to the variable \acrfull{trefht}. These four output variables are all that are used
+throughout this paper.
+
 \subsection{Model}
 
 We are using the \acrfull{cesm2} \citep{danabasoglu2020} to run our climate simulations,
-together with the \acrfull{waccm} \citep{gettleman2019}. \acrshort{cesm2} is run with
-the full dynamical ocean component \acrfull{pop} \citep{smith2010, danabasoglu2020}, as
-well as having \acrfull{mosart} \citep{li2013, danabasoglu2020}, \acrfull{clm}
-\citep{lawrence2019, danabasoglu2020}, \acrfull{ww3}, \acrfull{cice}, \acrfull{cism} and
-\acrfull{cime} included.
+together with the \acrfull{waccm} \citep{gettleman2019} and the fully dynamical ocean
+component \acrfull{pop} \citep{smith2010, danabasoglu2020}. The complete list of model
+components is found in \cref{tab:cesm-components}. The model atmosphere was run at
+nominal \(\SI{2}{\degree}\) resolution, with \(70\) vertical levels, in the \acrfull{ma}
+configuration.
 
-The model atmosphere was run at nominal \(\SI{2}{\degree}\) resolution, with \(70\)
-vertical levels, in the \acrfull{ma} configuration.
+\begin{table*}
+  \caption{\acrshort{cesm2} model components}%
+  \label{tab:cesm-components}
+  \begin{center}
+    \begin{tabular}[c]{ll}
+      \multicolumn{1}{c}{\textbf{Component name}} &
+      \multicolumn{1}{c}{\textbf{Reference}}                                              \\
+      \acrlong{cesm2}                             & \citet{danabasoglu2020}               \\
+      \acrlong{waccm}                             & \citet{gettleman2019}                 \\
+      \acrlong{pop}                               & \citet{smith2010, danabasoglu2020}    \\
+      \acrlong{mosart}                            & \citet{li2013, danabasoglu2020}       \\
+      \acrlong{clm}                               & \citet{lawrence2019, danabasoglu2020} \\
+      \acrlong{ww3}                               & \citet{danabasoglu2020}               \\
+      \acrlong{cice}                              & \citet{danabasoglu2020}               \\
+      \acrlong{cism}                              & \citet{danabasoglu2020}               \\
+      \acrlong{cime}                              & \citet{danabasoglu2020}
+    \end{tabular}
+  \end{center}
+\end{table*}
+
+% \begin{table*}
+%   \caption{\acrshort{cesm2} model components}%
+%   \label{tab:cesm-components}
+%   \begin{center}
+%     \begin{tabular}[c]{ll}
+%       \multicolumn{1}{c}{\textbf{Component short name}} &
+%       \multicolumn{1}{c}{\textbf{Component long name}}                                                                  \\
+%       \acrshort{cesm2}                                  & \acrlong{cesm2}\footnote{\citet{danabasoglu2020}}             \\
+%       \acrshort{waccm}                                  & \acrlong{waccm}\footnote{\citet{gettleman2019}}               \\
+%       \acrshort{pop}                                    & \acrlong{pop}\footnote{\citep{smith2010, danabasoglu2020}}    \\
+%       \acrshort{mosart}                                 & \acrlong{mosart}\footnote{\citet{li2013, danabasoglu2020}}    \\
+%       \acrshort{clm}                                    & \acrlong{clm}\footnote{\citet{lawrence2019, danabasoglu2020}} \\
+%       \acrshort{clm}                                    & \acrlong{clm}\footnote{\citet{lawrence2019, danabasoglu2020}} \\
+%       \acrshort{ww3}                                    & \acrlong{ww3}\footnote{\citet{danabasoglu2020}}               \\
+%       \acrshort{cice}                                   & \acrlong{cice}\footnote{\citet{danabasoglu2020}}              \\
+%       \acrshort{cism}                                   & \acrlong{cism}\footnote{\citet{danabasoglu2020}}              \\
+%       \acrshort{cime}                                   & \acrlong{cime}\footnote{\citet{danabasoglu2020}}
+%     \end{tabular}
+%   \end{center}
+% \end{table*}
+
+% , as
+% well as having \acrfull{mosart} \citep{li2013, danabasoglu2020}, \acrfull{clm}
+% \citep{lawrence2019, danabasoglu2020}, \acrfull{ww3}, \acrfull{cice}, \acrfull{cism} and
+% \acrfull{cime} included.
 
 The \acrshort{ma} version of \acrshort{waccm} uses the \acrfull{mam3}
 \citep{gettleman2019}. This was made as a simplified and computationally efficient
@@ -236,32 +290,33 @@ mixing of primary carbonaceous aerosols with secondary aerosols \citep{liu2016}.
 Specifically, the three modes are Aitken, accumulation and coarse (MAM7 includes Aitken,
 accumulation, primary carbon, fine dust and fine sea salt, coarse dust and coarse sea
 salt modes) \citep{liu2016}. Instantaneous ageing of primary carbonaceous particles is
-assumed by emitting them in the accumulation mode. There are \( 15 \) transported
-aerosol tracers in \acrshort{mam3} \citep{liu2016}. (\citet{marshall2019, marshall2020,
+assumed by emitting them in the accumulation mode. There are \(15\) transported aerosol
+tracers in \acrshort{mam3} \citep{liu2016}. (\citet{marshall2019, marshall2020,
   marshall2021} used a code with seven log-normal modes to simulate aerosol mass and
 number concentrations, but their model is an \acrfull{agcm}, as opposed to the
 \acrshort{cesm2} which is an \acrfull{esm} or \acrfull{aogcm}.)
 
 \subsection{Simulation set up}
 
-Simulations was created using a modified version of
-\url{http://svn.code.sf.net/p/codescripts/code/trunk/ncl/emission/createVolcEruptV3.ncl}
+Simulations were created using a modified version of the file
+\url{http://svn.code.sf.net/p/codescripts/code/trunk/ncl/emission/createVolcEruptV3.ncl},
 % \href{http://svn.code.sf.net/p/codescripts/code/trunk/ncl/emission/createVolcEruptV3.ncl}{\texttt{createVolcEruptV3.ncl}}
-file, via a Python project developed on GitHub:
-\url{https://github.com/engeir/volcano-cooking}, which is also available from the Python
-package manager PyPI, as \texttt{pip install volcano-cooking}. This creates volcanoes
-with a given \ce{SO2} amount that is injected over six
+via a Python project developed on GitHub at
+\url{https://github.com/engeir/volcano-cooking}. The project is also available from the
+Python package manager PyPI, as \texttt{pip install volcano-cooking}. This creates
+volcanoes with a given \ce{SO2} amount that is injected over six
 hours\footnote{\url{http://svn.code.sf.net/p/codescripts/code/trunk/ncl/emission/createVolcEruptV3.ncl}}
-at a given altitude and latitude, longitude. All volcanic \ce{SO2} files are created by
+at a given altitude, latitude and longitude. All volcanic \ce{SO2} files are created by
 setting the eruption details in a \texttt{JSON} file that is read to the
-\texttt{volcano-cooking} CLI at a specified version, making the experiment setup easy to
-reproduce.
+\texttt{volcano-cooking} CLI at a specified version, making the experiment setup highly
+reproducible.
 
-We are using the \texttt{BWma1850} component setup to run the \acrshort{cesm2}, and an
-accompanying \acrfull{fsst} simulation to obtain estimates of the radiative forcing. The
-\acrshort{fsst} that is run is not a standardised component setup as of \acrshort{cesm2}
-(v2.1.3), but is instead specified in full as (\texttt{BWma1850} full name also shown
-for reference)
+We are using the \texttt{BWma1850} component
+setup\footnote{\url{https://docs.cesm.ucar.edu/models/cesm2/config/2.1.0/compsets.html}}
+to run the \acrshort{cesm2}, and an accompanying \acrfull{fsst} simulation to obtain
+estimates of the radiative forcing. The \acrshort{fsst} simulation used is not from a
+standardised component setup as of \acrshort{cesm2} (v2.1.3), but is instead specified
+in full as (\texttt{BWma1850} full name also shown for comparison)
 \begin{small}
   \begin{verbatim}
 BWma1850 ->
@@ -275,7 +330,7 @@ fSST1850 ->
 They differ in \texttt{CICE -> CICE\%PRES}, which is prescribed sea-ice,
 \texttt{POP2\%ECO\%DEP -> DOCN\%DOM} which is from a dynamical ocean to a prescribed
 data ocean and the wave component \texttt{WW3 -> SWAV} which is now a stub wave
-component.
+component instead of the full \acrfull{ww3}.
 
 \subsection{Simulations}
 
@@ -283,13 +338,14 @@ The simulations cover three \ce{SO2} injection magnitudes and four seasons; 15 F
 15 May, 15 August and 15 November. The magnitudes vary across three orders of magnitude:
 \(\SI{26}{\tera\gram}\), \(\SI{400}{\tera\gram}\) and \(\SI{1629}{\tera\gram}\). The
 smallest eruption is of the same order of magnitude as Mount Pinatubo
-\citep[\(\sim10\)--\(\SI{20}{\tera\gram}\);~e.g.,][]{timmreck2018} and Mount Tambora
-\citep[\(\sim\SI{56.2}{\tera\gram}\);~e.g.,][]{zanchettin2016}, the intermediate is
+\citep[\(\sim10\)--\(\SI{20}{\tera\gram}\);~e.g.][]{timmreck2018} and Mount Tambora
+\citep[\(\sim\SI{56.2}{\tera\gram}\);~e.g.][]{zanchettin2016}, the intermediate is
 similar to the 1257 Samalas eruption
 \citep[\(\sim\SI{119}{\tera\gram}\);][]{toohey2017}, and the largest is similar to the
 Young Toba Tuff eruption
 \citep[\(10\)--\(\SI{10000}{\tera\gram}\);][and~references~therein]{jones2005}. They are
-all located at the equator, at \(\SI{0}{\degree N}\), \(\SI{1}{\degree E}\).
+all located at the equator, at \(\SI{0}{\degree N}\), \(\SI{1}{\degree E}\) and \ce{SO2}
+is injected between.
 
 \section{Results}
 
@@ -309,15 +365,19 @@ in \cref{fig:temp_norm_int}, is to numerically integrate the time series, and di
 through such that they integrate to one.
 
 When normalizing by setting their amplitude equal to (minus) one, the initial rise
-across all three is comparable. The difference among the three is how much more quickly
-the temperature reverts back to equilibrium in the smallest eruption case.
+across all three is comparable. The difference among the three is now how much more
+quickly the temperature reverts back to equilibrium in the small eruption case.
 
 On the other hand, when normalizing by enforcing all to integrate to the same value, the
-tail where the temperature revert back is the most similar across all three eruptions.
+tail of the temperature time series is what is most similar across all three eruptions.
 From these two normalizations, one thing that stays different is the amount of time
 spent at the peak temperature. The temperature from smaller eruption simulation starts
 to revert sooner after it reaches temperatures close to the peak temperature. The shape
-of the initial rise and the tail is more similar across the three.
+of the initial rise and the tail is more similar across the three, while the peak is
+sharper in the small eruption case compared to the two larger.
+
+\emph{Any similar results that is consistent with a faster temperature recovery for
+  weaker volcanic forcing?}
 
 \begin{figure}
   \begin{center}
@@ -342,11 +402,20 @@ of the initial rise and the tail is more similar across the three.
 \emph{See \citet{toohey2016b}.}
 
 Let us now look at how the temperature behave when forced by two eruptions occurring
-close in time (four years apart), shown in \cref{fig:double-overlap-superpose}. The
-temperature is still perturbed as the second eruption happen, but when comparing this
-with the superposition of the temperature time series of two single eruption events,
-their alignment is quite good. Therefore, we cannot from this say that the temperature
-response is sensitive to overlapping eruptions.
+close in time (four years apart), shown in \cref{fig:double-overlap-superpose} (blue
+line). The eruptions are two identical ones, and the same as the one used as the
+intermediate eruption in \cref{fig:temp_norm_int,fig:temp_norm_max}. The first eruption
+is on 15 January 1853 while the second is on 15 January 1857, close enough in time so
+that the temperature is still perturbed from the first eruption as the second eruption
+happen. As a comparison, we take the single volcano simulation of an intermediate
+eruption (\cref{fig:temp_norm_int,fig:temp_norm_max}) and superpose it with a copy of
+itself, shifted in time so they are aligned with the two volcanoes simulated in
+\cref{fig:double-overlap-superpose} (orange and green lines).
+
+When comparing the double-eruption event with the superposition of the temperature time
+series of two single eruption events, their alignment is quite good. Therefore, we
+cannot from this say that the temperature response is sensitive to overlapping
+eruptions.
 
 \emph{Can we say anything that relates to other work and how the physics is described?}
 
@@ -373,9 +442,16 @@ different forcings as well. This comparison is motivated by \citet{gregory2016},
 specifically their figure 4 which compare annual mean aerosol optical depth with
 radiative forcing. \Cref{fig:aod_vs_toa_full} show annual mean values from the three
 simulation cases along with the gradient obtained by \citet{gregory2016} (\(-19\)).
-First off, the \acrshort{toa} values are clearly much smaller compared the
-\acrshort{aod} than what was the case for \citet{gregory2016} and the data used in their
-figure.
+First off, the \acrshort{toa} values are clearly much smaller compared to \acrshort{aod}
+than what was the case for \citet{gregory2016} and the data used in their figure.
+
+We also find that the different eruption strengths lead to very different responses in
+\acrshort{aod} and \acrshort{toa}, where slope of the intermediate seem to follow close
+to a \( -4 \) gradient and the strong is closer to a \( -1 \) gradient. While the peak
+values (red circles) suggest a logarithmic looking functional shape dependence, within
+each eruption strength the annual mean values fall relatively close to on a straight
+line. This is the case also for the small eruption strength
+(\cref{fig:aod_vs_toa_inset}).
 
 \begin{figure}
   \begin{center}
@@ -411,8 +487,14 @@ figure.
 \emph{Related to \citet{marshall2020}: ``We find that the conversion between
   \acrshort{saod} and ERF depends on the time after an eruption, \dots''. ``Forcing per
   unit \acrshort{saod} is weaker in Year 1 than in Years 2 and 3 \dots'', does this make
-  sense relative to my results? It looks like it is opposite! But they also calculate
-  \acrshort{saod} differently from me: \( 1-\exp(-\mathrm{SAOD}) \).}
+  sense relative to my results? It looks like it is opposite! But they also represent
+  \acrshort{saod} somewhat differently from me: \( 1-\exp(-\mathrm{SAOD}) \).}
+
+To further look into the responses in \acrshort{aod} and \acrshort{toa} due the
+differently sized volcanic eruptions, we plot in
+\cref{fig:aod_vs_toa_avg_loop,fig:aod_vs_toa_avg_loop_scaled,fig:aod_vs_toa_avg_loop_ratio,fig:aod_vs_toa_avg_loop_ratio_scaled}
+seasonal means where the start of the time series are shifted so that the eruption day
+is at time zero, and all time series are exactly four years long.
 
 The ratio between \acrshort{aod} and \acrshort{toa} is not constant, but what is more is
 that their ratio seem to draw a loop. Especially when the eruptions are very large,
@@ -426,28 +508,30 @@ phase) \acrshort{toa} become more weak compared to \acrshort{aod} since, in addi
 a faster sedimentation rate, the \acrshort{toa} is further reduced due to the larger
 aerosols being less effective at scattering \acrshort{sw} radiation. This is in line
 with the results in
-\cref{fig:aod_vs_toa_avg_loop,fig:aod_vs_toa_avg_loop_scaled,fig:aod_vs_toa_avg_loop_ratio},
+\cref{fig:aod_vs_toa_avg_loop,fig:aod_vs_toa_avg_loop_scaled,fig:aod_vs_toa_avg_loop_ratio,fig:aod_vs_toa_avg_loop_ratio_scaled},
 where (1) the larger eruptions have a smaller ratio\footnote{Scattering is relatively
   more efficient throughout? Not sure if this actually makes sense.} and (2) the ratio is
 decreasing in magnitude as the eruption evolve (\acrshort{toa} reverts back faster than
 \acrshort{aod}). Based on the simple two phases of the aerosol evolution
-\citep{marshall2019}, a decreasing \acrshort{toa} to \acrshort{aod} ratio seems
-reasonable. Nevertheless, these results are contrary to the results by \citet[][their
-  figure 1c,d]{marshall2020}, which show that the \acrshort{toa} become relatively
-stronger than \acrshort{aod} later in the eruption evolution.
+\citep{marshall2019}, an increasing \acrshort{toa} to \acrshort{aod} ratio (decreasing
+when considering absolute values) seems reasonable. Nevertheless, these results are
+contrary to the results by \citet[][their figure 1c,d]{marshall2020}, which show that
+the \acrshort{toa} become relatively stronger than \acrshort{aod} later in the eruption
+evolution.
 
 In \cref{fig:aod_vs_toa_avg_loop_ratio} we plot the ratio of the annual means of
 \acrshort{toa} and \acrshort{aod}. The years where the signal-to-noise ratio is best is
-in 1851 and 1852, as well as 1850 and 1853 (see \cref{fig:aod_vs_toa_avg_loop}). We also
-note that the stronger eruptions also have a better signal-to-noise ratio, and thus the
-upper left corner is the most trustworthy in addition to the left side, while the right
-side (after 1854) should be considered mostly noise. From this we find that even though
-the ratio changes between the eruption magnitudes, we do find that the gradient at which
-the ratio is changing is very similar across large eruption magnitudes. A slope of
-approximately \( \mathrm{RATIO}=0.8\times \mathrm{year-after-eruption} + b \) is a good
-fit for both the intermediate (orange thick diamonds) and the strong (green upward
-triangles) eruption, and even though the spread in the small (blue downward triangles)
-eruption is large in the \( y \)-direction, they tend to follow the same slope.
+in years 1 and 2, as well as years 0 and 3 (see <maybe add figure of the time series
+data>). We also note that the stronger eruptions will have a better signal-to-noise
+ratio, and thus the upper left corner is the most trustworthy along with the left side,
+while the right side (after year 4) should be considered mostly noise. (\emph{Maybe add
+  a check in the analysis to only include positive \acrshort{aod}/denominator values, or
+  use a threshold.}) From this we find that even though the ratio changes between the
+eruption magnitudes, we do find that the gradient at which the ratio is changing is
+similar across large eruption magnitudes. A slope of approximately \( 1 \) is a good fit
+for both the intermediate (orange thick diamonds) and the strong eruption (green upward
+triangles), and even though the spread in the small eruption (blue downward triangles)
+is large in the \( y \)-direction, they tend to follow a similarly inclined slope.
 
 The change in ratio, where the smallest is found in the strong eruption while the
 largest ration is from the small eruption, is consistent with the change in peak values
@@ -464,8 +548,8 @@ eruptions, causing a larger ratio between \acrshort{toa} and \acrshort{aod}.
     \includegraphics[width=0.95\linewidth]{figures/aod_vs_toa_avg_loop.png}
   \end{center}
   \caption{
-    \acrshort{aod} versus \acrshort{toa}, with points labelled according to the
-    year it was averaged from. Same type as \citet{gregory2016}
+    \acrshort{aod} versus \acrshort{toa}, with points coloured according to the year and
+    season it was averaged from. (Same type of plot as \citet{gregory2016})
   }%
   \label{fig:aod_vs_toa_avg_loop}
 \end{figure}
@@ -475,9 +559,9 @@ eruptions, causing a larger ratio between \acrshort{toa} and \acrshort{aod}.
     \includegraphics[width=0.95\linewidth]{figures/aod_vs_toa_avg_loop_scaled.png}
   \end{center}
   \caption{
-    \acrshort{aod} versus \acrshort{toa}, with points labelled according to the
-    year it was averaged from, and scaled so the peak values are aligned. Same type as
-    \citet{gregory2016}
+    \acrshort{aod} versus \acrshort{toa}, with points coloured according to the year and
+    season it was averaged from, and scaled so the peak values are aligned. (Same type
+    of plot as \citet{gregory2016})
   }%
   \label{fig:aod_vs_toa_avg_loop_scaled}
 \end{figure}
@@ -488,10 +572,8 @@ eruptions, causing a larger ratio between \acrshort{toa} and \acrshort{aod}.
   \end{center}
   \caption{
     Ratio of \acrshort{toa} to \acrshort{aod} as shown in
-    \cref{fig:aod_vs_toa_avg_loop}, with the annotated year as the horizontal axis. A
-    very rough straight gradient line is included for reference, which is drawn close to
-    where the most trustworthy data lies (best signal to noise ratio), with a slope of
-    \(4/5\) per year
+    \cref{fig:aod_vs_toa_avg_loop}, with the time-after-eruption on the horizontal axis.
+    Slopes are linear regression fits using \textbf{scipy}
   }%
   \label{fig:aod_vs_toa_avg_loop_ratio}
 \end{figure}
@@ -514,14 +596,17 @@ Let us now look more at different parameters that are relevant, not only \acrsho
 and \acrshort{toa}. The initial parameter that is the input to the \acrshort{cesm2} is
 injected \ce{SO2}. Compared to \acrshort{aod} we find that the \acrshort{cesm2}
 simulations result in an almost linear relationship between them, shown in
-\cref{fig:so2_vs_aod}. We do, however, find that this linear relationship only show up
-the atmosphere used in the simulation is similar. One data point is from a simulation
-where the low-top atmosphere \acrshort{cam6} was used (\textbf{C2C\(\uparrow\)}),
-represented by the brown small star. This data point show that the \acrshort{aod} is way
-smaller for the same amount of injected \ce{SO2} than what is the case with
-\acrshort{waccm}. The latitude matter far less than the model complexity, as we can see
-from the \textbf{C2WN\(\uparrow\)} data point, representing a strong eruption similar to
-the strong eruption from before, but located at \( \SI{56}{\degree N} \). The weak
+\cref{fig:so2_vs_aod}. (Since \iso{} is ``total amount of \iso{}'', maybe consider
+comparing to integrated values of \acrshort{aod}, \acrshort{toa} and temperature as
+well, not just the peak values.) We do, however, find that this linear relationship only
+show up if the atmosphere used across simulations is similar. One data point is from a
+simulation where the low-top atmosphere \acrshort{cam6} was used
+(\textbf{C2C\(\uparrow\)}), represented by the small brown star. This data point show
+that the \acrshort{aod} is way smaller for the same amount of injected \ce{SO2} when run
+with the \acrshort{cam6} than what is the case with \acrshort{waccm}. The latitude
+matter far less than the model complexity, as we can see from the
+\textbf{C2WN\(\uparrow\)} data point, representing a strong eruption similar to the
+strong eruption from before, but located at \( \SI{56}{\degree N} \). The weak
 dependence on eruption latitude is also reported in \citet{marshall2019}.
 
 \begin{figure}
@@ -542,10 +627,11 @@ The same effect can be seen in the data from \citet{ottobliesner2016} (labelled
 \textbf{C1C}, red points), but here the \acrshort{toa} keeps up at larger values for
 longer. The simulations used by \citet{ottobliesner2016} was with \acrshort{cesm} as
 well, but version 1 (\acrshort{cesm1}) and with a low-top atmosphere (\acrshort{cam5}),
-which makes it more comparable to our \textbf{C2C\(\uparrow\)} simulation. However, due
-to the very small \acrshort{aod} values this gave (\cref{fig:so2_vs_aod}) we would not
-expect the \acrshort{cam6} simulation to have greater \acrshort{toa} than the
-\acrshort{waccm} simulations.
+which makes it more comparable to our \textbf{C2C\(\uparrow\)} simulation. (Still, the
+\textbf{C2C\(\uparrow\)} \acrshort{aod} value was much \emph{smaller} than the
+\acrshort{waccm} simulations, \cref{fig:so2_vs_aod}, and it is therefore somewhat
+surprising that \textbf{C1C} has \emph{larger} \acrshort{toa} values in
+\cref{fig:so2_vs_toa} than the \acrshort{waccm} simulations.)
 
 \begin{figure}
   \begin{center}
@@ -559,8 +645,8 @@ expect the \acrshort{cam6} simulation to have greater \acrshort{toa} than the
 \cref{fig:so2_vs_toa}, the points from the \acrshort{cesm2} simulations bend off, making
 the temperature response less extreme for higher values of \iso. Again we see that the
 data from the \acrshort{cesm1} simulations by \citet{ottobliesner2016} follow a
-different path than the \acrshort{cesm2} data, likely cased by the different atmospheres
-being used.
+different path than the \acrshort{cesm2} data, likely caused by the different
+atmospheres being used.
 
 \begin{figure}
   \begin{center}
@@ -585,14 +671,14 @@ would expect based on the close to linear relationship found between \iso{} and
   \label{fig:aod_vs_temp}
 \end{figure}
 
-In \cref{fig:toa_vs_temp} we compare the \acrshort{toa}, usually what is referred to
-when talking about forcing, and temperature response. There is a tendency that the
-temperature response is stronger as the radiative forcing increases, or that the forcing
-is more efficient the stringer it is, when inspecting the \acrshort{cesm2} data. The
-corresponding data from \citet{ottobliesner2016} coming out of \acrshort{cesm1} show a
-much more linear relationship, and also temperature responses that are much weaker for a
-given forcing than what we get from \acrshort{cesm2}. (Might change as we update the
-fSST simulation).
+In \cref{fig:toa_vs_temp} we compare the \acrshort{toa}, also referred to as radiative
+forcing, and temperature response. There is a tendency that the temperature response is
+stronger as the radiative forcing increases, or that the forcing is more efficient the
+stringer it is, when inspecting the \acrshort{cesm2} data. The corresponding data from
+\citet{ottobliesner2016} coming out of \acrshort{cesm1} show a much more linear
+relationship, and also temperature responses that are much weaker for a given forcing
+than what we get from \acrshort{cesm2}. (Might change as the fSST simulation is
+updated).
 
 \begin{figure}
   \begin{center}
@@ -611,7 +697,7 @@ fSST simulation).
 
 % Keep acknowledgments (note correct spelling: no ``e'' between the ``g'' and ``m'') as
 % brief as possible. In general, acknowledge only direct help in writing or research.
-% Financial support (e.g., grant numbers) for the work done, for an author, or for the
+% Financial support (e.g. grant numbers) for the work done, for an author, or for the
 % laboratory where the work was performed is best acknowledged here rather than as
 % footnotes to the title or to an author's name. Contribution numbers (if the work has
 % been published by the author's institution or organization) should be included as
@@ -649,7 +735,7 @@ fSST simulation).
 
 % Important!
 % \appendcaption{<appendix letter and number>}{<caption>}
-% must be used for figures and tables in appendixes, e.g.,
+% must be used for figures and tables in appendixes, e.g.
 %
 % \begin{figure}
 % \noindent\includegraphics[width=19pc,angle=0]{figure01.pdf}\\
