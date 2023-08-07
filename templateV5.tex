@@ -174,8 +174,8 @@ The introduction should go into some detail about:
       marvel2016, merlis2014, ollila2016, pauling2021, richardson2019, salvi2022, wigley2005}
   \item[climate impact] \citet{gregory2016, jones2005, ottobliesner2016, santer2016,
       timmreck2009, timmreck2010, toohey2016b, yang2019, yokohata2005, zanchettin2019}
-  \item[eruptions] \citet{arfeuille2014, douglass2006, lin2022, marshall2019, marshall2020,
-      marshall2021, schmidt2018, soden2002, sukhodolov2018}
+  \item[eruptions] \citet{arfeuille2014, douglass2006, kleinschmitt2018, marshall2019,
+      marshall2020, marshall2021, niemeier2017, soden2002, sukhodolov2018, tilmes2017}
   \item[other phenomena] \citet{chen2022, lehner2016, marshall2018}
   \item[models] \citet{rypdal2012}
   \item[cesm2] \citet{danabasoglu2020, gettleman2019, lawrence2019, li2013, liu2016, mills2016,
@@ -222,9 +222,9 @@ Radiative forcing is calculated as the difference in the net \( \mathrm{SW} +
 \mathrm{LW} \) all-sky \acrshort{toa} energy imbalance between volcanic simulations and
 a control simulation (definition as in \citet{marshall2020}). The \acrshort{cesm2}
 provide the output variables \acrfull{flnt} and \acrfull{fsnt}. The \acrshort{aod} is
-obtained from the \acrfull{aodm}, while global temperature is saved by \acrshort{cesm2}
-to the variable \acrfull{trefht}. These four output variables are all that are used
-throughout this paper.
+obtained from the output variable \acrfull{aodm}, while global temperature is saved by
+\acrshort{cesm2} to the variable \acrfull{trefht}. These four output variables are all
+that are used throughout this paper.
 
 \subsection{Model}
 
@@ -295,6 +295,14 @@ tracers in \acrshort{mam3} \citep{liu2016}. (\citet{marshall2019, marshall2020,
   marshall2021} used a code with seven log-normal modes to simulate aerosol mass and
 number concentrations, but their model is an \acrfull{agcm}, as opposed to the
 \acrshort{cesm2} which is an \acrfull{esm} or \acrfull{aogcm}.)
+
+Since dust absorbs water well it is expected to be removed by wet deposition almost as
+well as sea salt, which should make the course mode (mode 3, of which sea salt and soil
+dust are both part of) revert quickly to its background state below the tropopause
+\citep{liu2012}. Similarly, fine dust and fine sea salt are both merged into the
+accumulation mode (mode 2). \emph{\citet{liu2012} says the accumulation mode is roughly
+  $90\%$ of the sulfate burden, which I don't really get from my figures. Hmm, need to
+  look more into this.}
 
 \subsection{Simulation set up}
 
@@ -500,6 +508,8 @@ differently sized volcanic eruptions, we plot in
 seasonal means where the start of the time series are shifted so that the eruption day
 is at time zero, and all time series are exactly four years long.
 
+% TODO: get out the three aerosol components to check growth and sedimentation
+
 The ratio between \acrshort{aod} and \acrshort{toa} is not constant, but what is more is
 that their ratio seem to draw a loop. Especially when the eruptions are very large,
 \citet[][see their sections 3.1.2, 3.2.2]{marshall2019} describe how the growth of
@@ -538,7 +548,7 @@ triangles), and even though the spread in the small eruption (blue downward tria
 is large in the \( y \)-direction, they tend to follow a similarly inclined slope.
 
 The change in ratio, where the smallest is found in the strong eruption while the
-largest ration is from the small eruption, is consistent with the change in peak values
+largest ratio is from the small eruption, is consistent with the change in peak values
 seen in \cref{fig:aod_vs_toa_full}, where the red circles show the peak values are
 bending off to the right. \acrshort{toa} stops increasing in magnitude while
 \acrshort{aod} increases close to linearly with injected \ce{SO2} (see also
@@ -546,6 +556,20 @@ bending off to the right. \acrshort{toa} stops increasing in magnitude while
 develop as the amount of injected \ce{SO2} increase \citep{marshall2019}. This in turn
 might make the forcing from smaller eruptions relatively more efficient than from large
 eruptions, causing a larger ratio between \acrshort{toa} and \acrshort{aod}.
+
+One feature seen in \cref{fig:aod_vs_toa_avg_loop,fig:aod_vs_toa_avg_loop_ratio} is that
+the early phase seem to have a \acrshort{aod} to \acrshort{toa} ratio that changes (from
+about \( 0 \) to \( 1.2 \) years after the eruption), while the later phase has an
+almost constant ratio (from \( 1.2 \) to \( 3 \)--\( 4 \) years after the eruption).
+When plotting the \acrshort{toa} time series we find that their shape is very consistent
+over different eruption strengths (\cref{fig:toa_arrays_normalized}), but the
+\acrshort{aod} time series show a slight change in shape from smaller to larger
+eruptions (\cref{fig:aod_arrays_normalized}). Specifically, the \acrshort{aod} time
+series from the smallest eruptions have a fast rise and a flat peak before it decays
+back to its equilibrium state, while from the two larger eruptions we find a slower rise
+time, but a sharper peak, making the decay to equilibrium happen at a similar time after
+the eruption and at a similar rate. \emph{Why? \citet{marshall2019} and references
+  therein may be the best source for a suggested explanation.}
 
 \begin{figure}
   \begin{center}
@@ -592,6 +616,30 @@ eruptions, causing a larger ratio between \acrshort{toa} and \acrshort{aod}.
     \cref{fig:aod_vs_toa_avg_loop}
   }%
   \label{fig:aod_vs_toa_avg_loop_ratio_scaled}
+\end{figure}
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.95\linewidth]{figures/aod_arrays_normalized.png}
+  \end{center}
+  \caption{
+    The (scaled versions of the) arrays used in
+    \cref{fig:aod_vs_toa_avg_loop_scaled,fig:aod_vs_toa_avg_loop_ratio_scaled}
+    (\cref{fig:aod_vs_toa_avg_loop,fig:aod_vs_toa_avg_loop_ratio})
+  }%
+  \label{fig:aod_arrays_normalized}
+\end{figure}
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.95\linewidth]{figures/toa_arrays_normalized.png}
+  \end{center}
+  \caption{
+    The (scaled versions of the) arrays used in
+    \cref{fig:aod_vs_toa_avg_loop_scaled,fig:aod_vs_toa_avg_loop_ratio_scaled}
+    (\cref{fig:aod_vs_toa_avg_loop,fig:aod_vs_toa_avg_loop_ratio})
+  }%
+  \label{fig:toa_arrays_normalized}
 \end{figure}
 
 \paragraph{Comparing parameters}
@@ -669,6 +717,13 @@ we find. The relationship between \acrshort{aod} and temperature is slightly mor
 than what is the case with \iso{} and temperature, but the tendency is the same, as one
 would expect based on the close to linear relationship found between \iso{} and
 \acrshort{aod} in \cref{fig:so2_vs_aod}.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figures/aod_vs_toa_logscale.png}
+  \caption{\acrshort{aod} versus \acrshort{toa}}%
+  \label{fig:aod_vs_toa_logscale}
+\end{figure}
 
 \begin{figure}
   \begin{center}
