@@ -178,7 +178,7 @@ The introduction should go into some detail about:
   \item[feedback params] \citet{boer2007, gunther2022, gregory2020, hansen2005, knutti2017,
       marvel2016, merlis2014, ollila2016, pauling2021, richardson2019, salvi2022, wigley2005}
   \item[climate impact] \citet{gregory2016, jones2005, ottobliesner2016, santer2016,
-      timmreck2009, timmreck2010, toohey2016b, yang2019, yokohata2005, zanchettin2019}
+      timmreck2009, timmreck2010, yang2019, yokohata2005, zanchettin2019}
   \item[eruptions] \citet{arfeuille2014, douglass2006, kleinschmitt2018, marshall2019,
       marshall2020, marshall2021, niemeier2015, niemeier2017, soden2002, sukhodolov2018,
       tilmes2017}
@@ -414,46 +414,6 @@ sharper in the small eruption case compared to the two larger. \emph{ Any simila
   \caption{Normalized temperature response to three different-size volcanic eruptions,
     using integration, i.e., they all integrate to one}%
   \label{fig:temp_norm_int}
-\end{figure}
-
-\paragraph{Superposing volcanoes}
-
-\emph{See \citet{toohey2016b}.}
-
-% FIX: Porely written.
-
-Let us now look at how the temperature behave when forced by two eruptions occurring
-close in time (four years apart), shown in \cref{fig:double-overlap-superpose} (blue
-line). The eruptions are two identical ones, and the same as the one used as the
-intermediate eruption in \cref{fig:temp_norm_int,fig:temp_norm_max}. The first eruption
-is on 15 January 1853 while the second is on 15 January 1857, close enough in time so
-that the temperature is still perturbed from the first eruption as the second eruption
-happen. As a comparison, we take the single volcano simulation of an intermediate
-eruption (\cref{fig:temp_norm_int,fig:temp_norm_max}) and superpose it with a copy of
-itself, shifted in time so they are aligned with the two volcanoes simulated in
-\cref{fig:double-overlap-superpose} (orange and green lines).
-
-When comparing the double-eruption event with the superposition of the temperature time
-series of two single eruption events, their alignment is quite good. Therefore, we
-cannot from this say that the temperature response is sensitive to overlapping
-eruptions.
-
-\emph{Can we say anything that relates to other work and how the physics is described?}
-
-Previous work have reported no prolonged or persistent cooling after a double-volcano
-event with eruptions four years apart with \ce{SO2} injections of \( \SI{30}{\tera\gram}
-\) and \( \SI{50}{\tera\gram} \) \citep{toohey2016b}. This was, however, contrary to
-observations based on tree ring width data showing a persistent cooling from the two
-eruptions that was simulated.
-
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=0.95\linewidth]{figures/double-overlap-superpose.png}
-  \end{center}
-  \caption{Double-eruption event, where the temperature responses from the two eruptions
-    overlap. That is, the second equivalent eruption occur as the temperature is still
-    perturbed from the first eruption}%
-  \label{fig:double-overlap-superpose}
 \end{figure}
 
 \paragraph{Parameter scan}
