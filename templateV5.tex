@@ -135,11 +135,10 @@
 The paper should provide insight about what might happen if a large (order of magnitude
 or more than Mount Pinatubo) volcano erupted. \emph{Little literature has been found
   that investigate the effects of eruptions ten times or more than that of Mount Pinatubo,
-  so this should hopefully be worthwhile looking into.} How does the atmosphere react?
-(\acrshort{qbo}, \iso{}/\acrshort{aod}/\acrshort{rf} relationship.) It could also be
-about how volcanic simulations compare in magnitude and model complexity (dynamic ocean
-against slab ocean). If there is no big difference, we may also run more experiments to
-test for other things:
+  so this should hopefully be worthwhile looking into.} How does the atmosphere react, for
+example in the aerosol dynamics? (\acrshort{qbo}, \iso{}/\acrshort{aod}/\acrshort{rf}
+relationship.) It could also be about how volcanic simulations compare in magnitude and
+model complexity (dynamic ocean against slab ocean).
 \begin{itemize}
   \item How far does the linear relation between \acrshort{aod} and \acrshort{rf} go? What
         phases does the aerosols go though? (Perhaps the most promising avenue.)
@@ -192,9 +191,9 @@ The introduction should go into some detail about:
   initial conditions} is a key outstanding question. This could be a contribution to that.
 Also, when aerosols grow, they scatter radiation less efficiently and also fall down
 faster, so the temperature response should be comparatively weaker for increasing
-eruption magnitude (or the volcanic aerosols are less efficient). Clustering and long
-term effects are mentioned in its own section (Multi-decadal impacts) along with the
-dependence of the current climate state.
+eruption magnitude (or the volcanic aerosols are less efficient). \emph{Clustering} and
+long term effects are mentioned in its own section (Multi-decadal impacts) along with
+the \emph{dependence of the current climate state}.
 
 \citet{marshall2019} does many similar things to what I have done, but do not focus on
 seasonal variability. This is however mentioned as one other direction to dig into, and
@@ -357,9 +356,9 @@ The simulations cover three \ce{SO2} injection magnitudes and four seasons; 15 F
 smallest eruption is of the same order of magnitude as Mount Pinatubo
 \citep[\(\sim10\)--\(\SI{20}{\tera\gram}\);~e.g.][]{timmreck2018} and Mount Tambora
 \citep[\(\sim\SI{56.2}{\tera\gram}\);~e.g.][]{zanchettin2016}, the intermediate is
-similar to the 1257 Samalas eruption
-\citep[\(\sim\SI{119}{\tera\gram}\);][]{toohey2017}, and the largest is similar to the
-Young Toba Tuff eruption
+similar to the 1257 Samalas eruption \citep[\(\sim
+  119\)--\(\SI{250}{\tera\gram}\);~e.g.][]{toohey2017,ottobliesner2016}, and the largest
+is similar to the Young Toba Tuff eruption
 \citep[\(10\)--\(\SI{10000}{\tera\gram}\);][and~references~therein]{jones2005}. They are
 all located at the equator, at \(\SI{0}{\degree N}\), \(\SI{1}{\degree E}\) and \ce{SO2}
 is injected between \(\SI{18}{\kilo\meter}\) and \(\SI{20}{\kilo\meter}\).
@@ -368,13 +367,10 @@ is injected between \(\SI{18}{\kilo\meter}\) and \(\SI{20}{\kilo\meter}\).
 
 \subsection{Figures}
 
-Let us now introduce some figures.
-
 \paragraph{Forcing magnitudes}
 
-There are the three different forcing magnitudes that have been used. The figures below
-show two alternative ways of normalizing the temperature response to these volcanic
-events.
+There are three different forcing magnitudes that have been used. The figures below show
+two alternative ways of normalizing the temperature response to these volcanic events.
 
 First, we have the three temperature responses normalized by setting the peak value
 equal to one, shown in \cref{fig:temp_norm_max}. The second method of normalizing, shown
@@ -388,17 +384,17 @@ quickly the temperature reverts back to equilibrium in the small eruption case.
 On the other hand, when normalizing by enforcing all to integrate to the same value, the
 tail of the temperature time series is what is most similar across the three eruptions.
 From these two normalizations, one thing that stays different is the amount of time
-spent at the peak temperature. The temperature from smaller eruption simulation starts
-to revert sooner after it reaches temperatures close to the peak temperature. The shape
-of the initial rise and the tail is more similar across the three, while the peak is
-sharper in the small eruption case compared to the two larger. \emph{ Any similar
+spent at the peak temperature. The temperature from the smaller eruption simulation
+starts to revert sooner after it reaches temperatures close to the peak temperature. The
+shape of the initial rise and the tail is more similar across the three, while the peak
+is sharper in the small eruption case compared to the two larger. \emph{ Any similar
   results that is consistent with a faster temperature recovery for weaker volcanic
   forcing? Not, sure, but one curiosity is that in the \acrshort{aod} signals, the smaller
   eruption spent more time at the peak, contrary to what seems to be the case for the
   temperature. The \acrshort{rf} time series have similar shape for all. See
   \cref{fig:aod_arrays_normalized,fig:toa_arrays_normalized}.}
 
-\begin{figure}
+\begin{figure}[t]
   \begin{center}
     \includegraphics[width=0.95\linewidth]{figures/compare-waveform-max.png}
   \end{center}
@@ -407,7 +403,7 @@ sharper in the small eruption case compared to the two larger. \emph{ Any simila
   \label{fig:temp_norm_max}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[t]
   \begin{center}
     \includegraphics[width=0.95\linewidth]{figures/compare-waveform-integrate.png}
   \end{center}
@@ -418,22 +414,23 @@ sharper in the small eruption case compared to the two larger. \emph{ Any simila
 
 \paragraph{Parameter scan}
 
-So far we have been focusing on temperature. We here look more closely into the
-different forcings as well. This comparison is motivated by \citet{gregory2016},
-specifically their figure 4 which compare annual mean aerosol optical depth with
-radiative forcing. \Cref{fig:aod_vs_toa_full} show annual mean values from the three
-simulation cases along with the gradient obtained by \citet{gregory2016} (\(-19\)). The
-annual mean data from the smallest Pinatubo-like eruption has \acrshort{rf} values
-compared to \acrshort{aod} that nicely follow the same constant gradient as the
-\citet{gregory2016} and the data used in their figure (\cref{fig:aod_vs_toa_inset}).
+Whether the temperature time series have different shape depending on forcing strength
+or not is a natural next step to take, and we here look more closely into the different
+forcings. This comparison is motivated by \citet{gregory2016}, specifically their figure
+4 which compare annual mean \acrfull{aod} with \acrfull{rf}. \Cref{fig:aod_vs_toa_full}
+show annual mean values from the three simulation cases along with the gradient obtained
+by \citet{gregory2016} of \(-19\). The annual mean data from the smallest Pinatubo-like
+eruption has \acrshort{rf} values compared to \acrshort{aod} that nicely follow the same
+constant gradient as the \citet{gregory2016} and the data used in their figure
+(\cref{fig:aod_vs_toa_inset}).
 
 However, we do find that the stronger eruptions lead to very different responses in
-\acrshort{aod} and \acrshort{rf}, where slope of the intermediate seem to follow close
-to a \( -10 \) gradient and the strong is closer to a \( -4 \) gradient. While the peak
-values (red circles) suggest a logarithmic looking functional shape dependence, within
-each eruption strength the annual mean values fall relatively close to on a straight
-line, but does tend to draw an elongated loop. This is the case also for the small
-eruption strength (\cref{fig:aod_vs_toa_inset}).
+\acrshort{aod} and \acrshort{rf}, where the slope of the intermediate seem to follow
+close to a \( -10 \) gradient and the strong is closer to a \( -4 \) gradient. While the
+peak values (red circles) suggest a logarithmic looking functional shape dependence,
+within each eruption strength the annual mean values fall relatively close to on a
+straight line, but does tend to draw an elongated loop. This is the case also for the
+small eruption strength shown in \cref{fig:aod_vs_toa_inset}.
 
 Focusing on the peaks as shown by the red circles, previous papers simulating similar
 effects have found the same trend. \citet{niemeier2015} did simulations of continually
@@ -446,9 +443,9 @@ peak to approach (pink square in \cref{fig:aod_vs_toa_full}), however, the funct
 shape is very different; the exponential found by \citet{niemeier2015} have a much
 slower decay than what the \acrshort{cesm2} and \acrshort{p100} data might follow. Given
 the very different scenarios; a constant level of \iso{} in contrast to a specified
-injected mass, it should not be too surprising that the responses are different.
+injected mass, it should also not be too surprising that the responses are different.
 
-\begin{figure}
+\begin{figure}[t]
   \begin{center}
     \includegraphics[width=0.95\linewidth]{figures/aod_vs_toa_avg_full.png}
   \end{center}
@@ -457,7 +454,7 @@ injected mass, it should not be too surprising that the responses are different.
   \label{fig:aod_vs_toa_full}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[t]
   \begin{center}
     \includegraphics[width=0.95\linewidth]{figures/aod_vs_toa_avg_inset.png}
   \end{center}
@@ -466,16 +463,16 @@ injected mass, it should not be too surprising that the responses are different.
   \label{fig:aod_vs_toa_inset}
 \end{figure}
 
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=0.95\linewidth]{figures/aod_vs_toa_avg_scaled.png}
-  \end{center}
-  \caption{
-    \acrshort{aod} versus \acrshort{rf}, scaled so the peak values of the different
-    volcano magnitudes are aligned. Same type as \citet{gregory2016}
-  }%
-  \label{fig:aod_vs_toa_scaled}
-\end{figure}
+% \begin{figure}
+%   \begin{center}
+%     \includegraphics[width=0.95\linewidth]{figures/aod_vs_toa_avg_scaled.png}
+%   \end{center}
+%   \caption{
+%     \acrshort{aod} versus \acrshort{rf}, scaled so the peak values of the different
+%     volcano magnitudes are aligned. Same type as \citet{gregory2016}
+%   }%
+%   \label{fig:aod_vs_toa_scaled}
+% \end{figure}
 
 \paragraph{Forcing efficiency}
 
@@ -517,10 +514,33 @@ Nevertheless, these results are contrary to the results by \citet[][their figure
   1c,d]{marshall2020}, which show that the \acrshort{rf} become relatively stronger than
 \acrshort{aod} later in the eruption evolution. \emph{Why this difference?}
 
+\begin{figure}[t]
+  \begin{center}
+    \includegraphics[width=0.95\linewidth]{figures/aod_vs_toa_avg_loop.png}
+  \end{center}
+  \caption{
+    \acrshort{aod} versus \acrshort{rf}, with points coloured according to the year and
+    season it was averaged from. (Same type of plot as \citet{gregory2016})
+  }%
+  \label{fig:aod_vs_toa_avg_loop}
+\end{figure}
+
+\begin{figure}[t]
+  \begin{center}
+    \includegraphics[width=0.95\linewidth]{figures/aod_vs_toa_avg_loop_scaled.png}
+  \end{center}
+  \caption{
+    \acrshort{aod} versus \acrshort{rf}, with points coloured according to the year and
+    season it was averaged from, and scaled so the peak values are aligned. (Same type
+    of plot as \citet{gregory2016})
+  }%
+  \label{fig:aod_vs_toa_avg_loop_scaled}
+\end{figure}
+
 In \cref{fig:aod_vs_toa_avg_loop_ratio} we plot the ratio of the annual means of
 \acrshort{rf} and \acrshort{aod}. The years where the signal-to-noise ratio is best is
 in years 1 and 2, as well as years 0 and 3 (see in particular
-\cref{fig:toa_arrays_normalized}). For this reason, the ration of \acrshort{rf} to
+\cref{fig:toa_arrays_normalized}). For this reason, the ratio of \acrshort{rf} to
 \acrshort{aod} is found for the second season of the first year until the end of the
 third year. From this we find that even though the ratio changes between the eruption
 magnitudes, we do find that the gradient at which the ratio is changing is similar
@@ -541,44 +561,7 @@ increase \citep{marshall2019}. This in turn might make the forcing from smaller
 eruptions relatively more efficient than from large eruptions, causing a larger ratio
 between \acrshort{rf} and \acrshort{aod}.
 
-One feature seen in \cref{fig:aod_vs_toa_avg_loop,fig:aod_vs_toa_avg_loop_ratio} is that
-the early phase seem to have a \acrshort{aod} to \acrshort{rf} ratio that changes (from
-about \( 0 \) to \( 1.2 \) years after the eruption), while the later phase has an
-almost constant ratio (from \( 1.2 \) to \( 3 \)--\( 4 \) years after the eruption).
-When plotting the \acrshort{rf} time series we find that their shape is very consistent
-over different eruption strengths (\cref{fig:toa_arrays_normalized}), but the
-\acrshort{aod} time series show a slight change in shape from smaller to larger
-eruptions (\cref{fig:aod_arrays_normalized}). Specifically, the \acrshort{aod} time
-series from the smallest eruptions have a fast rise and a flat peak before it decays
-back to its equilibrium state, while from the two larger eruptions we find a slower rise
-time, but a sharper peak, making the decay to equilibrium happen at a similar time after
-the eruption and at a similar rate. \emph{Why? \citet{marshall2019} and references
-  therein may be the best source for a suggested explanation.}
-
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=0.95\linewidth]{figures/aod_vs_toa_avg_loop.png}
-  \end{center}
-  \caption{
-    \acrshort{aod} versus \acrshort{rf}, with points coloured according to the year and
-    season it was averaged from. (Same type of plot as \citet{gregory2016})
-  }%
-  \label{fig:aod_vs_toa_avg_loop}
-\end{figure}
-
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=0.95\linewidth]{figures/aod_vs_toa_avg_loop_scaled.png}
-  \end{center}
-  \caption{
-    \acrshort{aod} versus \acrshort{rf}, with points coloured according to the year and
-    season it was averaged from, and scaled so the peak values are aligned. (Same type
-    of plot as \citet{gregory2016})
-  }%
-  \label{fig:aod_vs_toa_avg_loop_scaled}
-\end{figure}
-
-\begin{figure}
+\begin{figure}[t]
   \begin{center}
     \includegraphics[width=0.95\linewidth]{figures/aod_vs_toa_avg_loop_ratio.png}
   \end{center}
@@ -590,7 +573,7 @@ the eruption and at a similar rate. \emph{Why? \citet{marshall2019} and referenc
   \label{fig:aod_vs_toa_avg_loop_ratio}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[t]
   \begin{center}
     \includegraphics[width=0.95\linewidth]{figures/aod_vs_toa_avg_loop_ratio_scaled.png}
   \end{center}
@@ -602,7 +585,30 @@ the eruption and at a similar rate. \emph{Why? \citet{marshall2019} and referenc
   \label{fig:aod_vs_toa_avg_loop_ratio_scaled}
 \end{figure}
 
-\begin{figure}
+One feature seen in \cref{fig:aod_vs_toa_avg_loop,fig:aod_vs_toa_avg_loop_ratio} is that
+the early phase seem to have a \acrshort{aod} to \acrshort{rf} ratio that is changing
+(from about \( 0 \) to \( 1.2 \) years after the eruption), while the later phase has an
+almost constant ratio (from \( 1.2 \) to \( 3 \)--\( 4 \) years after the eruption).
+When plotting the \acrshort{rf} time series we find that their shape is very consistent
+over different eruption strengths (\cref{fig:toa_arrays_normalized}), but the
+\acrshort{aod} time series show a slight change in shape from smaller to larger
+eruptions (\cref{fig:aod_arrays_normalized}). Specifically, the \acrshort{aod} time
+series from the smallest eruptions have a fast rise and a flat peak before it decays
+back to its equilibrium state, while from the two larger eruptions we find a slower rise
+time, but a sharper peak, making the decay to equilibrium happen at a similar time after
+the eruption and at a similar rate. \emph{Why? \citet{marshall2019} and references
+  therein may be the best source for a suggested explanation.}
+
+An interesting aspect with the similar decaying phase seen in both the \acrshort{aod}
+time series and the \acrshort{rf} time series is how this might influence the
+temperature time series, and whether one would expect a similar trend in them. That is,
+if one might expect the temperature time series to have different shape in the rising
+phase, but similar shape in the decaying phase, as discussed in relation to
+\cref{fig:temp_norm_max,fig:temp_norm_int}. Allowing the simulations to run for at least
+twenty years to allow the tail to be well resolved is another avenue that could be
+explored further.
+
+\begin{figure}[t]
   \begin{center}
     \includegraphics[width=0.95\linewidth]{figures/aod_arrays_normalized.png}
   \end{center}
@@ -614,7 +620,7 @@ the eruption and at a similar rate. \emph{Why? \citet{marshall2019} and referenc
   \label{fig:aod_arrays_normalized}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[t]
   \begin{center}
     \includegraphics[width=0.95\linewidth]{figures/toa_arrays_normalized.png}
   \end{center}
@@ -632,28 +638,20 @@ Let us now look more at different parameters that are relevant, not only \acrsho
 and \acrshort{rf}. The initial parameter that is the input to the \acrshort{cesm2} is
 injected \ce{SO2}. Compared to \acrshort{aod} we find that the \acrshort{cesm2}
 simulations result in an almost linear relationship between them, shown in
-\cref{fig:so2_vs_aod}. (Since \iso{} is ``total amount of \iso{}'', maybe consider
-comparing to integrated values of \acrshort{aod}, \acrshort{rf} and temperature as well,
-not just the peak values.) We do, however, find that this linear relationship only show
-up if the atmosphere used across simulations is similar. One data point is from a
-simulation where the low-top atmosphere \acrshort{cam6} was used
-(\textbf{C2C\(\uparrow\)}), represented by the small brown star. This data point show
-that the \acrshort{aod} is way smaller for the same amount of injected \ce{SO2} when run
-with the \acrshort{cam6} than what is the case with \acrshort{waccm}. The latitude
-matter far less than the model complexity, as we can see from the
-\textbf{C2WN\(\uparrow\)} data point, representing a strong eruption similar to the
-strong eruption from before, but located at \( \SI{56}{\degree N} \). The weak
-dependence on eruption latitude is also reported in \citet{marshall2019}.
+\cref{fig:so2_vs_aod}.\footnote{\emph{Since \iso{} is ``total amount of \iso{}'', maybe
+    consider comparing to integrated values of \acrshort{aod}, \acrshort{rf} and temperature
+    as well, not just the peak values.}} The latitude also play a role for how large the
+\acrshort{aod} perturbation become, as we can see from the \textbf{C2WN\(\uparrow\)}
+data point, representing a strong eruption, but located at \( \SI{56}{\degree N} \). The
+weak dependence on eruption latitude is also reported in \citet{marshall2019}.
 
-\begin{figure}
+\begin{figure}[t]
   \begin{center}
     \includegraphics[width=0.95\linewidth]{figures/injection_vs_aod.png}
   \end{center}
   \caption{Injected \ce{SO2} versus \acrshort{aod}}%
   \label{fig:so2_vs_aod}
 \end{figure}
-
-% FIX: I am no longer using the C1C data.
 
 With the almost linear relation between injected \ce{SO2} and \acrshort{aod}, we should
 expect to see a similar plot for \iso{} versus \acrshort{rf} as for \acrshort{aod}
@@ -662,12 +660,14 @@ but where the absolute value of the \acrshort{rf} is potted along the \( y \)-ax
 instead of the true value. Just as in \cref{fig:aod_vs_toa_full} we find the
 \acrshort{cesm2} data points to be heavily damped in \acrshort{rf} compared to \iso. The
 same effect can be seen in the data from \citet{ottobliesner2016} (labelled
-\textbf{C1C}, red points), but here the \acrshort{rf} keeps up at larger values for
-longer. The simulations used by \citet{ottobliesner2016} was with \acrshort{cesm} as
-well, but version 1 (\acrshort{cesm1}) and with a low-top atmosphere (\acrshort{cam5}),
-which makes it more comparable to our \textbf{C2C\(\uparrow\)} simulation.
+\textbf{C1C}, red points), but here the \acrshort{rf} tend to bend off sooner, having a
+smaller \acrshort{rf} response to \iso{} than the \acrshort{cesm2} data has. The
+simulations used by \citet{ottobliesner2016} was with \acrshort{cesm} as well, but
+version 1 (\acrshort{cesm1}) and with a low-top atmosphere (\acrshort{cam5}). The
+difference in model complexity might therefore be the reason why the \iso{} give weaker
+\acrshort{rf} response for \citet{ottobliesner2016} then what we find.
 
-\begin{figure}
+\begin{figure}[t]
   \begin{center}
     \includegraphics[width=0.95\linewidth]{figures/injection_vs_toa.png}
   \end{center}
@@ -679,10 +679,10 @@ which makes it more comparable to our \textbf{C2C\(\uparrow\)} simulation.
 \cref{fig:so2_vs_toa}, the points from the \acrshort{cesm2} simulations bend off, making
 the temperature response less extreme for higher values of \iso. Again we see that the
 data from the \acrshort{cesm1} simulations by \citet{ottobliesner2016} follow a
-different path than the \acrshort{cesm2} data, likely caused by the different
-atmospheres being used.
+different path than the \acrshort{cesm2} data, with weaker temperature fluctuations for
+a given \iso{}, as one would expect based on \cref{fig:so2_vs_toa}.
 
-\begin{figure}
+\begin{figure}[t]
   \begin{center}
     \includegraphics[width=0.95\linewidth]{figures/injection_vs_temperature.png}
   \end{center}
@@ -697,14 +697,14 @@ than what is the case with \iso{} and temperature, but the tendency is the same,
 would expect based on the close to linear relationship found between \iso{} and
 \acrshort{aod} in \cref{fig:so2_vs_aod}.
 
-\begin{figure}
+\begin{figure}[t]
   \centering
   \includegraphics[width=0.95\linewidth]{figures/aod_vs_toa_logscale.png}
   \caption{\acrshort{aod} versus \acrshort{rf}}%
   \label{fig:aod_vs_toa_logscale}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[t]
   \begin{center}
     \includegraphics[width=0.95\linewidth]{figures/aod_vs_temperature.png}
   \end{center}
@@ -712,16 +712,25 @@ would expect based on the close to linear relationship found between \iso{} and
   \label{fig:aod_vs_temp}
 \end{figure}
 
-In \cref{fig:toa_vs_temp} we compare the \acrshort{rf}, also referred to as radiative
-imbalance at \acrshort{toa}, and temperature response. There is a tendency that the
-temperature response is stronger as the radiative forcing increases, or that the forcing
-is more efficient the stringer it is, when inspecting the \acrshort{cesm2} data. The
-corresponding data from \citet{ottobliesner2016} coming out of \acrshort{cesm1} show a
-much more linear relationship, and also temperature responses that are much weaker for a
-given forcing than what we get from \acrshort{cesm2}. (Might change as the fSST
-simulation is updated).
+In \cref{fig:toa_vs_temp} we compare the \acrshort{rf} and temperature response. Both
+the \acrshort{cesm2} data and the \acrshort{cesm1} from \citet{ottobliesner2016} show a
+close to linear relationship between temperature and \acrshort{rf}, but where the
+\acrshort{cesm2} data seem to lead to stronger temperature perturbations compared to
+\acrshort{cesm1}. However, the overlap in data is not big, and the \acrshort{cesm2} data
+is too sparse to make strong conclusions, in addition to the difference in model
+complexity.
 
-\begin{figure}
+While the \acrshort{p100} data have been comparable to the strong \acrshort{cesm2} data
+point in both \acrshort{aod} and \acrshort{rf}, the temperature response reported by
+\citet{jones2005} is much stronger than what our strongest eruption caused. Since
+\citet{jones2005} used the \acrshort{aod} forcing from Mt. Pinatubo multiplied by one
+hundred, the shape during the whole phase could be significantly different to what a
+super-eruption would create, even though the peak is representable. This might be enough
+to cause a much stronger temperature perturbation, as we have seen in
+\cref{fig:aod_arrays_normalized} that the \acrshort{aod} shape differ as the eruption
+strength is increased.
+
+\begin{figure}[t]
   \begin{center}
     \includegraphics[width=0.95\linewidth]{figures/toa_vs_temperature.png}
   \end{center}
