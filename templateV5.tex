@@ -34,7 +34,7 @@
 \usepackage[version=4]{mhchem}
 \usepackage[acronym]{glossaries}
 \usepackage{cleveref}
-\usepackage{siunitx}
+\usepackage[separate-uncertainty=true]{siunitx}
 \usepackage{listings}
 % \usepackage{hyperref}
 
@@ -49,8 +49,8 @@
 % To be entered by author:
 % May use \\ to break lines in title:
 \title{
-	Parameter Scan: Volcanic influence on climate across multiple magnitudes of injected
-	\ce{SO2}
+  Parameter Scan: Volcanic influence on climate across multiple magnitudes of injected
+  \ce{SO2}
 }
 
 % Enter authors' names, as you see in this example: Use \correspondingauthor{} and
@@ -59,7 +59,7 @@
 % OPTIONAL.
 
 \authors{
-	Eirik Rolland Enger\correspondingauthor{Eirik Rolland Enger, eirik.r.enger@uit.no}
+  Eirik Rolland Enger\correspondingauthor{Eirik Rolland Enger, eirik.r.enger@uit.no}
 }
 
 % Follow this form: \affiliation{American Meteorological Society, Boston, Massachusetts}
@@ -83,9 +83,9 @@
 % Enter your abstract here. Abstracts should not exceed 250 words in length!
 
 \abstract{
-	Volcanoes affect Earth's climate. What happens when the climate is forced with
-	volcanoes of different size and injected at different heights? Should we expect to see
-	the same climate response for the same volcanoes in a different, warmer climate?
+  Volcanoes affect Earth's climate. What happens when the climate is forced with
+  volcanoes of different size and injected at different heights? Should we expect to see
+  the same climate response for the same volcanoes in a different, warmer climate?
 }
 
 \begin{document}
@@ -152,7 +152,7 @@ ocean) affect things.
         strange output that must be resolved. Could take a while.)
 \end{itemize}
 
-\subsection*{Introduction}
+\subsection{Introduction}
 
 The introduction should go into some detail about:
 
@@ -180,13 +180,15 @@ The introduction should go into some detail about:
   \item[climate impact] \citet{gregory2016, jones2005, ottobliesner2016, santer2016,
       timmreck2009, timmreck2010, yang2019, yokohata2005, zanchettin2019}
   \item[eruptions] \citet{arfeuille2014, douglass2006, kleinschmitt2018, marshall2019,
-      marshall2020, marshall2021, niemeier2015, niemeier2017, soden2002, sukhodolov2018,
-      tilmes2017}
+      marshall2020, marshall2021, niemeier2015, niemeier2017, pitari2016b, soden2002,
+      sukhodolov2018, tilmes2017}
   \item[other phenomena] \citet{chen2022, lehner2016, marshall2018}
   \item[models] \citet{rypdal2012}
   \item[cesm2] \citet{danabasoglu2020, gettleman2019, lawrence2019, li2013, liu2016, mills2016,
       smith2010}
 \end{description}
+
+\subsection{Motivation}
 
 \citet{marshall2022} mention (in the graphic in their figure 1) that the \emph{role of
   initial conditions} is a key outstanding question, especially if the \ce{CO2}
@@ -209,8 +211,8 @@ eruptions covered by \citet{marshall2020}.
 In \citet{marshall2020}, they take the reconstructed \acrshort{saod} from
 \citet{toohey2017}, convert it to radiative forcing based on their conversions, and plot
 the corresponding temperature time series from each radiative forcing using a simple
-climate model. \emph{So, can we use this with the \acrfull{fpp} framework?
-  (Noisy data? Check this.)}
+climate model. \emph{So, can we use this with the \acrfull{fpp} framework? (Noisy data?
+  Check this.)}
 % TODO: check the data if it can be used for FPP.
 
 Perhaps focus on why there seems to be a loop in the \acrshort{aod} against
@@ -218,8 +220,34 @@ Perhaps focus on why there seems to be a loop in the \acrshort{aod} against
 (\citet{marshall2021} discuss Tambora, but mention that it erupted in April, while their
 data consist of January and July eruptions.)
 
-% TODO: we should have a section for method as well, and maybe also write about what the
-% results and discussion should include
+Previous studies on both Mt. Pinatubo alone \citep{mills2017,hansen2005} and volcanoes
+in the instrumental era \citep{gregory2016} have been used to estimate the relationship
+between the energy imbalance caused by volcanic eruptions and \acrshort{aod}.
+\citet{myhre2013} use a formula for \acrshort{rf} that scales \acrshort{aod} by
+\(\SI{-25}{\watt\metre^{-2}\mathrm{SAOD}^{-1}}\) while values down to
+\(\SI{-19.0(5)}{\watt\metre^{-2}\mathrm{SAOD}^{-1}}\) \citep{gregory2016} and
+\(\SI{-18.3(10)}{\watt\metre^{-2}\mathrm{SAOD}^{-1}}\) \citep{mills2017} have been
+reported more recently. Simulations done with synthetic volcanoes have also been used,
+and in \citet{marshall2020} they simulate a total of \(82\) volcanic eruptions with
+varying injection height and latitude, ranging from \(10\) to \(\SI{100}{\tera\gram}\)
+of \iso{}. They obtain a scaling factor of
+\(\SI{-20.5(2)}{\watt\metre^{-2}\mathrm{SAOD}^{-1}}\) \citep{marshall2020}.
+
+A similar simulation setup, albeit with significant differences, was done by
+\citet{niemeier2015}, where \(14\) different levels of injected sulphur ranging between
+\(\SI{1}{\tera\gram(\ce{S})\mathrm{yr}^{-1}}\)
+(\(\SI{2}{\tera\gram(\ce{SO2})\mathrm{yr}^{-1}}\)) and
+\(\SI{100}{\tera\gram(\ce{S})\mathrm{yr}^{-1}}\)
+(\(\SI{200}{\tera\gram(\ce{SO2})\mathrm{yr}^{-1}}\)) was simulated. These were
+geoengineering simulations where sulphur would be continually injected, and the
+simulations run until the sulphur level was in a steady state. From this, they found
+that the radiative forcing to injecting rate ratio would follow an exponential and
+converge to a value of \(\SI{-65}{\watt\metre^{-2}}\). While the results from the
+super-volcano simulation by \citet{jones2005} indicate a much less steep gradient than
+the \(-18.3\) to \(-25\) found in more recent literature, the peak radiative forcing
+obtained in the super-volcano simulation was \(\SI{-60}{\watt\metre^{-2}}\), which may
+suggest the \citet{niemeier2015} results to be transferable to a volcanic eruption
+simulation scenario.
 
 \section{Method}
 
@@ -355,10 +383,11 @@ component instead of the full \acrfull{ww3}.
 
 \subsection{Simulations}
 
-The simulations cover three \ce{SO2} injection magnitudes and four seasons; 15 February,
-15 May, 15 August and 15 November. The magnitudes vary across three orders of magnitude:
-\(\SI{26}{\tera\gram}\), \(\SI{400}{\tera\gram}\) and \(\SI{1629}{\tera\gram}\). The
-smallest eruption is of the same order of magnitude as Mount Pinatubo
+The simulations are summarized in \cref{tab:simulation-overview} and cover three
+\ce{SO2} injection magnitudes and four seasons; 15 February, 15 May, 15 August and 15
+November. The magnitudes vary across three orders of magnitude: \(\SI{26}{\tera\gram}\),
+\(\SI{400}{\tera\gram}\) and \(\SI{1629}{\tera\gram}\). The smallest eruption is of the
+same order of magnitude as Mount Pinatubo
 \citep[\(\sim10\)--\(\SI{20}{\tera\gram}\);~e.g.][]{timmreck2018} and Mount Tambora
 \citep[\(\sim\SI{56.2}{\tera\gram}\);~e.g.][]{zanchettin2016}, the intermediate is
 similar to the 1257 Samalas eruption \citep[\(\sim
@@ -367,6 +396,22 @@ is similar to the Young Toba Tuff eruption
 \citep[\(10\)--\(\SI{10000}{\tera\gram}\);][and~references~therein]{jones2005}. They are
 all located at the equator, at \(\SI{0}{\degree N}\), \(\SI{1}{\degree E}\) and \ce{SO2}
 is injected between \(\SI{18}{\kilo\meter}\) and \(\SI{20}{\kilo\meter}\).
+
+\begin{table}
+  \caption{Simulations done with the \acrshort{cesm2}}%
+  \label{tab:simulation-overview}
+  \begin{center}
+    \begin{tabular}[c]{ccc}
+      \textbf{Simulation} & \textbf{\iso[I]{}}        & \textbf{Lon, lat, alt}           \\
+      \acrshort{c2ws}     & \(\SI{26}{\tera\gram}\)   &
+      \SI{1}{\degree\mathrm{E}}, \SI{0}{\degree\mathrm{N}}, \(18\)--\SI{20}{\kilo\metre} \\
+      \acrshort{c2wmp}    & \(\SI{400}{\tera\gram}\)  &
+      \SI{1}{\degree\mathrm{E}}, \SI{0}{\degree\mathrm{N}}, \(18\)--\SI{20}{\kilo\metre} \\
+      \acrshort{c2wm}     & \(\SI{1629}{\tera\gram}\) &
+      \SI{1}{\degree\mathrm{E}}, \SI{0}{\degree\mathrm{N}}, \(18\)--\SI{20}{\kilo\metre} \\
+    \end{tabular}
+  \end{center}
+\end{table}
 
 \section{Results}
 
