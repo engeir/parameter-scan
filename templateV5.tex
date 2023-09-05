@@ -152,23 +152,16 @@ ocean) affect things.
         strange output that must be resolved. Could take a while.)
 \end{itemize}
 
-\subsection{Introduction}
-
 The introduction should go into some detail about:
 
 \begin{itemize}
-  \item Importance of volcanic eruptions for temperature fluctuations
   \item Volcanic eruption aerosol evolution (in relation to \cref{fig:aod_vs_toa_avg_loop} for
         example)
-  \item Refer back to other simulations of volcanoes, for example the \citet{jones2005} paper
-        that ran a super-volcano, or \citet{gregory2016} who looked at historic volcanoes during
-        the last 150 years only (\(1860\)--\(2010\))
   \item The temperature response might be more sensitive to the sign of the forcing, rather than
         the forcing agent, and as such a halving of \ce{CO2} may be compared with volcanoes
         \citep{gunther2022}
   \item How important is it that \ce{SO2} is injected at a given height? (Not very:
         \citet{marshall2019})
-  \item To some extent a literature review of the above.
 \end{itemize}
 
 \subsection*{References}
@@ -188,7 +181,85 @@ The introduction should go into some detail about:
       smith2010}
 \end{description}
 
-\subsection{Motivation}
+\section{Introduction and Motivation}
+
+During much of the past few thousand years, the Holocene, the natural climate
+variability on Earth have been mostly forced by volcanic eruptions \citep{sigl2022}.
+Despite the strong influence volcanic eruptions have on climate variability, in
+particular up to the current strong anthropogenic forcing of the climate, few climate
+model experiments have included volcanic forcing estimates when simulating climate
+evolution \citep{sigl2022}, implying an incorrect positive forcing \citep{gregory2016}.
+Thus, even though understanding how volcanic eruptions force the climate has been given
+much attention, many questions still remain unanswered
+\citep[e.g.,][]{robock2000,zanchettin2019,marshall2022}.
+
+% NOTE: perhaps join these two sections with papers looking at similarities between CO2
+% and volcanic forcing. (feedback params references)
+
+One avenue that have been given much attention is how forcing from volcanoes or
+volcano-like forcings compare to the forcing that is due to increased \ce{CO2} levels.
+\citet{boer2007,marvel2016,merlis2014,ollila2016,richardson2019,salvi2022,wigley2005}
+all attempt to link volcanic forcing to climate sensitivity to a doubling of \ce{CO2}, a
+much used metric for describing the severity of global warming \citep{marvel2016}. This
+is motivated by the large uncertainty in estimates of the sensitivity of the real
+climate system, and inferring climate sensitivity from for example volcanoes have been
+used in an attempt to constrain the sensitivity \citep{boer2007}. Among these, some have
+been running simulations of the 1991 Mt.\ Pinatubo eruption
+\citep{merlis2014,ollila2016} or historical volcano or volcano-like forcings
+\citep{boer2007,marvel2016,wigley2005}, while some look at aerosol forcing in general
+\citep{richardson2019,salvi2022}.
+
+\begin{itemize}
+  \item Boer did sims using volcano-like eruptions: changed solar constant according to
+      en exponential. This also means complete "ash-cover". Sensitivity need not be
+      constant, so sensitivity for short timescale volcano-perturbations is different
+      from ECS. Claims it might be possible to infer climate sensitivity if the forcing
+      and heat storage is known (but not temperature alone). MAYBE WITH HIGH PRECISION
+  \item Marvel used sims where many kinds were represented, among others idealized
+      volcano simulations. Talk about ERF as opposed to IRF...
+  \item Merlis ran an ensemble of SAOD forced Pinatubo eruptions and compared with 2xCO2
+      and 0.5xCo2
+  \item Ollila looked at Pinatubo in a dynamical model, so not a GCM
+  \item Richardson compared many different sims setups, where 5xSO4 was one of them,
+      that is, 5 times sulfate aerosol concentrations or emissions, as a step function
+  \item Salvi ran simulations of historical aerosols, but this does not mean natural
+      volcanic aerosols it seems
+  \item Wigley used an ensemble of historic volcanoes, 1890 to 2000, output of AOGCMs,
+      and ran en upwelling diffusion EBM to emulate an AOGCM
+\end{itemize}
+
+% Section on RF to AOD ratio
+
+Previous studies on both Mt. Pinatubo alone \citep{mills2017,hansen2005} and volcanoes
+in the instrumental era \citep{gregory2016} have been used to estimate the relationship
+between the energy imbalance caused by volcanic eruptions and \acrshort{aod}.
+\citet{myhre2013} use a formula for \acrshort{rf} that scales \acrshort{aod} by
+\(\SI{-25}{\watt\metre^{-2}\mathrm{SAOD}^{-1}}\) while values down to
+\(\SI{-19.0(5)}{\watt\metre^{-2}\mathrm{SAOD}^{-1}}\) \citep{gregory2016} and
+\(\SI{-18.3(10)}{\watt\metre^{-2}\mathrm{SAOD}^{-1}}\) \citep{mills2017} have been
+reported more recently. Simulations done with synthetic volcanoes have also been used,
+and in \citet{marshall2020} they simulate a total of \(82\) volcanic eruptions with
+varying injection height and latitude, ranging from \(10\) to \(\SI{100}{\tera\gram}\)
+of \iso{}. They obtain a scaling factor of
+\(\SI{-20.5(2)}{\watt\metre^{-2}\mathrm{SAOD}^{-1}}\) \citep{marshall2020}.
+
+A similar simulation setup, albeit with significant differences, was done by
+\citet{niemeier2015}, where \(14\) different levels of injected sulphur ranging between
+\(\SI{1}{\tera\gram(\ce{S})\mathrm{yr}^{-1}}\)
+(\(\SI{2}{\tera\gram(\ce{SO2})\mathrm{yr}^{-1}}\)) and
+\(\SI{100}{\tera\gram(\ce{S})\mathrm{yr}^{-1}}\)
+(\(\SI{200}{\tera\gram(\ce{SO2})\mathrm{yr}^{-1}}\)) was simulated. These were
+geoengineering simulations where sulphur would be continually injected, and the
+simulations run until the sulphur level was in a steady state. From this, they found
+that the radiative forcing to injecting rate ratio would follow an exponential and
+converge to a value of \(\SI{-65}{\watt\metre^{-2}}\). While the results from the
+super-volcano simulation by \citet{jones2005} indicate a much less steep gradient than
+the \(-18.3\) to \(-25\) found in more recent literature, the peak radiative forcing
+obtained in the super-volcano simulation was \(\SI{-60}{\watt\metre^{-2}}\), which may
+suggest the \citet{niemeier2015} results to be transferable to a volcanic eruption
+simulation scenario.
+
+% TODO: include these notes better in the introduction
 
 \citet{marshall2022} mention (in the graphic in their figure 1) that the \emph{role of
   initial conditions} is a key outstanding question, especially if the \ce{CO2}
@@ -219,35 +290,6 @@ Perhaps focus on why there seems to be a loop in the \acrshort{aod} against
 \acrshort{rf} plots. Can also compare February-August means with May-November means.
 (\citet{marshall2021} discuss Tambora, but mention that it erupted in April, while their
 data consist of January and July eruptions.)
-
-Previous studies on both Mt. Pinatubo alone \citep{mills2017,hansen2005} and volcanoes
-in the instrumental era \citep{gregory2016} have been used to estimate the relationship
-between the energy imbalance caused by volcanic eruptions and \acrshort{aod}.
-\citet{myhre2013} use a formula for \acrshort{rf} that scales \acrshort{aod} by
-\(\SI{-25}{\watt\metre^{-2}\mathrm{SAOD}^{-1}}\) while values down to
-\(\SI{-19.0(5)}{\watt\metre^{-2}\mathrm{SAOD}^{-1}}\) \citep{gregory2016} and
-\(\SI{-18.3(10)}{\watt\metre^{-2}\mathrm{SAOD}^{-1}}\) \citep{mills2017} have been
-reported more recently. Simulations done with synthetic volcanoes have also been used,
-and in \citet{marshall2020} they simulate a total of \(82\) volcanic eruptions with
-varying injection height and latitude, ranging from \(10\) to \(\SI{100}{\tera\gram}\)
-of \iso{}. They obtain a scaling factor of
-\(\SI{-20.5(2)}{\watt\metre^{-2}\mathrm{SAOD}^{-1}}\) \citep{marshall2020}.
-
-A similar simulation setup, albeit with significant differences, was done by
-\citet{niemeier2015}, where \(14\) different levels of injected sulphur ranging between
-\(\SI{1}{\tera\gram(\ce{S})\mathrm{yr}^{-1}}\)
-(\(\SI{2}{\tera\gram(\ce{SO2})\mathrm{yr}^{-1}}\)) and
-\(\SI{100}{\tera\gram(\ce{S})\mathrm{yr}^{-1}}\)
-(\(\SI{200}{\tera\gram(\ce{SO2})\mathrm{yr}^{-1}}\)) was simulated. These were
-geoengineering simulations where sulphur would be continually injected, and the
-simulations run until the sulphur level was in a steady state. From this, they found
-that the radiative forcing to injecting rate ratio would follow an exponential and
-converge to a value of \(\SI{-65}{\watt\metre^{-2}}\). While the results from the
-super-volcano simulation by \citet{jones2005} indicate a much less steep gradient than
-the \(-18.3\) to \(-25\) found in more recent literature, the peak radiative forcing
-obtained in the super-volcano simulation was \(\SI{-60}{\watt\metre^{-2}}\), which may
-suggest the \citet{niemeier2015} results to be transferable to a volcanic eruption
-simulation scenario.
 
 \section{Method}
 
