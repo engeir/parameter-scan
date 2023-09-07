@@ -152,24 +152,13 @@ ocean) affect things.
         strange output that must be resolved. Could take a while.)
 \end{itemize}
 
-The introduction should go into some detail about:
-
-\begin{itemize}
-  \item Volcanic eruption aerosol evolution (in relation to \cref{fig:aod_vs_toa_avg_loop} for
-        example)
-  \item The temperature response might be more sensitive to the sign of the forcing, rather than
-        the forcing agent, and as such a halving of \ce{CO2} may be compared with volcanoes
-        \citep{gunther2022}
-  \item How important is it that \ce{SO2} is injected at a given height? (Not very:
-        \citet{marshall2019})
-\end{itemize}
-
 \subsection*{References}
 
 \begin{description}
   \item[overview] \citet{marshall2022}
-  \item[feedback params] \citet{boer2007, gunther2022, gregory2020, hansen2005, knutti2017,
-      marvel2016, merlis2014, ollila2016, pauling2021, richardson2019, salvi2022, wigley2005}
+  \item[feedback params] \citet{boer2007, bender2010, gunther2022, gregory2020, hansen2005,
+      knutti2017, marvel2016, merlis2014, ollila2016, pauling2021, pauling2023,
+      richardson2019, salvi2022, wigley2005}
   \item[climate impact] \citet{gregory2016, jones2005, ottobliesner2016, santer2016,
       timmreck2009, timmreck2010, yang2019, yokohata2005, zanchettin2019}
   \item[eruptions] \citet{arfeuille2014, douglass2006, kleinschmitt2018, marshall2019,
@@ -183,6 +172,8 @@ The introduction should go into some detail about:
 
 \section{Introduction and Motivation}
 
+\paragraph*{Why volcanoes have been given attention}
+
 During much of the past few thousand years, the Holocene, the natural climate
 variability on Earth have been mostly forced by volcanic eruptions \citep{sigl2022}.
 Despite the strong influence volcanic eruptions have on climate variability, in
@@ -193,8 +184,11 @@ Thus, even though understanding how volcanic eruptions force the climate has bee
 much attention, many questions still remain unanswered
 \citep[e.g.,][]{robock2000,zanchettin2019,marshall2022}.
 
-% NOTE: perhaps join these two sections with papers looking at similarities between CO2
-% and volcanic forcing. (feedback params references)
+% Section on similarities between CO2 and volcanic forcing. (feedback params
+% references). Richardson is doing something that looks very similar to Gunther 2022.
+% Mention that as well? (Similarity bw 0.5CO2 and volcanoes.)
+
+\paragraph*{On similarities bw.\ \ce{CO2} and volcanoes (\acrshort{ecs})}
 
 One avenue that have been given much attention is how forcing from volcanoes or
 volcano-like forcings compare to the forcing that is due to increased \ce{CO2} levels.
@@ -203,32 +197,23 @@ all attempt to link volcanic forcing to climate sensitivity to a doubling of \ce
 much used metric for describing the severity of global warming \citep{marvel2016}. This
 is motivated by the large uncertainty in estimates of the sensitivity of the real
 climate system, and inferring climate sensitivity from for example volcanoes have been
-used in an attempt to constrain the sensitivity \citep{boer2007}. Among these, some have
+used as an attempt to constrain the sensitivity \citep{boer2007}. Among these, some have
 been running simulations of the 1991 Mt.\ Pinatubo eruption
 \citep{merlis2014,ollila2016} or historical volcano or volcano-like forcings
 \citep{boer2007,marvel2016,wigley2005}, while some look at aerosol forcing in general
-\citep{richardson2019,salvi2022}.
-
-\begin{itemize}
-  \item Boer did sims using volcano-like eruptions: changed solar constant according to
-      en exponential. This also means complete "ash-cover". Sensitivity need not be
-      constant, so sensitivity for short timescale volcano-perturbations is different
-      from ECS. Claims it might be possible to infer climate sensitivity if the forcing
-      and heat storage is known (but not temperature alone). MAYBE WITH HIGH PRECISION
-  \item Marvel used sims where many kinds were represented, among others idealized
-      volcano simulations. Talk about ERF as opposed to IRF...
-  \item Merlis ran an ensemble of SAOD forced Pinatubo eruptions and compared with 2xCO2
-      and 0.5xCo2
-  \item Ollila looked at Pinatubo in a dynamical model, so not a GCM
-  \item Richardson compared many different sims setups, where 5xSO4 was one of them,
-      that is, 5 times sulfate aerosol concentrations or emissions, as a step function
-  \item Salvi ran simulations of historical aerosols, but this does not mean natural
-      volcanic aerosols it seems
-  \item Wigley used an ensemble of historic volcanoes, 1890 to 2000, output of AOGCMs,
-      and ran en upwelling diffusion EBM to emulate an AOGCM
-\end{itemize}
+\citep{richardson2019,salvi2022}. While many of the earlier studies often assume
+\acrshort{ecs} can be inferred from volcanoes \citep{wigley2005} or suggest that it
+might be possible \citep{bender2010}, as long as you constrain it with \acrfull{erf} and
+not \acrfull{irf} \citep{richardson2019}, other studies suggest this is either not
+possible or that the precision at which climate simulations are run must be much higher
+\citep{boer2007,salvi2022}. However, even though \acrshort{erf} is a more suited
+indicator of the temperature response to a forcing, than \acrshort{irf}
+\citep{marvel2016,richardson2019}, most of the more recent studies conclude that we
+cannot constrain \acrshort{ecs} from volcanoes \citep{pauling2023}.
 
 % Section on RF to AOD ratio
+
+\paragraph*{On the comparison bw.\ \acrshort{rf} and \acrshort{aod}}
 
 Previous studies on both Mt. Pinatubo alone \citep{mills2017,hansen2005} and volcanoes
 in the instrumental era \citep{gregory2016} have been used to estimate the relationship
@@ -259,7 +244,14 @@ obtained in the super-volcano simulation was \(\SI{-60}{\watt\metre^{-2}}\), whi
 suggest the \citet{niemeier2015} results to be transferable to a volcanic eruption
 simulation scenario.
 
-% TODO: include these notes better in the introduction
+% TODO: write section on aerosol evolution in the atmosphere (Robock 2000). Something
+% related to loop in figures.
+
+\paragraph*{On aerosol evolution and atm.\ dynamics (TODO)}
+
+% FIX: include these notes better in the introduction
+
+\paragraph*{Marshall papers (still notes)}
 
 \citet{marshall2022} mention (in the graphic in their figure 1) that the \emph{role of
   initial conditions} is a key outstanding question, especially if the \ce{CO2}
@@ -294,6 +286,9 @@ data consist of January and July eruptions.)
 \section{Method}
 
 \subsection{Output variables}
+
+% TODO: describe ERF vs IRF, and what is used here (for example Marshall 20??,
+% Richardson 2019, Marvel 2016)
 
 Radiative forcing is calculated as the combined (\acrshort{sw} and \acrshort{lw})
 all-sky \acrshort{toa} energy imbalance, where the \acrshort{cesm2} provide the output
