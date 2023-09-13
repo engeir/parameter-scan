@@ -18,10 +18,10 @@
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Start with one of the following: DOUBLE-SPACED VERSION FOR SUBMISSION TO THE AMS
-% \documentclass{ametsocV5}
+\documentclass{ametsocV5}
 
 % TWO-COLUMN JOURNAL PAGE LAYOUT---FOR AUTHOR USE ONLY
-\documentclass[twocol]{ametsocV5}
+% \documentclass[twocol]{ametsocV5}
 
 % Enter packages here. If too many math alphabets are used, remove unnecessary packages
 % or define hmmax and bmmax as necessary.
@@ -41,7 +41,7 @@
 \makeglossaries{}
 \input{./definitions/acronyms.tex}
 
-% Create some cusotm commands
+% Create some custom commands
 \newcommand{\iso}[1][i]{{#1}njected \ce{SO2}}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -130,45 +130,21 @@
 % \paragraph{First quaternary heading}
 % \section{Section title}
 
-\section{Outline}
-
-The paper should provide insight about what might happen if a large volcano erupted
-(order of magnitude or more than Mount Pinatubo). \emph{Little literature has been found
-  that investigate the effects of eruptions ten times or more than that of Mount Pinatubo,
-  so this should hopefully be worthwhile looking into.} How does the atmosphere react, for
-example in the aerosol dynamics? (\acrshort{qbo}, \iso{}/\acrshort{aod}/\acrshort{rf}
-relationship.) It should also be about how volcanic simulations compare in magnitude and
-if there is time for more simulations, how model complexity (dynamic ocean against slab
-ocean) affect things.
-\begin{itemize}
-  \item How far does the linear relation between \acrshort{aod} and \acrshort{rf} go? What
-        phases does the aerosols go though? (Perhaps the most promising avenue.)
-  \item How much does it matter how high in the atmosphere the initial \ce{SO2} is injected?
-        (Already is some literature on this, suggesting it is not much. Also some on latitude
-        dependence, which has a bigger influence.)
-  \item How does the climate response change based on the state of the climate: what if we run a
-        \ce{CO2} doubling or quadrupling simulation until close to equilibrium, and let the
-        volcanoes erupt then? (Lack the doubling scenario, and setting it up has resulted in
-        strange output that must be resolved. Could take a while.)
-\end{itemize}
-
-\subsection*{References}
-
-\begin{description}
-  \item[overview] \citet{marshall2022}
-  \item[feedback params] \citet{boer2007, bender2010, gunther2022, gregory2020, hansen2005,
-      knutti2017, marvel2016, merlis2014, ollila2016, pauling2021, pauling2023,
-      richardson2019, salvi2022, wigley2005}
-  \item[climate impact] \citet{gregory2016, jones2005, ottobliesner2016, santer2016,
-      timmreck2009, timmreck2010, yang2019, yokohata2005, zanchettin2019}
-  \item[eruptions] \citet{arfeuille2014, douglass2006, kleinschmitt2018, marshall2019,
-      marshall2020, marshall2021, niemeier2015, niemeier2017, pitari2016b, robock2000,
-      soden2002, sukhodolov2018, tilmes2017}
-  \item[other phenomena] \citet{chen2022, lehner2016, marshall2018}
-  \item[models] \citet{rypdal2012}
-  \item[cesm2] \citet{danabasoglu2020, gettleman2019, lawrence2019, li2013, liu2016, mills2016,
-      smith2010}
-\end{description}
+% NOTE: what to include in the paper, key questions.
+% The paper should provide insight about what might happen if a large volcano erupted
+% (order of magnitude or more than Mount Pinatubo). How does the atmosphere react, for
+% example in the aerosol dynamics? (QBO, SO2/AOD/RF relationship.) It should also be
+% about how volcanic simulations compare in magnitude and if there is time for more
+% simulations, how model complexity (dynamic ocean against slab ocean) affect things.
+% - How far does the linear relation between AOD and RF go? What phases does the
+%   aerosols go though? (Perhaps the most promising avenue.)
+% - How much does it matter how high in the atmosphere the initial SO2 is injected?
+%   (Already is some literature on this, suggesting it is not much. Also some on
+%   latitude dependence, which has a bigger influence.)
+% - How does the climate response change based on the state of the climate: what if we
+%   run a CO2 doubling or quadrupling simulation until close to equilibrium, and let the
+%   volcanoes erupt then? (Lack the doubling scenario, and setting it up has resulted in
+%   strange output that must be resolved. Could take a while.)
 
 \section{Introduction and Motivation}
 
@@ -193,23 +169,44 @@ much attention, many questions still remain unanswered
 One avenue that have been given much attention is how forcing from volcanoes or
 volcano-like forcings compare to the forcing that is due to increased \ce{CO2} levels.
 \citet{boer2007,marvel2016,merlis2014,ollila2016,richardson2019,salvi2022,wigley2005}
-all attempt to link volcanic forcing to climate sensitivity to a doubling of \ce{CO2}, a
-much used metric for describing the severity of global warming \citep{marvel2016}. This
-is motivated by the large uncertainty in estimates of the sensitivity of the real
-climate system, and inferring climate sensitivity from for example volcanoes have been
-used as an attempt to constrain the sensitivity \citep{boer2007}. Among these, some have
-been running simulations of the 1991 Mt.\ Pinatubo eruption
-\citep{merlis2014,ollila2016} or historical volcano or volcano-like forcings
-\citep{boer2007,marvel2016,wigley2005}, while some look at aerosol forcing in general
-\citep{richardson2019,salvi2022}. While many of the earlier studies often assume
-\acrshort{ecs} can be inferred from volcanoes \citep{wigley2005} or suggest that it
-might be possible \citep{bender2010}, as long as you constrain it with \acrfull{erf} and
-not \acrfull{irf} \citep{richardson2019}, other studies suggest this is either not
-possible or that the precision at which climate simulations are run must be much higher
-\citep{boer2007,salvi2022}. However, even though \acrshort{erf} is a more suited
-indicator of the temperature response to a forcing than \acrshort{irf}
-\citep{marvel2016,richardson2019}, more recent studies conclude that \acrshort{ecs}
-cannot be constrained from volcanoes \citep{pauling2023}.
+all look at the link or lack thereof between volcanic forcing and the climate
+sensitivity to a doubling of \ce{CO2}, a much used metric for describing the severity of
+global warming \citep{marvel2016}. This is motivated by the large uncertainty in
+estimates of the sensitivity of the real climate system, and inferring climate
+sensitivity from for example volcanoes have been used as an attempt to constrain the
+sensitivity \citep{boer2007}. Among these, some have been running simulations of the
+1991 Mt.\ Pinatubo eruption \citep{merlis2014,ollila2016} or historical volcano or
+volcano-like forcings \citep{boer2007,marvel2016,wigley2005}, while some look at aerosol
+forcing in general \citep{richardson2019,salvi2022}. While many of the earlier studies
+often assume \acrshort{ecs} can be inferred from volcanoes \citep{wigley2005} or suggest
+that it might be possible \citep{bender2010}, as long as you constrain it with
+\acrfull{erf} and not \acrfull{irf} \citep{richardson2019}, other studies suggest this
+is either not possible and that the sensitivity to volcanic forcing and \ce{CO2}
+doubling are different or that the precision at which climate simulations are run must
+be much higher \citep{douglass2006,boer2007,salvi2022}. However, even though
+\acrshort{erf} is a more suited indicator of the temperature response to a forcing than
+\acrshort{irf} \citep{marvel2016,richardson2019}, more recent studies conclude that
+\acrshort{ecs} cannot be constrained from volcanoes \citep{pauling2023}.
+
+% TODO: write section on aerosol evolution in the atmosphere (Robock 2000, Pitari 2016).
+% Something related to loop in figures.
+
+\paragraph*{On aerosol evolution and atm.\ dynamics}
+
+Even though \ce{H2O}, \ce{N2} and \ce{CO2} are the most abundant gases emitted by
+volcanoes \citep{robock2000}, sulphur species like \ce{SO2} are the most influential due
+to the already large concentrations of the former gases in the atmosphere. From \ce{SO2}
+comes \ce{H2SO4} due to reactions with \ce{OH} and \ce{H2O} \citep{robock2000}. Sulphate
+acid, \ce{H2SO4}, produce the largest effect on the radiative forcing, and since their
+formation from \ce{SO2} is happening over weeks \citep{robock2000}, the peak radiative
+forcing from the eruption has a slight delay from the eruption time. The duration of
+time that the \ce{H2SO4} aerosols stay in the atmosphere depends on several factors,
+including the phase of the \acrshort{qbo} \citep{pitari2016b}, the season of the year
+(most notably to which hemisphere aerosols are transported)
+\citep{toohey2011,toohey2019}, latitude \citep{marshall2019,toohey2019}, volcanic plume
+height \citep{marshall2019} and their size \citep{marshall2019}. In the case of tropical
+eruptions, aerosols are typically transported poleward in the stratosphere and back to
+mid-latitude troposphere within one to two years \citep{robock2000}.
 
 % Section on RF to AOD ratio
 
@@ -244,44 +241,47 @@ obtained in the super-volcano simulation was \(\SI{-60}{\watt\metre^{-2}}\), whi
 suggest the \citet{niemeier2015} results to be transferable to a volcanic eruption
 simulation scenario.
 
-% TODO: write section on aerosol evolution in the atmosphere (Robock 2000). Something
-% related to loop in figures.
+\paragraph*{Aerosol optical depth vs.\ radiative forcing}
 
-\paragraph*{On aerosol evolution and atm.\ dynamics (TODO)}
+The aerosol evolution and lifetime in the stratosphere strongly influence the radiative
+forcing resulting from the aerosols and the \acrshort{aod}, but not always in the same
+way. \citet{marshall2020} present results showing higher efficacies in years 2 and 3
+after an eruption, compared to year 1, explaining that this is due to the aerosols being
+concentrated more spatially in the first year and more spread out in later years. This
+has the effect of increasing the albedo per global mean \acrshort{aod} which in turn
+increases the \acrshort{rf} per \acrshort{aod} \citep{marshall2020}. (Also,
+\acrshort{saod} to \acrshort{rf} depend on insulation, cloudiness and surface albedo
+among others, which vary across eruptions \citep{marshall2021,andersson2015}.)
 
-% FIX: include these notes better in the introduction
+% \citet{marshall2022} mention (in the graphic in their figure 1) that the \emph{role of
+%   initial conditions} is a key outstanding question, especially if the \ce{CO2}
+% doubling simulations work out, this could be a contribution to that.
+% Also, when aerosols grow, they scatter radiation less efficiently and also fall down
+% faster, so the temperature response should be comparatively weaker for increasing
+% eruption magnitude (or the volcanic aerosols are less efficient). \emph{Clustering} and
+% long term effects are mentioned in its own section (Multi-decadal impacts) along with
+% the \emph{dependence of the current climate state}.
 
-\paragraph*{Marshall papers (still notes)}
+% \citet{marshall2019} does many similar things to what I have done, but do not focus on
+% seasonal variability. This is however mentioned as one other direction to dig into, but
+% is somewhat covered by \citet{marshall2020}. Assumes that there is an $e$-folding time,
+% but notes that it does change, so they calculate an average time over a small range
+% (from a month after the peak until reaching ten percent of the peak). They further note
+% that the $e$-folding time is dependent on latitude mostly, but also on injected
+% \ce{SO2}. Their eruptions all occur in July, but with the equivalent winter (January)
+% eruptions covered by \citet{marshall2020}.
 
-\citet{marshall2022} mention (in the graphic in their figure 1) that the \emph{role of
-  initial conditions} is a key outstanding question, especially if the \ce{CO2}
-doubling simulations work out, this could be a contribution to that.
-Also, when aerosols grow, they scatter radiation less efficiently and also fall down
-faster, so the temperature response should be comparatively weaker for increasing
-eruption magnitude (or the volcanic aerosols are less efficient). \emph{Clustering} and
-long term effects are mentioned in its own section (Multi-decadal impacts) along with
-the \emph{dependence of the current climate state}.
-
-\citet{marshall2019} does many similar things to what I have done, but do not focus on
-seasonal variability. This is however mentioned as one other direction to dig into, but
-is somewhat covered by \citet{marshall2020}. Assumes that there is an $e$-folding time,
-but notes that it does change, so they calculate an average time over a small range
-(from a month after the peak until reaching ten percent of the peak). They further note
-that the $e$-folding time is dependent on latitude mostly, but also on injected
-\ce{SO2}. Their eruptions all occur in July, but with the equivalent winter (January)
-eruptions covered by \citet{marshall2020}.
-
-In \citet{marshall2020}, they take the reconstructed \acrshort{saod} from
-\citet{toohey2017}, convert it to radiative forcing based on their conversions, and plot
-the corresponding temperature time series from each radiative forcing using a simple
-climate model. \emph{So, can we use this with the \acrfull{fpp} framework? (Noisy data?
-  Check this.)}
+% In \citet{marshall2020}, they take the reconstructed \acrshort{saod} from
+% \citet{toohey2017}, convert it to radiative forcing based on their conversions, and plot
+% the corresponding temperature time series from each radiative forcing using a simple
+% climate model. \emph{So, can we use this with the \acrfull{fpp} framework? (Noisy data?
+%   Check this.)}
 % TODO: check the data if it can be used for FPP.
 
-Perhaps focus on why there seems to be a loop in the \acrshort{aod} against
-\acrshort{rf} plots. Can also compare February-August means with May-November means.
-(\citet{marshall2021} discuss Tambora, but mention that it erupted in April, while their
-data consist of January and July eruptions.)
+% Perhaps focus on why there seems to be a loop in the \acrshort{aod} against
+% \acrshort{rf} plots. Can also compare February-August means with May-November means.
+% (\citet{marshall2021} discuss Tambora, but mention that it erupted in April, while their
+% data consist of January and July eruptions.)
 
 \paragraph*{Motivation}
 
@@ -314,13 +314,6 @@ volcanic eruptions.
 
 \subsection{Model}
 
-We are using the \acrfull{cesm2} \citep{danabasoglu2020} to run our climate simulations,
-together with the \acrfull{waccm} \citep{gettleman2019} and the fully dynamical ocean
-component \acrfull{pop} \citep{smith2010, danabasoglu2020}. The complete list of model
-components is found in \cref{tab:cesm-components}. The model atmosphere was run at
-nominal \(\SI{2}{\degree}\) resolution, with \(70\) vertical levels, in the \acrfull{ma}
-configuration.
-
 \begin{table*}
   \caption{\acrshort{cesm2} model components}%
   \label{tab:cesm-components}
@@ -340,6 +333,13 @@ configuration.
     \end{tabular}
   \end{center}
 \end{table*}
+
+We are using the \acrfull{cesm2} \citep{danabasoglu2020} to run our climate simulations,
+together with the \acrfull{waccm} \citep{gettleman2019} and the fully dynamical ocean
+component \acrfull{pop} \citep{smith2010, danabasoglu2020}. The complete list of model
+components is found in \cref{tab:cesm-components}. The model atmosphere was run at
+nominal \(\SI{2}{\degree}\) resolution, with \(70\) vertical levels, in the \acrfull{ma}
+configuration.
 
 % \begin{table*}
 %   \caption{\acrshort{cesm2} model components}%
@@ -442,7 +442,13 @@ similar to the 1257 Samalas eruption \citep[\(\sim
 is similar to the Young Toba Tuff eruption
 \citep[\(10\)--\(\SI{10000}{\tera\gram}\);][and~references~therein]{jones2005}. They are
 all located at the equator, at \(\SI{0}{\degree N}\), \(\SI{1}{\degree E}\) and \ce{SO2}
-is injected between \(\SI{18}{\kilo\meter}\) and \(\SI{20}{\kilo\meter}\).
+is injected between \(\SI{18}{\kilo\meter}\) and \(\SI{20}{\kilo\meter}\). An advantage
+with having eruptions this big, in the large to super-volcano size, is improvement of
+the signal-to-noise ratio without having to run a large and computationally expensive
+ensemble. This still, however, leave the question of whether this will give realistic
+values for the forcing open \citep{gregory2016}.
+% FIX: should probably estimate the climate feedback parameters for CESM2 with these
+% volcanic eruption simulations
 
 \begin{table}
   \caption{Simulations done with the \acrshort{cesm2}}%
@@ -466,28 +472,28 @@ is injected between \(\SI{18}{\kilo\meter}\) and \(\SI{20}{\kilo\meter}\).
 
 There are three different forcing magnitudes that have been used. The figures below show
 two alternative ways of normalizing the temperature response to these volcanic events.
-
 First, we have the three temperature responses normalized by setting the peak value
-equal to one, shown in \cref{fig:temp_norm_max}. The second method of normalizing, shown
-in \cref{fig:temp_norm_int}, is to numerically integrate the time series, and divide
-through such that they integrate to one.
+equal to one, shown in \cref{fig:temp_norm_max} (the peak of a third order
+Savitzky-Golay filter with a one year long window length, that is). The second method of
+normalizing, shown in \cref{fig:temp_norm_int}, is to numerically integrate the time
+series, and divide through such that they integrate to one.
 
 When normalizing by setting their amplitude equal to (minus) one, the initial rise
 across all three is comparable. The difference among the three is now how much more
-quickly the temperature reverts back to equilibrium in the small eruption case.
+quickly the temperature reverts back to equilibrium in the small eruption case. On the
+other hand, when normalizing by enforcing all to integrate to the same value, the tail
+of the temperature time series is what is most similar across the three eruptions. From
+these two normalizations, one thing that stays different is the amount of time spent at
+the peak temperature. The temperature from the smaller eruption simulation starts to
+revert sooner after it reaches temperatures close to the peak temperature. The shape of
+the initial rise and the tail is more similar across the three, while the peak is
+sharper in the small eruption case compared to the two larger.
 
-On the other hand, when normalizing by enforcing all to integrate to the same value, the
-tail of the temperature time series is what is most similar across the three eruptions.
-From these two normalizations, one thing that stays different is the amount of time
-spent at the peak temperature. The temperature from the smaller eruption simulation
-starts to revert sooner after it reaches temperatures close to the peak temperature. The
-shape of the initial rise and the tail is more similar across the three, while the peak
-is sharper in the small eruption case compared to the two larger. \emph{ Any similar
-  results that is consistent with a faster temperature recovery for weaker volcanic
-  forcing? Not, sure, but one curiosity is that in the \acrshort{aod} signals, the smaller
-  eruption spent more time at the peak, contrary to what seems to be the case for the
-  temperature. The \acrshort{rf} time series have similar shape for all forcing
-  magnitudes. See \cref{fig:aod_arrays_normalized,fig:toa_arrays_normalized}.}
+% NOTE: Any similar results that is consistent with a faster temperature recovery for
+% weaker volcanic forcing? Not, sure, but one curiosity is that in the AOD signals, the
+% smaller eruption spent more time at the peak, contrary to what seems to be the case
+% for the temperature. The RF time series have similar shape for all forcing magnitudes.
+% See figs. 9 (aod_arrays_normalized) and 10 (toa_arrays_normalized).
 
 \begin{figure}[t]
   \begin{center}
@@ -580,12 +586,6 @@ should not be too surprising that the responses are different.
 
 \subsection{Forcing efficiency}
 
-\emph{Related to \citet{marshall2020}: ``We find that the conversion between
-  \acrshort{saod} and ERF depends on the time after an eruption, \dots''. ``Forcing per
-  unit \acrshort{saod} is weaker in Year 1 than in Years 2 and 3 \dots'', does this make
-  sense relative to my results? It looks like it is opposite! But they also represent
-  \acrshort{saod} somewhat differently from me: \( 1-\exp(-\mathrm{SAOD}) \).}
-
 To further look into the responses in \acrshort{aod} and \acrshort{rf} due to the
 differently sized volcanic eruptions, we plot in
 \cref{fig:aod_vs_toa_avg_loop,fig:aod_vs_toa_avg_loop_scaled,fig:aod_vs_toa_avg_loop_ratio,fig:aod_vs_toa_avg_loop_ratio_scaled}
@@ -614,9 +614,18 @@ see \cref{fig:aod_vs_toa_avg_loop_ratio}). Based on the simple two phases of the
 evolution \citep{marshall2019}, an increasing \acrshort{rf} to \acrshort{aod} ratio
 (decreasing when considering absolute values) seems reasonable.
 
-\emph{\citet[][their figure 1c,d]{marshall2020} appear to have results suggesting that
-  \acrshort{rf} should be larger later after the eruption than \acrshort{aod}, not weaker.
-  Why this difference?}
+\citet[][their figure 1c,d]{marshall2020} present results showing a time dependence
+in the conversion between \acrshort{saod} and \acrshort{rf}, but where
+\acrshort{rf} should be larger later in the eruption evolution when compared to
+\acrshort{aod}, not weaker. This happen since the aerosols are initially spatially
+confined to the hemisphere where the eruption was at before it spread, leading to a
+larger global mean albedo per \acrshort{saod} and in turn large \acrshort{rf} per
+\acrshort{saod} \citep{marshall2020}. From their results and the results shown here in
+\cref{fig:aod_vs_toa_avg_loop,fig:aod_vs_toa_avg_loop_scaled,fig:aod_vs_toa_avg_loop_ratio,fig:aod_vs_toa_avg_loop_ratio_scaled},
+there seems to be several and competing effects that decide on the values of
+\acrshort{saod} and \acrshort{rf}.
+
+% FIX: Marshall et al. 2020 used 1-e^{-SAOD}, so check this out as well.
 
 \begin{figure}[t]
   \begin{center}
@@ -643,17 +652,17 @@ evolution \citep{marshall2019}, an increasing \acrshort{rf} to \acrshort{aod} ra
 
 In \cref{fig:aod_vs_toa_avg_loop_ratio} we plot the ratio of the annual means of
 \acrshort{rf} and \acrshort{aod}. The years where the signal-to-noise ratio is best is
-in years 1 and 2, as well as years 0 and 3 (mostly due to the \acrshort{rf} time series,
-shown in \cref{fig:toa_arrays_normalized}). For this reason, the ratio of \acrshort{rf}
-to \acrshort{aod} is calculated for the second season of the first year until the end of
-the third year. From this we find that even though the ratio changes between the
-eruption magnitudes, we do find that the gradient at which the ratio is changing is
-similar across large eruption magnitudes. A slope of approximately \( 5.8 \) is a good
-fit for both the intermediate (orange thick diamonds) and the strong eruption (green
-upward triangles), and even though the spread in the small eruption (blue downward
-triangles) is large in the \( y \)-direction, they tend to follow a similarly inclined,
-albeit steeper, slope. In the later phase, from the second season of the second year,
-the ratios stay close to constant for the reminder of the decaying phase.
+in years 1 and 2, as well as year 0 (the noise is mostly due to the \acrshort{rf} time
+series, shown in \cref{fig:toa_arrays_normalized}). For this reason, the ratio of
+\acrshort{rf} to \acrshort{aod} is calculated for the second season of the first year
+until the end of the third year. From this we find that even though the ratio changes
+between the eruption magnitudes, we do find that the gradient at which the ratio is
+changing is similar across large eruption magnitudes. A slope of approximately \( 5.8 \)
+is a good fit for both the intermediate (orange thick diamonds) and the strong eruption
+(green upward triangles), and even though the spread in the small eruption (blue
+downward triangles) is large in the \( y \)-direction, they tend to follow a similarly
+inclined, albeit steeper, slope. In the later phase, from the second season of the
+second year, the ratios stay close to constant for the reminder of the decaying phase.
 
 The change in ratio, where the smallest is found in the strong eruption and the largest
 ratio is from the small eruption, is consistent with the change in peak values seen in
@@ -661,9 +670,10 @@ ratio is from the small eruption, is consistent with the change in peak values s
 to the right. The \acrshort{rf} increase in magnitude slows down while \acrshort{aod}
 increases close to linearly with injected \ce{SO2} (see also \cref{fig:so2_vs_aod}).
 This could be the result of larger aerosols having time to develop as the amount of
-injected \ce{SO2} increase \citep{marshall2019}. This in turn might make the forcing
-from smaller eruptions relatively more efficient than from large eruptions, causing a
-larger ratio between \acrshort{rf} and \acrshort{aod}.
+injected \ce{SO2} increase \citep{niemeier2015,marshall2019}. This in turn make the
+forcing from smaller eruptions relatively more efficient than from large eruptions since
+larger aerosols scatter radiation less efficiently, causing a larger ratio between
+\acrshort{rf} and \acrshort{aod}.
 
 \begin{figure}[t]
   \begin{center}
@@ -700,8 +710,9 @@ eruptions (\cref{fig:aod_arrays_normalized}). Specifically, the \acrshort{aod} t
 series from the smallest eruptions have a fast rise and a flat peak before it decays
 back to its equilibrium state, while from the two larger eruptions we find a slower rise
 time, but a sharper peak, making the decay to equilibrium happen at a similar time after
-the eruption and at a similar rate. \emph{Why? \citet{marshall2019} and references
-  therein may be the best source for a suggested explanation.}
+the eruption and at a similar rate.
+% TODO: Why? Marshall et al. (2019) and references therein may be the best source for a
+% suggested explanation.
 
 An interesting aspect with the similar decaying phase seen in both the \acrshort{aod}
 time series and the \acrshort{rf} time series is how this might influence the
@@ -768,7 +779,7 @@ tend to bend off sooner, having a smaller \acrshort{rf} response to \iso{} than 
 \acrshort{cesm2} data has. The simulations used by \citet{ottobliesner2016} was with
 \acrshort{cesm} as well, but version 1 (\acrshort{cesm1}) and with a low-top atmosphere
 (\acrshort{cam5}). The difference in model complexity might therefore be the reason why
-the \iso{} give weaker \acrshort{rf} response for \citet{ottobliesner2016} then what we
+the \iso{} give weaker \acrshort{rf} response for \citet{ottobliesner2016} than what we
 find.
 
 \begin{figure}[t]
@@ -840,6 +851,22 @@ perturbation.
   \caption{\acrshort{rf} versus temperature}%
   \label{fig:toa_vs_temp}
 \end{figure}
+
+\section{Discussion \& Conclusions}
+
+% NOTE: what we have done, future work, going back to points from introduction
+
+In this paper we considered three large to super-volcano sized eruptions.
+
+\clearpage
+
+Todo:
+
+\begin{itemize}
+  \item Create an estimate of climate sensitivity from volcanoes
+  \item Create plots also using the \(1-\mathrm{e}^{-\mathrm{SAOD}}\), like in Marshall et al.
+        (2020)
+\end{itemize}
 
 \clearpage
 
