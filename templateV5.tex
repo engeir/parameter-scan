@@ -756,7 +756,7 @@ between them, shown in \cref{fig:so2_vs_aod}.\footnote{\emph{Since \iso{} is ``t
     amount of \iso{}'', maybe consider comparing to integrated values of \acrshort{aod},
     \acrshort{rf} and temperature as well, not just the peak values.}} The latitude also
 play a role for how large the \acrshort{aod} perturbation become, as we can see from the
-\textbf{C2WN\(\uparrow\)} data point, representing a strong eruption, but located at \(
+C2WN\(\uparrow\) data point, representing a strong eruption, but located at \(
 \SI{56}{\degree N} \). The weak dependence on eruption latitude is also reported in
 \citet{marshall2019}.
 
@@ -774,8 +774,8 @@ versus \acrshort{rf}. \iso[I] versus \acrshort{rf} is shown in \cref{fig:so2_vs_
 but where the absolute value of the \acrshort{rf} is potted along the \( y \)-axis. Just
 as in \cref{fig:aod_vs_toa_full} we find the \acrshort{cesm2} data points to be heavily
 damped in \acrshort{rf} compared to \iso. The same effect can be seen in the data from
-\citet{ottobliesner2016} (labelled \textbf{C1C}, red points), but here the \acrshort{rf}
-tend to bend off sooner, having a smaller \acrshort{rf} response to \iso{} than the
+\citet{ottobliesner2016} (labelled C1C, red points), but here the \acrshort{rf} tend to
+bend off sooner, having a smaller \acrshort{rf} response to \iso{} than the
 \acrshort{cesm2} data has. The simulations used by \citet{ottobliesner2016} was with
 \acrshort{cesm} as well, but version 1 (\acrshort{cesm1}) and with a low-top atmosphere
 (\acrshort{cam5}). The difference in model complexity might therefore be the reason why
@@ -842,7 +842,8 @@ hundred, the shape during the whole phase could be significantly different to wh
 super-eruption would create, even though the peak is representable, as we have seen in
 \cref{fig:aod_arrays_normalized} where the \acrshort{aod} shape differ as the eruption
 strength is increased. This might be enough to cause a much stronger temperature
-perturbation.
+perturbation. We also note that \citet{timmreck2010} obtain cooling that is much smaller
+than for example \citet{jones2005}.
 
 \begin{figure}[t]
   \begin{center}
@@ -852,7 +853,55 @@ perturbation.
   \label{fig:toa_vs_temp}
 \end{figure}
 
-\section{Discussion \& Conclusions}
+\section{Discussion}
+
+\Cref{fig:aod_vs_toa_full,fig:aod_vs_toa_inset,fig:aod_vs_toa_avg_loop,fig:aod_vs_toa_avg_loop_scaled,fig:aod_vs_toa_avg_loop_ratio,fig:aod_vs_toa_avg_loop_ratio_scaled,fig:aod_vs_toa_logscale}
+all show that as the \acrshort{aod} values are increased past \(\sim 0.5\), the scaling
+of \(\sim -20\) no longer map to corresponding values of \acrshort{rf}. When
+looking at the intermediate volcanic eruption with \(\SI{400}{\tera\gram}\) \iso{} there
+seem to be a mostly linear relationship between the \acrshort{aod} and \acrshort{rf}
+values, with a slope of approximately \(-10\). As for the largest eruption, scaling
+\acrshort{aod} by \(\sim-4\) yields reasonable \acrshort{rf} values. From
+\cref{fig:so2_vs_aod} we have an almost linear relation between \iso{} and
+\acrshort{aod}, and previous results indicate that larger eruptions where more \ce{SO2}
+is injected creates larger aerosols which are less effective at scattering radiation,
+making the cooling less efficient \citep{english2013,timmreck2010,timmreck2018}.
+(\citet{timmreck2010} mention that for very large eruptions, they look at Pinatubo and
+Young Toba Tuff, \ce{OH} radicals are not abundant enough which limit the \ce{SO2}
+oxidation. Originally in \citep{bekki1995}.)
+
+Only when inspecting the data generated from the largest eruption at
+\(\SI{1629}{\tera\gram}\) of \iso{} can we see that it initially follow approximately
+the same path as the intermediate, before it continues on a much less steep path.
+Nevertheless, the shape the two eruptions draw is very similar when scaled, suggesting
+that the intermediate also do follow a loop rather than there just being noise that
+causes the spread. That is, there appear to be a time-after-eruption dependency on the
+ratio between \acrshort{aod} and \acrshort{rf}. \citet{marshall2020} discuss a similar
+feature they find when looking at \acrshort{aod} (\acrshort{saod}) and \acrshort{rf},
+but there, the efficiency increases from year 1 to year 2, while here efficiency
+decreases with time. \citet{marshall2020} explain that this is due to the time it takes
+for the aerosols to spread which affects the global albedo and in turn the
+\acrshort{rf}, while the \acrshort{aod} being less affected by the aerosols spreading.
+
+An attempt to reason for the decrease in efficiency being more likely: smaller eruptions
+and estimates from then give an \acrshort{rf} to \acrshort{aod} that is quite steep,
+while larger eruptions (or values of \iso{} in the atmosphere, see \citet{niemeier2015})
+result in estimates that are smaller (\(\sim-20\) versus \(\sim-10\) to \(\sim-4\)). It
+has been shown that that efficiency decrease as the injection rate increase
+\citep{niemeier2017}, related to the \acrshort{qbo}, and that large volcanic eruptions
+result in larger aerosol particle sizes which result in decreasing cooling efficiency
+per \iso{} \citep{english2013, timmreck2018}. Can this be used to reason that the
+efficiency is initially high, then decreasing?
+
+Section about how RF to AOD show non-linear trend when going past \(\sim\) 2 in AOD and
+-20 in RF\@. Also that the slope already at this point is -10 rather than the
+\(\sim\)-20 used many other places. Why?
+
+Section about the apparent loop that shows up in the RF to AOD plot, and how it also
+looks to loop opposite to what Marshall et al 2020 found. Albedo versus other effects,
+like aerosol size, growth \& sedimentation phases\ldots{}
+
+\section{Conclusions}
 
 % NOTE: what we have done, future work, going back to points from introduction
 
@@ -863,9 +912,12 @@ In this paper we considered three large to super-volcano sized eruptions.
 Todo:
 
 \begin{itemize}
-  \item Create an estimate of climate sensitivity from volcanoes
-  \item Create plots also using the \(1-\mathrm{e}^{-\mathrm{SAOD}}\), like in Marshall et al.
-        (2020)
+  \item[\lbrack{}\hphantom{x}\rbrack{}] Create an estimate of climate sensitivity from
+    volcanoes. Gregory et al.\ (2016) talks about what they got in Jones et al.\
+    (2005), so maybe comparing is worthwhile.
+  \item[\lbrack{}x\rbrack{}] Create plots also using the \(1-\mathrm{e}^{-\mathrm{SAOD}}\),
+    like in Marshall et al.\ (2020). \emph{For data greater than 1, the scaling squishes
+    it a lot.}
 \end{itemize}
 
 \clearpage
