@@ -280,15 +280,15 @@ among others, which vary across eruptions \citep{marshall2021,andersson2015}.)
 % (\citet{marshall2021} discuss Tambora, but mention that it erupted in April, while their
 % data consist of January and July eruptions.)
 
-\paragraph*{Motivation}
-
-From \citet{pauling2023}: what aspect of the climate system control the response to
-volcanic eruptions?
-
-From \citet{marshall2022}: However, uncertainties remain regarding the role of internal
-variability and the dependence on the current climate state. Also \citet{aubry2022} give
-a review on this very topic. They emphasise the urgency to accelerate research on
-climate-volcano impacts (a niche topic to date).
+% \paragraph*{Motivation}
+%
+% From \citet{pauling2023}: what aspect of the climate system control the response to
+% volcanic eruptions?
+%
+% From \citet{marshall2022}: However, uncertainties remain regarding the role of internal
+% variability and the dependence on the current climate state. Also \citet{aubry2022} give
+% a review on this very topic. They emphasise the urgency to accelerate research on
+% climate-volcano impacts (a niche topic to date).
 
 \section{Method}
 
@@ -550,7 +550,7 @@ however, the functional shape is very different; the exponential found by
 \citet{niemeier2015} have a much slower decay than what the \acrshort{cesm2} and
 \acrshort{p100} data might follow. Given the very different scenarios; a constant level
 of \iso{} in contrast to a specified injected mass simulating a volcanic eruption, it
-should not be too surprising that the responses are different.
+should not be too surprising that the forcings are different.
 
 \begin{figure}[t]
   \begin{center}
@@ -613,7 +613,7 @@ evolution \citep{marshall2019}, an increasing \acrshort{rf} to \acrshort{aod} ra
 
 \citet[][their figure 1c,d]{marshall2020} present results showing a time dependence
 in the conversion between \acrshort{saod} and \acrshort{rf}, but where
-\acrshort{rf} should be larger later in the eruption evolution when compared to
+\acrshort{rf} is larger later in the eruption evolution when compared to
 \acrshort{aod}, not weaker. This happen since the aerosols are initially spatially
 confined to the hemisphere where the eruption was at before it spread, leading to a
 larger global mean albedo per \acrshort{saod} and in turn large \acrshort{rf} per
@@ -839,8 +839,9 @@ hundred, the shape during the whole phase could be significantly different to wh
 super-eruption would create, even though the peak is representable, as we have seen in
 \cref{fig:aod_arrays_normalized} where the \acrshort{aod} shape differ as the eruption
 strength is increased. This might be enough to cause a much stronger temperature
-perturbation. We also note that \citet{timmreck2010} obtain cooling that is much smaller
-than for example \citet{jones2005}.
+perturbation. We also note that \citet{timmreck2010} how used a more realistic
+\acrshort{aod} forcing obtained cooling that was much smaller
+than \citet{jones2005}.
 
 \begin{figure}[t]
   \begin{center}
@@ -869,7 +870,7 @@ The peak in \acrshort{aod} levels for the \acrshort{ytt} simulation appear six m
 after the peak of Pinatubo (or a \acrshort{p100} scaling) in \citet{timmreck2010}, and
 at a much smaller value, see their fig.\ 1c. \citet{timmreck2010} also obtained a peak
 \acrshort{rf} anomaly of \(\SI{-18}{\watt\metre^{-2}}\) (\(7\)-\(8\) months after)
-compared to \citet{jones2005} of \(\SI{-60}{\watt\metre{-2}}\) (one year after).
+compared to \citet{jones2005} of \(\SI{-60}{\watt\metre^{-2}}\) (one year after).
 (\acrshort{rf} peak occurring prior to the \acrshort{aod} peak is the same as I see with
 my simulations, especially with the larger ones.)
 
@@ -882,17 +883,17 @@ similar when scaled, suggesting that the intermediate also do follow a loop and 
 is not just noise that causes the spread. That is, there appear to be a
 time-after-eruption dependency on the ratio between \acrshort{aod} and \acrshort{rf}.
 \citet{marshall2020} discuss a similar feature they find when looking at \acrshort{aod}
-(\acrshort{saod}) and \acrshort{rf}, but there, the efficiency increases from year 1 to
+and \acrshort{rf}, but there, the efficiency increases from year 1 to
 year 2, while here efficiency decreases with time. \citet{marshall2020} explain that
 this is due to the time it takes for the aerosols to spread which affects the global
 albedo and in turn the \acrshort{rf}, while the \acrshort{aod} being less affected by
 the aerosols spreading.
 
 An attempt to reason for the decrease in efficiency being more likely: smaller eruptions
-and estimates from then give an \acrshort{rf} to \acrshort{aod} that is quite steep,
+and estimates from them give an \acrshort{rf} to \acrshort{aod} that is quite steep,
 while larger eruptions (or values of \iso{} in the atmosphere as used in
 \citet{niemeier2015}) result in estimates that are smaller in magnitude (\(\sim-20\)
-versus \(\sim-10\) to \(\sim-4\)). It has been shown that that efficiency decrease as
+versus \(\sim-10\) to \(\sim-4\), \cref{fig:aod_vs_toa_avg_loop_ratio}). It has been shown that that efficiency decrease as
 the injection rate increase \citep{niemeier2017}, related to the \acrshort{qbo}, and
 that large volcanic eruptions result in larger aerosol particle sizes which result in
 decreasing cooling efficiency per \iso{} \citep{english2013, timmreck2018}. Can this be
