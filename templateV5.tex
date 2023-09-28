@@ -201,9 +201,9 @@ time that the \ce{H2SO4} aerosols stay in the atmosphere depends on several fact
 including the phase of the \acrshort{qbo} \citep{pitari2016b}, the season of the year
 (most notably to which hemisphere aerosols are transported)
 \citep{toohey2011,toohey2019}, latitude \citep{marshall2019,toohey2019}, volcanic plume
-height \citep{marshall2019} and the aerosol size \citep{marshall2019}. In the case of tropical
-eruptions, aerosols are typically transported poleward in the stratosphere and back to
-mid-latitude troposphere within one to two years \citep{robock2000}.
+height \citep{marshall2019} and the aerosol size \citep{marshall2019}. In the case of
+tropical eruptions, aerosols are typically transported poleward in the stratosphere and
+back to mid-latitude troposphere within one to two years \citep{robock2000}.
 
 % Section on RF to AOD ratio
 
@@ -840,8 +840,7 @@ super-eruption would create, even though the peak is representable, as we have s
 \cref{fig:aod_arrays_normalized} where the \acrshort{aod} shape differ as the eruption
 strength is increased. This might be enough to cause a much stronger temperature
 perturbation. We also note that \citet{timmreck2010} how used a more realistic
-\acrshort{aod} forcing obtained cooling that was much smaller
-than \citet{jones2005}.
+\acrshort{aod} forcing obtained cooling that was much smaller than \citet{jones2005}.
 
 \begin{figure}[t]
   \begin{center}
@@ -883,23 +882,22 @@ similar when scaled, suggesting that the intermediate also do follow a loop and 
 is not just noise that causes the spread. That is, there appear to be a
 time-after-eruption dependency on the ratio between \acrshort{aod} and \acrshort{rf}.
 \citet{marshall2020} discuss a similar feature they find when looking at \acrshort{aod}
-and \acrshort{rf}, but there, the efficiency increases from year 1 to
-year 2, while here efficiency decreases with time. \citet{marshall2020} explain that
-this is due to the time it takes for the aerosols to spread which affects the global
-albedo and in turn the \acrshort{rf}, while the \acrshort{aod} being less affected by
-the aerosols spreading.
+and \acrshort{rf}, but there, the efficiency increases from year 1 to year 2, while here
+efficiency decreases with time. \citet{marshall2020} explain that this is due to the
+time it takes for the aerosols to spread which affects the global albedo and in turn the
+\acrshort{rf}, while the \acrshort{aod} being less affected by the aerosols spreading.
 
 An attempt to reason for the decrease in efficiency being more likely: smaller eruptions
 and estimates from them give an \acrshort{rf} to \acrshort{aod} that is quite steep,
 while larger eruptions (or values of \iso{} in the atmosphere as used in
 \citet{niemeier2015}) result in estimates that are smaller in magnitude (\(\sim-20\)
-versus \(\sim-10\) to \(\sim-4\), \cref{fig:aod_vs_toa_avg_loop_ratio}). It has been shown that that efficiency decrease as
-the injection rate increase \citep{niemeier2017}, related to the \acrshort{qbo}, and
-that large volcanic eruptions result in larger aerosol particle sizes which result in
-decreasing cooling efficiency per \iso{} \citep{english2013, timmreck2018}. Can this be
-used to reason that the efficiency is initially high, then decreasing? Perhaps several
-and competing effects (albedo, \acrshort{qbo}, particle size, growth \& sedimentation
-phases)?
+versus \(\sim-10\) to \(\sim-4\), \cref{fig:aod_vs_toa_avg_loop_ratio}). It has been
+shown that that efficiency decrease as the injection rate increase \citep{niemeier2017},
+related to the \acrshort{qbo}, and that large volcanic eruptions result in larger
+aerosol particle sizes which result in decreasing cooling efficiency per \iso{}
+\citep{english2013, timmreck2018}. Can this be used to reason that the efficiency is
+initially high, then decreasing? Perhaps several and competing effects (albedo,
+\acrshort{qbo}, particle size, growth \& sedimentation phases)?
 
 Large compared to small eruptions:
 
@@ -914,6 +912,58 @@ Large compared to small eruptions:
         especially in the early phase, why? (\Cref{fig:aod_vs_toa_avg_loop_ratio}.)
 \end{enumerate}
 
+\subsection{Climate sensitivity estimate}
+
+\citet{jones2005} also estimate the climate feedback (response) parameter to be \(\alpha
+\simeq \SI{4}{\watt\metre^{-2}\kelvin^{-1}}\) (Still not sure how they do this, you need
+constant forcing, no?), which was more than twice (and half the sensitivity, since this
+is the reciprocal?) what \citet{gregory2016} obtained in
+their simulations using Pinatubo in the HadCM3 climate model. (they used a step volcanic
+forcing simulation to obtain their estimate).
+
+Instead of estimating \(\alpha \), we focus our attention to the climate resistance
+\(\rho \), and the transient climate response parameter \(1/\rho\) (where
+\(\mathrm{TCR}=F_{2\times}\times \mathrm{TCRP}\) is the transient climate sensitivity).
+Even though the forcing from volcanic eruptions last only for about a year, which is too
+short for the timescales at which \(F=\rho T\) is valid \citep{gregory2016}, we might
+get around this by using a time-integral form introduced by \citet{merlis2014}
+\begin{equation}
+  \int_0^{\tau}F \mathrm{d}t=\rho\int_{0}^{\tau}T \mathrm{d}t
+\end{equation}
+\begin{equation}
+  \rho=\frac{\int_0^{\tau}F \mathrm{d}t}{\int_{0}^{\tau}T \mathrm{d}t}.
+  \label{eq:climate-resistance}
+\end{equation}
+If the upper bound of the integral, \(\tau \), is big enough such that the upper ocean
+heat capacity is the same at \(t=0\) and \(t=\tau \), then this agrees with \(F=\rho T\)
+\citep{gregory2016} (\citet{merlis2014} used \(\tau =\SI{15}{\mathrm{y}}\)). We may also
+keep in mind that the climate resistance and the climate feedback parameter are related
+to the ocean heat uptake efficiency (\(\kappa \)) through \(\rho =\alpha +\kappa \).
+
+When computing the trapezoidal integral of the forcing and temperature, before finding
+the ratio, the three main simulation types (four in each ensemble) give estimated TCRP
+of \(3.3\), \(3.12\) and \(2.91\), shown in \cref{tab:trcp}. This is not the same as the
+climate feedback parameter \citet{jones2005} estimated, but as both \(\alpha \) and
+\(\kappa \) are positive, and our estimates of \(\rho (=\alpha +\kappa) \) are all less
+than \citet{jones2005} estimate of \(\alpha \simeq
+\SI{4}{\watt\metre^{-2}\kelvin^{-1}}\), we conclude that the climate feedback parameter
+related to the simulations done here is significantly less than what \citet{jones2005}
+got.
+
+\begin{table}
+  \centering
+  \caption{Estimated climate resistance and TCRP by use of the method outlined by
+    \citet{merlis2014}. Estimates are based on ensembles with four members, and where
+    \(\tau =\SI{9}{\mathrm{y}}\) in \cref{eq:climate-resistance}}%
+  \label{tab:trcp}
+  \begin{tabular}{ccc}
+    Simulation type & \(\rho [\si{\watt\metre^{-2}\kelvin^{-1}}]\) & \(1/\rho\)         \\
+    Small           & \(\SI{3.3(9)}{}\)                            & \(\num{0.32(7)}\)  \\
+    Intermediate    & \(\SI{3.12(9)}{}\)                           & \(\num{0.321(9)}\) \\
+    Large           & \(\SI{2.91(8)}{}\)                           & \(\num{0.34(1)}\)  \\
+  \end{tabular}
+\end{table}
+
 \section{Conclusions}
 
 % NOTE: what we have done, future work, going back to points from introduction
@@ -925,13 +975,66 @@ In this paper we considered three large to super-volcano sized eruptions.
 To-do:
 
 \begin{itemize}
-  \item[\lbrack{}\hphantom{x}\rbrack{}] Create an estimate of climate sensitivity from
-    volcanoes. Gregory et al.\ (2016) talks about what they got in Jones et al.\
-    (2005), so maybe comparing is worthwhile.
-  \item[\lbrack{}x\rbrack{}] Create plots also using the \(1-\mathrm{e}^{-\mathrm{SAOD}}\),
-    like in Marshall et al.\ (2020). \emph{For data greater than 1, the scaling squishes
-      it a lot.}
+  \item[\lbrack{}x\rbrack{}] Create an estimate of climate sensitivity from
+    volcanoes. \citet{gregory2016} talks about what they got in \citet{jones2005}, so
+    maybe comparing is worthwhile. \emph{Did find the TCRP according to
+      \citet{merlis2014}, which gives some ground for comparison, but the climate
+      feedback parameter is missing.}
+  \item[\lbrack{}x\rbrack{}] Create plots also using the
+    \(1-\mathrm{e}^{-\mathrm{SAOD}}\), like in Marshall et al.\ (2020). \emph{For data
+      greater than 1, the scaling squishes it a lot.}
 \end{itemize}
+
+\section*{Climate sensitivity estimate}
+
+From \citet{gregory2016}: ``The peak forcing was about \(\SI{-60}{\watt\metre^{-2}}\),
+only \(20\) times greater than Pinatubo, and the climate feedback parameter \(\alpha
+\simeq \SI{4}{\watt\metre^{-2}\kelvin^{-1}}\), more than twice the value (half the
+sensitivity) that we found for Pinatubo in HadCM3.''
+
+\(1/\rho \) is the ``transient climate response parameter'' (where
+\(\mathrm{TCR}=F_{2\times}\times \mathrm{TCRP}\) is the
+transient climate sensitivity), where \(\rho \) is
+a climate resistance obtained from \(F(t)=\rho T(t)\), where the forcing increase at a
+roughly constant rate.
+
+The climate feedback parameter \(\alpha\) and the ocean heat uptake efficiency
+\(\kappa\) are both positive, and \(\rho =\alpha +\kappa \). In this picture, \(T\) is a
+surface skin temperature, with negligible thermal inertia, determined by the Earth
+energy balance \(F=N+\alpha T\), where \(N\) is the net downward radiative heat flux at
+the top of the atmosphere, and \(N=\kappa T\) if we neglect heat storage other than in
+the ocean. We call \(F=\rho T\) the ``zero-layer model''.
+
+``For volcanic forcing which is large in magnitude for only a year or two, the TCRP and
+the zero-layer model are therefore not applicable.'' They \citep{gregory2016} use an
+abruptPin simulation to estimate the climate feedback parameter \(\alpha \) for volcanic
+forcing in comparison to forcing from for example \(4\times \ce{CO2}\). Possible to use
+method outlined by \citet{merlis2014}? That is,
+
+\citet{gregory2016} use \(F=N+\alpha T\) while \citet{jones2005} use \(Q=N+\lambda \Delta T\)
+to describe the same thing. Also, \citet{merlis2014} is using \(\tilde{\beta}=\rho\),
+\(\beta =\alpha =\lambda \), \(\gamma =\kappa \) and \(\mathcal{F}=F\). See
+\cref{tab:symbol-comparison}.
+
+\begin{table}
+  \centering
+  \caption{For my own convenience, a comparison table comprising symbols used across
+    the papers \citet{gregory2016} (G16), \citet{merlis2014} (M14) and \citet{jones2005}
+    (J05). They all use \(T\) for the temperature and \(N\) for the net downward radiative
+    heat flux at \acrshort{toa}}%
+  \label{tab:symbol-comparison}
+  \begin{tabular}{cc}
+    Name                         & G16, M14, J05                         \\
+    Forcing                      & \(F\), \(\mathcal{F}\), \(Q\)         \\
+    Climate feedback parameter   & \(\alpha \), \(\beta \), \(\lambda \) \\
+    Climate resistance           & \(\rho \), \(\tilde{\beta }\), \(-\)  \\
+    Ocean heat uptake efficiency & \(\kappa \), \(\gamma \), \(-\)       \\
+  \end{tabular}
+\end{table}
+
+When computing the trapezoidal integral of the forcing and temperature, before finding
+the ratio, the three main simulation types (four in each ensemble) give estimated TCRP
+of \(3.3\), \(3.12\) and \(2.91\), shown in \cref{tab:trcp}.
 
 \clearpage
 
