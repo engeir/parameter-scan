@@ -68,14 +68,11 @@
 % \affiliation{}
 
 % If appropriate, add additional authors, different affiliations:
-\extraauthor{Audun Theodorsen}
-\extraaffil{UiT The Arctic University of Norway, Tromsø, Norway}
-\extraauthor{Rune Graversen}
-\extraaffil{UiT The Arctic University of Norway, Tromsø, Norway}
-\extraauthor{Martin Rypdal}
-\extraaffil{UiT The Arctic University of Norway, Tromsø, Norway}
-\extraauthor{Maria Rugenstein}
-\extraaffil{Colorado State University, Fort Collins, Colorado}
+% In alphabetical order?
+\extraauthor{Rune Graversen}\extraaffil{UiT The Arctic University of Norway, Tromsø, Norway}
+\extraauthor{Martin Rypdal}\extraaffil{UiT The Arctic University of Norway, Tromsø, Norway}
+\extraauthor{Audun Theodorsen}\extraaffil{UiT The Arctic University of Norway, Tromsø, Norway}
+\extraauthor{Maria Rugenstein}\extraaffil{Colorado State University, Fort Collins, Colorado}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ABSTRACT
@@ -89,11 +86,11 @@
   eruptions are compared to determine how far the linear relationship between the two
   parameters hold. Simulating a Pinatubo-like eruption yields results consistent with
   several previous studies showing a slope of \(\sim \SI{-20}{\watt\metre^{-2}}\) per
-  \acrshort{aod}. Larger eruptions, however, show a clear time-after-eruption
+  unit \acrshort{aod}. Larger eruptions, however, show a clear time-after-eruption
   dependence, where the \acrshort{rf} is relatively stronger than \acrshort{aod} the
   first year after an eruption (higher cooling efficiency), while in the later phase
-  their ratio is roughly constant for a given eruption strength, but differ across
-  eruptions.
+  their ratio is roughly constant for a given eruption strength, but where smaller
+  eruptions have a larger ratio and as such are more efficient.
 }
 
 \begin{document}
@@ -179,22 +176,22 @@ volcano-like forcings compare to the forcing that is due to increased \ce{CO2} l
 \citet{boer2007,marvel2016,merlis2014,ollila2016,richardson2019,salvi2022,wigley2005}
 all look at the link or lack thereof between volcanic forcing and the climate
 sensitivity to a doubling of \ce{CO2}, a much used metric for describing the severity of
-global warming \citep{marvel2016}. This is motivated by the large uncertainty in
-estimates of the sensitivity of the real climate system, and inferring climate
-sensitivity from for example volcanoes have been used as an attempt to constrain the
-sensitivity \citep{boer2007}. Among these, some have been running simulations of the
-1991 Mt.\ Pinatubo eruption \citep{merlis2014,ollila2016} or historical volcano or
-volcano-like forcings \citep{boer2007,marvel2016,wigley2005}, while some look at aerosol
-forcing in general \citep{richardson2019,salvi2022}. While many of the earlier studies
-often assume \acrshort{ecs} can be inferred from volcanoes \citep{wigley2005} or suggest
-that it might be possible \citep{bender2010}, as long as you constrain it with
-\acrfull{erf} and not \acrfull{irf} \citep{richardson2019}, other studies suggest this
-is either not possible and that the sensitivity to volcanic forcing and \ce{CO2}
-doubling are different or that the precision at which climate simulations are run must
-be much higher \citep{douglass2006,boer2007,salvi2022}. However, even though
-\acrshort{erf} is a more suited indicator of the temperature response to a forcing than
-\acrshort{irf} \citep{marvel2016,richardson2019}, more recent studies conclude that
-\acrshort{ecs} cannot be constrained from volcanoes \citep{pauling2023}.
+global warming. This is motivated by the large uncertainty in estimates of the
+sensitivity of the real climate system, and inferring climate sensitivity from for
+example volcanoes have been used as an attempt to constrain the sensitivity
+\citep{boer2007}. Among these, some have been running simulations of the 1991 Mt.\
+Pinatubo eruption \citep{merlis2014,ollila2016} or historical volcano or volcano-like
+forcings \citep{boer2007,marvel2016,wigley2005}, while some look at aerosol forcing in
+general \citep{richardson2019,salvi2022}. While many of the earlier studies often assume
+\acrshort{ecs} can be inferred from volcanoes \citep{wigley2005} or suggest that it
+might be possible \citep{bender2010}, as long as you constrain it with \acrfull{erf} and
+not \acrfull{irf} \citep{richardson2019}, other studies suggest this is either not
+possible and that the sensitivity to volcanic forcing and \ce{CO2} doubling are
+different or that the precision at which climate simulations are run must be much higher
+\citep{douglass2006,boer2007,salvi2022}. However, even though \acrshort{erf} is a more
+suited indicator of the temperature response to a forcing than \acrshort{irf}
+\citep{marvel2016,richardson2019}, more recent studies conclude that \acrshort{ecs}
+cannot be constrained from volcanoes \citep{pauling2023}.
 
 \paragraph*{On aerosol evolution and atm.\ dynamics}
 
@@ -221,14 +218,14 @@ Previous studies on both Mt. Pinatubo alone \citep{mills2017,hansen2005} and vol
 in the instrumental era \citep{gregory2016} have been used to estimate the relationship
 between the energy imbalance caused by volcanic eruptions and \acrshort{aod}.
 \citet{myhre2013} use a formula for \acrshort{rf} that scales \acrshort{aod} by
-\(\SI{-25}{\watt\metre^{-2}\mathrm{SAOD}^{-1}}\) while values down to
-\(\SI{-19.0(5)}{\watt\metre^{-2}\mathrm{SAOD}^{-1}}\) \citep{gregory2016} and
-\(\SI{-18.3(10)}{\watt\metre^{-2}\mathrm{SAOD}^{-1}}\) \citep{mills2017} have been
+\(\SI{-25}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) while values down to
+\(\SI{-19.0(5)}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) \citep{gregory2016} and
+\(\SI{-18.3(10)}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) \citep{mills2017} have been
 reported more recently. Simulations done with synthetic volcanoes have also been used,
-and in \citet{marshall2020} they simulate a total of \(82\) volcanic eruptions with
-varying injection height and latitude, ranging from \(10\) to \(\SI{100}{\tera\gram}\)
-of \iso{}. They obtain a scaling factor of
-\(\SI{-20.5(2)}{\watt\metre^{-2}\mathrm{SAOD}^{-1}}\) \citep{marshall2020}.
+and in \citet{marshall2020} they obtain a scaling factor of
+\(\SI{-20.5(2)}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) from simulating a total of \(82\)
+volcanic eruptions with varying injection height and latitude, ranging from \(10\) to
+\(\SI{100}{\tera\gram}\) of \iso{}.
 
 A similar simulation setup, albeit with significant differences, was done by
 \citet{niemeier2015}, where \(14\) different levels of injected sulphur ranging between
@@ -248,14 +245,14 @@ simulation scenario.
 
 \paragraph*{Aerosol optical depth vs.\ radiative forcing}
 
-The aerosol evolution and lifetime in the stratosphere strongly influence the radiative
-forcing resulting from the aerosols and the \acrshort{aod}, but not always in the same
-way. \citet{marshall2020} present results showing higher efficacies in years 2 and 3
-after an eruption, compared to year 1, explaining that this is due to the aerosols being
+The aerosol evolution and lifetime in the stratosphere strongly influence the
+\acrshort{aod} and the \acrshort{rf}, but not always in the same way.
+\citet{marshall2020} present results showing higher efficacies in years 2 and 3 after an
+eruption, compared to year 1, explaining that this is due to the aerosols being
 concentrated more spatially in the first year and more spread out in later years. This
 has the effect of increasing the albedo per global mean \acrshort{aod} which in turn
 increases the \acrshort{rf} per \acrshort{aod} \citep{marshall2020}. (Also,
-\acrshort{saod} to \acrshort{rf} depend on insulation, cloudiness and surface albedo
+\acrshort{aod} to \acrshort{rf} depend on insulation, cloudiness and surface albedo
 among others, which vary across eruptions \citep{marshall2021,andersson2015}.)
 
 % \citet{marshall2022} mention (in the graphic in their figure 1) that the \emph{role of
@@ -276,7 +273,7 @@ among others, which vary across eruptions \citep{marshall2021,andersson2015}.)
 % \ce{SO2}. Their eruptions all occur in July, but with the equivalent winter (January)
 % eruptions covered by \citet{marshall2020}.
 
-% In \citet{marshall2020}, they take the reconstructed \acrshort{saod} from
+% In \citet{marshall2020}, they take the reconstructed \acrshort{aod} from
 % \citet{toohey2017}, convert it to radiative forcing based on their conversions, and plot
 % the corresponding temperature time series from each radiative forcing using a simple
 % climate model. \emph{So, can we use this with the \acrfull{fpp} framework? (Noisy data?
@@ -310,12 +307,14 @@ all-sky \acrshort{toa} energy imbalance, where the \acrshort{cesm2} provide the 
 variables \acrfull{fsnt} and \acrfull{flnt}. We thus get that \(\mathrm{RF_*}=
 \mathrm{FSNT} - \mathrm{FLNT}\) and taking the difference between volcanic simulations
 and a control simulation gives the final estimate of \acrshort{rf}
-(\(\mathrm{RF}=\mathrm{RF_{VOLC}}-\mathrm{RF_{CONTROL}}\)) \citep{marshall2020}. The
-\acrshort{aod} is obtained from the output variable \acrfull{aodm}, while global
-temperature is saved by \acrshort{cesm2} to the variable \acrfull{trefht}. These four
-output variables are all that are used throughout this paper. The important input data
-used in the model simulations are \iso{} in units of tera grams, used to simulate
-volcanic eruptions.
+(\(\mathrm{RF}=\mathrm{RF_{VOLC}}-\mathrm{RF_{CONTROL}}\)) \citep{marshall2020}. This
+outline specifically describe how to calculate \acrshort{erf} as opposed to
+\acrshort{irf}, which instead is the difference between the \acrshort{erf} and the sum
+of all rapid adjustments \citep{marshall2020,smith2018}. The \acrshort{aod} is obtained
+from the output variable \acrfull{aodm}, while global temperature is saved by
+\acrshort{cesm2} to the variable \acrfull{trefht}. These four output variables are all
+that are used throughout this paper. The important input data used in the model
+simulations are \iso{} in units of tera grams, used to simulate volcanic eruptions.
 
 \subsection{Model}
 
@@ -428,6 +427,7 @@ fSST1850 ->
   DOCN%DOM_MOSART_CISM2%NOEVOLVE_SWAV_TEST
   \end{verbatim}
 \end{small}
+%
 They differ in \texttt{CICE -> CICE\%PRES}, which is prescribed sea-ice,
 \texttt{POP2\%ECO\%DEP -> DOCN\%DOM} which is from a dynamical ocean to a prescribed
 data ocean and the wave component \texttt{WW3 -> SWAV} which is now a stub wave
@@ -452,21 +452,21 @@ advantage with having eruptions this big, in the large to super-volcano size, is
 improvement of the signal-to-noise ratio without having to run a large and
 computationally expensive ensemble. This still, however, leave the question of whether
 this will give realistic values for the forcing open \citep{gregory2016}.
-% FIX: should probably estimate the climate feedback parameters for CESM2 with these
-% volcanic eruption simulations
 
 \begin{table}
   \caption{Simulations done with the \acrshort{cesm2}}%
   \label{tab:simulation-overview}
   \begin{center}
     \begin{tabular}[c]{ccc}
-      \textbf{Simulation} & \textbf{\iso[I]{}}        & \textbf{Lon, lat, alt}           \\
-      \acrshort{c2ws}     & \(\SI{26}{\tera\gram}\)   &
-      \SI{1}{\degree\mathrm{E}}, \SI{0}{\degree\mathrm{N}}, \(18\)--\SI{20}{\kilo\metre} \\
+      \textbf{Simulation} & \textbf{\iso[I]{}}        & \textbf{Lon, lat, alt}            \\
+      \acrshort{c2wsn}    & \(\SI{1629}{\tera\gram}\) &
+      \SI{1}{\degree\mathrm{E}}, \SI{56}{\degree\mathrm{N}}, \(18\)--\SI{20}{\kilo\metre} \\
+      \acrshort{c2ws}     & \(\SI{1629}{\tera\gram}\) &
+      \SI{1}{\degree\mathrm{E}}, \SI{0}{\degree\mathrm{N}}, \(18\)--\SI{20}{\kilo\metre}  \\
       \acrshort{c2wmp}    & \(\SI{400}{\tera\gram}\)  &
-      \SI{1}{\degree\mathrm{E}}, \SI{0}{\degree\mathrm{N}}, \(18\)--\SI{20}{\kilo\metre} \\
-      \acrshort{c2wm}     & \(\SI{1629}{\tera\gram}\) &
-      \SI{1}{\degree\mathrm{E}}, \SI{0}{\degree\mathrm{N}}, \(18\)--\SI{20}{\kilo\metre} \\
+      \SI{1}{\degree\mathrm{E}}, \SI{0}{\degree\mathrm{N}}, \(18\)--\SI{20}{\kilo\metre}  \\
+      \acrshort{c2wm}     & \(\SI{26}{\tera\gram}\)   &
+      \SI{1}{\degree\mathrm{E}}, \SI{0}{\degree\mathrm{N}}, \(18\)--\SI{20}{\kilo\metre}  \\
     \end{tabular}
   \end{center}
 \end{table}
@@ -520,16 +520,16 @@ sharper in the small eruption case compared to the two larger.
 
 \subsection{Parameter scan}
 
-Whether the temperature time series have different shape depending on forcing strength
-or not is a natural next step to take, and we here look more closely into the different
-forcings. This comparison is also motivated by \citet{gregory2016}, specifically their
-figure 4 which compare annual mean \acrfull{aod} with \acrfull{rf}.
-\Cref{fig:aod_vs_toa_full} show annual mean values from the three simulation cases along
-with the gradient obtained by \citet{gregory2016} of \(-19\). The annual mean data from
-the smallest Pinatubo-like eruption (blue downward facing triangles,
-\cref{fig:aod_vs_toa_inset}) has \acrshort{rf} values compared to \acrshort{aod} that
-nicely follow the same constant gradient as the \citet{gregory2016} data used in their
-figure 4.
+Whether the different shapes of the temperature time series come as a result of the
+shape of the forcing time series or not is a natural next step to take, and we here look
+more closely into the different forcings. This comparison is also motivated by
+\citet{gregory2016}, specifically their figure 4 which compare annual mean \acrfull{aod}
+with \acrfull{rf}. \Cref{fig:aod_vs_toa_full} show annual mean values from the three
+simulation cases along with the gradient obtained by \citet{gregory2016} of \(-19\). The
+annual mean data from the smallest Pinatubo-like eruption (blue downward facing
+triangles, \cref{fig:aod_vs_toa_inset}) has \acrshort{rf} values compared to
+\acrshort{aod} that nicely follow the same constant gradient as the \citet{gregory2016}
+data used in their figure 4.
 
 However, we do find that the stronger eruptions lead to very different responses in
 \acrshort{aod} and \acrshort{rf}, where the slope of the intermediate seem to follow
@@ -552,6 +552,7 @@ decay and that converged to \( \SI{-65}{\watt\meter^{-2}} \)
   \mathrm{e}^{-\left(\frac{\SI{2246}{\tera\gram(S)yr^{-1}}}{x}\right)^{0.23}}.
   \label{eq:niemeier_exponential}
 \end{equation}
+%
 This upper limit is close to what one might suspect the \acrshort{cesm2} peaks and the
 \acrfull{p100} simulation peak to approach (pink square in \cref{fig:aod_vs_toa_full}),
 however, the functional shape is very different; the exponential found by
@@ -619,18 +620,16 @@ see \cref{fig:aod_vs_toa_avg_loop_ratio}). Based on the simple two phases of the
 evolution \citep{marshall2019}, an increasing \acrshort{rf} to \acrshort{aod} ratio
 (decreasing when considering absolute values) seems reasonable.
 
-\citet[][their figure 1c,d]{marshall2020} present results showing a time dependence
-in the conversion between \acrshort{saod} and \acrshort{rf}, but where
-\acrshort{rf} is larger later in the eruption evolution when compared to
-\acrshort{aod}, not weaker. This happen since the aerosols are initially spatially
-confined to the hemisphere where the eruption was at before it spread, leading to a
-larger global mean albedo per \acrshort{saod} and in turn large \acrshort{rf} per
-\acrshort{saod} \citep{marshall2020}. From their results and the results shown here in
+\citet[][their figure 1c,d]{marshall2020} present results showing a time dependence in
+the conversion between \acrshort{aod} and \acrshort{rf}, but where \acrshort{rf} is
+larger later in the eruption evolution when compared to \acrshort{aod}, not weaker. This
+happen since the aerosols are initially spatially confined to the hemisphere where the
+eruption was at before it spread, leading to a larger global mean albedo per
+\acrshort{aod} and in turn large \acrshort{rf} per \acrshort{aod} \citep{marshall2020}.
+From their results and the results shown here in
 \cref{fig:aod_vs_toa_avg_loop,fig:aod_vs_toa_avg_loop_scaled,fig:aod_vs_toa_avg_loop_ratio,fig:aod_vs_toa_avg_loop_ratio_scaled},
 there seems to be several and competing effects that decide on the values of
-\acrshort{saod} and \acrshort{rf}.
-
-% FIX: Marshall et al. 2020 used 1-e^{-SAOD}, so check this out as well.
+\acrshort{aod} and \acrshort{rf}.
 
 \begin{figure}[t]
   \begin{center}
@@ -677,8 +676,8 @@ increases close to linearly with injected \ce{SO2} (see also \cref{fig:so2_vs_ao
 This could be the result of larger aerosols having time to develop as the amount of
 injected \ce{SO2} increase \citep{niemeier2015,marshall2019}. This in turn make the
 forcing from smaller eruptions relatively more efficient than from large eruptions since
-larger aerosols scatter radiation less efficiently, causing a larger ratio between
-\acrshort{rf} and \acrshort{aod}.
+larger aerosols scatter radiation less efficiently, causing a less negative ratio
+between \acrshort{rf} and \acrshort{aod}.
 
 \begin{figure}[t]
   \begin{center}
@@ -761,7 +760,7 @@ between them, shown in \cref{fig:so2_vs_aod}.\footnote{\emph{Since \iso{} is ``t
     amount of \iso{}'', maybe consider comparing to integrated values of \acrshort{aod},
     \acrshort{rf} and temperature as well, not just the peak values.}} The latitude also
 play a role for how large the \acrshort{aod} perturbation become, as we can see from the
-C2WN\(\uparrow\) data point, representing a strong eruption, but located at \(
+\acrshort{c2wsn} data point, representing a strong eruption, but located at \(
 \SI{56}{\degree N} \). The weak dependence on eruption latitude is also reported in
 \citet{marshall2019}.
 
@@ -778,10 +777,10 @@ expect to see a similar plot for \iso{} versus \acrshort{rf} as for \acrshort{ao
 versus \acrshort{rf}. \iso[I] versus \acrshort{rf} is shown in \cref{fig:so2_vs_toa},
 but where the absolute value of the \acrshort{rf} is potted along the \( y \)-axis. Just
 as in \cref{fig:aod_vs_toa_full} we find the \acrshort{cesm2} data points to be heavily
-damped in \acrshort{rf} compared to \iso. The same effect can be seen in the data from
-\citet{ottobliesner2016} (labelled C1C, red points), but here the \acrshort{rf} tend to
-bend off sooner, having a smaller \acrshort{rf} response to \iso{} than the
-\acrshort{cesm2} data has. The simulations used by \citet{ottobliesner2016} was with
+damped in \acrshort{rf} as \iso{} increases. The same effect can be seen in the data
+from \citet{ottobliesner2016} (labelled C1C, red points), but here the \acrshort{rf}
+tend to bend off sooner, having a smaller \acrshort{rf} response to \iso{} than the
+\acrshort{cesm2} data. The simulations used by \citet{ottobliesner2016} was with
 \acrshort{cesm} as well, but version 1 (\acrshort{cesm1}) and with a low-top atmosphere
 (\acrshort{cam5}). The difference in model complexity might therefore be the reason why
 the \iso{} give weaker \acrshort{rf} response for \citet{ottobliesner2016} than what we
@@ -847,8 +846,10 @@ hundred, the shape during the whole phase could be significantly different to wh
 super-eruption would create, even though the peak is representable, as we have seen in
 \cref{fig:aod_arrays_normalized} where the \acrshort{aod} shape differ as the eruption
 strength is increased. This might be enough to cause a much stronger temperature
-perturbation. We also note that \citet{timmreck2010} how used a more realistic
-\acrshort{aod} forcing obtained cooling that was much smaller than \citet{jones2005}.
+perturbation. We also note that \citet{timmreck2010} used a more realistic
+\acrshort{aod} forcing and obtained cooling that was much smaller than
+\citet{jones2005}. \emph{(More on this in
+  \cref{sec:discussion}\ref{sec:climate-sensitivity-estimate}.)}
 
 \begin{figure}[t]
   \begin{center}
@@ -858,7 +859,7 @@ perturbation. We also note that \citet{timmreck2010} how used a more realistic
   \label{fig:toa_vs_temp}
 \end{figure}
 
-\section{Discussion}
+\section{Discussion}\label{sec:discussion}
 
 \Cref{fig:aod_vs_toa_full,fig:aod_vs_toa_inset,fig:aod_vs_toa_avg_loop,fig:aod_vs_toa_avg_loop_scaled,fig:aod_vs_toa_avg_loop_ratio,fig:aod_vs_toa_avg_loop_ratio_scaled,fig:aod_vs_toa_logscale}
 all show that as the \acrshort{aod} values are increased past \(\sim 0.5\), the scaling
@@ -920,21 +921,22 @@ Large compared to small eruptions:
         especially in the early phase, why? (\Cref{fig:aod_vs_toa_avg_loop_ratio}.)
 \end{enumerate}
 
-\subsection{Climate sensitivity estimate}
+\subsection{Climate sensitivity estimate}%
+\label{sec:climate-sensitivity-estimate}
 
-\citet{jones2005} also estimate the climate feedback (response) parameter to be \(\alpha
-\simeq \SI{4}{\watt\metre^{-2}\kelvin^{-1}}\) (Still not sure how they do this, you need
-constant forcing, no?), which was more than twice (and half the sensitivity, since this
-is the reciprocal?) what \citet{gregory2016} obtained in
-their simulations using Pinatubo in the HadCM3 climate model. (they used a step volcanic
+The climate feedback (response) parameter is estimated by \citet{jones2005} to be
+\(\alpha \simeq \SI{4}{\watt\metre^{-2}\kelvin^{-1}}\) (Still not sure how they do this,
+you need constant forcing, no?), which was more than twice (and half the sensitivity,
+[since this is the reciprocal?]) of what \citet{gregory2016} obtained in their
+simulations using Pinatubo in the HadCM3 climate model. (they used a step volcanic
 forcing simulation to obtain their estimate).
 
 Instead of estimating \(\alpha \), we focus our attention to the climate resistance
-\(\rho \), and the transient climate response parameter \(1/\rho\) (where
-\(\mathrm{TCR}=F_{2\times}\times \mathrm{TCRP}\) is the transient climate sensitivity).
-Even though the forcing from volcanic eruptions last only for about a year, which is too
-short for the timescales at which \(F=\rho T\) is valid \citep{gregory2016}, we might
-get around this by using a time-integral form introduced by \citet{merlis2014}
+\(\rho \), and the \acrfull{tcrp} \(1/\rho\) (where \(\mathrm{TCR}=F_{2\times}\times
+\mathrm{TCRP}\) is the transient climate sensitivity). Even though the forcing from
+volcanic eruptions last only for about a year, which is too short for the timescales at
+which \(F=\rho T\) is valid \citep{gregory2016}, we might get around this by using a
+time-integral form introduced by \citet{merlis2014}
 \begin{equation}
   \int_0^{\tau}F \mathrm{d}t=\rho\int_{0}^{\tau}T \mathrm{d}t
 \end{equation}
@@ -942,25 +944,26 @@ get around this by using a time-integral form introduced by \citet{merlis2014}
   \rho=\frac{\int_0^{\tau}F \mathrm{d}t}{\int_{0}^{\tau}T \mathrm{d}t}.
   \label{eq:climate-resistance}
 \end{equation}
+%
 If the upper bound of the integral, \(\tau \), is big enough such that the upper ocean
 heat capacity is the same at \(t=0\) and \(t=\tau \), then this agrees with \(F=\rho T\)
-\citep{gregory2016} (\citet{merlis2014} used \(\tau =\SI{15}{\mathrm{y}}\)). We may also
-keep in mind that the climate resistance and the climate feedback parameter are related
-to the ocean heat uptake efficiency (\(\kappa \)) through \(\rho =\alpha +\kappa \).
+\citep{gregory2016} (\citet{merlis2014} used \(\tau =\SI{15}{\mathrm{y}}\)). We also
+note that the climate resistance and the climate feedback parameter are related to the
+ocean heat uptake efficiency \(\kappa \) through \(\rho =\alpha +\kappa \).
 
-When computing the trapezoidal integral of the forcing and temperature, before finding
-the ratio, the three main simulation types (four in each ensemble) give estimated TCRP
-of \(3.3\), \(3.12\) and \(2.91\), shown in \cref{tab:trcp}. This is not the same as the
-climate feedback parameter \citet{jones2005} estimated, but as both \(\alpha \) and
-\(\kappa \) are positive, and our estimates of \(\rho (=\alpha +\kappa) \) are all less
-than \citet{jones2005} estimate of \(\alpha \simeq
+When computing the trapezoidal integral of the forcing and temperature before finding
+the ratio, the three main simulation types (four in each ensemble) give estimated
+\acrshort{tcrp} of \(3.3\), \(3.12\) and \(2.91\), shown in \cref{tab:trcp}. This is not
+the same as the climate feedback parameter \citet{jones2005} estimated, but as both
+\(\alpha \) and \(\kappa \) are positive, and our estimates of \(\rho (=\alpha +\kappa)
+\) are all less than the \citet{jones2005} estimate of \(\alpha \simeq
 \SI{4}{\watt\metre^{-2}\kelvin^{-1}}\), we conclude that the climate feedback parameter
 related to the simulations done here is significantly less than what \citet{jones2005}
 got.
 
 \begin{table}
   \centering
-  \caption{Estimated climate resistance and TCRP by use of the method outlined by
+  \caption{Estimated climate resistance and \acrshort{tcrp} by use of the method outlined by
     \citet{merlis2014}. Estimates are based on ensembles with four members, and where
     \(\tau =\SI{9}{\mathrm{y}}\) in \cref{eq:climate-resistance}}%
   \label{tab:trcp}
@@ -985,11 +988,11 @@ To-do:
 \begin{itemize}
   \item[\lbrack{}x\rbrack{}] Create an estimate of climate sensitivity from
     volcanoes. \citet{gregory2016} talks about what they got in \citet{jones2005}, so
-    maybe comparing is worthwhile. \emph{Did find the TCRP according to
+    maybe comparing is worthwhile. \emph{Did find the \acrshort{tcrp} according to
       \citet{merlis2014}, which gives some ground for comparison, but the climate
       feedback parameter is missing.}
   \item[\lbrack{}x\rbrack{}] Create plots also using the
-    \(1-\mathrm{e}^{-\mathrm{SAOD}}\), like in Marshall et al.\ (2020). \emph{For data
+    \(1-\mathrm{e}^{-\mathrm{AOD}}\), like in Marshall et al.\ (2020). \emph{For data
       greater than 1, the scaling squishes it a lot.}
 \end{itemize}
 
@@ -1002,10 +1005,9 @@ climate sensitivity parameter [which is the reciprocal?]) that we found for Pina
 HadCM3.''
 
 \(1/\rho \) is the ``transient climate response parameter'' (where
-\(\mathrm{TCR}=F_{2\times}\times \mathrm{TCRP}\) is the
-transient climate sensitivity), where \(\rho \) is
-a climate resistance obtained from \(F(t)=\rho T(t)\), where the forcing increase at a
-roughly constant rate.
+\(\mathrm{TCR}=F_{2\times}\times \mathrm{TCRP}\) is the transient climate sensitivity),
+where \(\rho \) is a climate resistance obtained from \(F(t)=\rho T(t)\), where the
+forcing increase at a roughly constant rate.
 
 The climate feedback parameter \(\alpha\) and the ocean heat uptake efficiency
 \(\kappa\) are both positive, and \(\rho =\alpha +\kappa \). In this picture, \(T\) is a
@@ -1014,16 +1016,16 @@ energy balance \(F=N+\alpha T\), where \(N\) is the net downward radiative heat 
 the top of the atmosphere, and \(N=\kappa T\) if we neglect heat storage other than in
 the ocean. We call \(F=\rho T\) the ``zero-layer model''.
 
-``For volcanic forcing which is large in magnitude for only a year or two, the TCRP and
-the zero-layer model are therefore not applicable.'' They \citep{gregory2016} use an
-abruptPin simulation to estimate the climate feedback parameter \(\alpha \) for volcanic
-forcing in comparison to forcing from for example \(4\times \ce{CO2}\). Possible to use
-method outlined by \citet{merlis2014}? That is,
+``For volcanic forcing which is large in magnitude for only a year or two, the
+\acrshort{tcrp} and the zero-layer model are therefore not applicable.'' They
+\citep{gregory2016} use an abruptPin simulation to estimate the climate feedback
+parameter \(\alpha \) for volcanic forcing in comparison to forcing from for example
+\(4\times \ce{CO2}\). Possible to use method outlined by \citet{merlis2014}? That is,
 
-\citet{gregory2016} use \(F=N+\alpha T\) while \citet{jones2005} use \(Q=N+\lambda \Delta T\)
-to describe the same thing. Also, \citet{merlis2014} is using \(\tilde{\beta}=\rho\),
-\(\beta =\alpha =\lambda \), \(\gamma =\kappa \) and \(\mathcal{F}=F\). See
-\cref{tab:symbol-comparison}.
+\citet{gregory2016} use \(F=N+\alpha T\) while \citet{jones2005} use \(Q=N+\lambda
+\Delta T\) to describe the same thing. Also, \citet{merlis2014} is using
+\(\tilde{\beta}=\rho\), \(\beta =\alpha =\lambda \), \(\gamma =\kappa \) and
+\(\mathcal{F}=F\). See \cref{tab:symbol-comparison}.
 
 \begin{table}
   \centering
@@ -1040,10 +1042,6 @@ to describe the same thing. Also, \citet{merlis2014} is using \(\tilde{\beta}=\r
     Ocean heat uptake efficiency & \(\kappa \) & \(\gamma \)        & \(-\)        \\
   \end{tabular}
 \end{table}
-
-When computing the trapezoidal integral of the forcing and temperature, before finding
-the ratio, the three main simulation types (four in each ensemble) give estimated TCRP
-of \(3.3\), \(3.12\) and \(2.91\), shown in \cref{tab:trcp}.
 
 \clearpage
 
