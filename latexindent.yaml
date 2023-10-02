@@ -1,5 +1,8 @@
 defaultIndent: "  "
 
 modifyLineBreaks:
+  # See defaults on https://latexindentpl.readthedocs.io/en/latest/sec-the-m-switch.html#text-wrapping
   textWrapOptions:
     columns: 89
+    blocksBeginWith:
+       other: \\\w+
