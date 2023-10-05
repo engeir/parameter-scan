@@ -379,11 +379,11 @@ Simulations were created using a modified version of the file
 % \href{http://svn.code.sf.net/p/codescripts/code/trunk/ncl/emission/createVolcEruptV3.ncl}{\texttt{createVolcEruptV3.ncl}}
 via a Python project developed on GitHub at
 \url{https://github.com/engeir/volcano-cooking}. The project is also available from the
-Python package manager PyPI. The program creates volcanoes with a given \ce{SO2} amount
-that is injected over six
+Python package manager PyPI\@. The program creates volcanoes with a given \ce{SO2}
+amount that is injected over six
 hours\footnote{\url{http://svn.code.sf.net/p/codescripts/code/trunk/ncl/emission/createVolcEruptV3.ncl}}
 at a given altitude, latitude and longitude. All volcanic \ce{SO2} files are created by
-setting the eruption details in a .json file that is read to the
+setting the eruption details in a~.json file that is read to the
 \texttt{volcano-cooking} CLI at a fixed version, making the experiment setup highly
 reproducible.
 
@@ -436,9 +436,9 @@ November. The magnitudes vary across three orders of magnitude: \(\SI{26}{\tera\
 same order of magnitude as Mount Pinatubo
 \citep[\(\sim10\)--\(\SI{20}{\tera\gram}\);~e.g.][]{timmreck2018} and Mount Tambora
 \citep[\(\sim\SI{56.2}{\tera\gram}\);~e.g.][]{zanchettin2016}, the intermediate is
-similar to the 1257 Samalas eruption \citep[\(\sim
-  119\)--\(\SI{250}{\tera\gram}\);~e.g.][]{toohey2017,ottobliesner2016}, and the largest
-is similar to the \ac{ytt} eruption
+similar to the 1257 Samalas eruption
+\citep[\(\sim{119}\)--\(\SI{250}{\tera\gram}\);~e.g.][]{toohey2017,ottobliesner2016},
+and the largest is similar to the \ac{ytt} eruption
 \citep[\(100\)--\(\SI{10000}{\tera\gram}\);][and~references~therein]{jones2005}. They
 are all located at the equator, at \(\SI{0}{\degree N}\), \(\SI{1}{\degree E}\) and
 \ce{SO2} is injected between \(\SI{18}{\kilo\meter}\) and \(\SI{20}{\kilo\meter}\). An
@@ -513,15 +513,15 @@ relatively close to a straight line, but do tend to have a spread in the
 eruption strength shown in \cref{fig:aod_vs_toa_inset}.
 
 Focusing on the peaks as shown by the red circles, \citet{niemeier2015} did simulations
-of continually emitting injections of sulphur, up to \( \SI{100}{\tera\gram
-  \mathrm{(S)}\mathrm{yr}^{-1}} \), and found that the impact of increasing the injection
-rate lead to a \ac{rf} as a function of injection rate that had an exponential decay
-converging to \( \SI{-65}{\watt\meter^{-2}} \)
+of continually emitting injections of sulphur, up to \(\SI{100}{\tera\gram
+  \mathrm{(S)}\mathrm{yr}^{-1}}\), and found that the impact of increasing the injection
+rate lead to a \ac{rf} as a function of injection rate \(x\) that had an exponential
+decay converging to \( \SI{-65}{\watt\meter^{-2}} \)
 \begin{equation}
   \Delta
   R_{\mathrm{TOA}} =
   -\SI{65}{\watt\metre^{-2}}
-  \mathrm{e}^{-\left(\frac{\SI{2246}{\tera\gram(S)yr^{-1}}}{x}\right)^{0.23}}.
+  \mathrm{e}^{-{\left(\frac{\SI{2246}{\tera\gram(S)yr^{-1}}}{x}\right)}^{0.23}}.
   \label{eq:niemeier_exponential}
 \end{equation}
 %
