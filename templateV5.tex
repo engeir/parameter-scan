@@ -92,7 +92,7 @@
   how far the linear relationship between the two parameters hold. Simulating a
   Pinatubo-like eruption yields results consistent with several previous studies showing
   a slope of \(\sim \SI{-20}{\watt\metre^{-2}}\) per unit \ac*{aod}. Larger eruptions,
-  however, show a clear time-after-eruption dependence, where the \ac*{rf} is relatively
+  however, show a time-after-eruption dependence, where the \ac*{rf} is relatively
   stronger than \ac*{aod} the first year after an eruption (higher cooling efficiency),
   while in the later phase their ratio is roughly constant for a given eruption
   strength, but where smaller eruptions have a larger ratio and as such are more
@@ -159,12 +159,23 @@
 
 \section{Introduction and Motivation}
 
+% NOTE: Suggested layout for the introduction
+% - The objectives of the work.
+% - The justification for these objectives: Why is the work important?
+% - Background: Who else has done what? How? What have we done previously?
+% - Guidance to the reader: What should the reader watch for in the paper? What are the
+%   interesting high points? What strategy did we use?
+% - Summary/conclusion: What should the reader expect as conclusion? In advanced
+%   versions of the outline, you should also include all the sections that will go in
+%   the Experimental section (at the level of paragraph subhead- ings) and indicate what
+%   information will go.
+
 \paragraph*{Why volcanoes have been given attention}
 
 During much of the past few thousand years, the Holocene, the natural climate
 variability on Earth have been mostly forced by volcanic eruptions \citep{sigl2022}.
 Despite the strong climate variability impact of volcanic eruptions, in particular up to
-the current strong anthropogenic forcing of the climate,
+the current anthropogenic forcing of the climate,
 % FIX: check that the Sigl part is correct and precise. (Comment from Rune.) I think so,
 % at least if we make sure to specify that the simulations in mind are simulations over
 % the Holocene.
@@ -186,9 +197,9 @@ possibly the \ac{aod} to \ac{rf} relationship is still unanswered
 One avenue that has been given much attention is how forcing from volcanoes or
 volcano-like forcings compares to the forcing that is due to increased \ce{CO2} levels.
 \citet{boer2007,marvel2016,merlis2014,ollila2016,richardson2019,salvi2022,wigley2005}
-all investigate the link, if any exists, between volcanic forcing and the climate
+all investigate the link, or if any exists, between volcanic forcing and the climate
 sensitivity to a doubling of \ce{CO2}, a much used metric for describing the severity of
-global warming. This is motivated by the large uncertainty in estimates of the
+global warming. This comparison motivated by the large uncertainty in estimates of the
 sensitivity of the real climate system, and inferring climate sensitivity from for
 example volcanoes have been used as an attempt to constrain the sensitivity
 \citep{boer2007}.
@@ -205,9 +216,10 @@ earlier studies often assume that \ac{ecs} can be inferred from volcanoes
 which differ in that \ac{erf} account for rapid atmospheric adjustments while \ac{irf}
 do not \citep{richardson2019}. Other studies suggest either that this is not possible
 and that the sensitivity to volcanic forcing and \ce{CO2} doubling are different, or
-that it is inaccurate since the precision at which climate simulations are run is not
-high enough \citep{douglass2006,boer2007,salvi2022}. Even though \ac{erf} is a more
-suited indicator of the temperature response to a forcing than \ac{irf}
+that constraining the \ac{ecs} by \ac{erf} will be inaccurate since the precision at
+which climate simulations are run is not high enough
+\citep{douglass2006,boer2007,salvi2022}. Even though \ac{erf} is a more suited indicator
+of the temperature response to a forcing than \ac{irf}
 \citep{marvel2016,richardson2019}, more recent studies conclude that \ac{ecs} cannot be
 constrained from volcanoes \citep{pauling2023}.
 
@@ -215,8 +227,8 @@ constrained from volcanoes \citep{pauling2023}.
 
 \ce{H2O}, \ce{N2} and \ce{CO2} are the most abundant gases emitted by volcanoes
 \citep{robock2000}, but still, sulphur species like \ce{SO2} are the most influential
-due to the already relatively large concentrations of the former gases in the
-atmosphere. From \ce{SO2} \ce{H2SO4} is formed after reactions with \ce{OH} and \ce{H2O}
+due to the already relatively high concentrations of the former gases in the atmosphere.
+From \ce{SO2} \ce{H2SO4} is formed after reactions with \ce{OH} and \ce{H2O}
 \citep{robock2000}. Sulphate acid, \ce{H2SO4}, produces the largest effect by
 % FIX: mention the albedo effect
 backscattering sunlight and thus increasing the planetary albedo and reducing the
@@ -246,11 +258,11 @@ between the energy imbalance caused by volcanic eruptions and \ac{aod}.
 \(\SI{-18.3(10)}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) \citep{mills2017} have been
 reported more recently. Simulations done with synthetic volcanoes have also been used,
 and in \citet{marshall2020} they obtain a scaling factor of
-\(\SI{-20.5(2)}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) from simulating a total of \(82\)
-volcanic eruptions with varying injection height and latitude, ranging from \(10\) to
+\(\SI{-20.5(2)}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) from simulating \(82\) volcanic
+eruptions with varying injection height and latitude, ranging from \(10\) to
 \(\SI{100}{\tera\gram}\) of \iso{}.
 
-A similar simulation setup, albeit with significant differences, was done by
+A similar simulation setup, albeit with notable differences, was done by
 \citet{niemeier2015}, where \(14\) different levels of injected sulphur ranging between
 \(\SI{1}{\tera\gram(\ce{S})\mathrm{yr}^{-1}}\)
 (\(\SI{2}{\tera\gram(\ce{SO2})\mathrm{yr}^{-1}}\)) and
@@ -260,23 +272,22 @@ geoengineering simulations where sulphur would be continually injected, and the
 simulations run until the sulphur level was in a steady state. From this, they found
 that the \ac{rf} to injected rate ratio would follow an exponential and converge to a
 value of \(\SI{-65}{\watt\metre^{-2}}\). While the results from the super-volcano
-simulation by \citet{jones2005} indicate a much less steep gradient than the \(-18.3\)
-to \(-25\) found in more recent literature, the peak \ac{rf} obtained in the
-super-volcano simulation was \(\SI{-60}{\watt\metre^{-2}}\), which may suggest the
+simulation by \citet{jones2005} indicate a weaker gradient than the \(-18.3\) to \(-25\)
+found in more recent literature, the peak \ac{rf} obtained in the super-volcano
+simulation was \(\SI{-60}{\watt\metre^{-2}}\), which may suggest the
 \citet{niemeier2015} results to be transferable to a volcanic eruption simulation
 scenario.
 
-\paragraph*{Aerosol optical depth vs.\ radiative forcing}
+\paragraph*{Aerosol optical depth against radiative forcing}
 
-The aerosol evolution and lifetime in the stratosphere strongly influence the \ac{aod}
-and the \ac{rf}, but not always in the same way. \citet{marshall2020} present results
-showing higher efficiencies in years 2 and 3 after an eruption, compared to year 1,
-explaining that this is due to the aerosols being concentrated more spatially in the
-first year and more spread out in later years. This has the effect of increasing the
-albedo per global mean \ac{aod} which in turn increases the \ac{rf} per \ac{aod}
-\citep{marshall2020}. (Also, \ac{aod} to \ac{rf} depend on insulation, cloudiness and
-surface albedo among others, which vary across eruptions
-\citep{marshall2021,andersson2015}.)
+The aerosol evolution and lifetime in the stratosphere influence the \ac{aod} and the
+\ac{rf}, but not always in the same way. \citet{marshall2020} present results showing
+higher efficiencies in years 2 and 3 after an eruption, compared to year 1, explaining
+that this is due to the aerosols being concentrated more spatially in the first year and
+more spread out in later years. This has the effect of increasing the albedo per global
+mean \ac{aod} which in turn increases the \ac{rf} per \ac{aod} \citep{marshall2020}.
+(Also, \ac{aod} to \ac{rf} depend on insulation, cloudiness and surface albedo among
+others, which vary across eruptions \citep{marshall2021,andersson2015}.)
 
 % \citet{marshall2022} mention (in the graphic in their figure 1) that the \emph{role of
 %   initial conditions} is a key outstanding question, especially if the \ce{CO2}
@@ -357,15 +368,15 @@ aerosols with secondary aerosols \citep{liu2016}. Specifically, the three modes 
 Aitken, accumulation and coarse (MAM7 includes Aitken, accumulation, primary carbon,
 fine dust and fine sea salt, coarse dust and coarse sea salt modes) \citep{liu2016}.
 Instantaneous ageing of primary carbonaceous particles is assumed by emitting them in
-the accumulation mode. There are \(15\) transported aerosol tracers in \ac{mam3}
+the accumulation mode. The \ac{mam3} include \(15\) transported aerosol tracers
 \citep{liu2016}. \citet{marshall2019, marshall2020, marshall2021} used a code with seven
 log-normal modes to simulate aerosol mass and number concentrations, but their model is
 an \ac{agcm}, as opposed to the \ac{cesm2} which is an \ac{esm} or \ac{aogcm}.
 
-Since dust efficiently absorbs water it is expected to be removed by wet deposition
-similar to sea salt, which makes the course mode (mode 3, of which sea salt and soil
+Dust absorbs water efficiently and is thus expected to be removed by wet deposition
+similarly to sea salt, which makes the course mode (mode 3, of which sea salt and soil
 dust are both part of) quickly retain its background state below the tropopause
-\citep{liu2012}. Similarly, fine dust and fine sea salt are both merged into the
+\citep{liu2012}. Likewise, fine dust and fine sea salt are both merged into the
 accumulation mode (mode 2).
 
 % NOTE: maybe Maria have an idea?
@@ -384,7 +395,7 @@ amount that is injected over six
 hours\footnote{\url{http://svn.code.sf.net/p/codescripts/code/trunk/ncl/emission/createVolcEruptV3.ncl}}
 at a given altitude, latitude and longitude. All volcanic \ce{SO2} files are created by
 setting the eruption details in a~.json file that is read to the
-\texttt{volcano-cooking} CLI at a fixed version, making the experiment setup highly
+\texttt{volcano-cooking} CLI at a fixed version, making the experiment setup
 reproducible.
 
 We are using the \texttt{BWma1850} component
@@ -490,27 +501,28 @@ compare the two in \ac{rf} to \ac{aod} plots. \Cref{fig:aod_vs_toa_full} show an
 mean values from the four simulation cases in \cref{tab:simulation-overview}; the
 smallest eruption case as blue downward pointing triangles, the intermediate single
 volcano eruption case as orange thick diamonds, the intermediate double volcano eruption
-case as red thin diamonds, the strong tropical eruption case as green upward pointing
-triangles, the strong northern hemisphere eruption case as brown upward pointing
+case as red thin diamonds, the large tropical eruption case as green upward pointing
+triangles, the large northern hemisphere eruption case as brown upward pointing
 three-branched twigs, and the data from \citet[][figure 4, black crosses from HadCM3
   sstPiHistVol]{gregory2016}. Additionally, the estimated peak values from the Mt.\
 Pinatubo eruption and Mt.\ Tambora erupted is plotted as a purple star and yellow plus
-sign, respectively, while the peak from the \citet{jones2005} super-volcano simulation
-is shown as a pink square. Finally, red circles represent the peak values obtained from
-the three tropical eruptions (\ac{c2wm}, \ac{c2wmp} and \ac{c2ws}), and the gradient
-lines are the same as shown by \citet{gregory2016}.
+sign, while the peak from the \citet{jones2005} super-volcano simulation is shown as a
+pink square. Finally, red circles represent the peak values obtained from the three
+tropical eruptions (\ac{c2wm}, \ac{c2wmp} and \ac{c2ws}), and the gradient lines are the
+same as shown by \citet{gregory2016}.
 
 The annual mean data from the smallest Pinatubo-like eruption shown in
 \cref{fig:aod_vs_toa_inset} as blue downward facing triangles, has \ac{rf} values as a
 function of \ac{aod} that follow almost the same constant gradient as the
 \citet{gregory2016} data used in their figure 4. However, we do find that the stronger
-eruptions lead to very different responses in \ac{aod} and \ac{rf}, where the slope of
-the intermediate seem to follow close to a \( -10 \) gradient and the strong is closer
-to a \( -4 \) gradient. The peak values (red circles) suggest a non-linear functional
-shape dependence, while within each eruption strength the annual mean values fall
-relatively close to a straight line, but do tend to have a spread in the
-\(\mathrm{rf}=\mathrm{aod}\pm C\) direction. This is the case also for the small
-eruption strength shown in \cref{fig:aod_vs_toa_inset}.
+eruptions lead to dissimilar responses in \ac{aod} and \ac{rf}, where the slope of the
+intermediate seem to follow close to a \(-10\) gradient and the large is closer to a
+\(-4\) gradient. The peak values (red circles) suggest a non-linear functional shape
+dependence, while within each eruption strength the annual mean values fall relatively
+close to a straight line, but do tend to have a spread in the
+\(\mathrm{rf}=\mathrm{aod}\pm C\) direction. A similar spread is also found for the
+small eruption strength shown in \cref{fig:aod_vs_toa_inset}.
+% FIX: This last part might be removed and better explained via the ratio plots.
 
 Focusing on the peaks as shown by the red circles, \citet{niemeier2015} did simulations
 of continually emitting injections of sulphur, up to \(\SI{100}{\tera\gram
@@ -525,13 +537,12 @@ decay converging to \( \SI{-65}{\watt\meter^{-2}} \)
   \label{eq:niemeier_exponential}
 \end{equation}
 %
-This upper limit is close to what one might suspect the \ac{cesm2} peaks and the
+The upper limit is close to what one might suspect the \ac{cesm2} peaks and the
 \ac{p100} simulation peak to approach (pink square in \cref{fig:aod_vs_toa_full}),
-however, the functional shape is very different; the exponential shape found by
+however, the functional shape is dissimilar; the exponential shape found by
 \citet{niemeier2015} has a much slower decay than that of \ac{cesm2} and \ac{p100}.
-Given the very different scenarios; a constant level of \iso{} in contrast to a
-specified injected mass simulating a volcanic eruption, it is not surprising that the
-forcings are different.
+Given the distinctive scenarios; a constant level of \iso{} in contrast to a specified
+injected mass simulating a volcanic eruption, dissimilar forcings are expected.
 
 \begin{figure}[t]
   \begin{center}
@@ -582,7 +593,7 @@ the time-after-eruption where the \ac{aod} and \ac{rf} values changes the most.
 except the seasonal means are computed from normalized \ac{aod} and \ac{rf} time series.
 \Cref{fig:aod_vs_toa_avg_loop_ratio,fig:aod_vs_toa_avg_loop_ratio_scaled} show the
 \ac{rf} to \ac{aod} ratios from
-\cref{fig:aod_vs_toa_avg_loop,fig:aod_vs_toa_avg_loop_scaled}, respectively. In
+\cref{fig:aod_vs_toa_avg_loop,fig:aod_vs_toa_avg_loop_scaled}. In
 \cref{fig:aod_vs_toa_avg_loop_ratio}, straight lines are linear regression fits to the
 seasonal means, summarised in order of the legend and from left to right in text in the
 right side of the plot. Shaded regions are the standard deviation around the seasonal
@@ -594,8 +605,8 @@ to avoid further cluttering the plot.
 
 The ratio between \ac{aod} and \ac{rf} is not constant, and from
 \cref{fig:aod_vs_toa_avg_loop} a pattern where right after the eruption \ac{rf} is
-particularly strong relative to \ac{aod} show up, especially when the eruptions are very
-large. \citet[][see their sections 3.1.2, 3.2.2]{marshall2019} describe how the growth
+particularly big relative to \ac{aod} show up, especially as the eruptions become
+larger. \citet[][see their sections 3.1.2, 3.2.2]{marshall2019} describe how the growth
 of aerosol particles affect both parameters and introduce a suggested two phases of the
 aerosol evolution, a ``growth'' phase and a ``sedimentation'' phase. In general there
 are larger aerosols for larger eruptions (more time to grow), such that both \ac{aod}
@@ -605,7 +616,7 @@ at scattering radiation).
 In the later phase (``sedimentation'' phase) the dependence of \ac{rf} on \ac{aod}
 becomes weaker since, in addition to a faster sedimentation rate, the \ac{rf} is further
 reduced due to the larger aerosols being less effective at scattering \ac{sw} radiation.
-This is largely in line with the results in
+These phases fall largely in line with the results in
 \cref{fig:aod_vs_toa_avg_loop,fig:aod_vs_toa_avg_loop_scaled,fig:aod_vs_toa_avg_loop_ratio,fig:aod_vs_toa_avg_loop_ratio_scaled},
 where (1) the larger eruptions have a smaller ratio (larger aerosols scatter \ac{sw}
 radiation more poorly) and (2) the ratio is decreasing in magnitude as the eruption
@@ -649,20 +660,20 @@ and \ac{rf}.
 \end{figure}
 
 In \cref{fig:aod_vs_toa_avg_loop_ratio} we plot the ratio of the annual means of \ac{rf}
-and \ac{aod}. The years where the signal-to-noise ratio is the lowest are years 1 and 2,
-as well as year 0 (the noise is mostly due to the \ac{rf} time series, shown in
-\cref{fig:toa_arrays_normalized}). For this reason, the ratio of \ac{rf} to \ac{aod} is
+and \ac{aod}. The years where the signal-to-noise ratio is the lowest are years \(1\)
+and \(2\), as well as year \(0\) (the noise is mostly due to the \ac{rf} time series,
+shown in \cref{fig:toa_arrays_normalized}). Hence, the ratio of \ac{rf} to \ac{aod} is
 calculated for the second season of the first year until the end of the third year. From
 this we find that even though the ratio changes between the eruption magnitudes, we find
 that the gradient at which the ratio is changing is similar across large eruption
-magnitudes. A slope of approximately \( 5.8 \) is a good fit for both the intermediate
-(orange thick diamonds) and the strong eruption (green upward triangles), and even
-though the spread in the small eruption (blue downward triangles) is large in the \( y
-\)-direction, they tend to follow a similarly inclined, albeit steeper, slope. In the
+magnitudes. A slope of approximately \(5.8\) is a good fit for both the intermediate
+(orange thick diamonds) and the large eruption (green upward triangles), and even though
+the spread in the small eruption (blue downward triangles) is large in the
+\(y\)-direction, they tend to follow a similarly inclined, albeit steeper, slope. In the
 later phase, from the second season of the second year, the ratios stay close to
 constant for the reminder of the decaying phase.
 
-The change in ratio, where the smallest is found in the strong eruption and the largest
+The change in ratio, where the smallest is found in the large eruption and the largest
 ratio is from the small eruption, is consistent with the change in peak values seen in
 \cref{fig:aod_vs_toa_full}, where the red circles indicate that the peak values are
 saturating. The \ac{rf} peak magnitudes increases more slowly than the \ac{aod} peak
@@ -691,7 +702,7 @@ negative ratio between \ac{rf} and \ac{aod}.
   \end{center}
   \caption{
     A scaled version of \cref{fig:aod_vs_toa_avg_loop_ratio}, where the scaling is the
-    exact same as in \cref{fig:aod_vs_toa_avg_loop_scaled} compared to
+    same as in \cref{fig:aod_vs_toa_avg_loop_scaled} compared to
     \cref{fig:aod_vs_toa_avg_loop}
   }%
   \label{fig:aod_vs_toa_avg_loop_ratio_scaled}
@@ -701,13 +712,13 @@ One feature seen in \cref{fig:aod_vs_toa_avg_loop,fig:aod_vs_toa_avg_loop_ratio}
 the early phase seems to have a \ac{rf} to \ac{aod} ratio that is changing (from about
 \(0\) to \(1.2\) years after the eruption), while the later phase has an almost constant
 ratio (from \(1.2\) to \(3\)--\(4\) years after the eruption). When plotting the \ac{rf}
-time series, we find that their shapes are very consistent over different eruption
-strengths (\cref{fig:toa_arrays_normalized}), but the \ac{aod} time series show a slight
-change in shape from smaller to larger eruptions (\cref{fig:aod_arrays_normalized}).
-Specifically, the \ac{aod} time series from the smallest eruptions have a fast rise and
-a flat peak before it decays back to its equilibrium state, while from the two larger
-eruptions we find a slower rise time, but a sharper peak, making the decay to
-equilibrium happening at a similar time after the eruption and at a similar rate.
+time series, we find that their shapes are consistent over different eruption strengths
+(\cref{fig:toa_arrays_normalized}), but the \ac{aod} time series show a slight change in
+shape from smaller to larger eruptions (\cref{fig:aod_arrays_normalized}). Specifically,
+the \ac{aod} time series from the smallest eruptions have a fast rise and a flat peak
+before it decays back to its equilibrium state, while from the two larger eruptions we
+find a slower rise time, but a sharper peak, making the decay to equilibrium happening
+at a similar time after the eruption and at a similar rate.
 % TODO: Why? Marshall et al. (2019) and references therein may be the best source for a
 % suggested explanation.
 
@@ -716,7 +727,7 @@ time series and the \ac{rf} time series is the influence of these decaying phase
 temperature time series, perhaps inducing a trend. That is, do the temperature time
 series have different shape in the rising phase, but similar shape in the decaying
 phase, as discussed in relation to \cref{fig:temp_norm_max,fig:temp_norm_int}. Allowing
-the simulations to run for at least twenty years to allow the tail to be well resolved
+the simulations to run for at least twenty years to enable the tail to be well resolved
 is therefore another avenue that could be explored further.
 % WARN: The paragraph above is left hanging... Although it is connected to the next
 % section.
@@ -749,26 +760,26 @@ is therefore another avenue that could be explored further.
 
 Whether the different shapes of the temperature time series can be obtained (synonyms?)
 from the shape of either of the forcing time series or not (\ac{rf} or \ac{aod}) is a
-natural next step to take. There are three different forcing magnitudes that have been
-used, as outlined in \cref{tab:simulation-overview}. The figures below show two
-alternative ways of normalizing the temperature response to these volcanic forcing
-events. First, the three temperature responses are normalized by setting the smoothed
-peak\footnote{the peak of a third-order Savitzky-Golay filter with a one year long
-  window length} value equal to one, shown in \cref{fig:temp_norm_max}. The second method
-of normalizing, shown in \cref{fig:temp_norm_int}, is to divide by the integral of the
-time series, such that the scaled time series integrate to one.
+natural next step to take. Three different forcing magnitudes have been used, as
+outlined in \cref{tab:simulation-overview}. The figures below show two alternative ways
+of normalizing the temperature response to these volcanic forcing events. First, the
+three temperature responses are normalized by setting the smoothed peak\footnote{the
+  peak of a third-order Savitzky-Golay filter with a one year long window length} value
+equal to one, shown in \cref{fig:temp_norm_max}. The second method of normalizing, shown
+in \cref{fig:temp_norm_int}, is to divide by the integral of the time series, such that
+the scaled time series integrate to one.
 
 When normalizing by setting their amplitude equal to (minus) one, the initial rise
 across all three time series is comparable. The difference among the three is how
 quickly the temperature reverts back to equilibrium in the small eruption case (solid
-black and blue shading in \cref{fig:temp_norm_max}). On the other hand, when normalizing
-by enforcing all time series to integrate to the same value, the tails of the
-temperature time series by construction become similar across the three eruption
-magnitudes. From both of these two normalizations, the amount of time spent at the peak
-temperature appears different. The temperature from the smaller eruption simulation
-starts to revert sooner after it reaches the peak temperature. The shape of the initial
-rise and the tail is more similar across the three, while the peak is sharper in the
-small eruption case compared to the two larger.
+black and blue shading in \cref{fig:temp_norm_max}). However, when normalizing by
+enforcing all time series to integrate to the same value, the tails of the temperature
+time series by construction become similar across the three eruption magnitudes. From
+both of these two normalizations, the amount of time spent at the peak temperature
+appears different. The temperature from the smaller eruption simulation starts to revert
+sooner after it reaches the peak temperature. The shape of the initial rise and the tail
+is more similar across the three, while the peak is sharper in the small eruption case
+compared to the two larger.
 
 % NOTE: Any similar results that is consistent with a faster temperature recovery for
 % weaker volcanic forcing? Not, sure, but one curiosity is that in the AOD signals, the
@@ -822,8 +833,8 @@ effect can be seen in the data from \citet{ottobliesner2016} (labelled C1C, red 
 but here the \ac{rf} tend to bend off sooner, having a smaller \ac{rf} response to
 \iso{} than the \ac{cesm2} data. The simulations used by \citet{ottobliesner2016} was
 with \ac{cesm} as well, but version 1 (\ac{cesm1}) and with a low-top atmosphere
-(\ac{cam5}). The difference in model complexity might therefore be the reason why the
-\iso{} give weaker \ac{rf} response for \citet{ottobliesner2016} than what we find.
+(\ac{cam5}). The difference in model complexity might thus be the reason why the \iso{}
+give weaker \ac{rf} response for \citet{ottobliesner2016} than what we find.
 
 \begin{figure}[t]
   \begin{center}
@@ -835,10 +846,10 @@ with \ac{cesm} as well, but version 1 (\ac{cesm1}) and with a low-top atmosphere
 
 \Cref{fig:so2_vs_temp} show \iso{} versus temperature response. Just as in
 \cref{fig:so2_vs_toa}, the data from the \ac{cesm2} simulations bend off, making the
-temperature response less extreme for higher values of \iso. Again we see that the data
-from the \ac{cesm1} simulations by \citet{ottobliesner2016} follow a different path than
-the \ac{cesm2} data, with weaker temperature fluctuations for a given \iso{}, as one
-would expect based on \cref{fig:so2_vs_toa}.
+temperature response weaker for higher values of \iso. Again we see that the data from
+the \ac{cesm1} simulations by \citet{ottobliesner2016} follow a different path than the
+\ac{cesm2} data, with weaker temperature fluctuations for a given \iso{}, as one would
+expect based on \cref{fig:so2_vs_toa}.
 
 \begin{figure}[t]
   \begin{center}
@@ -848,11 +859,11 @@ would expect based on \cref{fig:so2_vs_toa}.
   \label{fig:so2_vs_temp}
 \end{figure}
 
-\Cref{fig:aod_vs_temp} should in the case of the \ac{cesm2} data points be very similar
-in shape to the paths found in \cref{fig:so2_vs_temp} due to the close to linear
-relationship found between \iso{} and \ac{aod} in \cref{fig:so2_vs_aod}. The
-relationship between \ac{aod} and temperature is slightly more linear than what is the
-case with \iso{} and temperature, but the tendency is still the same.
+\Cref{fig:aod_vs_temp} should in the case of the \ac{cesm2} data points be akin in shape
+to the paths found in \cref{fig:so2_vs_temp} due to the close to linear relationship
+found between \iso{} and \ac{aod} in \cref{fig:so2_vs_aod}. The relationship between
+\ac{aod} and temperature is slightly more linear than what is the case with \iso{} and
+temperature, but the tendency is still the same.
 
 \begin{figure}[t]
   \centering
@@ -873,19 +884,19 @@ In \cref{fig:toa_vs_temp} we compare the \ac{rf} and temperature response. Both 
 \ac{cesm2} data and the \ac{cesm1} from \citet{ottobliesner2016} show a close to linear
 relationship between temperature and \ac{rf}, but where the \ac{cesm2} data seem to lead
 to stronger temperature perturbations compared to \ac{cesm1}. However, the overlap in
-data is not big, and the \ac{cesm2} data is too sparse to make strong conclusions, in
-addition to the difference in model complexity.
+data points is not big, and the \ac{cesm2} data are too sparse to make strong
+conclusions, in addition to the difference in model complexity.
 
-While the \ac{p100} data have been comparable to the strong \ac{cesm2} data point in
-both \ac{aod} and \ac{rf}, the temperature response reported by \citet{jones2005} is
-much stronger than what our strongest eruption caused. Since \citet{jones2005} used the
+While the \ac{p100} data have been comparable to the large \ac{cesm2} data point in both
+\ac{aod} and \ac{rf}, the temperature response reported by \citet{jones2005} is much
+stronger than what our strongest eruption caused. Since \citet{jones2005} used the
 \ac{aod} forcing from Mt. Pinatubo multiplied by one hundred, the shape during the whole
-phase could be significantly different to what a super-eruption would create, even
-though the peak is representable, as we have seen in \cref{fig:aod_arrays_normalized}
-where the \ac{aod} shape differ as the eruption strength is increased. This might be
-enough to cause a much stronger temperature perturbation. We also note that
-\citet{timmreck2010} used a more realistic \ac{aod} forcing and obtained cooling that
-was much smaller than \citet{jones2005}. \emph{(More on this in
+phase could be notably different to what a super-eruption would create, even though the
+peak is representable, as we have seen in \cref{fig:aod_arrays_normalized} where the
+\ac{aod} shape differ as the eruption strength is increased. This might be enough to
+cause a much stronger temperature perturbation. We also note that \citet{timmreck2010}
+used a more realistic \ac{aod} forcing and obtained cooling that was much smaller than
+\citet{jones2005}. \emph{(More on this in
   \cref{sec:discussion}\ref{sec:climate-sensitivity-estimate}.)}
 
 \begin{figure}[t]
@@ -898,6 +909,16 @@ was much smaller than \citet{jones2005}. \emph{(More on this in
 
 \section{Discussion}%
 \label{sec:discussion}
+
+% NOTE: Suggested layout for the
+% Discussion:
+% - Explain the results and emphasize significant findings clearly
+% - Discuss the impact and importance of results compared with recent relevant research
+% Conclusion
+% - The justification for these objectives: Why is the work important?
+% - Summarize the key points made in the other sections
+% - Conclude overall discussion of article
+% - Link this section to the introduction
 
 \Cref{fig:aod_vs_toa_full,fig:aod_vs_toa_inset,fig:aod_vs_toa_avg_loop,fig:aod_vs_toa_avg_loop_scaled,fig:aod_vs_toa_avg_loop_ratio,fig:aod_vs_toa_avg_loop_ratio_scaled,fig:aod_vs_toa_logscale}
 all show that as the \ac{aod} values are increased past \(\sim 0.5\), the scaling of
@@ -914,37 +935,37 @@ very large eruptions, they look at Pinatubo and \ac{ytt}, \ce{OH} radicals are n
 abundant enough which limit the \ce{SO2} oxidation. Originally in \citep{bekki1995}.)
 The peak in \ac{aod} levels for the \ac{ytt} simulation appear six months after the peak
 of Pinatubo (or a \ac{p100} scaling) in \citet{timmreck2010}, and at a much smaller
-value, see their fig.\ 1c. \citet{timmreck2010} also obtained a peak \ac{rf} anomaly of
+value, see their Fig.\ 1c. \citet{timmreck2010} also obtained a peak \ac{rf} anomaly of
 \(\SI{-18}{\watt\metre^{-2}}\) (\(7\)-\(8\) months after) compared to \citet{jones2005}
-of \(\SI{-60}{\watt\metre^{-2}}\) (one year after). (\ac{rf} peak occurring prior to the
+of \(\SI{-60}{\watt\metre^{-2}}\) (one year after). (\ac{rf} peak occurring before the
 \ac{aod} peak is the same as I see with my simulations, especially with the larger
 ones.)
 
-From the smallest and the intermediate eruption sizes, there is an apparent roughly
-linear relationship between \ac{aod} and \ac{rf}. Only when inspecting the data
+From the smallest and the intermediate eruption sizes, an apparent roughly linear
+relationship between \ac{aod} and \ac{rf} emerge. Only when inspecting the data
 generated from the largest eruption at \(\SI{1629}{\tera\gram}\) of \iso{} can we see
 that it initially follow approximately the same path as the intermediate, before it
-continues on a much less steep path. Yet, the shape that the two eruptions draw is very
-similar when scaled, suggesting that the intermediate also do follow a loop and that it
-is not just noise that causes the spread. That is, there appear to be a
-time-after-eruption dependency on the ratio between \ac{aod} and \ac{rf}.
-\citet{marshall2020} discuss a similar feature they find when looking at \ac{aod} and
-\ac{rf}, but there, the efficiency increases from year 1 to year 2, while here
-efficiency decreases with time. \citet{marshall2020} explain that this is due to the
-time it takes for the aerosols to spread which affects the global albedo and in turn the
-\ac{rf}, while the \ac{aod} being less affected by the aerosols spreading.
+continues on a shallower path. Yet, the path that the \ac{aod} and \ac{rf} data points
+from the two eruptions follow is comparable when scaled, suggesting that the
+intermediate also do follow a loop and that it is not just noise that causes the spread.
+Importantly, there appear to be a time-after-eruption dependency on the ratio between
+\ac{aod} and \ac{rf}. \citet{marshall2020} discuss a similar feature they find when
+looking at \ac{aod} and \ac{rf}, but there, the efficiency increases from year 1 to year
+2, while here efficiency decreases with time. \citet{marshall2020} explain that this is
+due to the time it takes for the aerosols to spread which affects the global albedo and
+in turn the \ac{rf}, while the \ac{aod} being less affected by the aerosols spreading.
 
 An attempt to reason for the decrease in efficiency being more likely: smaller eruptions
 and estimates from them give an \ac{rf} to \ac{aod} that is quite steep, while larger
 eruptions (or values of \iso{} in the atmosphere as used in \citet{niemeier2015}) result
 in estimates that are smaller in magnitude (\(\sim-20\) versus \(\sim-10\) to
-\(\sim-4\), \cref{fig:aod_vs_toa_avg_loop_ratio}). It has been shown that that
-efficiency decrease as the injection rate increase \citep{niemeier2017}, related to the
-\ac{qbo}, and that large volcanic eruptions result in larger aerosol particle sizes
-which result in decreasing cooling efficiency per \iso{} \citep{english2013,
-  timmreck2018}. Can this be used to reason that the efficiency is initially high, then
-decreasing? Perhaps several and competing effects (albedo, \ac{qbo}, particle size,
-growth \& sedimentation phases)?
+\(\sim-4\), \cref{fig:aod_vs_toa_avg_loop_ratio}). \citet{niemeier2017} showed that the
+efficiency decrease as the injection rate increase, which is related to the \ac{qbo},
+and that large volcanic eruptions result in larger aerosol particle sizes which result
+in decreasing cooling efficiency per \iso{} \citep{english2013, timmreck2018}. Can this
+be used to reason that the efficiency is initially high, then decreasing? Perhaps
+several and competing effects (albedo, \ac{qbo}, particle size, growth \& sedimentation
+phases)?
 
 Large compared to small eruptions:
 
@@ -954,9 +975,9 @@ Large compared to small eruptions:
   \item Aerosols grow to larger radii, which makes them less efficient at scattering radiation,
         so you have less cooling for the same amount of \iso{}
   \item Larger aerosols stay for a shorter time due to being heavier (and other causes? Verify.)
-  \item \ac{rf} plot (\cref{fig:toa_arrays_normalized}) show very similar shape when they are
-        scaled; smaller eruptions are more efficient throughout, but especially in the early
-        phase, why? (\Cref{fig:aod_vs_toa_avg_loop_ratio}.)
+  \item \ac{rf} plot (\cref{fig:toa_arrays_normalized}) show similar shape when they are scaled;
+        smaller eruptions are more efficient throughout, but especially in the early phase, why?
+        (\Cref{fig:aod_vs_toa_avg_loop_ratio}.)
 \end{enumerate}
 
 \subsection{Climate sensitivity estimate}%
@@ -991,13 +1012,13 @@ ocean heat uptake efficiency \(\kappa \) through \(\rho =\alpha +\kappa \).
 
 When computing the trapezoidal integral of the forcing and temperature before finding
 the ratio, the three main simulation types (four in each ensemble) give estimated
-\ac{tcrp} of \(3.3\), \(3.12\) and \(2.91\), shown in \cref{tab:trcp}. This is not the
-same as the climate feedback parameter \citet{jones2005} estimated, but as both \(\alpha
-\) and \(\kappa \) are positive, and our estimates of \(\rho (=\alpha +\kappa) \) are
-all less than the \citet{jones2005} estimate of \(\alpha \simeq
-\SI{4}{\watt\metre^{-2}\kelvin^{-1}}\), we conclude that the climate feedback parameter
-related to the simulations done here is significantly less than what \citet{jones2005}
-got.
+\ac{tcrp} (\(1/\rho\)) of \(3.3\), \(3.12\) and \(2.91\), shown in \cref{tab:trcp}. The
+parameter \(\rho\) is not the same as the climate feedback parameter \citet{jones2005}
+estimated (\(\alpha\)), but as both \(\alpha \) and \(\kappa \) are positive, and our
+estimates of \(\rho (=\alpha +\kappa) \) are all smaller than the \citet{jones2005}
+estimate of \(\alpha \simeq \SI{4}{\watt\metre^{-2}\kelvin^{-1}}\), we conclude that the
+climate feedback parameter related to the simulations performed here must be
+substantially smaller than what \citet{jones2005} got.
 
 \begin{table}
   \centering
