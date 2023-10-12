@@ -28,6 +28,7 @@
 %\newcommand{\hmmax}{0}
 %\newcommand{\bmmax}{0}
 \usepackage{amsmath,amsfonts,amssymb,bm}
+\usepackage{subcaption}
 \usepackage{multirow}
 \usepackage{mathptmx}% {times}
 \usepackage{newtxtext}
@@ -144,7 +145,7 @@
 
 % NOTE: what to include in the paper, key questions.
 % The paper should provide insight about what might happen if a large volcano erupted
-% (order of magnitude or more than Mount Pinatubo). How does the atmosphere react, for
+% (order of magnitude or more than Mt.\ Pinatubo). How does the atmosphere react, for
 % example in the aerosol dynamics? (QBO, SO2/AOD/RF relationship.) It should also be
 % about how volcanic simulations compare in magnitude and if there is time for more
 % simulations, how model complexity (dynamic ocean against slab ocean) affect things.
@@ -171,21 +172,18 @@
 %   the Experimental section (at the level of paragraph subhead- ings) and indicate what
 %   information will go.
 
-\paragraph*{Why volcanoes have been given attention}
+\paragraph*{Historical background: Volcanoes in climate science}
 
 During much of the past few thousand years, the Holocene, the natural climate
-variability on Earth have been mostly forced by volcanic eruptions \citep{sigl2022}.
+variability on Earth has been mostly forced by volcanic eruptions \citep{sigl2022}.
 Despite the strong climate variability impact of volcanic eruptions, in particular up to
-the current anthropogenic forcing of the climate,
-% FIX: check that the Sigl part is correct and precise. (Comment from Rune.) I think so,
-% at least if we make sure to specify that the simulations in mind are simulations over
-% the Holocene.
-few climate model experiments have included volcanic forcing when simulating climate
-evolution during the Holocene \citep{sigl2022}, implying an exaggerated positive forcing
-\citep{gregory2016}. Thus, even though the understanding of how volcanic eruptions force
-the climate has been given much attention, questions for example related to aerosol
-particle processes such as how they grow, which impacts their scattering efficiency and
-possibly the \ac{aod} to \ac{rf} relationship is still unanswered
+the current anthropogenic forcing of the climate, few climate model experiments have
+included volcanic forcing when simulating climate evolution during the Holocene
+\citep{sigl2022}, implying an exaggerated positive forcing \citep{gregory2016}. Thus,
+even though the understanding of how volcanic eruptions force the climate has been given
+much attention, questions for example related to aerosol particle processes such as how
+they grow, which impacts their scattering efficiency and possibly the \ac{aod} to
+\ac{rf} relationship is still unanswered
 \citep[e.g.][]{robock2000,zanchettin2019,marshall2020,marshall2022}.
 % FIX: what specifically is unanswered? Do I get into this in the later sections?
 
@@ -193,7 +191,7 @@ possibly the \ac{aod} to \ac{rf} relationship is still unanswered
 % references). Richardson is doing something that looks very similar to Gunther 2022.
 % Mention that as well? (Similarity bw 0.5CO2 and volcanoes.)
 
-\paragraph*{On similarities bw.\ \ce{CO2} and volcanoes (\ac{ecs})}
+\paragraph*{Historical background: Can volcanoes aid \ce{CO2} in constraining \ac{ecs}?}
 
 One avenue that has been given much attention is how forcing from volcanoes or
 volcano-like forcings compares to the forcing that is due to increased \ce{CO2} levels.
@@ -203,35 +201,31 @@ sensitivity to a doubling of \ce{CO2}, a much used metric for describing the sev
 global warming. This comparison is motivated by the large uncertainty in estimates of
 the sensitivity of the real climate system, and inferring climate sensitivity from for
 example volcanoes have been used as an attempt to constrain the sensitivity
-\citep{boer2007}.
-% FIX: Explain how
-Such a constraint rely on the assumption that volcanic forcing and \ce{CO2} forcing
-produce correlated feedbacks \citep{pauling2023}. Among these, some have been running
-simulations of the 1991 Mt.\ Pinatubo eruption \citep{merlis2014,ollila2016} or
-historical volcano or volcano-like forcings \citep{boer2007,marvel2016,wigley2005},
-while some investigate aerosol forcing in general \citep{richardson2019,salvi2022}. Many
-earlier studies often assume that \ac{ecs} can be inferred from volcanoes
-\citep{wigley2005} or suggest that it might be possible \citep{bender2010}, as long as
-\ac{ecs} is constrained by \ac{erf} and not \ac{irf},
-% FIX: explain what ERF and IRF are
+\citep{boer2007}. Such a constraint rely on the assumption that volcanic forcing and
+\ce{CO2} forcing produce correlated feedbacks \citep{pauling2023}. Among these, some
+have been running simulations of the 1991 Mt.\ Pinatubo eruption
+\citep{merlis2014,ollila2016} or historical volcano or volcano-like forcings
+\citep{boer2007,marvel2016,wigley2005}, while some investigate aerosol forcing in
+general \citep{richardson2019,salvi2022}. Many earlier studies assume that \ac{ecs} can
+be inferred from volcanoes \citep{wigley2005} or suggest that it might be possible
+\citep{bender2010}, as long as \ac{ecs} is constrained by \ac{erf} and not \ac{irf},
 which differ in that \ac{erf} account for rapid atmospheric adjustments while \ac{irf}
-do not \citep{richardson2019}. Other studies suggest either that this is not possible
-and that the sensitivity to volcanic forcing and \ce{CO2} doubling are different, or
-that constraining the \ac{ecs} by \ac{erf} will be inaccurate since the precision at
-which climate simulations are run is not high enough
+do not \citep{richardson2019}. Other studies suggest either that constraining \ac{ecs}
+by \ac{erf} is not possible and that the sensitivity to volcanic forcing and \ce{CO2}
+doubling are different, or that constraining the \ac{ecs} by \ac{erf} will be inaccurate
+since the precision at which climate simulations are run is not high enough
 \citep{douglass2006,boer2007,salvi2022}. Even though \ac{erf} is a more suited indicator
 of the temperature response to a forcing than \ac{irf}
 \citep{marvel2016,richardson2019}, more recent studies conclude that \ac{ecs} cannot be
 constrained from volcanoes \citep{pauling2023}.
 
-\paragraph*{On aerosol evolution and atm.\ dynamics}
+\paragraph*{Theoretical background: Aerosol evolution and atm.\ dynamics}
 
 \ce{H2O}, \ce{N2} and \ce{CO2} are the most abundant gases emitted by volcanoes
 \citep{robock2000}, but still, sulphur species like \ce{SO2} are the most influential
 due to the already relatively high concentrations of the former gases in the atmosphere.
 From \ce{SO2} \ce{H2SO4} is formed after reactions with \ce{OH} and \ce{H2O}
 \citep{robock2000}. Sulphate acid, \ce{H2SO4}, produces the largest effect by
-% FIX: mention the albedo effect
 backscattering sunlight and thus increasing the planetary albedo and reducing the
 \ac{rf} from the Sun, and since its formation from \ce{SO2} is happening over weeks
 \citep{robock2000}, the peak \ac{rf} from the eruption has a slight delay from the onset
@@ -240,7 +234,7 @@ atmosphere depends on several factors, including the phase of the \ac{qbo}
 \citep{pitari2016b}, the season of the year (determining to which hemisphere aerosols
 are transported) \citep{toohey2011,toohey2019}, latitude \citep{marshall2019,
   toohey2019}, volcanic plume height \citep{marshall2019} and the aerosol size
-\citep{marshall2019}. In the case of tropical eruptions, aerosols are typically
+\citep{marshall2019}. But in the case of tropical eruptions, aerosols are typically
 transported poleward in the stratosphere and back to mid-latitude troposphere within one
 to two years \citep{robock2000}.
 % TODO: mention that aerosols are washed out by droplets? This does not occur in the
@@ -248,9 +242,9 @@ to two years \citep{robock2000}.
 
 % Section on RF to AOD ratio
 
-\paragraph*{On the comparison bw.\ \acs*{rf} and \acs*{aod}}
+\paragraph*{Similar contributions: Comparing \acs*{rf} and \acs*{aod}}
 
-Previous studies on both Mt. Pinatubo alone \citep{mills2017,hansen2005} and volcanoes
+Previous studies on both Mt.\ Pinatubo alone \citep{mills2017,hansen2005} and volcanoes
 in the instrumental era \citep{gregory2016} have been used to estimate the relationship
 between the \ac{rf} energy imbalance caused by volcanic eruptions and \ac{aod}.
 \citet{myhre2013} use a formula for \ac{rf} that scales \ac{aod} by
@@ -278,11 +272,11 @@ found in more recent literature, the peak \ac{rf} obtained in the super-volcano
 simulation was \(\SI{-60}{\watt\metre^{-2}}\), suggesting the \citet{niemeier2015}
 results might be transferable to a volcanic eruption simulation scenario.
 
-\paragraph*{Aerosol optical depth against radiative forcing}
+\paragraph*{Similar contributions: Time-after-eruption dependence}
 
 The aerosol evolution and lifetime in the stratosphere influence the \ac{aod} and the
 \ac{rf}, but not always in the same way. \citet{marshall2020} present results showing
-higher efficiencies in years 2 and 3 after an eruption, compared to year 1, explaining
+higher efficiencies in years 2 and 3 after an eruption, compared to year 1, suggesting
 that this is due to the aerosols being concentrated more spatially in the first year and
 more spread out in later years. This has the effect of increasing the albedo per global
 mean \ac{aod} which in turn increases the \ac{rf} per \ac{aod} \citep{marshall2020}.
@@ -314,11 +308,6 @@ others, which vary across eruptions \citep{marshall2021,andersson2015}.)
 %   Check this.)}
 % TODO: check the data if it can be used for FPP.
 
-% Perhaps focus on why there seems to be a loop in the \ac{aod} against
-% \ac{rf} plots. Can also compare February-August means with May-November means.
-% (\citet{marshall2021} discuss Tambora, but mention that it erupted in April, while their
-% data consist of January and July eruptions.)
-
 % \paragraph*{Motivation}
 %
 % From \citet{pauling2023}: what aspect of the climate system control the response to
@@ -328,6 +317,17 @@ others, which vary across eruptions \citep{marshall2021,andersson2015}.)
 % variability and the dependence on the current climate state. Also \citet{aubry2022} give
 % a review on this very topic. They emphasise the urgency to accelerate research on
 % climate-volcano impacts (a niche topic to date).
+
+\paragraph*{This paper's contributions}
+
+Considering the linear relationship often found between \ac{aod} and \ac{rf}
+\citep{gregory2016, marshall2020, mills2017, myhre2013} along with studies indicating a
+non-linear relationship \citep{niemeier2015}, as well as a time-after-eruption
+dependence \citep{marshall2020}, we see that for large to super-volcano sized volcanic
+eruptions there is both a clear non-linear \ac{aod} to \ac{rf} dependence explored in
+section \ldots, but also a time-after-eruption dependence on both \ac{aod} and \ac{rf},
+which we look at in section \ldots. In section \ldots, conclusions about the underlying
+atmospheric dynamics are made.
 
 \section{Method}
 
@@ -436,7 +436,7 @@ atmospheric adjustments \citep{marshall2020,smith2018}. The \ac{aod} is obtained
 the output variable \ac{aodm}, while global temperature is saved by \ac{cesm2} to the
 variable \ac{trefht}. These four output variables are all that are used throughout this
 paper. The important input data used in the model simulations are \iso{} in units of
-tera grams, used to simulate volcanic eruptions.
+teragrams, used to simulate volcanic eruptions.
 
 \subsection{Simulations}
 
@@ -444,8 +444,8 @@ The simulations are summarized in \cref{tab:simulation-overview} and cover three
 \ce{SO2} injection magnitudes and four seasons; 15 February, 15 May, 15 August and 15
 November. The magnitudes vary across three orders of magnitude: \(\SI{26}{\tera\gram}\),
 \(\SI{400}{\tera\gram}\) and \(\SI{1629}{\tera\gram}\). The smallest eruption is of the
-same order of magnitude as Mount Pinatubo
-\citep[\(\sim10\)--\(\SI{20}{\tera\gram}\);~e.g.][]{timmreck2018} and Mount Tambora
+same order of magnitude as Mt.\ Pinatubo
+\citep[\(\sim10\)--\(\SI{20}{\tera\gram}\);~e.g.][]{timmreck2018} and Mt.\ Tambora
 \citep[\(\sim\SI{56.2}{\tera\gram}\);~e.g.][]{zanchettin2016}, the intermediate is
 similar to the 1257 Samalas eruption
 \citep[\(\sim{119}\)--\(\SI{250}{\tera\gram}\);~e.g.][]{toohey2017,ottobliesner2016},
@@ -455,8 +455,8 @@ are all located at the equator, at \(\SI{0}{\degree N}\), \(\SI{1}{\degree E}\) 
 \ce{SO2} is injected between \(\SI{18}{\kilo\meter}\) and \(\SI{20}{\kilo\meter}\). An
 advantage with having eruptions this big, in the large to super-volcano size, is
 improvement of the signal-to-noise ratio without having to run a large and
-computationally expensive ensemble. This still, however, leave the question open whether
-this will give realistic values for the forcing \citep{gregory2016}.
+computationally expensive ensemble. However, this still leave the question of whether
+this will give realistic values for the forcing open \citep{gregory2016}.
 
 \begin{table}
   \caption{Simulations done with the \ac*{cesm2}. \acf*{c2wsn} and \acf*{c2ws} are the
@@ -494,33 +494,31 @@ this will give realistic values for the forcing \citep{gregory2016}.
 
 \subsection{Part 1}
 
-We first compare \ac{aod} to \ac{rf}, which are both used to provide insight about how
-the volcanic eruption impacted climate. This comparison is also motivated by
-\citet[][their Fig.\ 4]{gregory2016} and \citet[][their Fig.\ 1]{marshall2020} who
-compare the two in \ac{rf} to \ac{aod} plots. \Cref{fig:aod_vs_toa_full} show annual
-mean values from the four simulation cases in \cref{tab:simulation-overview}; the
-smallest eruption case as blue downward pointing triangles, the intermediate eruption
-case as orange thick diamonds, the large tropical eruption case as green upward pointing
-triangles, the large northern hemisphere eruption case as brown upward pointing
-three-branched twigs, and the data from \citet[][Fig.\ 4, black crosses from HadCM3
-  sstPiHistVol]{gregory2016} as grey crosses. Additionally, the estimated peak values from
-the Mt.\ Pinatubo eruption and Mt.\ Tambora erupted are plotted as a purple star and a
-yellow plus, while the peak from the \citet{jones2005} super-volcano simulation is shown
-as a pink square. Finally, red circles represent the peak values obtained from the three
-tropical eruptions (\ac{c2wm}, \ac{c2wmp} and \ac{c2ws}), and the gradient lines are the
-same as shown by \citet{gregory2016}.
+In this section, we investigate the effect of the forcing strength on the \ac{aod} and
+\ac{rf}, which are both parameters used to provide insight about how volcanic eruptions
+impact climate. A similar comparison was carried out in \citet[][their Fig.\
+  4]{gregory2016} and \citet[][their Fig.\ 1]{marshall2020}, with \ac{rf} to \ac{aod}
+plots. \Cref{fig:aod_vs_toa_full} show annual mean values from the four simulation cases
+in \cref{tab:simulation-overview}; the smallest eruption case as blue downward pointing
+triangles, the intermediate eruption case as orange thick diamonds, the large tropical
+eruption case as green upward pointing triangles, the large northern hemisphere eruption
+case as brown upward pointing three-branched twigs, and the data from \citet[][Fig.\ 4,
+  black crosses from HadCM3 sstPiHistVol]{gregory2016} as grey crosses. Additionally, the
+estimated peak values from the Mt.\ Pinatubo eruption and Mt.\ Tambora eruption are
+plotted as a purple star and a yellow plus, while the peak from the \citet{jones2005}
+super-volcano simulation is shown as a pink square. Finally, red circles represent the
+peak values obtained from the three tropical eruptions (\ac{c2wm}, \ac{c2wmp} and
+\ac{c2ws}). The gradient lines are the same as shown by \citet{gregory2016}.
 
 The annual mean data from the smallest Pinatubo-like eruption shown in
 \cref{fig:aod_vs_toa_inset} as blue downward facing triangles, has \ac{rf} values as a
 function of \ac{aod} that follow almost the same constant gradient as the
-\citet{gregory2016} data used in their Fig.\ 4. However, we do find that the stronger
-eruptions lead to dissimilar responses in \ac{aod} and \ac{rf}, where the slope of the
-intermediate seem to follow close to a \(-10\) gradient and the large is closer to a
-\(-4\) gradient. The peak values (red circles) suggest a non-linear functional shape
-dependence, while within each eruption strength the annual mean values fall relatively
-close to a straight line, but do tend to have a spread in the
-\(\mathrm{RF}=\mathrm{AOD}+C\) direction. A similar spread is also found for the small
-eruption case shown in \cref{fig:aod_vs_toa_inset}.
+\citet{gregory2016} data. However, we do find that the stronger eruptions lead to
+dissimilar responses in \ac{aod} and \ac{rf}, where the slope of the intermediate seem
+to follow close to a \(-10\) gradient and the large is closer to a \(-4\) gradient. The
+peak values (red circles) suggest a non-linear functional shape dependence, while within
+each eruption strength the annual mean values fall relatively close to a straight line,
+but do tend to have a spread in the \(\mathrm{RF}=\mathrm{AOD}+C\) direction.
 % FIX: This last part might be removed and better explained via the ratio plots.
 
 Focusing on the peaks as shown by the red circles, \citet{niemeier2015} did simulations
@@ -543,31 +541,57 @@ however, the functional shape is dissimilar; the exponential shape found by
 Given the distinctive scenarios; a constant level of \iso{} in contrast to a specified
 injected mass simulating a volcanic eruption, dissimilar forcings are expected.
 
-\begin{figure}[t]
-  \begin{center}
+\begin{figure}
+  \begin{subfigure}{\linewidth}
+    \centering
     \includegraphics[width=0.95\linewidth]{figures/aod_vs_toa_avg_full.png}
-  \end{center}
+    \caption{}%
+    \label{fig:aod_vs_toa_full}
+  \end{subfigure}
+  \begin{subfigure}{\linewidth}
+    \centering
+    \includegraphics[width=0.95\linewidth]{figures/aod_vs_toa_avg_inset.png}
+    \caption{}%
+    \label{fig:aod_vs_toa_inset}
+  \end{subfigure}
   \caption{\ac{aod} versus \ac{rf}, yearly means. Data from the four simulations listed
     in \cref{tab:simulation-overview} are shown along with the data from the HadCM3
     sstPiHistVol simulation by \citet{gregory2016} (grey crosses). Also shown are the
     estimated peak values of the Mt.\ Pinatubo (purple star) and Mt.\ Tambora (yellow
-    plus) eruptions, and the simulated super-volcano of \citet{jones2005} (pink
-    square). Red circles indicate the peak values from the simulations \ac*{c2wm},
-    \ac*{c2wmp} and \ac*{c2ws}. The grey gradient lines are the same regression fits as in
-    \citet[][Fig.\ 4]{gregory2016}, where the solid line is the fit to the Gregory et al.\
-    data (grey crosses). \Cref{fig:aod_vs_toa_inset} show the same plot but zoomed in on
-    the smallest values}%
-  \label{fig:aod_vs_toa_full}
+    plus) eruptions. In (\subref{fig:aod_vs_toa_full}) the simulated super-volcano of
+    \citet{jones2005} (pink square) is shown as well as the peak values from the
+    simulations \ac*{c2wm}, \ac*{c2wmp} and \ac*{c2ws} as red circles. The grey
+    gradient lines are the same regression fits as in \citet[][Fig.\ 4]{gregory2016},
+    where the solid line is the fit to the Gregory et al.\ data (grey crosses).
+    (\subref{fig:aod_vs_toa_inset}): Zooming in on the smallest values}%
+  \label{fig:aod_vs_toa}
 \end{figure}
 
-\begin{figure}[t]
-  \begin{center}
-    \includegraphics[width=0.95\linewidth]{figures/aod_vs_toa_avg_inset.png}
-  \end{center}
-  \caption{Same as in \cref{fig:aod_vs_toa_full}, but zooming in on smaller values. Data
-    outside the plot are left out of the legend}%
-  \label{fig:aod_vs_toa_inset}
-\end{figure}
+% \begin{figure}[t]
+%   \begin{center}
+%     \includegraphics[width=0.95\linewidth]{figures/aod_vs_toa_avg_full.png}
+%   \end{center}
+%   \caption{\ac{aod} versus \ac{rf}, yearly means. Data from the four simulations listed
+%     in \cref{tab:simulation-overview} are shown along with the data from the HadCM3
+%     sstPiHistVol simulation by \citet{gregory2016} (grey crosses). Also shown are the
+%     estimated peak values of the Mt.\ Pinatubo (purple star) and Mt.\ Tambora (yellow
+%     plus) eruptions, and the simulated super-volcano of \citet{jones2005} (pink
+%     square). Red circles indicate the peak values from the simulations \ac*{c2wm},
+%     \ac*{c2wmp} and \ac*{c2ws}. The grey gradient lines are the same regression fits as in
+%     \citet[][Fig.\ 4]{gregory2016}, where the solid line is the fit to the Gregory et al.\
+%     data (grey crosses). \Cref{fig:aod_vs_toa_inset} show the same plot but zoomed in on
+%     the smallest values}%
+%   \label{fig:aod_vs_toa_full}
+% \end{figure}
+
+% \begin{figure}[t]
+%   \begin{center}
+%     \includegraphics[width=0.95\linewidth]{figures/aod_vs_toa_avg_inset.png}
+%   \end{center}
+%   \caption{Same as in \cref{fig:aod_vs_toa_full}, but zooming in on smaller values. Data
+%     outside the plot are left out of the legend}%
+%   \label{fig:aod_vs_toa_inset}
+% \end{figure}
 
 % \begin{figure}
 %   \begin{center}
@@ -712,27 +736,50 @@ turn make the forcing from smaller eruptions relatively more efficient than from
 eruptions since larger aerosols scatter radiation less efficiently, causing a less
 negative ratio between \ac{rf} and \ac{aod}.
 
-\begin{figure}[t]
-  \begin{center}
-    \includegraphics[width=0.95\linewidth]{figures/aod_vs_toa_avg_loop_ratio.png}
-  \end{center}
-  \caption{
-    Ratio of \ac{rf} to \ac{aod}, with the time-after-eruption on the horizontal axis.
-    Slopes are linear regression fits and are described in \cref{tab:slope-gradients},
-    while shaded regions are the standard deviation across the ensembles for each season
-  }%
-  \label{fig:aod_vs_toa_avg_loop_ratio}
+\begin{figure}
+  \begin{subfigure}{\linewidth}
+    \centering
+    \includegraphics[width=0.95\linewidth]{figures/aod_vs_toa_avg_loop_ratio}
+    \caption{}%
+    \label{fig:aod_vs_toa_avg_loop_ratio}
+  \end{subfigure}
+  \begin{subfigure}{\linewidth}
+    \centering
+    \includegraphics[width=0.95\linewidth]{figures/aod_vs_toa_avg_loop_ratio_scaled}
+    \caption{}%
+    \label{fig:aod_vs_toa_avg_loop_ratio_scaled}
+  \end{subfigure}
+  \caption{(\subref{fig:aod_vs_toa_avg_loop_ratio}): Ratio of \ac{rf} to \ac{aod}, with
+    time-after-eruption on the horizontal axis. Slopes are linear regression fits and
+    are described in \cref{tab:slope-gradients}, while shaded regions are the standard
+    deviation across the ensembles for each season.
+    (\subref{fig:aod_vs_toa_avg_loop_ratio_scaled}): Same as in
+    \subref{fig:aod_vs_toa_avg_loop_ratio}, but where the underlying \ac{aod} and \ac{rf}
+    time series have been scaled to have peak values at unity}%
+  \label{fig:aod_vs_toa_avg_loop_ratios}
 \end{figure}
 
-\begin{figure}[t]
-  \begin{center}
-    \includegraphics[width=0.95\linewidth]{figures/aod_vs_toa_avg_loop_ratio_scaled.png}
-  \end{center}
-  \caption{ Same as in \cref{fig:aod_vs_toa_avg_loop_ratio}, but where the underlying
-    \ac{aod} and \ac{rf} time series  have been scaled to have peak values at unity (see
-    \cref{fig:aod_arrays_normalized,fig:toa_arrays_normalized})}%
-  \label{fig:aod_vs_toa_avg_loop_ratio_scaled}
-\end{figure}
+% \begin{figure}[t]
+%   \begin{center}
+%     \includegraphics[width=0.95\linewidth]{figures/aod_vs_toa_avg_loop_ratio.png}
+%   \end{center}
+%   \caption{
+%     Ratio of \ac{rf} to \ac{aod}, with the time-after-eruption on the horizontal axis.
+%     Slopes are linear regression fits and are described in \cref{tab:slope-gradients},
+%     while shaded regions are the standard deviation across the ensembles for each season
+%   }%
+%   \label{fig:aod_vs_toa_avg_loop_ratio}
+% \end{figure}
+
+% \begin{figure}[t]
+%   \begin{center}
+%     \includegraphics[width=0.95\linewidth]{figures/aod_vs_toa_avg_loop_ratio_scaled.png}
+%   \end{center}
+%   \caption{ Same as in \cref{fig:aod_vs_toa_avg_loop_ratio}, but where the underlying
+%     \ac{aod} and \ac{rf} time series  have been scaled to have peak values at unity (see
+%     \cref{fig:aod_arrays_normalized,fig:toa_arrays_normalized})}%
+%   \label{fig:aod_vs_toa_avg_loop_ratio_scaled}
+% \end{figure}
 
 One feature seen in \cref{fig:aod_vs_toa_avg_loop_ratio} is that the early phase seems
 to have a \ac{rf} to \ac{aod} ratio that is changing (from about \(0\) to \(1.2\) years
@@ -757,23 +804,44 @@ be well resolved is therefore another avenue that could be explored further.
 % WARN: The paragraph above is left hanging... Although it is connected to the next
 % section.
 
-\begin{figure}[t]
-  \begin{center}
-    \includegraphics[width=0.95\linewidth]{figures/aod_arrays_normalized.png}
-  \end{center}
-  \caption{The \ac{aod} time series from the simulations summarised in
-    \cref{tab:simulation-overview}, scaled to have peak values at unity}%
-  \label{fig:aod_arrays_normalized}
+\begin{figure}
+  \begin{subfigure}{\linewidth}
+    \centering
+    \includegraphics[width=0.95\linewidth]{figures/aod_arrays_normalized}
+    \caption{}%
+    \label{fig:aod_arrays_normalized}
+  \end{subfigure}
+  \begin{subfigure}{\linewidth}
+    \centering
+    \includegraphics[width=0.95\linewidth]{figures/toa_arrays_normalized}
+    \caption{}%
+    \label{fig:toa_arrays_normalized}
+  \end{subfigure}
+  \caption{(\subref{fig:aod_arrays_normalized}): The \ac{aod} time series from the
+    simulations summarised in \cref{tab:simulation-overview}, scaled to have peak
+    values at unity. (\subref{fig:toa_arrays_normalized}): The \ac{rf} time series
+    from the simulations summarised in \cref{tab:simulation-overview}, scaled to
+    have peak values at unity}%
+  \label{fig:arrays_normalized}
 \end{figure}
 
-\begin{figure}[t]
-  \begin{center}
-    \includegraphics[width=0.95\linewidth]{figures/toa_arrays_normalized.png}
-  \end{center}
-  \caption{The \ac{rf} time series from the simulations summarised in
-    \cref{tab:simulation-overview}, scaled to have peak values at unity}%
-  \label{fig:toa_arrays_normalized}
-\end{figure}
+% \begin{figure}[t]
+%   \begin{center}
+%     \includegraphics[width=0.95\linewidth]{figures/aod_arrays_normalized.png}
+%   \end{center}
+%   \caption{The \ac{aod} time series from the simulations summarised in
+%     \cref{tab:simulation-overview}, scaled to have peak values at unity}%
+%   \label{fig:aod_arrays_normalized}
+% \end{figure}
+
+% \begin{figure}[t]
+%   \begin{center}
+%     \includegraphics[width=0.95\linewidth]{figures/toa_arrays_normalized.png}
+%   \end{center}
+%   \caption{The \ac{rf} time series from the simulations summarised in
+%     \cref{tab:simulation-overview}, scaled to have peak values at unity}%
+%   \label{fig:toa_arrays_normalized}
+% \end{figure}
 
 \subsection{Part 3}
 
@@ -784,14 +852,14 @@ outlined in \cref{tab:simulation-overview}. The figures below show two alternati
 of normalizing the temperature response to these volcanic forcing events. First, the
 three temperature responses are normalized by setting the smoothed peak\footnote{the
   peak of a third-order Savitzky-Golay filter with a one year long window length} value
-equal to one, shown in \cref{fig:temp_norm_max}. The second method of normalizing, shown
-in \cref{fig:temp_norm_int}, is to divide by the integral of the time series, such that
-the scaled time series integrate to one.
+equal to one, shown in \cref{fig:compare-waveform-max}. The second method of
+normalizing, shown in \cref{fig:compare-waveform-integrate}, is to divide by the
+integral of the time series, such that the scaled time series integrate to one.
 
 When normalizing by setting their amplitude equal to (minus) one, the initial rise
 across all three time series is comparable. The difference among the three is how
 quickly the temperature reverts back to equilibrium in the small eruption case (solid
-black and blue shading in \cref{fig:temp_norm_max}). However, when normalizing by
+black and blue shading in \cref{fig:compare-waveform-max}). However, when normalizing by
 enforcing all time series to integrate to the same value, the tails of the temperature
 time series by construction become similar across the three eruption magnitudes. From
 both of these two normalizations, the amount of time spent at the peak temperature
@@ -806,26 +874,47 @@ compared to the two larger.
 % for the temperature. The RF time series have similar shape for all forcing magnitudes.
 % See figs. 9 (aod_arrays_normalized) and 10 (toa_arrays_normalized).
 
-\begin{figure}[t]
-  \begin{center}
-    \includegraphics[width=0.95\linewidth]{figures/compare-waveform-max.png}
-  \end{center}
+\begin{figure}
+  \begin{subfigure}{\linewidth}
+    \centering
+    \includegraphics[width=0.95\linewidth]{figures/compare-waveform-max}
+    \caption{}%
+    \label{fig:compare-waveform-max}
+  \end{subfigure}
+  \begin{subfigure}{\linewidth}
+    \centering
+    \includegraphics[width=0.95\linewidth]{figures/compare-waveform-integrate}
+    \caption{}%
+    \label{fig:compare-waveform-integrate}
+  \end{subfigure}
   \caption{Temperature response to the three tropical volcanic eruptions cases,
     \ac{c2wm}, \ac{c2wmp} and \ac{c2ws}. The temperature time series have been
-    normalised to have peak values at unity, where \(C\) gives the normalisation
-    constant}%
-  \label{fig:temp_norm_max}
+    normalised to have (\subref{fig:compare-waveform-max}) peak values at unity and
+    (\subref{fig:compare-waveform-integrate}) so that they integrate to one, where
+    \(C\) is the normalisation constant}%
+  \label{fig:compare-waveform}
 \end{figure}
 
-\begin{figure}[t]
-  \begin{center}
-    \includegraphics[width=0.95\linewidth]{figures/compare-waveform-integrate.png}
-  \end{center}
-  \caption{Temperature response to the three tropical volcanic eruptions cases,
-    \ac{c2wm}, \ac{c2wmp} and \ac{c2ws}. The temperature time series have been normalised
-    so that they integrate to one, where \(C\) gives the normalisation constant}%
-  \label{fig:temp_norm_int}
-\end{figure}
+% \begin{figure}[t]
+%   \begin{center}
+%     \includegraphics[width=0.95\linewidth]{figures/compare-waveform-max.png}
+%   \end{center}
+%   \caption{Temperature response to the three tropical volcanic eruptions cases,
+%     \ac{c2wm}, \ac{c2wmp} and \ac{c2ws}. The temperature time series have been
+%     normalised to have peak values at unity, where \(C\) gives the normalisation
+%     constant}%
+%   \label{fig:compare-waveform-max}
+% \end{figure}
+
+% \begin{figure}[t]
+%   \begin{center}
+%     \includegraphics[width=0.95\linewidth]{figures/compare-waveform-integrate.png}
+%   \end{center}
+%   \caption{Temperature response to the three tropical volcanic eruptions cases,
+%     \ac{c2wm}, \ac{c2wmp} and \ac{c2ws}. The temperature time series have been normalised
+%     so that they integrate to one, where \(C\) gives the normalisation constant}%
+%   \label{fig:compare-waveform-integrate}
+% \end{figure}
 
 \subsection{Part 4}
 
@@ -889,7 +978,7 @@ temperature, but the tendency is still the same.
 
 \begin{figure}[t]
   \centering
-  \includegraphics[width=0.95\linewidth]{figures/aod_vs_toa_logscale.png}
+  \includegraphics[width=0.95\linewidth]{./figures/aod_vs_toa.png}
   \caption{\ac{aod} versus \ac{rf}}%
   \label{fig:aod_vs_toa_logscale}
 \end{figure}
