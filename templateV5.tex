@@ -172,6 +172,8 @@
 %   the Experimental section (at the level of paragraph subheadings) and indicate what
 %   information will go.
 
+% Toohey et al 2011 have a nice end of introduction.
+
 \paragraph*{Historical background: Volcanoes in climate science}
 
 During much of the past few thousand years, the Holocene, the natural climate
@@ -237,7 +239,7 @@ atmosphere depends on several factors, including the phase of the \ac{qbo}
 \citep{pitari2016b}, the season of the year (determining to which hemisphere aerosols
 are transported) \citep{toohey2011,toohey2019}, latitude \citep{marshall2019,
   toohey2019}, volcanic plume height \citep{marshall2019} and the aerosol size
-\citep{marshall2019}. But in the case of tropical eruptions, aerosols are typically
+\citep{marshall2019}. In the case of tropical eruptions, aerosols are typically
 transported poleward in the stratosphere and back to mid-latitude troposphere within one
 to two years \citep{robock2000}.
 % TODO: mention that aerosols are washed out by droplets? This does not occur in the
@@ -251,12 +253,12 @@ Previous studies on both Mt.\ Pinatubo alone \citep{mills2017,hansen2005} and vo
 in the instrumental era \citep{gregory2016} have been used to estimate the relationship
 between the \ac{rf} energy imbalance caused by volcanic eruptions and \ac{aod}.
 \citet{myhre2013} use a formula for \ac{rf} that scales \ac{aod} by
-\(\SI{-25}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) while values down to
+\(\SI{-25}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) while estimates down to
 \(\SI{-19.0(5)}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) \citep{gregory2016} and
 \(\SI{-18.3(10)}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) \citep{mills2017} have been
 reported more recently. Simulations done with synthetic volcanoes have also been used,
 and in \citet{marshall2020} they obtain a scaling factor of
-\(\SI{-20.5(2)}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) from simulating \(82\) volcanic
+\(\SI{-20.5(2)}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) from \(82\) simulations of volcanic
 eruptions with varying injection height and latitude, ranging from \(10\) to
 \(\SI{100}{\tera\gram}\) of \iso{}.
 
@@ -268,12 +270,14 @@ A similar simulation setup, albeit with notable differences, was done by
 (\(\SI{200}{\tera\gram(\ce{SO2})\mathrm{yr}^{-1}}\)) was simulated. These were
 geoengineering simulations where sulphur would be continually injected, and the
 simulations run until the sulphur level was in a steady state. From this, they found
-that the \ac{rf} to injected rate ratio would follow an exponential and converge to a
-value of \(\SI{-65}{\watt\metre^{-2}}\). While the results from the super-volcano
-simulation by \citet{jones2005} indicate a weaker gradient than the \(-18.3\) to \(-25\)
-found in more recent literature, the peak \ac{rf} obtained in the super-volcano
-simulation was \(\SI{-60}{\watt\metre^{-2}}\), suggesting the \citet{niemeier2015}
-results might be transferable to a volcanic eruption simulation scenario.
+that the \ac{rf} to injected \ce{SO2} rate ratio would follow an exponential and
+converge to a value of \(\SI{-65}{\watt\metre^{-2}}\). While the results from the
+super-volcano simulation by \citet{jones2005} indicate a weaker gradient of \(\sim
+\SI{-4}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) than the
+\(-18.3\)--\(\SI{-25}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) found in more recent
+literature, the peak \ac{rf} obtained in the super-volcano simulation was
+\(\SI{-60}{\watt\metre^{-2}}\), suggesting the \citet{niemeier2015} results might be
+transferable to a volcanic eruption simulation scenario.
 
 \paragraph*{Similar contributions: Time-after-eruption dependence}
 
@@ -282,9 +286,10 @@ The aerosol evolution and lifetime in the stratosphere influence the \ac{aod} an
 higher efficiencies in years 2 and 3 after an eruption, compared to year 1, suggesting
 that this is due to the aerosols being concentrated more spatially in the first year and
 more spread out in later years. This has the effect of increasing the albedo per global
-mean \ac{aod} which in turn increases the \ac{rf} per \ac{aod} \citep{marshall2020}.
-(Also, \ac{aod} to \ac{rf} depend on insulation, cloudiness and surface albedo among
-others, which vary across eruptions \citep{marshall2021,andersson2015}.)
+mean \ac{aod} which in turn increases the \ac{rf} to \ac{aod} ratio
+\citep{marshall2020}.
+% TODO: Also, \ac{aod} to \ac{rf} depend on insulation, cloudiness and surface albedo
+% among others, which vary across eruptions \citep{marshall2021,andersson2015}.
 
 % \citet{marshall2022} mention (in the graphic in their figure 1) that the \emph{role of
 %   initial conditions} is a key outstanding question, especially if the \ce{CO2}
@@ -323,15 +328,17 @@ others, which vary across eruptions \citep{marshall2021,andersson2015}.)
 
 \paragraph*{This paper's contributions}
 
-Considering the linear relationship often found between \ac{aod} and \ac{rf} of
-approximately \(\SI{20}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) \citep{gregory2016,
-  marshall2020, mills2017, myhre2013} along with studies indicating a non-linear
-relationship \citep{niemeier2015}, as well as a time-after-eruption dependence
-\citep{marshall2020}, we see that for large to super-volcano sized volcanic eruptions
-there is both a clear non-linear \ac{aod} to \ac{rf} dependence explored in section
-\ldots, but also a time-after-eruption dependence on both \ac{aod} and \ac{rf}, which we
-look at in section \ldots. In section \ldots, conclusions about the underlying
-atmospheric dynamics are made.
+This work aims to (evaluate/quantify?) the relationship between \ac{aod} and \ac{rf} for
+volcanic eruptions of super-volcano size. This is considering the linear relationship
+often found between \ac{aod} and \ac{rf} of approximately
+\(\SI{20}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) \citep{gregory2016, marshall2020,
+  mills2017, myhre2013} along with studies indicating a non-linear relationship
+\citep{niemeier2015}, as well as a time-after-eruption dependence \citep{marshall2020}.
+We see that for large to super-volcano sized volcanic eruptions there is both a clear
+non-linear \ac{aod} to \ac{rf} dependence, explored in section \ldots, but also a
+time-after-eruption dependence on both \ac{aod} and \ac{rf}, which we look at in section
+\ldots. In section \ldots, conclusions about the underlying atmospheric dynamics are
+made.
 
 \section{Method}
 
@@ -360,8 +367,8 @@ atmospheric dynamics are made.
 
 We apply the \ac{cesm2} \citep{danabasoglu2020}, along with the \ac{waccm}
 \citep{gettleman2019} and the fully dynamical ocean component \ac{pop} \citep{smith2010,
-  danabasoglu2020}. The complete list of model components is found in
-\cref{tab:cesm-components}. The model atmosphere was run at nominal \(\SI{2}{\degree}\)
+  danabasoglu2020}. A complete list of model components is found in
+\cref{tab:cesm-components}. The atmosphere model was run at nominal \(\SI{2}{\degree}\)
 resolution, with \(70\) vertical levels, in the \ac{ma} configuration.
 
 The \ac{ma} version of \ac{waccm} uses the \ac{mam3} \citep{gettleman2019}. This is
@@ -379,10 +386,9 @@ log-normal modes to simulate aerosol mass and number concentrations, but their m
 an \ac{agcm}, as opposed to the \ac{cesm2} which is an \ac{esm} or \ac{aogcm}.
 
 Dust absorbs water efficiently and is thus expected to be removed by wet deposition
-similarly to sea salt, which makes the course mode (mode 3, of which sea salt and soil
-dust are both part of) quickly retain its background state below the tropopause
-\citep{liu2012}. Likewise, fine dust and fine sea salt are both merged into the
-accumulation mode (mode 2).
+similarly to sea salt, which makes the course mode (of which sea salt and soil dust are
+both part of) quickly retain its background state below the tropopause \citep{liu2012}.
+Likewise, fine dust and fine sea salt are both merged into the accumulation mode.
 
 % NOTE: maybe Maria have an idea?
 % \citet{liu2012} says the accumulation mode is roughly $90\%$ of the sulfate burden,
@@ -431,7 +437,7 @@ component instead of the full \ac{ww3}.
 \subsection{Output variables}
 
 \Ac{rf} is calculated as the combined (\ac{sw} and \ac{lw}) all-sky \ac{toa} energy
-imbalance, where the \ac{cesm2} provides the output variables \ac{fsnt} and \ac{flnt}.
+imbalance, where the \ac{cesm2} provide the output variables \ac{fsnt} and \ac{flnt}.
 Thus, \(\mathrm{RF_*}= \mathrm{FSNT} - \mathrm{FLNT}\), and taking the difference
 between volcanic simulations and a control simulation gives the final estimate of
 \ac{rf} (\(\mathrm{RF}=\mathrm{RF_{VOLC}}-\mathrm{RF_{CONTROL}}\)) \citep{marshall2020}.
@@ -448,16 +454,19 @@ teragrams, used to simulate volcanic eruptions.
 The simulations are summarized in \cref{tab:simulation-overview} and cover three
 \ce{SO2} injection magnitudes and four seasons; 15 February, 15 May, 15 August and 15
 November. The magnitudes vary across three orders of magnitude: \(\SI{26}{\tera\gram}\),
-\(\SI{400}{\tera\gram}\) and \(\SI{1629}{\tera\gram}\). The smallest eruption is of the
-same order of magnitude as Mt.\ Pinatubo
+\(\SI{400}{\tera\gram}\) and \(\SI{1629}{\tera\gram}\). The smallest eruption case
+(\ac{c2wm}) is of the same order of magnitude as Mt.\ Pinatubo
 \citep[\(\sim10\)--\(\SI{20}{\tera\gram}\);~e.g.][]{timmreck2018} and Mt.\ Tambora
-\citep[\(\sim\SI{56.2}{\tera\gram}\);~e.g.][]{zanchettin2016}, the intermediate is
-similar to the 1257 Samalas eruption
+\citep[\(\sim\SI{56.2}{\tera\gram}\);~e.g.][]{zanchettin2016}, the intermediate case
+(\ac{c2wmp}) is similar to the 1257 Samalas eruption
 \citep[\(\sim{118.8}\)--\(\SI{259.7}{\tera\gram}\);~e.g.][]{toohey2017,ottobliesner2016},
-and the largest is similar to the \ac{ytt} eruption
+and the largest case (\ac{c2ws}) is similar to the \ac{ytt} eruption
 \citep[\(100\)--\(\SI{10000}{\tera\gram}\);~e.g.][]{jones2005}. They are all located at
 the equator, at \(\SI{0}{\degree N}\), \(\SI{1}{\degree E}\) and \ce{SO2} is injected
-between \(\SI{18}{\kilo\meter}\) and \(\SI{20}{\kilo\meter}\). An advantage with having
+between \(\SI{18}{\kilo\meter}\) and \(\SI{20}{\kilo\meter}\). An ensemble of two
+additional eruptions at high latitude were also simulated, separated by six months (15
+February and 15 August) (\ac{c2wsn}). They are of the same magnitude in \iso{} as
+\ac{c2ws}, but located at \(\SI{56}{\degree \mathrm{N}}\). An advantage with having
 eruptions this big, in the large to super-volcano size, is improvement of the
 signal-to-noise ratio without having to run a large and computationally expensive
 ensemble. However, this still leave the question of whether this will give realistic
@@ -813,12 +822,12 @@ similar time after the eruption and at a similar rate.
 
 In \cref{fig:so2_vs} we compare all relevant parameters to each other. The initial input
 parameter to the \ac{cesm2} is injected \ce{SO2}. Compared to \ac{aod} peak values we
-get an almost linear relationship against \iso{}, shown in \cref{fig:so2_vs_aod}. The
-latitude also plays a role for how large the \ac{aod} perturbation becomes, as we can
-see from the \ac{c2wsn} data point. The weak dependence on eruption latitude is also
-reported in \citet{marshall2019}, where they find \(\SI{72}{\percent}\) of the \ac{aod}
-variance can be explained by \iso{}, while latitude contributes to only
-\(\SI{16}{\percent}\) of the variance.
+get an almost linear relationship against \iso{} for our tropical \ac{c2w} cases, shown
+in \cref{fig:so2_vs_aod}. The latitude also plays a role for how large the \ac{aod}
+perturbation becomes, as we can see from the \ac{c2wsn} data point. The weak dependence
+on eruption latitude is also reported in \citet{marshall2019}, where they find
+\(\SI{72}{\percent}\) of the \ac{aod} variance can be explained by \iso{}, while
+latitude contributes to only \(\SI{16}{\percent}\) of the variance.
 
 % \begin{figure}[t]
 %   \begin{center}
@@ -842,7 +851,7 @@ points), but here the \ac{rf} tend to bend off sooner, having a smaller \ac{rf} 
 to \iso{} than the \ac{cesm2} data. A description of how the OB16 data was analysed can
 be found in \cref{app:ob16}. The simulations used by \citet{ottobliesner2016} was using
 \ac{cesm1} with a low-top atmosphere (\ac{cam5}). The difference in model complexity
-might thus be the reason why the \iso{} give weaker \ac{rf} response for
+might thus explain why the \iso{} give weaker \ac{rf} response for
 \citet{ottobliesner2016} than what we find.
 
 \begin{figure*}
@@ -917,15 +926,15 @@ rise than the data from both our simulations and the simulations by
 \citet{ottobliesner2016}. However, \citet{timmreck2010} did simulations in the MPI-ESM
 that was forced with \ac{aod} obtained from the HAM aerosol model, of a
 \(\SI{850}{\tera\gram(\ce{S})}\) eruption representing the \ac{ytt} eruption. That is,
-the same aerosol microphysical model was used in \citet{timmreck2010, niemeier2015}, as
-well as very similar \acp{esm}; the MIP-ESM is the ancestor of ECHAM6 which was the next
-version update from ECHAM5 \citep{kuma23}. From the initial input of
-\(\SI{850}{\tera\gram(\ce{S})}\) (equivalent to \(\SI{1700}{\tera\gram(\ce{SO2})}\)),
-via an \ac{aod} estimate, they got a peak \ac{rf} of only
-\(\SI{-18}{\watt\metre^{-2}}\). This is in good agreement with the functional given in
-\cref{eq:niemeier_exponential}. The upper limit is close to what one might suspect the
-\ac{cesm2} peaks and the \ac{p100} simulation peak to approach (pink square in
-\cref{fig:aod_vs_toa_full}), however, the functional shape is dissimilar; the
+the same aerosol microphysical model was used in \citet{timmreck2010} and
+\citet{niemeier2015}, as well as very similar \acp{esm}; the MIP-ESM is the ancestor of
+ECHAM6 which was the next version update from ECHAM5 \citep{kuma23}. From the initial
+input of \(\SI{850}{\tera\gram(\ce{S})}\) (equivalent to
+\(\SI{1700}{\tera\gram(\ce{SO2})}\)), via an \ac{aod} estimate, they got a peak \ac{rf}
+of only \(\SI{-18}{\watt\metre^{-2}}\). This is in good agreement with the functional
+given in \cref{eq:niemeier_exponential}. The upper limit is close to what one might
+suspect the \ac{cesm2} peaks and the \ac{p100} simulation peak to approach (pink square
+in \cref{fig:aod_vs_toa_full}), however, the functional shape is dissimilar; the
 exponential shape found by \citet{niemeier2015} has a much slower decay than that of
 \ac{cesm2} and \ac{p100}. Given the distinctive scenarios; a constant level of \iso{} in
 contrast to a specified injected mass simulating a volcanic eruption, dissimilar
@@ -955,7 +964,9 @@ the \ac{cesm1} simulations by \citet{ottobliesner2016} follow a different path t
 \ac{cesm2} data, with temperature fluctuations being less extreme as \iso{} increases.
 \citet{timmreck2010} also find a much weaker temperature response than our results
 suggest, with a maximum temperature perturbation of only \(\SI{-3.5}{\kelvin}\) for
-their \(\SI{1700}{\tera\gram}\) \ce{SO2} eruption.
+their \(\SI{1700}{\tera\gram}\) \ce{SO2} eruption, while the opposite is the case for
+the \citet{jones2005} simulation which resulted in a maximum temperature perturbation of
+\(\SI{-10.7}{\kelvin}\).
 
 % \begin{figure}[t]
 %   \begin{center}
@@ -969,11 +980,12 @@ their \(\SI{1700}{\tera\gram}\) \ce{SO2} eruption.
 In \cref{fig:aod_vs_toa} we again look at \ac{rf} as a function of \ac{aod}, but this
 time focus on the peak values rather than the annual means. As previously discussed, the
 gradient is much weaker than what previous studies have been reporting, and in the case
-of our \ac{c2w} data the peak values do not follow a straight line. Results from others
-do however suggest there might be large dependencies on the model that was used as well
-as on the input parameters of the model, for example related to latitude. These
-contributions add on top of noise, which for the relatively small ensemble size of four
-used here may play a role.
+of our \ac{c2w} data the peak values do not follow a straight line. The results from
+other studies \citep{jones2005, ottobliesner2016, timmreck2010} do however suggest there
+might be large dependencies on the model that was used as well as on the input
+parameters of the model, for example related to latitude. These contributions add on top
+of noise, which for the relatively small ensemble size of four used here may play a
+role.
 
 % \begin{figure}[t]
 %   \centering
@@ -1106,7 +1118,7 @@ two larger.
 \subsection{Linearity in \ac{rf} to \ac{aod} ratio}
 
 \Cref{fig:aod_vs_toa_full,fig:aod_vs_toa_inset,fig:aod_vs_toa_avg_loop_ratio,fig:aod_vs_toa_avg_loop_ratio_scaled,fig:aod_vs_toa}
-all show that as the \ac{aod} increases past \(\sim 0.5\), the scaling of \(\sim -20\)
+all show that as the \ac{aod} increases past \(\sim 1.0\), the scaling of \(\sim -20\)
 no longer map to corresponding values of \ac{rf}. When looking at the intermediate
 volcanic eruption with \(\SI{400}{\tera\gram}\) \iso{} there seem to be a mostly linear
 relationship between the \ac{aod} and \ac{rf} values, with a slope of approximately
@@ -1142,15 +1154,16 @@ A bigger spread is nevertheless found when converting from \iso{} to any of the 
 output parameters when comparing across models. Conversion from \iso{} to \ac{aod} is
 consistent within similar models, even when comparing simulations of volcanic eruptions
 \citep{timmreck2010} and continuous injection of \ce{SO2} \citep{niemeier2015}, but has
-a wide spread at large values of \iso{}
+a wide spread at large values of \iso{} across models
 (\cref{fig:so2_vs_aod,fig:so2_vs_toa,fig:so2_vs_temp}). Knowing the \ac{aod} give
 comparatively small spread in the data across models for both \ac{rf}
 (\cref{fig:aod_vs_toa}) and temperature (\cref{fig:aod_vs_temp}), and necessarily also
 for temperature as a function of \ac{rf} (\cref{fig:toa_vs_temp}). A roughly linear
 relationship between \ac{aod} and \ac{rf} have been assumed across several studies, but
 for smaller values of \ac{aod} and \ac{rf}, and where the estimated slope is
-significantly steeper; from around \(\SI{-20}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) at
-\(\mathrm{AOD}<1\) to closer to \(\SI{-5}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\).
+significantly steeper; around \(\SI{-20}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) at
+\(\mathrm{AOD}<1\) rather than \(\SI{-5}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) found here
+at \(\mathrm{AOD}>1\).
 
 From the \ac{c2wm} case and the \ac{c2wmp} case, an apparent roughly linear relationship
 between \ac{aod} and \ac{rf} emerge in \cref{fig:aod_vs_toa_ses_avg}. There is, however,
@@ -1229,17 +1242,17 @@ heat capacity is the same at \(t=0\) and \(t=\tau \), then this agrees with \(F=
 note that the climate resistance and the climate feedback parameter are related to the
 ocean heat uptake efficiency \(\kappa \) through \(\rho =\alpha +\kappa \).
 
-Following the integral-form computation laid out in \cref{eq:climate-resistance}, the
-three tropical simulation cases (four in each ensemble) give estimated climate
-resistance \(\rho \) of \(\num{3.3(9)}\), \(\num{3.12(9)}\) and \(\num{2.91(8)}\), and
-\ac{tcrp} (\(1/\rho\)) of \(\num{0.32(7)}\), \(\num{0.321(9)}\) and \(\num{0.34(1)}\),
-shown in \cref{tab:trcp}. The parameter \(\rho\) is not the same as the climate feedback
-parameter \citet{jones2005} estimated (\(\alpha\)), but as both \(\alpha \) and \(\kappa
-\) are positive, and our estimates of \(\rho (=\alpha +\kappa) \) are all smaller than
-the \citet{jones2005} estimate of \(\alpha \simeq
-\SI{4}{\watt\metre^{-2}\kelvin^{-1}}\), we conclude that the climate feedback parameter
-related to the simulations performed here must be significantly smaller than what
-\citet{jones2005} got.
+Following the integral-form computation laid out in \cref{eq:climate-resistance} and
+using \(\tau =\SI{8}{\mathrm{yr}}\), the three tropical simulation cases (four in each
+ensemble) give estimated climate resistance \(\rho \) of \(\num{3.3(9)}\),
+\(\num{3.12(9)}\) and \(\num{2.91(8)}\), and \ac{tcrp} (\(1/\rho\)) of
+\(\num{0.32(7)}\), \(\num{0.321(9)}\) and \(\num{0.34(1)}\), shown in \cref{tab:trcp}.
+The parameter \(\rho\) is not the same as the climate feedback parameter
+\citet{jones2005} estimated (\(\alpha\)), but as both \(\alpha \) and \(\kappa \) are
+positive, and our estimates of \(\rho (=\alpha +\kappa) \) are all smaller than the
+\citet{jones2005} estimate of \(\alpha \simeq \SI{4}{\watt\metre^{-2}\kelvin^{-1}}\), we
+conclude that the climate feedback parameter related to the simulations performed here
+must be significantly smaller than what \citet{jones2005} got.
 
 \begin{table}
   \centering
