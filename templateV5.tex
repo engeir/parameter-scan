@@ -187,7 +187,6 @@ much attention, questions for example related to aerosol particle processes such
 they grow, which impacts their scattering efficiency and possibly the \ac{aod} to
 \ac{rf} relationship is still unanswered
 \citep[e.g.][]{robock2000,zanchettin2019,marshall2020,marshall2022}.
-% FIX: what specifically is unanswered? Do I get into this in the later sections?
 
 % NOTE: Section on similarities between CO2 and volcanic forcing. (feedback params
 % references). Richardson is doing something that looks very similar to Gunther 2022.
@@ -287,19 +286,23 @@ mean \ac{aod} which in turn increases the \ac{rf} to \ac{aod} ratio
 
 \paragraph*{This paper's contributions}
 
-This work aims to (evaluate/quantify?) the relationship between \ac{aod} and \ac{rf} for
-volcanic eruptions of super-volcano size. This is considering the linear relationship
-often found between \ac{aod} and \ac{rf} of approximately
+This work aims to evaluate the relationship between \ac{aod} and \ac{rf} for volcanic
+eruptions of super-volcano size. This is considering the linear relationship often found
+between \ac{aod} and \ac{rf} of approximately
 \(\SI{20}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) \citep{gregory2016, marshall2020,
   mills2017, myhre2013} along with studies indicating a non-linear relationship
 \citep{niemeier2015}, as well as a time-after-eruption dependence \citep{marshall2020}.
-We see that for large to super-volcano sized volcanic eruptions there is both a clear
-non-linear \ac{aod} to \ac{rf} dependence, explored in section \ldots, but also a
-time-after-eruption dependence on both \ac{aod} and \ac{rf}, which we look at in section
-\ldots. In section \ldots, conclusions about the underlying atmospheric dynamics are
-made.
 
-\section{Method}
+To address these issues we simulate ensembles of volcanic eruptions in the \ac{cesm2},
+with \iso{} spanning three orders of magnitude of \(\SI{26}{\tera\gram(\ce{SO2})}\),
+\(\SI{400}{\tera\gram(\ce{SO2})}\) and \(\SI{1629}{\tera\gram(\ce{SO2})}\), with further
+details on the experiment setup in \cref{sec:method}. We find that for large to
+super-volcano sized volcanic eruptions there is both a clear non-linear \ac{rf} to
+\ac{aod} dependence, but also a time-after-eruption dependence on both \ac{aod} and
+\ac{rf}, which is presented in \cref{sec:results} and discussed in
+\cref{sec:discussion}. Finally, in \cref{sec:conclusions}, conclusions are made.
+
+\section{Method}\label{sec:method}
 
 \subsection{Model}
 
@@ -438,7 +441,7 @@ values for the forcing open \citep{gregory2016}.
   \end{center}
 \end{table}
 
-\section{Results}
+\section{Results}\label{sec:results}
 
 % NOTE: the results should be laid out in a logical way, with the most
 % interesting/important stuff first, then tangents that dig deeper at specific things
@@ -481,7 +484,6 @@ of the \ac{c2wmp} case seem to follow close to a \(-10\) gradient and the \ac{c2
 is closer to a \(-4\) gradient. The peak values (red circles) suggest a non-linear
 functional shape dependence, while within each eruption strength the annual mean values
 fall relatively close to a straight line.
-% FIX: This last part might be removed and better explained via the ratio plots.
 
 \begin{figure}
   \begin{subfigure}{\linewidth}
@@ -795,8 +797,6 @@ temperature time series, perhaps inducing a trend. That is, do the temperature t
 series have different shape in the rising phase, but similar shape in the decaying
 phase? Allowing the simulations to run for at least twenty years to enable the tail to
 be well resolved is therefore another avenue that could be explored further.
-% WARN: The paragraph above is left hanging... Although it is connected to the next
-% section.
 
 Whether the different shapes of the temperature time series can be inferred from the
 shape of either of the forcing time series or not (\ac{rf} or \ac{aod}) is a natural
@@ -847,7 +847,7 @@ two larger.
     the normalisation constant}\label{fig:compare-waveform}%
 \end{figure}
 
-\section{Discussion}%
+\section{Discussion}\label{sec:discussion}
 
 % NOTE: Suggested layout for the
 % Discussion:
@@ -964,9 +964,11 @@ heat capacity is the same at \(t=0\) and \(t=\tau \), then this agrees with \(F=
 note that the climate resistance and the climate feedback parameter are related to the
 ocean heat uptake efficiency \(\kappa \) through \(\rho =\alpha +\kappa \).
 
-Following the integral-form computation laid out in \cref{eq:climate-resistance} and
-using \(\tau =\SI{8}{\mathrm{yr}}\), the three tropical simulation cases (four in each
-ensemble) give estimated climate resistance \(\rho \) of \(\num{3.3(9)}\),
+We estimate the climate resistance following the integral-form computation laid out in
+\cref{eq:climate-resistance} and using \(\tau =\SI{8}{\mathrm{yr}}\), as this is as long
+as our simulations run. The temperature has not quite reached back to equilibrium at
+this time, as seen in \cref{fig:compare-waveform}. The three tropical simulation cases
+(four in each ensemble) give estimated climate resistance \(\rho \) of \(\num{3.3(9)}\),
 \(\num{3.12(9)}\) and \(\num{2.91(8)}\), and \ac{tcrp} (\(1/\rho\)) of
 \(\num{0.32(7)}\), \(\num{0.321(9)}\) and \(\num{0.34(1)}\), shown in \cref{tab:trcp}.
 The parameter \(\rho\) is not the same as the climate feedback parameter
@@ -990,7 +992,7 @@ must be significantly smaller than what \citet{jones2005} got.
   \end{tabular}
 \end{table}
 
-\section{Conclusions}
+\section{Conclusions}\label{sec:conclusions}
 
 % NOTE: what we have done, future work, going back to points from introduction
 
