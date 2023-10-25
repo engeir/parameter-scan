@@ -405,7 +405,7 @@ November. The magnitudes vary across three orders of magnitude: \(\SI{26}{\tera\
 \citep[\(\sim10\)--\(\SI{20}{\tera\gram}\);~e.g.][]{timmreck2018} and Mt.\ Tambora
 \citep[\(\sim\SI{56.2}{\tera\gram}\);~e.g.][]{zanchettin2016}, the intermediate case
 (\ac{c2wmp}) is similar to the 1257 Samalas eruption
-\citep[\(\sim{118.8}\)--\(\SI{259.7}{\tera\gram}\);~e.g.][]{toohey2017,ottobliesner2016},
+\citep[\(\sim{118.8}\)--\(\SI{173.1}{\tera\gram}\);~e.g.][]{toohey2017,ottobliesner2016},
 and the largest case (\ac{c2ws}) is similar to the \ac{ytt} eruption
 \citep[\(100\)--\(\SI{10000}{\tera\gram}\);~e.g.][]{jones2005}. They are all located at
 the equator, at \(\SI{0}{\degree N}\), \(\SI{1}{\degree E}\) and \ce{SO2} is injected
@@ -665,12 +665,26 @@ versus \ac{rf} is shown in \cref{fig:so2_vs_toa}, but where the absolute value o
 \ac{rf} is potted along the \(y\)-axis. Just as in \cref{fig:aod_vs_toa_full} we find
 the \ac{cesm2} data points to be heavily damped in \ac{rf} as \iso{} increases. The same
 effect can be seen in the data from \citet{ottobliesner2016} (labelled OB16, red
-points), but here the \ac{rf} tend to bend off sooner, having a smaller \ac{rf} response
-to \iso{} than the \ac{cesm2} data. A description of how the OB16 data was analysed can
-be found in \cref{app:ob16}. The simulations used by \citet{ottobliesner2016} was using
-\ac{cesm1} with a low-top atmosphere (\ac{cam5}). The difference in model complexity
-might thus explain why the \iso{} give weaker \ac{rf} response for
-\citet{ottobliesner2016} than what we find.
+points), while follow much the same path as our \ac{c2w} data. A description of how the
+OB16 data was analysed can be found in \cref{app:ob16}. The simulations used by
+\citet{ottobliesner2016} was using \ac{cesm1} with a low-top atmosphere (\ac{cam5}),
+thus we find that despite the difference in model complexity, similar \acp{rf} are
+obtained by \citet{ottobliesner2016} as what we found.
+
+% \begin{figure*}
+%   \centering
+%   \includegraphics[width=0.95\linewidth]{figures/parameter_scan.png}
+%
+%   \caption{(a) \ac{aod} (b) \ac{rf} and (c) temperature as a function of \iso{}\@. (d)
+%     \ac{rf} and (e) temperature as a function of \ac{aod}. (f) Temperature as a function of
+%     \ac{rf}. \ac{c2w} cases are shown as blue diamonds, the \ac{c2wsn} case is the brown
+%     three-branched twig, OB16 are data from \citet{ottobliesner2016} marked as red
+%     asterisks, the purple star and yellow plus are Mt.\ Pinatubo and Mt.\ Tambora estimates,
+%     the pink square is the one-hundred times Mt.\ Pinatubo super-volcano from
+%     \citet{jones2005} and the pink disk is the \ac{ytt} super-volcano from
+%     \citet{timmreck2010}. A pink stippled line is in (b) used to draw the function from
+%     \cref{eq:niemeier_exponential}}\label{fig:parameter_scan}%
+% \end{figure*}
 
 \begin{figure*}
   \begin{subfigure}{0.5\linewidth}
@@ -1155,18 +1169,20 @@ parameter \(\alpha \) for volcanic forcing in comparison to forcing from for exa
 
 \appendix
 
-\appendixtitle{Otto-Bliesner data}\label{app:ob16}
+\appendixtitle{Otto-Bliesner data analysis}\label{app:ob16}
 
 Data from \citet{ottobliesner2016} are the original input data of \iso{} as used in
 their model simulations, where corresponding \ac{rf} and temperature data are found as
 the value of the time series at the time of an eruption (according to the \iso{} time
 series). Therefore, \ac{rf} and temperature values may be somewhat smaller in
-\cref{fig:so2_vs_toa,fig:so2_vs_temp,fig:toa_vs_temp} than the true value. More on how:
-an ensemble of 5 is used for both \ac{rf} and temperature, and a mean from the 5 is used
-as the de facto \ac{rf} and temperature time series. A control simulation of a single
-time series is used to remove seasonal dependence from the temperature, where the
-control simulation is averaged into one year/one climatology. \ac{rf} have seasonality
-removed in Fourier domain. The forcing (\ce{SO2}) can be downloaded with direct link
+\cref{fig:so2_vs_toa,fig:so2_vs_temp,fig:toa_vs_temp} than their true value.
+Specifically, an ensemble of 5 is used for both \ac{rf} and temperature, and a mean from
+the 5 is used as the de facto \ac{rf} and temperature time series. A control simulation
+of a single time series is used to remove seasonal dependence from the temperature,
+where the control simulation is averaged into a climatology mean. Further, a drift in
+the temperature is removed by subtracting a linear regression fit. \ac{rf} have
+seasonality removed in the Fourier domain. The forcing (\ce{SO2}) can be downloaded with
+direct link
 \url{https://svn-ccsm-inputdata.cgd.ucar.edu/trunk/inputdata/atm/cam/volc/IVI2LoadingLatHeight501-2000_L18_c20100518.nc},
 or found at \url{https://www.cesm.ucar.edu/working-groups/paleo/simulations/ccsm4-lm}
 and \url{https://svn-ccsm-inputdata.cgd.ucar.edu/trunk/inputdata/atm/cam/volc/}
