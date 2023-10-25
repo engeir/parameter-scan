@@ -283,6 +283,11 @@ mean \ac{aod} which in turn increases the \ac{rf} to \ac{aod} ratio
 \citep{marshall2020}.
 % TODO: Also, \ac{aod} to \ac{rf} depend on insulation, cloudiness and surface albedo
 % among others, which vary across eruptions \citep{marshall2021,andersson2015}.
+% Andersson note that including the lowermost stratosphere is in some latitudes part in
+% increaseing the AOD by 45%, which means to include AOD estimates between the
+% tropopause and 380K potential temperature level.
+% gettleman2019 refer to AOD at being above the tropopause, so my initial guess is the
+% CESM2 do consider the full vertical profile that Andersson calls for.
 
 \paragraph*{This paper's contributions}
 
@@ -576,9 +581,7 @@ second and third years spread globally, leading to a larger global mean albedo p
 \ac{aod} and in turn larger \ac{rf} per \ac{aod}. From their results and the results
 shown here in \cref{fig:aod_vs_toa_avg_loop_ratio,fig:aod_vs_toa_avg_loop_ratio_scaled},
 there seem to be several and competing effects that decide on the values of \ac{aod} and
-\ac{rf}. \citet{marshall2019, marshall2020, marshall2021} used a code with seven
-log-normal modes to simulate aerosol mass and number concentrations, but their model is
-an \ac{agcm}, as opposed to the \ac{cesm2} which is an \ac{esm} or \ac{aogcm}.
+\ac{rf}.
 
 The change in ratio, where the smallest is found in the larger eruptions and the largest
 ratio is from the smaller eruptions, is consistent with the change in peak values seen
@@ -760,7 +763,7 @@ that was forced with \ac{aod} obtained from the HAM aerosol model, of a
 \(\SI{850}{\tera\gram(\ce{S})}\) eruption representing the \ac{ytt} eruption. That is,
 the same aerosol microphysical model was used in \citet{timmreck2010} and
 \citet{niemeier2015}, as well as very similar \acp{esm}; the MIP-ESM is the ancestor of
-ECHAM6 which was the next version update from ECHAM5 \citep{kuma23}. From the initial
+ECHAM6 which was the next version update from ECHAM5 \citep{kuma2023}. From the initial
 input of \(\SI{850}{\tera\gram(\ce{S})}\) (equivalent to
 \(\SI{1700}{\tera\gram(\ce{SO2})}\)), via an \ac{aod} estimate, they got a peak \ac{rf}
 of only \(\SI{-18}{\watt\metre^{-2}}\). This is in good agreement with the functional
@@ -771,9 +774,9 @@ given in \cref{eq:niemeier_exponential}.
 
 \Cref{fig:so2_vs_temp} show \iso{} versus temperature response. Just as in
 \cref{fig:so2_vs_toa}, the data from the \ac{cesm2} simulations bend off, making the
-temperature response weaker with higher values of \iso. Again we see that the data from
+temperature response weaker with higher values of \iso. We find here that the data from
 the \ac{cesm1} simulations by \citet{ottobliesner2016} follow a different path than the
-\ac{cesm2} data, with temperature fluctuations being less extreme as \iso{} increases.
+\ac{c2w} data, with temperature fluctuations being less extreme as \iso{} increases.
 \citet{timmreck2010} also find a much weaker temperature response than our results
 suggest, with a maximum temperature perturbation of only \(\SI{-3.5}{\kelvin}\) for
 their \(\SI{1700}{\tera\gram}\) \ce{SO2} eruption, while the opposite is the case for
@@ -782,13 +785,12 @@ the \citet{jones2005} simulation which resulted in a maximum temperature perturb
 
 In \cref{fig:aod_vs_toa} we again look at \ac{rf} as a function of \ac{aod}, but this
 time focus on the peak values rather than the annual means. As previously discussed, the
-gradient is much weaker than what previous studies have been reporting, and in the case
-of our \ac{c2w} data the peak values do not follow a straight line. The results from
-other studies \citep{jones2005, ottobliesner2016, timmreck2010} do however suggest there
-might be large dependencies on the model that was used as well as on the input
-parameters of the model, for example related to latitude. These contributions add on top
-of noise, which for the relatively small ensemble size of four used here may play a
-role.
+gradient is much weaker than what previous studies have found, and in the case of our
+\ac{c2w} data the peak values do not follow a straight line. The results from other
+studies \citep{jones2005, ottobliesner2016, timmreck2010} do however suggest there might
+be large dependencies on the model that was used as well as on the input parameters of
+the model, for example related to latitude. These contributions add on top of noise,
+which for the relatively small ensemble size of four used here may play a role.
 
 \Cref{fig:aod_vs_temp} should in the case of the \ac{cesm2} data points be akin in shape
 to the paths found in \cref{fig:so2_vs_temp} due to the close to linear relationship
@@ -873,7 +875,7 @@ two larger.
 % - Conclude overall discussion of article
 % - Link this section to the introduction
 
-\subsection{Linearity in \ac{rf} to \ac{aod} ratio}
+\subsection{Linearity between \ac{aod} and \ac{rf}}
 
 \Cref{fig:aod_vs_toa_full,fig:aod_vs_toa_inset,fig:aod_vs_toa_avg_loop_ratio,fig:aod_vs_toa_avg_loop_ratio_scaled,fig:aod_vs_toa}
 all show that as the \ac{aod} increases past \(\sim 1.0\), the scaling of \(\sim -20\)
@@ -932,7 +934,15 @@ to be a time-after-eruption dependency on the \ac{rf} to \ac{aod} ratio.
 efficiency decreases with time, as shown in \cref{fig:aod_vs_toa_avg_loop_ratio}.
 \citet{marshall2020} explain that this is due to the time it takes for the aerosols to
 spread which affects the global albedo and in turn the \ac{rf}, with the \ac{aod} being
-less affected by the aerosols spreading.
+less affected by the aerosols spreading. \citet{marshall2019, marshall2020,
+  marshall2021} used a code with seven log-normal modes to simulate aerosol mass and
+number concentrations, but their model is run in an atmosphere-only configuration with
+prescribed sea surface temperatures and sea ice extent \citep{marshall2019}, as opposed
+to the \ac{cesm2} which is run as an \ac{esm}. The configuration used by
+\citet{marshall2019} is from the model UM-UKCA, which is an extended version of the
+HadGEM3 \citep{dhomse2014}, which in turn is from a different family of models than both
+\ac{cesm} and ECHAM5/MIP-ESM (used by \citet{timmreck2010,niemeier2015}), but an
+ancestor of HadCM3 (used by \citet{gregory2016}) \citep{kuma2023}.
 
 Smaller eruptions and estimates from them give an \ac{rf} to \ac{aod} ratio that is
 quite large (\(\sim \SI{-20}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\)), while larger
