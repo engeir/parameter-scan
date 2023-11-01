@@ -1,5 +1,7 @@
 # Parameter scan
 
+<sup>Latest version: v0.1.0</sup> <!-- x-release-please-version -->
+
 To run the continuous compiler, use the command
 
 ```bash
