@@ -88,14 +88,14 @@
 % Enter your abstract here. Abstracts should not exceed 250 words in length!
 
 \abstract{%
-  Large to super-volcano sized eruptions are simulated in the \ac*{cesm2} climate model
-  with the \ac*{waccm} atmosphere. Ensembles containing four members are simulated and
-  the \ac*{aod} and \ac*{rf} from the eruptions are compared to determine how far the
+  Large to super-volcano sized eruptions are simulated in the \ac{cesm2} climate model
+  with the \ac{waccm} atmosphere. Ensembles containing four members are simulated and
+  the \ac{aod} and \ac{rf} from the eruptions are compared to determine how far the
   linear relationship between the two parameters hold. Simulating a Pinatubo-like
   eruption yields results consistent with several previous studies showing a slope of
-  \(\sim \SI{-20}{\watt\metre^{-2}}\) per unit \acs*{aod}. Larger eruptions, however,
-  show a more shallow slope indicative of a lower cooling efficiency. Moreover, a
-  time-after-eruption dependence between \acs*{aod} and \acs*{rf} is found, where the
+  \(\sim \SI{-20}{\watt\metre^{-2}}\) per unit \acs*{aod} for \ac{rf}. Larger eruptions,
+  however, show a more shallow slope indicative of a lower cooling efficiency. Moreover,
+  a time-after-eruption dependence between \acs*{aod} and \acs*{rf} is found, where the
   \acs*{rf} is relatively stronger than \acs*{aod} the first year after the eruption
   (higher cooling efficiency), while later their ratio is roughly constant for a given
   eruption strength.
@@ -143,6 +143,8 @@
 % \paragraph{First quaternary heading}
 % \section{Section title}
 
+\acresetall{}
+
 % NOTE: what to include in the paper, key questions.
 % The paper should provide insight about what might happen if a large volcano erupted
 % (order of magnitude or more than Mt.\ Pinatubo). How does the atmosphere react, for
@@ -159,7 +161,7 @@
 %   volcanoes erupt then? (Lack the doubling scenario, and setting it up has resulted in
 %   strange output that must be resolved. Could take a while.)
 
-\section{Introduction and Motivation}
+\section{Introduction}
 
 % NOTE: Suggested layout for the introduction
 % - The objectives of the work.
@@ -174,7 +176,7 @@
 
 % Toohey et al 2011 have a nice end of introduction.
 
-\paragraph*{Historical background: Volcanoes in climate science}
+% \paragraph*{Historical background: Volcanoes in climate science}
 
 During much of the past few thousand years, the Holocene, the natural climate
 variability on Earth has been mostly forced by volcanic eruptions \citep{sigl2022}.
@@ -192,7 +194,7 @@ they grow, which impacts their scattering efficiency and possibly the \ac{aod} t
 % references). Richardson is doing something that looks very similar to Gunther 2022.
 % Mention that as well? (Similarity bw 0.5CO2 and volcanoes.)
 
-\paragraph*{Historical background: Can volcanoes aid \ce{CO2} in constraining \ac{ecs}?}
+% \paragraph*{Historical background: Can volcanoes aid \ce{CO2} in constraining \ac{ecs}?}
 
 % NOTE: take-away should be how RF is estimated and that it is sometimes defined as ERF
 % and IRF.
@@ -218,7 +220,7 @@ indicator of the temperature response to a forcing than \ac{irf}
 \citep{marvel2016,richardson2019}, more recent studies conclude that \ac{ecs} cannot be
 constrained from volcanoes \citep{pauling2023}.
 
-\paragraph*{Theoretical background: Aerosol evolution and atm.\ dynamics}
+% \paragraph*{Theoretical background: Aerosol evolution and atm.\ dynamics}
 
 \ce{H2O}, \ce{N2} and \ce{CO2} are the most abundant gases emitted by volcanoes
 \citep{robock2000}, but still, sulphur species like \ce{SO2} are the most influential
@@ -238,9 +240,7 @@ transported poleward in the stratosphere and back to mid-latitude troposphere wi
 to two years \citep{robock2000}. As the aerosols move below the tropopause they are
 removed by wet deposition before retaining their background state \citep{liu2012}.
 
-% Section on RF to AOD ratio
-
-\paragraph*{Similar contributions: Comparing \acs*{rf} and \acs*{aod}}
+% \paragraph*{Similar contributions: Comparing \acs*{rf} and \acs*{aod}}
 
 Previous studies on both Mt.\ Pinatubo alone \citep{mills2017,hansen2005} and volcanoes
 in the instrumental era \citep{gregory2016} have been used to estimate the relationship
@@ -270,9 +270,12 @@ super-volcano simulation by \citet{jones2005} indicate a weaker gradient of \(\s
 \(-18.3\)--\(\SI{-25}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) found in more recent
 literature, the peak \ac{rf} obtained in the super-volcano simulation was
 \(\SI{-60}{\watt\metre^{-2}}\), suggesting the \citet{niemeier2015} results might be
-transferable to a volcanic eruption simulation scenario.
+transferable to a volcanic eruption simulation scenario. Moreover, \citet{timmreck2010}
+find a peak \ac{rf} anomaly of \(\SI{-18}{\watt\metre^{-2}}\) from
+\(\SI{1700}{\tera\gram}\) of \iso{}, which corresponds well with the function estimated
+by \citet{niemeier2015}.
 
-\paragraph*{Similar contributions: Time-after-eruption dependence}
+% \paragraph*{Similar contributions: Time-after-eruption dependence}
 
 The aerosol evolution and lifetime in the stratosphere influence the \ac{aod} and the
 \ac{rf}, but not always in the same way. \citet{marshall2020} present results showing
@@ -289,7 +292,7 @@ mean \ac{aod} which in turn increases the \ac{rf} to \ac{aod} ratio
 % gettleman2019 refer to AOD at being above the tropopause, so my initial guess is the
 % CESM2 do consider the full vertical profile that Andersson calls for.
 
-\paragraph*{This paper's contributions}
+% \paragraph*{This paper's contributions}
 
 This work aims to evaluate the relationship between \ac{aod} and \ac{rf} for volcanic
 eruptions of super-volcano size. This is considering the linear relationship often found
@@ -355,15 +358,10 @@ similarly to sea salt, which makes the course mode (of which sea salt and soil d
 both part of) quickly retain its background state below the tropopause \citep{liu2012}.
 Likewise, fine dust and fine sea salt are both merged into the accumulation mode.
 
-% NOTE: maybe Maria have an idea?
-% \citet{liu2012} says the accumulation mode is roughly $90\%$ of the sulfate burden,
-% which I don't really get from my figures. Hmm, need to look more into this.
-
 \subsection{Simulation set up}
 
 Simulations were created using a modified version of the file
 \url{http://svn.code.sf.net/p/codescripts/code/trunk/ncl/emission/createVolcEruptV3.ncl},
-% \href{http://svn.code.sf.net/p/codescripts/code/trunk/ncl/emission/createVolcEruptV3.ncl}{\texttt{createVolcEruptV3.ncl}}
 via a Python project developed on GitHub at
 \url{https://github.com/engeir/volcano-cooking}. The project is also available from the
 Python package manager PyPI\@. The program creates volcanoes with a given \ce{SO2}
@@ -371,8 +369,8 @@ amount that is injected over six
 hours\footnote{\url{http://svn.code.sf.net/p/codescripts/code/trunk/ncl/emission/createVolcEruptV3.ncl}}
 at a given altitude, latitude and longitude. All volcanic \ce{SO2} files are created by
 setting the eruption details in a~.json file that is read to the
-\texttt{volcano-cooking} CLI at a fixed version, making the experiment setup
-reproducible.
+\texttt{volcano-cooking} CLI at a fixed version, making for a reproducible experiment
+setup.
 
 We are using the \texttt{BWma1850} component
 setup\footnote{\url{https://docs.cesm.ucar.edu/models/cesm2/config/2.1.0/compsets.html}}
@@ -842,6 +840,10 @@ two larger.
 % for the temperature. The RF time series have similar shape for all forcing magnitudes.
 % See figs. 9 (aod_arrays_normalized) and 10 (toa_arrays_normalized).
 
+% TODO: The temperature time series figures should be used for mainly two things: 1) as
+% motivation to go into why they look so similar, especially the two larger eruptions,
+% and 2) to make a point that non-linearities does not arise.
+
 \begin{figure}
   \begin{subfigure}{\linewidth}
     \centering
@@ -1017,8 +1019,6 @@ must be significantly smaller than what \citet{jones2005} got.
 \end{table}
 
 \section{Conclusions}\label{sec:conclusions}
-
-% NOTE: what we have done, future work, going back to points from introduction
 
 In this paper we considered three large to super-volcano sized eruptions. We investigate
 the \ac{rf} as a function of \ac{aod} and look at their ratio, and find that the \ac{rf}
