@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/engeir/parameter-scan/compare/v0.1.0...v0.1.1) (2023-11-04)
+
+
+### Bug Fixes
+
+* **results:** re-order to start with temp plots ([88b5e53](https://github.com/engeir/parameter-scan/commit/88b5e53e3ee789cb1642b7f3c30f513429fe144c))
+
 ## 0.1.0 (2023-11-01)
 
 
