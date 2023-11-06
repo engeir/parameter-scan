@@ -69,16 +69,18 @@ G16 use $F=N+\alpha T$ while J05 use $Q=N+\lambda \Delta T$ to describe the same
 Also, M14 is using $\tilde{\beta}=\rho$, $\beta =\alpha =\lambda $, $\gamma =\kappa$ and
 $\mathcal{F}=F$.
 
-\caption{For my own convenience, a comparison table comprising symbols used across the
-papers G16 (G16), M14 (M14) and J05 (J05). They all use $T$ for the temperature and $N$
-for the net downward radiative heat flux at {toa}}
+<caption>
+For my own convenience, a comparison table comprising symbols used across the
+papers G16, M14 and J05. They all use $T$ for the temperature and $N$ for the net
+downward radiative heat flux at TOA
+</caption>
 
-| Name                         | G16                 | M14                          | J05          |
-| ---------------------------- | ------------------- | ---------------------------- | ------------ |
-| Forcing                      | $F$                 | $\mathcal{F}$                | $Q$          |
-| Climate feedback parameter   | $\alpha $           | $\beta $                     | $\lambda $   |
-| Climate sensitivity          | $1/\alpha $         | $1/\beta $                   | $1/\lambda $ |
-| Climate resistance           | $\rho $             | $\tilde{\beta }$             | $-$          |
-| TCRP                         | $1/\rho $           | $1/\tilde{\beta }$           | $-$          |
-| TCS                          | $F_{2\times}/\rho $ | $F_{2\times}/\tilde{\beta }$ | $-$          |
-| Ocean heat uptake efficiency | $\kappa $           | $\gamma $                    | $-$          |
+| Name                         | G16                | M14                         | J05         |
+| ---------------------------- | ------------------ | --------------------------- | ----------- |
+| Forcing                      | $F$                | $\mathcal{F}$               | $Q$         |
+| Climate feedback parameter   | $\alpha$           | $\beta$                     | $\lambda$   |
+| Climate sensitivity          | $1/\alpha$         | $1/\beta$                   | $1/\lambda$ |
+| Climate resistance           | $\rho$             | $\tilde{\beta}$             | $-$         |
+| TCRP                         | $1/\rho$           | $1/\tilde{\beta}$           | $-$         |
+| TCS                          | $F_{2\times}/\rho$ | $F_{2\times}/\tilde{\beta}$ | $-$         |
+| Ocean heat uptake efficiency | $\kappa$           | $\gamma$                    | $-$         |
