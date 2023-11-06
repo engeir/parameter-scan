@@ -69,11 +69,11 @@ G16 use $F=N+\alpha T$ while J05 use $Q=N+\lambda \Delta T$ to describe the same
 Also, M14 is using $\tilde{\beta}=\rho$, $\beta =\alpha =\lambda $, $\gamma =\kappa$ and
 $\mathcal{F}=F$.
 
-<caption>
-For my own convenience, a comparison table comprising symbols used across the
-papers G16, M14 and J05. They all use $T$ for the temperature and $N$ for the net
-downward radiative heat flux at TOA
-</caption>
+> Caption
+>
+> For my own convenience, a comparison table comprising symbols used across the papers
+> G16, M14 and J05. They all use $T$ for the temperature and $N$ for the net downward
+> radiative heat flux at TOA
 
 | Name                         | G16                | M14                         | J05         |
 | ---------------------------- | ------------------ | --------------------------- | ----------- |
