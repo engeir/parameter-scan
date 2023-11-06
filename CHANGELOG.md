@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.1.2](https://github.com/engeir/parameter-scan/compare/v0.1.1...v0.1.2) (2023-11-06)
+
+
+### Bug Fixes
+
+* **notes:** move notes from the main document to the README ([f91ded4](https://github.com/engeir/parameter-scan/commit/f91ded48381ef2d700f94042a19113b940b50f65))
+* **style:** SI not known to Github md flavor math mode ([2ba890f](https://github.com/engeir/parameter-scan/commit/2ba890f922820eb53e100d43a6bf55f5bc3d26cb))
+* **style:** simple md math does not work in html tags ([b1e1a4e](https://github.com/engeir/parameter-scan/commit/b1e1a4ebd8e8e523411eb9941d5e873a640af162))
+* table caption in html tags, not tex style ([c3b5c58](https://github.com/engeir/parameter-scan/commit/c3b5c58e37105fff98e88555f3d66ecc7677a6ee))
+
 ## [0.1.1](https://github.com/engeir/parameter-scan/compare/v0.1.0...v0.1.1) (2023-11-04)
 
 
