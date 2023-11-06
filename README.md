@@ -40,10 +40,12 @@ Large eruptions compared to small:
 
 ### Climate sensitivity estimate
 
-From G16: "The peak forcing was about $-60\mathrm{Wm^{-2}}$, only $20$ times greater
-than Pinatubo, and the climate feedback parameter $\alpha \simeq
-4\mathrm{Wm^{-2}K^{-1}}$, more than twice the value (half the climate sensitivity
-parameter [which is the reciprocal]) that we found for Pinatubo in HadCM3."
+> The peak forcing was about $-60\mathrm{Wm^{-2}}$, only $20$ times greater than
+> Pinatubo, and the climate feedback parameter $\alpha \simeq 4\mathrm{Wm^{-2}K^{-1}}$,
+> more than twice the value (half the climate sensitivity parameter [which is the
+> reciprocal]) that we found for Pinatubo in HadCM3.
+>
+> G16
 
 $1/\rho$ is the "transient climate response parameter" (where
 $\mathrm{TCS}=F_{2\times}\times \mathrm{TCRP}$ is the transient climate sensitivity),
