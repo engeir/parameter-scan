@@ -22,7 +22,10 @@ tectonic templateV5.tex
 
 ## Notes
 
-Large eruptions compared to small:
+- [ ] Change "Tg of injected SO2" to "Tg(SO2)", as used by Niemeier and Timmreck, but
+      for "Tg(S)".
+
+### Large eruptions compared to small
 
 - $\mathrm{SO_2}$ oxidises more slowly due to lack of OH, which delays the peak AOD
   level
@@ -39,6 +42,11 @@ Large eruptions compared to small:
       missing._
 
 ### Climate sensitivity estimate
+
+- Would smaller alpha give smaller or larger temp in Jones et al.?
+- Climate resistance estimates. Maybe the difference in climate resistance we get
+  compared to what J05 used can be a pointer on that the small RF to AOD ratio they got
+  was too small even for such a large eruption.
 
 > The peak forcing was about $-60\mathrm{Wm^{-2}}$, only $20$ times greater than
 > Pinatubo, and the climate feedback parameter $\alpha \simeq 4\mathrm{Wm^{-2}K^{-1}}$,

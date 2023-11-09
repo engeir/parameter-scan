@@ -11,7 +11,7 @@
 % formatting.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% TemplateV6.1.tex --  LaTeX-based blank template for submissions to the 
+% TemplateV6.1.tex --  LaTeX-based blank template for submissions to the
 % American Meteorological Society
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -56,7 +56,7 @@
 
 %% Enter authors' names and affiliations as you see in the examples below.
 %
-%% Use \correspondingauthor{} and \thanks{} (\thanks command to be used for affiliations footnotes, 
+%% Use \correspondingauthor{} and \thanks{} (\thanks command to be used for affiliations footnotes,
 %% such as current affiliation, additional affiliation, deceased, co-first authors, etc.)
 %% immediately following the appropriate author.
 %
@@ -66,12 +66,12 @@
 %% Enter affiliations within the \affiliation{} field. Use \aff{#} to indicate the affiliation letter at both the
 %% affiliation and at each author's name. Use \\ to insert line breaks to place each affiliation on its own line.
 
-%\authors{Author One,\aff{a}\correspondingauthor{Author One, email@email.com} 
-%Author Two,\aff{a} 
-%Author Three,\aff{b} 
-%Author Four,\aff{a} 
-%Author Five\thanks{Author Five's current affiliation: NCAR, Boulder, Colorado},\aff{c} 
-%Author Six,\aff{c} 
+%\authors{Author One,\aff{a}\correspondingauthor{Author One, email@email.com}
+%Author Two,\aff{a}
+%Author Three,\aff{b}
+%Author Four,\aff{a}
+%Author Five\thanks{Author Five's current affiliation: NCAR, Boulder, Colorado},\aff{c}
+%Author Six,\aff{c}
 %Author Seven,\aff{d}
 % and Author Eight\aff{a,d}
 %}
@@ -127,8 +127,8 @@
 % SIGNIFICANCE STATEMENT/CAPSULE SUMMARY
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% If you are including an optional significance statement for a journal article or a required capsule summary for BAMS 
-% (see www.ametsoc.org/ams/index.cfm/publications/authors/journal-and-bams-authors/formatting-and-manuscript-components for details), 
+% If you are including an optional significance statement for a journal article or a required capsule summary for BAMS
+% (see www.ametsoc.org/ams/index.cfm/publications/authors/journal-and-bams-authors/formatting-and-manuscript-components for details),
 % please apply the necessary command as shown below:
 %
 % Significance Statement (all journals except BAMS)
@@ -151,7 +151,7 @@
 %
 
 %% In all cases, if there is only one entry of this type within
-%% the higher level heading, use the star form: 
+%% the higher level heading, use the star form:
 %%
 % \section{Section title}
 % \subsection*{subsection}
@@ -178,7 +178,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % TABLES---INSERT NEAR IN-TEXT DISCUSSION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%  Enter tables near where they are discussed within the document. 
+%%  Enter tables near where they are discussed within the document.
 %%  Please place tables before/after paragraphs, not within a paragraph.
 %%
 %
@@ -370,16 +370,14 @@ between \gls{aod} and \gls{rf} of approximately
   mills2017, myhre2013} along with studies indicating a non-linear relationship
 \citep{niemeier2015}, as well as a time-after-eruption dependence \citep{marshall2020}.
 
-To address these issues we simulate ensembles of volcanic eruptions in the
-\glsentrylong{cesm2}, with \iso{} spanning three orders of magnitude of
-\(\SI{26}{\tera\gram(\ce{SO2})}\), \(\SI{400}{\tera\gram(\ce{SO2})}\) and
-\(\SI{1629}{\tera\gram(\ce{SO2})}\), with further details on the experiment setup in
-\ref{sec:method}. We find that for large to super-volcano sized volcanic eruptions there
-is both a clear non-linear \gls{rf} to \gls{aod} dependence, but also a
-time-after-eruption dependence on both \gls{aod} and \gls{rf}, which is presented in
-\ref{sec:results} and discussed in \ref{sec:discussion}. Finally, in
-\ref{sec:conclusions}, conclusions are made.
-
+To address these issues we simulate ensembles of volcanic eruptions in the \gls{cesm2},
+with \iso{} spanning three orders of magnitude of \(\SI{26}{\tera\gram(\ce{SO2})}\),
+\(\SI{400}{\tera\gram(\ce{SO2})}\) and \(\SI{1629}{\tera\gram(\ce{SO2})}\), with further
+details on the experiment setup in section~\ref{sec:method}. We find that for large to
+super-volcano sized volcanic eruptions there is both a clear non-linear \gls{rf} to
+\gls{aod} dependence, but also a time-after-eruption dependence on the \gls{rf} to
+\gls{aod} ratio, which is presented in section~\ref{sec:results} and discussed in
+Finally, in section~\ref{sec:conclusions}, conclusions are made.
 \section{Method}\label{sec:method}
 
 \subsection{Model}
@@ -408,8 +406,9 @@ time-after-eruption dependence on both \gls{aod} and \gls{rf}, which is presente
 We apply the \gls{cesm2} \citep{danabasoglu2020}, along with the \gls{waccm}
 \citep{gettleman2019} and the fully dynamical ocean component \gls{pop}
 \citep{smith2010, danabasoglu2020}. A complete list of model components is found in
-\ref{tab:cesm-components}. The atmosphere model was run at nominal \(\SI{2}{\degree}\)
-resolution, with \(70\) vertical levels, in the \gls{ma} configuration.
+table~\ref{tab:cesm-components}. The atmosphere model was run at nominal
+\(\SI{2}{\degree}\) resolution, with \(70\) vertical levels, in the \gls{ma}
+configuration.
 
 The \gls{ma} version of \gls{waccm} uses the \gls{mam3} \citep{gettleman2019}. This is
 implemented as a simplified and computationally efficient default setting in the
@@ -460,19 +459,21 @@ imbalance, where the \gls{cesm2} provide the output variables \gls{fsnt} and \gl
 Thus, \(\mathrm{RF_*}= \mathrm{FSNT} - \mathrm{FLNT}\), and taking the difference
 between volcanic simulations and a control simulation gives the final estimate of
 \gls{rf} (\(\mathrm{RF}=\mathrm{RF_{VOLC}}-\mathrm{RF_{CONTROL}}\))
-\citep{marshall2020}. This outline specifically describe how to calculate \gls{erf} as
-opposed to \gls{irf}, which instead is the difference between the \gls{erf} and the sum
-of all rapid atmospheric adjustments \citep{marshall2020,smith2018}. The \gls{aod} is
-obtained from the output variable \gls{aodm}, while global temperature is saved by
-\gls{cesm2} to the variable \gls{trefht}. These four output variables are all that are
-used throughout this paper. The important input data used in the model simulations are
-\iso{} in units of teragrams, used to simulate volcanic eruptions.
+\citep{marshall2020}. The output parameters that go into this estimate are from he
+\gls{fsst} simulation, hence this outline specifically describe how to calculate
+\gls{erf} as opposed to \gls{irf}, which instead is the difference between the \gls{erf}
+and the sum of all rapid atmospheric adjustments \citep{marshall2020,smith2018}. The
+\gls{aod} is obtained from the output variable \gls{aodm}, while global temperature is
+saved by \gls{cesm2} to the variable \gls{trefht}. These four output variables are all
+that are used throughout this paper. The important input data used in the model
+simulations are \iso{} in units of teragrams (\(\si{\tera\gram(\ce{SO2})}\)), used to
+simulate volcanic eruptions.
 
 \subsection{Simulations}
 
-The simulations are summarized in \ref{tab:simulation-overview} and cover three \ce{SO2}
-injection magnitudes and four seasons; 15 February, 15 May, 15 August and 15 November.
-The magnitudes vary across three orders of magnitude: \(\SI{26}{\tera\gram}\),
+The simulations are summarized in table~\ref{tab:simulation-overview} and cover three
+\ce{SO2} injection magnitudes and four seasons; 15 February, 15 May, 15 August and 15
+November. The magnitudes vary across three orders of magnitude: \(\SI{26}{\tera\gram}\),
 \(\SI{400}{\tera\gram}\) and \(\SI{1629}{\tera\gram}\). The smallest eruption case
 (\gls{c2wm}) is of the same order of magnitude as Mt.\ Pinatubo
 \citep[\(\sim10\)--\(\SI{20}{\tera\gram}\);~e.g.][]{timmreck2018} and Mt.\ Tambora
@@ -494,22 +495,26 @@ values for the forcing open \citep{gregory2016}.
 \begin{table}
   \centering
 
-  \caption{Simulations done with the \gls{cesm2}. \glsentrylong{c2wsn} and
-    \glsentrylong{c2ws} are the same in eruption magnitude, but while \gls{c2ws} is located
-    at the equator, \gls{c2wsn} is located at high latitude. \glsentrylong{c2wmp} and
-    \glsentrylong{c2wm} are located at the equator, but with different magnitudes to
-    \gls{c2ws}}\label{tab:simulation-overview}%
+  \caption{Simulations done with the \gls{cesm2}. \gls{c2wsn} and \gls{c2ws} are the same
+    in eruption magnitude, but while \gls{c2ws} is located at the equator, \gls{c2wsn} is
+    located at high latitude. \gls{c2wmp} and \gls{c2wm} are located at the equator, but
+    with different magnitudes to \gls{c2ws}}\label{tab:simulation-overview}%
   \begin{center}
-    \begin{tabular}[c]{ccc}
-      \textbf{Name} & \textbf{\ce{SO2}}         & \textbf{Lon, lat, alt}                  \\
-      \gls{c2wsn}   & \(\SI{1629}{\tera\gram}\) &
-      \SI{1}{\degree\mathrm{E}}, \SI{56}{\degree\mathrm{N}}, \(18\)--\SI{20}{\kilo\metre} \\
-      \gls{c2ws}    & \(\SI{1629}{\tera\gram}\) &
-      \SI{1}{\degree\mathrm{E}}, \SI{0}{\degree\mathrm{N}}, \(18\)--\SI{20}{\kilo\metre}  \\
-      \gls{c2wmp}   & \(\SI{400}{\tera\gram}\)  &
-      \SI{1}{\degree\mathrm{E}}, \SI{0}{\degree\mathrm{N}}, \(18\)--\SI{20}{\kilo\metre}  \\
-      \gls{c2wm}    & \(\SI{26}{\tera\gram}\)   &
-      \SI{1}{\degree\mathrm{E}}, \SI{0}{\degree\mathrm{N}}, \(18\)--\SI{20}{\kilo\metre}  \\
+    \begin{tabular}[c]{cccc}
+      \textbf{Name}                & \textbf{\ce{SO2}}         & \textbf{Lon, lat, alt} &
+      \textbf{Eruption months}                                                            \\
+      \gls{c2wsn}                  & \(\SI{1629}{\tera\gram}\) &
+      \SI{1}{\degree\mathrm{E}}, \SI{56}{\degree\mathrm{N}},
+      \(18\)--\SI{20}{\kilo\metre} & Feb,Aug                                              \\
+      \gls{c2ws}                   & \(\SI{1629}{\tera\gram}\) &
+      \SI{1}{\degree\mathrm{E}}, \SI{0}{\degree\mathrm{N}}, \(18\)--\SI{20}{\kilo\metre}
+                                   & Feb,May,Aug,Nov                                      \\
+      \gls{c2wmp}                  & \(\SI{400}{\tera\gram}\)  &
+      \SI{1}{\degree\mathrm{E}}, \SI{0}{\degree\mathrm{N}},
+      \(18\)--\SI{20}{\kilo\metre} & Feb,May,Aug,Nov                                      \\
+      \gls{c2wm}                   & \(\SI{26}{\tera\gram}\)   &
+      \SI{1}{\degree\mathrm{E}}, \SI{0}{\degree\mathrm{N}}, \(18\)--\SI{20}{\kilo\metre}
+                                   & Feb,May,Aug,Nov                                      \\
     \end{tabular}
   \end{center}
 \end{table}
@@ -530,22 +535,22 @@ values for the forcing open \citep{gregory2016}.
 \subsection{Part 1}
 
 We start by looking at the time series of the global mean surface air temperature.
-Medians with the 5th to 95th percentiles are shown in \ref{fig:compare-waveform}, where
-the black lines are the medians across the four member ensembles, while shading indicate
-the percentiles. Three different forcing magnitudes have been used, as outlined in
-\ref{tab:simulation-overview}. The figures below show two alternative ways of
+Medians with the 5th to 95th percentiles are shown in fig.~\ref{fig:compare-waveform},
+where the black lines are the medians across the four member ensembles, while shading
+indicate the percentiles. Three different forcing magnitudes have been used, as outlined
+in table~\ref{tab:simulation-overview}. The figures below show two alternative ways of
 normalizing the temperature response to these volcanic forcing events. First, the three
 temperature responses are normalised by setting the peak value equal to unity, shown in
-\ref{fig:compare-waveform}a. The second method of normalizing, shown in
-\ref{fig:compare-waveform}b, is to divide by the integral of the time series, such that
-the scaled time series integrate to unity.
+fig.~\ref{fig:compare-waveform}a. The second method of normalizing, shown in
+fig.~\ref{fig:compare-waveform}b, is to divide by the integral of the time series, such
+that the scaled time series integrate to unity.
 
 When normalizing by setting their amplitude to unity, the initial rise across all three
 time series is comparable. The difference among the three is how quickly the temperature
 reverts back to equilibrium in the small eruption case (solid black and blue shading in
-\ref{fig:compare-waveform}a). However, when normalizing by enforcing all time series to
-integrate to the same value, the tails of the temperature time series by construction
-become similar across the three eruption magnitudes. From both of these two
+fig.~\ref{fig:compare-waveform}a). However, when normalizing by enforcing all time
+series to integrate to the same value, the tails of the temperature time series by
+construction become similar across the three eruption magnitudes. From both of these two
 normalizations, the amount of time spent at the peak temperature appears different. The
 temperature from the smaller eruption simulation starts to revert sooner after it
 reaches the peak temperature. The shape of the initial rise and the tail is more similar
@@ -579,14 +584,14 @@ is expected that similar dynamics are at play in all cases.
 We next look at whether the shape of the temperature time series can be inferred from
 the shape of either of the forcing time series or not (\gls{aod} or \gls{rf}). When
 plotting the \gls{rf} time series, we find that their shapes are consistent over
-different eruption strengths (\ref{fig:arrays_normalised}b), and as such, that the
+different eruption strengths (fig.~\ref{fig:arrays_normalised}b), and as such, that the
 temperature seem to have a strong dependence on \gls{rf}. The same can largely be said
 about the \gls{aod} as well, but the \gls{aod} time series do show a slight change in
-shape from smaller to larger eruptions (\ref{fig:arrays_normalised}a). Specifically, the
-\gls{aod} time series from the smaller eruptions have a fast rise and a flat peak before
-it decays back to its equilibrium state, while from the larger eruptions we find a
-slower rise time, but a sharper peak, making the decay to equilibrium happening at a
-similar time after the eruption and at a similar rate.
+shape from smaller to larger eruptions (fig.~\ref{fig:arrays_normalised}a).
+Specifically, the \gls{aod} time series from the smaller eruptions have a fast rise and
+a flat peak before it decays back to its equilibrium state, while from the larger
+eruptions we find a slower rise time, but a sharper peak, making the decay to
+equilibrium happening at a similar time after the eruption and at a similar rate.
 % TODO: Why? Marshall et al. (2019) and references therein may be the best source for a
 % suggested explanation.
 
@@ -595,7 +600,7 @@ similar time after the eruption and at a similar rate.
   \includegraphics[width=0.95\linewidth]{figures/arrays_combined_normalized.png}
 
   \caption{The \gls{aod} time series (a) and \gls{rf} time series (b) from the simulations
-    summarised in \ref{tab:simulation-overview}, scaled to have peak values at unity
+    summarised in table~\ref{tab:simulation-overview}, scaled to have peak values at unity
   }\label{fig:arrays_normalised}
 \end{figure}
 
@@ -605,28 +610,28 @@ We next focus our attention towards how the \gls{aod} and \gls{rf} time series d
 relative to each other, which are both parameters providing insight about how volcanic
 eruptions impact climate. A similar comparison was carried out in \citet[][their Fig.\
   4]{gregory2016} and \citet[][their Fig.\ 1]{marshall2020}, with \gls{rf} to \gls{aod}
-plots. \ref{fig:aod_vs_toa_ses_avg} show annual mean values from the four simulation
-cases in \ref{tab:simulation-overview}; the small eruption case (\gls{c2wm}) as blue
-downward pointing triangles, the intermediate eruption case (\gls{c2wmp}) as orange
-thick diamonds, the large tropical eruption case (\gls{c2ws}) as green upward pointing
-triangles, the large northern hemisphere eruption case (\gls{c2wsn}) as brown upward
-pointing three-branched twigs, and the data from \citet[][Fig.\ 4, black crosses from
-  HadCM3 sstPiHistVol]{gregory2016} as grey crosses labelled G16. Additionally, the
-estimated peak values from the Mt.\ Pinatubo eruption and Mt.\ Tambora eruption are
-plotted as a purple star and a yellow plus, while the peak from the \gls{p100} is shown
-as a pink square. Finally, red circles represent the peak values obtained from the three
-tropical eruptions (\gls{c2wm}, \gls{c2wmp} and \gls{c2ws}). The gradient lines are the
-same as shown by \citet{gregory2016}. The full data range is shown in
-\ref{fig:aod_vs_toa_ses_avg}a while \ref{fig:aod_vs_toa_ses_avg}b show a narrow range
-highlighting the \gls{c2wm} case.
+plots. Figure~\ref{fig:aod_vs_toa_ses_avg} show annual mean values from the four
+simulation cases in table~\ref{tab:simulation-overview}; the small eruption case
+(\gls{c2wm}) as blue downward pointing triangles, the intermediate eruption case
+(\gls{c2wmp}) as orange thick diamonds, the large tropical eruption case (\gls{c2ws}) as
+green upward pointing triangles, the large northern hemisphere eruption case
+(\gls{c2wsn}) as brown upward pointing three-branched twigs, and the data from
+\citet[][Fig.\ 4, black crosses from HadCM3 sstPiHistVol]{gregory2016} as grey crosses
+labelled G16. Additionally, the estimated peak values from the Mt.\ Pinatubo eruption
+and Mt.\ Tambora eruption are plotted as a purple star and a yellow plus, while the peak
+from the \gls{p100} is shown as a pink square. Finally, red circles represent the peak
+values obtained from the three tropical eruptions (\gls{c2wm}, \gls{c2wmp} and
+\gls{c2ws}). The gradient lines are the same as shown by \citet{gregory2016}. The full
+data range is shown in fig.~\ref{fig:aod_vs_toa_ses_avg}a while
+fig.~\ref{fig:aod_vs_toa_ses_avg}b show a narrow range highlighting the \gls{c2wm} case.
 
 The annual mean data from the Pinatubo-like \gls{c2wm} case shown in
-\ref{fig:aod_vs_toa_ses_avg}b as blue downward facing triangles, has \gls{rf} values as
-a function of \gls{aod} that follow almost the same constant gradient as the
-\citet{gregory2016} data. However, in \ref{fig:aod_vs_toa_ses_avg}a we find that the
-stronger eruptions lead to dissimilar responses in \gls{aod} and \gls{rf}, where the
+fig.~\ref{fig:aod_vs_toa_ses_avg}b as blue downward facing triangles, has \gls{rf}
+values as a function of \gls{aod} that follow almost the same constant gradient as the
+\citet{gregory2016} data. However, in fig.~\ref{fig:aod_vs_toa_ses_avg}a we find that
+the stronger eruptions lead to dissimilar responses in \gls{aod} and \gls{rf}, where the
 slope of the \gls{c2wmp} case seem to follow close to a \(-10\) gradient and the
-\gls{c2ws} case is closer to a \(-4\) gradient. The peak values (red circles) suggest a
+\gls{c2ws} case is closer to a \(-5\) gradient. The peak values (red circles) suggest a
 non-linear functional shape dependence, while within each eruption strength the annual
 mean values fall relatively close to a straight line.
 
@@ -635,14 +640,14 @@ mean values fall relatively close to a straight line.
   \includegraphics[width=0.95\linewidth]{figures/aod_vs_toa_avg.png}
 
   \caption{\gls{rf} as a function of \gls{aod}, yearly means. Data from the four
-    simulations listed in \ref{tab:simulation-overview} (\gls{c2wm}, \gls{c2wmp}, \gls{c2ws}
-    and \gls{c2wsn}) are shown along with the data from the HadCM3 sstPiHistVol simulation
-    by \citet{gregory2016} (grey crosses). Also shown are the estimated peak values of the
-    Mt.\ Pinatubo (purple star) and Mt.\ Tambora (yellow plus) eruptions. In (a) the
-    simulated super-volcano of \citet{jones2005} (pink square) is shown as well as the peak
-    values from the simulations \gls{c2wm}, \gls{c2wmp} and \gls{c2ws} as red circles. All
-    peak values (as opposed to annual means) have an asterisk (\(\ast{}\)) in their label.
-    The grey gradient lines are the same regression fits as in \citet[][Fig.\
+    simulations listed in table~\ref{tab:simulation-overview} (\gls{c2wm}, \gls{c2wmp},
+    \gls{c2ws} and \gls{c2wsn}) are shown along with the data from the HadCM3 sstPiHistVol
+    simulation by \citet{gregory2016} (grey crosses). Also shown are the estimated peak
+    values of the Mt.\ Pinatubo (purple star) and Mt.\ Tambora (yellow plus) eruptions. In
+    (a) the simulated super-volcano of \citet{jones2005} (pink square) is shown as well as
+    the peak values from the simulations \gls{c2wm}, \gls{c2wmp} and \gls{c2ws} as red
+    circles. All peak values (as opposed to annual means) have an asterisk (\(\ast{}\)) in
+    their label. The grey gradient lines are the same regression fits as in \citet[][Fig.\
       4]{gregory2016}, where the solid line is the fit to the Gregory et al.\ data (grey
     crosses). (b): Zooming in on the smallest values}\label{fig:aod_vs_toa_ses_avg}%
 \end{figure}
@@ -650,20 +655,22 @@ mean values fall relatively close to a straight line.
 \subsection{Part 3}
 
 To get a feeling for how the responses in \gls{aod} and \gls{rf} develop relative to
-each other over time, as briefly mentioned in relation to \ref{fig:arrays_normalised},
-we plot in \ref{fig:aod_vs_toa_avg_loop_ratios} seasonal means of the \gls{rf} to
-\gls{aod} ratio, where the start of the time series is taken as that of the eruption
-day. \ref{fig:aod_vs_toa_ses_avg} show the \gls{rf} to \gls{aod} ratios from
-\ref{fig:aod_vs_toa_ses_avg}, but where the data is averaged to seasonal means rather
-than yearly means. In \ref{fig:aod_vs_toa_avg_loop_ratios}a, straight lines are linear
-regression fits to the seasonal means across all four ensembles, summarised in
-\ref{tab:slope-gradients}. Shaded regions are the standard deviation around the seasonal
-means. A similar shading is plotted in \ref{fig:aod_vs_toa_avg_loop_ratios}b, but where
-the regression fits have been omitted to avoid further cluttering the plot. The years
-where the signal-to-noise ratio is the lowest are years \(1\) and \(2\), as well as year
-\(0\) (the noise is mostly due to the \gls{rf} time series, shown in
-\ref{fig:arrays_normalised}b). Hence, the ratio of \gls{rf} to \gls{aod} is calculated
-for the second season of the first year until the end of the third year.
+each other over time, as briefly mentioned in relation to
+fig.~\ref{fig:arrays_normalised}, we plot in fig.~\ref{fig:aod_vs_toa_avg_loop_ratios}
+seasonal means of the \gls{rf} to \gls{aod} ratio, where the start of the time series is
+taken as that of the eruption day. Figure~\ref{fig:aod_vs_toa_ses_avg} show the \gls{rf}
+to \gls{aod} ratios from fig.~\ref{fig:aod_vs_toa_ses_avg}, but where the data is
+averaged to seasonal means rather than yearly means. In
+fig.~\ref{fig:aod_vs_toa_avg_loop_ratios}a, straight lines are linear regression fits to
+the seasonal means across all four ensembles, summarised in
+fig.~\ref{tab:slope-gradients}. Shaded regions are the standard deviation around the
+seasonal means. A similar shading is plotted in
+fig.~\ref{fig:aod_vs_toa_avg_loop_ratios}b, but where the regression fits have been
+omitted to avoid further cluttering the plot. The years where the signal-to-noise ratio
+is the lowest are years \(1\) and \(2\), as well as year \(0\) (the noise is mostly due
+to the \gls{rf} time series, shown in fig.~\ref{fig:arrays_normalised}b). Hence, the
+ratio of \gls{rf} to \gls{aod} is calculated for the second season of the first year
+until the end of the third year.
 
 Even though the ratio changes between the eruption magnitudes, we find that the gradient
 at which the ratio is changing is similar across large eruption magnitudes. A slope of
@@ -673,32 +680,32 @@ case (orange thick diamonds) and the \gls{c2ws} case (green upward triangles)
 columns), and even though the spread in the \gls{c2wm} case (blue downward triangles) is
 large in the \(y\)-direction, they tend to follow a similarly inclined, albeit steeper,
 slope. Normalizing the time series before computing the ratio, shown in
-\ref{fig:aod_vs_toa_avg_loop_ratios}b yield a similarly inclined slope across all
+fig.~\ref{fig:aod_vs_toa_avg_loop_ratios}b, yield a similarly inclined slope across all
 forcing magnitude ensembles. In the 2nd period, from the second season of the second
 year, the ratios stay close to constant for the reminder of the decaying phase of the
 time series. Again this become more clear in the normalised version in
-\ref{fig:aod_vs_toa_avg_loop_ratios}b, where the ratios are similar between the
+fig.~\ref{fig:aod_vs_toa_avg_loop_ratios}b, where the ratios are similar between the
 ensembles.
 
 \begin{table}
   \centering
 
   \caption{Gradient and standard deviation for the regression lines to the data found in
-    \ref{fig:aod_vs_toa_avg_loop_ratios}. The regression fit in the top row of all
+    fig.~\ref{fig:aod_vs_toa_avg_loop_ratios}. The regression fit in the top row of all
     individual simulations indicate the regression fit to the first period (from \(0\) years
     to \(1\) years), while the bottom is the regression fit to the second period (from \(1\)
     years to \(3\) years)}\label{tab:slope-gradients}%
   \begin{tabular}{cccc}
-    Simulation                   & Period & \ref{fig:aod_vs_toa_avg_loop_ratios}a &
-    \ref{fig:aod_vs_toa_avg_loop_ratios}b                                                            \\
-    \multirow{2}{*}{\gls{c2wsn}} & 1st    & \(3.04\pm1.28\)                       & \(0.67\pm0.28\)  \\
-                                 & 2nd    & \(0.65\pm0.44\)                       & \(0.14\pm0.10\)  \\
-    \multirow{2}{*}{\gls{c2ws}}  & 1st    & \(5.78\pm0.59\)                       & \(1.13\pm0.11\)  \\
-                                 & 2nd    & \(-0.83\pm0.36\)                      & \(-0.16\pm0.07\) \\
-    \multirow{2}{*}{\gls{c2wmp}} & 1st    & \(5.84\pm0.93\)                       & \(0.55\pm0.09\)  \\
-                                 & 2nd    & \(-0.72\pm0.43\)                      & \(-0.07\pm0.04\) \\
-    \multirow{2}{*}{\gls{c2wm}}  & 1st    & \(10.23\pm3.90\)                      & \(0.43\pm0.16\)  \\
-                                 & 2nd    & \(1.03\pm2.03\)                       & \(0.04\pm0.08\)  \\
+    Simulation                   & Period & Fig.~\ref{fig:aod_vs_toa_avg_loop_ratios}a &
+    Fig.~\ref{fig:aod_vs_toa_avg_loop_ratios}b                                                            \\
+    \multirow{2}{*}{\gls{c2wsn}} & 1st    & \(3.04\pm1.28\)                            & \(0.67\pm0.28\)  \\
+                                 & 2nd    & \(0.65\pm0.44\)                            & \(0.14\pm0.10\)  \\
+    \multirow{2}{*}{\gls{c2ws}}  & 1st    & \(5.78\pm0.59\)                            & \(1.13\pm0.11\)  \\
+                                 & 2nd    & \(-0.83\pm0.36\)                           & \(-0.16\pm0.07\) \\
+    \multirow{2}{*}{\gls{c2wmp}} & 1st    & \(5.84\pm0.93\)                            & \(0.55\pm0.09\)  \\
+                                 & 2nd    & \(-0.72\pm0.43\)                           & \(-0.07\pm0.04\) \\
+    \multirow{2}{*}{\gls{c2wm}}  & 1st    & \(10.23\pm3.90\)                           & \(0.43\pm0.16\)  \\
+                                 & 2nd    & \(1.03\pm2.03\)                            & \(0.04\pm0.08\)  \\
   \end{tabular}
 \end{table}
 
@@ -709,16 +716,16 @@ understood by \citet{marshall2020} to happen since the aerosols are initially sp
 confined to the hemisphere where the eruption was situated, before they during the
 second and third years spread globally, leading to a larger global mean albedo per
 \gls{aod} and in turn larger \gls{rf} per \gls{aod}. From their results and the results
-shown here in \ref{fig:aod_vs_toa_avg_loop_ratios}, there seem to be several and
+shown here in fig.~\ref{fig:aod_vs_toa_avg_loop_ratios}, there seem to be several and
 competing effects that decide on the values of \gls{aod} and \gls{rf}.
 
 The change in ratio, where the smallest is found in the larger eruptions and the largest
 ratio is from the smaller eruptions, is consistent with the change in peak values seen
-in \ref{fig:aod_vs_toa_ses_avg}a, where the red circles indicate that the peak values
-are saturating in \gls{rf}. The \gls{rf} peak magnitudes increases more slowly than the
-\gls{aod} peak magnitudes which increases close to linearly with injected \ce{SO2} (see
-also \ref{fig:parameter_scan}a). This may be the result of larger aerosols having time
-to develop as the amount of injected \ce{SO2} increases
+in fig.~\ref{fig:aod_vs_toa_ses_avg}a, where the red circles indicate that the peak
+values are saturating in \gls{rf}. The \gls{rf} peak magnitudes increases more slowly
+than the \gls{aod} peak magnitudes which increases close to linearly with injected
+\ce{SO2} (see also fig.~\ref{fig:parameter_scan}a). This may be the result of larger
+aerosols having time to develop as the amount of injected \ce{SO2} increases
 \citep{niemeier2015,marshall2019}. This in turn make the forcing from smaller eruptions
 more efficient than from large eruptions since larger aerosols scatter radiation less
 efficiently, causing a smaller ratio between \gls{rf} and \gls{aod}.
@@ -736,25 +743,24 @@ efficiently, causing a smaller ratio between \gls{rf} and \gls{aod}.
 
 \subsection{Part 4}
 
-In \ref{fig:parameter_scan} we compare all relevant parameters to each other. The
+In fig.~\ref{fig:parameter_scan} we compare all relevant parameters to each other. The
 initial input parameter to the \gls{cesm2} is injected \ce{SO2}. Compared to \gls{aod}
-peak values we get an almost linear relationship against \iso{} for our tropical
-\gls{c2w} cases, shown in \ref{fig:parameter_scan}a. The latitude also plays a role for
-how large the \gls{aod} perturbation becomes, as we can see from the \gls{c2wsn} data
-point. The weak dependence on eruption latitude is also reported in
-\citet{marshall2019}, where they find \(\SI{72}{\percent}\) of the \gls{aod} variance
-can be explained by \iso{}, while latitude contributes to only \(\SI{16}{\percent}\) of
-the variance.
+peak values we get an almost linear relationship against \iso{} for our tropical cases,
+shown in fig.~\ref{fig:parameter_scan}a. The latitude also plays a role for how large
+the \gls{aod} perturbation becomes, as we can see from the \gls{c2wsn} data point. A
+weak dependence on eruption latitude is also reported in \citet{marshall2019}, where
+they find \(\SI{72}{\percent}\) of the \gls{aod} variance can be explained by \iso{},
+while latitude contributes to only \(\SI{16}{\percent}\) of the variance.
 
 With the almost linear relation between injected \ce{SO2} and \gls{aod}, we should
 expect to see a similar plot for \iso{} versus \gls{rf} as for \gls{aod} versus
-\gls{rf}. \iso[I] versus \gls{rf} is shown in \ref{fig:parameter_scan}b, but where the
-absolute value of the \gls{rf} is potted along the \(y\)-axis. Just as in
-\ref{fig:aod_vs_toa_ses_avg}a we find the \gls{cesm2} data points to be heavily damped
-in \gls{rf} as \iso{} increases. The same effect can be seen in the data from
+\gls{rf}. \iso[I] versus \gls{rf} is shown in fig.~\ref{fig:parameter_scan}b, but where
+the absolute value of the \gls{rf} is potted along the \(y\)-axis. Just as in
+fig.~\ref{fig:aod_vs_toa_ses_avg}a we find the \gls{cesm2} data points to be heavily
+damped in \gls{rf} as \iso{} increases. The same effect can be seen in the data from
 \citet{ottobliesner2016} (labelled OB16, red points), which follow much the same path as
-our \gls{c2w} data. A description of how the OB16 data was analysed can be found in
-\ref{app:ob16}. The simulations used by \citet{ottobliesner2016} was using \gls{cesm1}
+our tropical cases. A description of how the OB16 data was analysed can be found in the
+appendix. The simulations used by \citet{ottobliesner2016} was using the \gls{cesm1}
 with a low-top atmosphere (\gls{cam5}), thus we find that despite the difference in
 model complexity, similar \glspl{rf} are obtained by \citet{ottobliesner2016} as what we
 find.
@@ -765,15 +771,18 @@ find.
 
   \caption{(a) \gls{aod} (b) \gls{rf} and (c) temperature as a function of \iso{}\@. (d)
     \gls{rf} and (e) temperature as a function of \gls{aod}. (f) Temperature as a function
-    of \gls{rf}. \gls{c2w} cases are shown as blue diamonds, the \gls{c2wsn} case is the
-    brown three-branched twig, OB16 are data from \citet{ottobliesner2016} marked as red
-    asterisks, the purple star and yellow plus are Mt.\ Pinatubo and Mt.\ Tambora estimates,
-    the pink square is the one-hundred times Mt.\ Pinatubo super-volcano from
-    \citet{jones2005} and the pink disk is the \gls{ytt} super-volcano from
-    \citet{timmreck2010}. A pink stippled line is in (b) used to draw the function from
-    \ref{eq:niemeier_exponential}}\label{fig:parameter_scan}%
+    of \gls{rf}. Tropical cases (\gls{c2wm}, \gls{c2wmp}, \gls{c2ws}) are shown as blue
+    diamonds, the \gls{c2wsn} case is the brown three-branched twig, OB16 are data from
+    \citet{ottobliesner2016} marked as red asterisks, the purple star and yellow plus are
+    Mt.\ Pinatubo and Mt.\ Tambora estimates based on observations, estimates , the pink
+    square is the one-hundred times Mt.\ Pinatubo super-volcano from \citet{jones2005} and
+    the pink disk is the \gls{ytt} super-volcano from
+    eq.~\ref{eq:niemeier_exponential}}\label{fig:parameter_scan}%
 \end{figure*}
 
+% INFO: the conversion between S and SO2 is confirmed by Niemeier and Timmreck (2015)'s
+% reference to the Bekki et al. (1996) paper. Bekki uses 6000 Mt SO2, Niemeier uses 3000
+% Tg(S).
 \citet{niemeier2015} did simulations of continually emitting injections of sulphur, up
 to \(\SI{100}{\tera\gram \mathrm{(S)}\mathrm{yr}^{-1}}\), in the middle atmosphere
 version of the GCM ECHAM5 \citep{giorgetta2006} and with aerosol microphysics from HAM
@@ -787,8 +796,7 @@ converging to \(\SI{-65}{\watt\meter^{-2}}\),
   \mathrm{e}^{-{\left(\frac{\SI{2246}{\tera\gram(S)yr^{-1}}}{x}\right)}^{0.23}}.
   \label{eq:niemeier_exponential}
 \end{equation}
-%
-This is shown in~\ref{fig:parameter_scan} as the stippled pink line to have a much
+This is shown in fig.~\ref{fig:parameter_scan} as the stippled pink line to have a much
 slower rise than the data from both our simulations and the simulations by
 \citet{ottobliesner2016}. However, \citet{timmreck2010} did simulations in the MPI-ESM
 that was forced with \gls{aod} obtained from the HAM aerosol model, of a
@@ -798,52 +806,51 @@ the same aerosol microphysical model was used in \citet{timmreck2010} and
 of ECHAM6 which was the next version update from ECHAM5 \citep{kuma2023}. From the
 initial input of \(\SI{850}{\tera\gram(\ce{S})}\) (equivalent to
 \(\SI{1700}{\tera\gram(\ce{SO2})}\)), via an \gls{aod} estimate, they got a peak
-\gls{rf} of only \(\SI{-18}{\watt\metre^{-2}}\) (pink filled circle in
+\gls{rf} of \(\SI{-18}{\watt\metre^{-2}}\) (pink filled circle in
 \ref{fig:parameter_scan}b). This is in good agreement with the functional given in
-\ref{eq:niemeier_exponential}.
-% INFO: the conversion between S and SO2 is confirmed by Niemeier and Timmreck (2015)'s
-% reference to the Bekki et al. (1996) paper. Bekki uses 6000 Mt SO2, Niemeier uses 3000
-% Tg(S).
+eq.~\ref{eq:niemeier_exponential}.
 
-\ref{fig:parameter_scan}c show \iso{} versus temperature response. Just as in
-\ref{fig:parameter_scan}b, the data from the \gls{cesm2} simulations bend off, making
-the temperature response weaker with higher values of \iso. We find here that the data
-from the \gls{cesm1} simulations by \citet{ottobliesner2016} follow a different path
-than the \gls{c2w} data, with temperature fluctuations being less extreme as \iso{}
-increases. \citet{timmreck2010} also find a much weaker temperature response than our
-results suggest, with a maximum temperature perturbation of only \(\SI{-3.5}{\kelvin}\)
-for their \(\SI{1700}{\tera\gram}\) \ce{SO2} eruption, while the opposite is the case
-for the \citet{jones2005} simulation which resulted in a maximum temperature
-perturbation of \(\SI{-10.7}{\kelvin}\), much greater than we obtain in our \gls{cesm2}
-simulations.
+Figure~\ref{fig:parameter_scan}c show \iso{} versus temperature response. Just as in
+fig.~\ref{fig:parameter_scan}b, the data from the \gls{cesm2} tropical simulation cases
+bend off, making the temperature response weaker with higher values of \iso{}. We find
+here that the data from the \gls{cesm1} simulations by \citet{ottobliesner2016} follow a
+different path than the \gls{cesm2} data, with temperature fluctuations being less
+extreme as \iso{} increases. \citet{timmreck2010} also find a much weaker temperature
+response than our results suggest, with a maximum temperature perturbation of only
+\(\SI{-3.5}{\kelvin}\) for their \(\SI{1700}{\tera\gram(\ce{SO2})}\) eruption, while the
+opposite is the case for the \citet{jones2005} simulation which resulted in a maximum
+temperature perturbation of \(\SI{-10.7}{\kelvin}\), much greater than what we obtain in
+our \gls{cesm2} simulations.
 
-In \ref{fig:parameter_scan}d we again look at \gls{rf} as a function of \gls{aod}, but
-this time focus on the peak values rather than the annual and seasonal means. As
+In fig.~\ref{fig:parameter_scan}d we again look at \gls{rf} as a function of \gls{aod},
+but this time focus on the peak values rather than the annual and seasonal means. As
 previously discussed, the gradient is much weaker than what previous studies have found,
-and in the case of our \gls{c2w} data the peak values do not follow a straight line. The
-results from other studies \citep{jones2005, ottobliesner2016, timmreck2010} do however
-suggest there might be large dependencies on the model that was used as well as on the
-input parameters of the model, for example related to latitude. These contributions add
-on top of noise, which for the relatively small ensemble size of four used here may play
-a role.
+and the data from our tropical cases give peak values that do not follow a straight
+line. Comparing with the results from other studies \citep{jones2005, ottobliesner2016,
+  timmreck2010} suggests that there might be large dependencies on the model that was used
+as well as on the input parameters of the model, for example related to latitude. These
+contributions add on top of noise, which for the relatively small ensemble size of four
+used here may play a role.
 
-\ref{fig:parameter_scan}e should in the case of the \gls{cesm2} data points be akin in
-shape to the paths found in \ref{fig:parameter_scan}c due to the close to linear
-relationship found between \iso{} and \gls{aod} in \ref{fig:parameter_scan}a. The
-relationship between \gls{aod} and temperature do tend to follow a similar functional
-shape, but more data would be needed to draw strong conclusions from this.
+Figure~\ref{fig:parameter_scan}e should in the case of the \gls{cesm2} data points be
+akin in shape to the paths found in fig.~\ref{fig:parameter_scan}c due to the close to
+linear relationship found between \iso{} and \gls{aod} in
+fig.~\ref{fig:parameter_scan}a. The relationship between \gls{aod} and temperature do
+tend to follow a similar functional shape, but more data would be needed to draw strong
+conclusions from this.
 
-In \ref{fig:parameter_scan}f we compare the \gls{rf} and temperature responses. Both the
-\gls{cesm2} data and the \gls{cesm1} data from \citet{ottobliesner2016} show a close to
-linear relationship between temperature and \gls{rf}, but where the \gls{cesm2} data has
-a steeper gradient and as such seem to lead to stronger temperature perturbations
-compared to \gls{cesm1}. However, the overlap in data is not big, and the \gls{cesm2}
-data are too sparse to make strong conclusions, in addition to the difference in model
-complexity. It is also important to note that the temperature values used in the
-\citet{ottobliesner2016} data points are the exact temperature at the time of the
-eruption according to the \iso{} time series, which means the peak temperatures will be
-biased low, while close eruptions will contribute a bias to higher temperatures. This,
-in combination with strong noise make the data less reliable.
+In fig.~\ref{fig:parameter_scan}f we compare the \gls{rf} and temperature responses.
+Both the \gls{cesm2} data and the \gls{cesm1} data from \citet{ottobliesner2016} show a
+close to linear relationship between temperature and \gls{rf}, but where the \gls{cesm2}
+data has a steeper gradient and as such seem to lead to stronger temperature
+perturbations compared to \gls{cesm1}. However, the overlap in data is not big, and the
+\gls{cesm2} data are too sparse to make strong conclusions, in addition to the
+difference in model complexity. It is also important to note that the temperature values
+used in the \citet{ottobliesner2016} data points are the exact temperature at the time
+of the eruption according to the \iso{} time series. Thus, missing the peak temperature
+means the estimates will be biased towards lower temperatures, while other eruptions
+occurring close in time will contribute a bias to higher temperatures. This, in
+combination with strong noise make the data less reliable.
 
 \section{Discussion}\label{sec:discussion}
 
@@ -859,16 +866,16 @@ in combination with strong noise make the data less reliable.
 
 \subsection{Linearity between \gls{aod} and \gls{rf}}
 
-Fig.~\ref{fig:aod_vs_toa_ses_avg},~\ref{fig:aod_vs_toa_avg_loop_ratios},~\ref{fig:parameter_scan}d
-all show that as the \gls{aod} increases past \(\sim 1.0\), the scaling of \(\sim -20\)
-no longer map to corresponding values of \gls{rf}. When looking at the intermediate
-volcanic eruption with \(\SI{400}{\tera\gram}\) \iso{} there seem to be a mostly linear
-relationship between the \gls{aod} and \gls{rf} values, with a slope of approximately
-\(-10\). As for the largest eruption, scaling \gls{aod} by \(\sim-5\) yields reasonable
-\gls{rf} values. From \ref{fig:parameter_scan}a we have an almost linear relation
-between \iso{} and \gls{aod}, and previous results indicate that larger eruptions where
-more \ce{SO2} is injected creates larger aerosols which are less effective at scattering
-radiation, making the cooling less efficient
+Figures~\ref{fig:aod_vs_toa_ses_avg},~\ref{fig:aod_vs_toa_avg_loop_ratios} and
+\ref{fig:parameter_scan}d all show that as the \gls{aod} increases past \(\sim 1.0\),
+the scaling of \(\sim -20\) no longer map to corresponding values of \gls{rf}. When
+looking at the intermediate volcanic eruption with \(\SI{400}{\tera\gram}\) \iso{} there
+seem to be a mostly linear relationship between the \gls{aod} and \gls{rf} values, with
+a slope of approximately \(-10\). As for the largest eruption, scaling \gls{aod} by
+\(\sim-5\) yields reasonable \gls{rf} values. From fig.~\ref{fig:parameter_scan}a we
+have an almost linear relation between \iso{} and \gls{aod}, and previous results
+indicate that larger eruptions where more \ce{SO2} is injected creates larger aerosols
+which are less effective at scattering radiation, making the cooling less efficient
 \citep{english2013,timmreck2010,timmreck2018}. \citet{timmreck2010} also find that for
 very large eruptions, they look at Pinatubo and \gls{ytt}, \ce{OH} radicals are not
 abundant enough which limit the \ce{SO2} oxidation. (Originally in \citep{bekki1995}.)
@@ -878,57 +885,56 @@ peak of Pinatubo in \citet{timmreck2010}, and at a much smaller value when compa
 \gls{rf} anomaly of \(\SI{-18}{\watt\metre^{-2}}\) (\(7\)-\(8\) months after) compared
 to \citet{jones2005} of \(\SI{-60}{\watt\metre^{-2}}\) (one year after). \gls{rf} peak
 occurring before the \gls{aod} peak is the same as what has been found here for
-\gls{cesm2}, approximately \(6\)--\(8\) months after the eruption
-\ref{fig:arrays_normalised}.
+\gls{cesm2}, approximately \(6\)--\(8\) months after the eruption (see
+fig.~\ref{fig:arrays_normalised}).
 
-While the \gls{p100} data have been comparable to the large \gls{cesm2} data point in
-both \gls{aod} and \gls{rf}, the temperature response reported by \citet{jones2005} is
-much stronger than what our strongest eruption produced. Since \citet{jones2005} used
-the \gls{aod} forcing from Mt.\ Pinatubo multiplied by one hundred, the shape of the
-time series could be notably different to what a super-eruption would create, even
-though the peak is representable, as we have seen in \ref{fig:arrays_normalised}a where
-the \gls{aod} shape differ as the eruption strength is increased. This might be enough
-to cause a much stronger temperature perturbation. We also note that
-\citet{timmreck2010} used a more realistic \gls{aod} forcing and obtained cooling that
-was much smaller than \citet{jones2005}.
+While the \gls{p100} data have been comparable to the \gls{c2ws} simulation case in both
+\gls{aod} and \gls{rf}, the temperature response reported by \citet{jones2005} is much
+stronger than what our strongest eruption produced. Since \citet{jones2005} used the
+\gls{aod} forcing from Mt.\ Pinatubo multiplied by one hundred, the shape of the time
+series could be notably different to what a super-eruption would create, even though the
+peak is representable, as we have seen in fig.~\ref{fig:arrays_normalised}a where the
+\gls{aod} shape differ as the eruption strength is increased. This might be enough to
+cause a much stronger temperature perturbation. We also note that \citet{timmreck2010}
+used a more realistic \gls{aod} forcing and obtained cooling that was much smaller than
+\citet{jones2005}.
 
 A bigger spread is nevertheless found when converting from \iso{} to any of the three
 output parameters when comparing across models. Conversion from \iso{} to \gls{aod} is
 consistent within similar models, even when comparing simulations of volcanic eruptions
 \citep{timmreck2010} and continuous injection of \ce{SO2} \citep{niemeier2015}, but has
-a wide spread at large values of \iso{} across models (\ref{fig:parameter_scan}a,b,c).
-Compared to \gls{aod} as a function of \iso{}, both \gls{rf} (\ref{fig:parameter_scan}d)
-and temperature (\ref{fig:parameter_scan}e) as a function of \gls{aod} result in a small
-spread in the data across models, and necessarily the spread will also be small for
-temperature as a function of \gls{rf} (\ref{fig:parameter_scan}f). A roughly linear
-relationship between \gls{aod} and \gls{rf} have been assumed is several previous
-studies, but (1) for smaller values of \gls{aod} and \gls{rf}, and (2) where the
-estimated slope is significantly steeper; around
-\(\SI{-20}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) at \(\mathrm{AOD}<1\) rather than
-\(\SI{-5}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) found here at \(\mathrm{AOD}>1\). We
-therefore expect a significantly shallower slope to be a more precise estimate of the
-ratio between \gls{rf} and \gls{aod} for eruptions one magnitude or more greater than
-Mt.\ Pinatubo.
+a wide spread at large values of \iso{} across models
+(figs.~\ref{fig:parameter_scan}a,b,c). Compared to \gls{aod} as a function of \iso{},
+both \gls{rf} (fig.~\ref{fig:parameter_scan}d) and temperature
+(fig.~\ref{fig:parameter_scan}e) as a function of \gls{aod} result in a small spread in
+the data across models, and necessarily the spread will also be small for temperature as
+a function of \gls{rf} (fig.~\ref{fig:parameter_scan}f). A roughly linear relationship
+between \gls{aod} and \gls{rf} have been assumed is several previous studies, but (1)
+for smaller values of \gls{aod} and \gls{rf}, and (2) where the estimated slope is
+significantly steeper; around \(\SI{-20}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) at
+\(\mathrm{AOD}<1\) rather than \(\SI{-5}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) found here
+at \(\mathrm{AOD}>1\) when simulating with our strongest eruption. We therefore expect a
+shallower slope to be a more precise estimate of the ratio between \gls{rf} and
+\gls{aod} for eruptions one magnitude or more greater than Mt.\ Pinatubo.
 
-From the \gls{c2wm} case and the \gls{c2wmp} case, an apparent roughly linear
-relationship between \gls{aod} and \gls{rf} emerge in \ref{fig:aod_vs_toa_ses_avg}.
-There is, however, some spread in the data in particular of the \gls{c2ws} case.
-Importantly, there appear to be a time-after-eruption dependency on the \gls{rf} to
-\gls{aod} ratio. \citet{marshall2020} discuss a similar feature they find when looking
-at \gls{aod} and \gls{rf}, but there, the efficiency increases from year 1 to year 2,
-while here efficiency decreases with time, as shown in
-\ref{fig:aod_vs_toa_avg_loop_ratios}. \citet{marshall2020} explain that this is due to
-the time it takes for the aerosols to spread which affects the global albedo and in turn
-the \gls{rf}, with the \gls{aod} being less affected by the aerosols spreading.
-\citet{marshall2019, marshall2020, marshall2021} used a code with seven log-normal modes
-to simulate aerosol mass and number concentrations, but their model is run in an
-atmosphere-only configuration with prescribed sea surface temperatures and sea ice
-extent \citep{marshall2019}, as opposed to the \gls{cesm2} which is run as an \gls{esm}.
-The configuration used by \citet{marshall2019} is from the model UM-UKCA, which is an
-extended version of the HadGEM3 \citep{dhomse2014}, which in turn is from a different
-family of models than both \gls{cesm} and ECHAM5/MIP-ESM (used by
-\citet{timmreck2010,niemeier2015}), but an ancestor of HadCM3 (used by
-\citet{gregory2016}) \citep{kuma2023}.
+From the \gls{c2wm} and \gls{c2wmp} cases, an apparent roughly linear relationship
+between \gls{aod} and \gls{rf} emerge in fig.~\ref{fig:aod_vs_toa_ses_avg}. There is,
+however, some spread in the data in particular of the \gls{c2ws} case. Importantly,
+there appear to be a time-after-eruption dependency on the \gls{rf} to \gls{aod} ratio.
+\citet{marshall2020} discuss a similar feature they find when looking at \gls{aod} and
+\gls{rf}, but there, the efficiency increases from year 1 to year 2, while here
+efficiency decreases with time, as shown in fig.~\ref{fig:aod_vs_toa_avg_loop_ratios}.
+\citet{marshall2020} explain that this is due to the time it takes for the aerosols to
+spread which affects the global albedo and in turn the \gls{rf}, with the \gls{aod}
+being less affected by the aerosols spreading. \citet{marshall2019, marshall2020,
+  marshall2021} used a code with seven log-normal modes to simulate aerosol mass and
+number concentrations, but their model is run in an atmosphere-only configuration with
+prescribed sea surface temperatures and sea ice extent \citep{marshall2019}, as opposed
+to the \gls{cesm2} which is run as an \gls{esm}. The configuration used by
+\citet{marshall2019} is from the model UM-UKCA, which is an extended version of the
+HadGEM3 \citep{dhomse2014}, which in turn is from a different family of models than both
+\gls{cesm2} and ECHAM5/MIP-ESM (used by \citet{timmreck2010,niemeier2015}), but an
+ancestor of HadCM3 (used by \citet{gregory2016}) \citep{kuma2023}.
 
 Smaller eruptions and estimates from them give an \gls{rf} to \gls{aod} ratio that is
 quite large (\(\sim \SI{-20}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\)), while larger
@@ -936,8 +942,8 @@ eruptions (or yearly \iso{} in the atmosphere as used in \citet{niemeier2015}) r
 estimates that are smaller in magnitude (\(\sim
 \SI{-10}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) to \(\sim
 \SI{-5}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\), as shown in
-\ref{fig:aod_vs_toa_avg_loop_ratios}). \citet{niemeier2017} show that the efficiency
-decrease as the injection rate increase, which is related to
+fig.~\ref{fig:aod_vs_toa_avg_loop_ratios}). \citet{niemeier2017} show that the
+efficiency decrease as the injection rate increase, which is related to
 % the \gls{qbo}, and
 that larger volcanic eruptions results in larger aerosol particle sizes which in turn
 result in a decreasing cooling efficiency per \iso{} \citep{english2013, timmreck2018}.
@@ -950,11 +956,10 @@ result in a decreasing cooling efficiency per \iso{} \citep{english2013, timmrec
 % NOTE: climate feedback/response parameter
 
 The climate feedback parameter is estimated by \citet{jones2005} to be \(\alpha \simeq
-\SI{4}{\watt\metre^{-2}\kelvin^{-1}}\)\footnote{Still not sure how they do this, you
-  need constant forcing, no?}, which was more than twice (and half the sensitivity, since
-\(\alpha =1/s\) where \(s\) is the climate sensitivity parameter) of what
-\citet{gregory2016} obtained in their simulations using Pinatubo in the HadCM3 climate
-model. (They used a step volcanic forcing simulation to obtain their estimate).
+\SI{4}{\watt\metre^{-2}\kelvin^{-1}}\), which was more than twice (and half the
+sensitivity, since \(\alpha =1/s\) where \(s\) is the climate sensitivity parameter) of
+what \citet{gregory2016} obtained in their simulations using Pinatubo in the HadCM3
+climate model. (They used a step volcanic forcing simulation to obtain their estimate).
 
 Instead of estimating \(\alpha \), we focus our attention to the climate resistance
 \(\rho \), and the \gls{tcrp} \(1/\rho\) (where \(\mathrm{TCS}=F_{2\times}\times
@@ -977,26 +982,24 @@ note that the climate resistance and the climate feedback parameter are related 
 ocean heat uptake efficiency \(\kappa \) through \(\rho =\alpha +\kappa \).
 
 We estimate the climate resistance following the integral-form computation laid out in
-\ref{eq:climate-resistance} and using \(\tau =\SI{8}{\mathrm{yr}}\), as this is as long
-as our simulations run. The temperature has not quite reached back to equilibrium at
-this time, as seen in \ref{fig:compare-waveform}. The three tropical simulation cases
-(four in each ensemble) give estimated climate resistance \(\rho \) of \(\num{3.3(9)}\),
-\(\num{3.12(9)}\) and \(\num{2.91(8)}\), and \gls{tcrp} (\(1/\rho\)) of
-\(\num{0.32(7)}\), \(\num{0.321(9)}\) and \(\num{0.34(1)}\), shown in \ref{tab:trcp}.
-The climate resistance parameter \(\rho\) is not the same as the climate feedback
-parameter \citet{jones2005} estimated (\(\alpha\)), but as both \(\alpha \) and \(\kappa
-\) are positive, and our estimates of \(\rho (=\alpha +\kappa) \) are all smaller than
-the \citet{jones2005} estimate of \(\alpha \simeq
-\SI{4}{\watt\metre^{-2}\kelvin^{-1}}\), we conclude that the climate feedback parameter
-related to the simulations performed here must be significantly smaller than what
-\citet{jones2005} got.
+eq.~\ref{eq:climate-resistance} and using \(\tau =\SI{8}{\mathrm{yr}}\), as this is as
+long as our simulations run. The three tropical simulation cases (four in each ensemble)
+give estimated climate resistance \(\rho \) of \(\num{3.3(9)}\), \(\num{3.12(9)}\) and
+\(\num{2.91(8)}\), and \gls{tcrp} (\(1/\rho\)) of \(\num{0.32(7)}\), \(\num{0.321(9)}\)
+and \(\num{0.34(1)}\), shown in table~\ref{tab:trcp}. The climate resistance parameter
+\(\rho\) is not the same as the climate feedback parameter \citet{jones2005} estimated
+(\(\alpha\)), but as both \(\alpha \) and \(\kappa \) are positive, and our estimates of
+\(\rho (=\alpha +\kappa) \) are all smaller than the \citet{jones2005} estimate of
+\(\alpha \simeq \SI{4}{\watt\metre^{-2}\kelvin^{-1}}\), we conclude that the climate
+feedback parameter related to the simulations performed here must be significantly
+smaller than what \citet{jones2005} got.
 
 \begin{table}
   \centering
 
   \caption{Estimated climate resistance and \gls{tcrp} by use of the method outlined by
     \citet{merlis2014}. Estimates are based on ensembles with four members, and where \(\tau
-    =\SI{9}{\mathrm{y}}\) in \ref{eq:climate-resistance}}\label{tab:trcp}%
+    =\SI{8}{\mathrm{yr}}\) in eq.~\ref{eq:climate-resistance}}\label{tab:trcp}%
   \begin{tabular}{ccc}
     Simulation type & \(\rho [\si{\watt\metre^{-2}\kelvin^{-1}}]\) & \(1/\rho\)         \\
     \gls{c2ws}      & \(\num{2.91(8)}\)                            & \(\num{0.34(1)}\)  \\
@@ -1019,18 +1022,13 @@ eruptions is also consistent with data from previous studies of super-volcanoes.
 We find that there is generally hard to find a consistent conversion between \iso{} and
 \gls{aod} that translates well between models, while from our simulations in the
 \gls{cesm2} there is close to a linear relationship between \iso{} and \gls{aod}, with
-both having a exponential decay across large injection magnitudes.
+both having an exponential decay across large injection magnitudes.
 
 The time-after-eruption dependence of the ratio between \gls{rf} and \gls{aod} have been
 reported before, but where the efficiency increased with time \citep{marshall2020}, that
 is, \gls{rf} became relatively larger when compared with \gls{aod}. Our simulations
 rather show a decrease in the aerosols cooling efficiency, where the \gls{aod} was
 relatively larger than \gls{rf} later in the eruption phase.
-
-% TODO: would smaller alpha give smaller or larger temp in Jones et al.?
-Climate resistance estimates. \emph{Maybe the difference in climate resistance we get
-  compared to what \citet{jones2005} used can be a pointer on that the small \gls{rf} to
-  \gls{aod} ratio they got was too small even for such a large eruption.}
 
 An interesting aspect concerning the similar decaying phase seen in both the \gls{aod}
 time series and the \gls{rf} time series is the influence of these decaying phases on
@@ -1046,22 +1044,22 @@ be well resolved is therefore another avenue that could be explored further.
 \acknowledgments
 %  Keep acknowledgments (note correct spelling: no ``e'' between the ``g'' and
 % ``m'') as brief as possible. In general, acknowledge only direct help in
-%  writing or research. Financial support (e.g., grant numbers) for the work done, 
-%  for an author, or for the laboratory where the work was performed must be 
+%  writing or research. Financial support (e.g., grant numbers) for the work done,
+%  for an author, or for the laboratory where the work was performed must be
 %  acknowledged here rather than as footnotes to the title or to an author's name.
-%  Contribution numbers (if the work has been published by the author's institution 
-%  or organization) should be placed in the acknowledgments rather than as 
+%  Contribution numbers (if the work has been published by the author's institution
+%  or organization) should be placed in the acknowledgments rather than as
 %  footnotes to the title or to an author's name.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % DATA AVAILABILITY STATEMENT
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 
+%
 %
 \datastatement
-%  The data availability statement is where authors should describe how the data underlying 
-%  the findings within the article can be accessed and reused. Authors should attempt to 
-%  provide unrestricted access to all data and materials underlying reported findings. 
+%  The data availability statement is where authors should describe how the data underlying
+%  the findings within the article can be accessed and reused. Authors should attempt to
+%  provide unrestricted access to all data and materials underlying reported findings.
 %  If data access is restricted, authors must mention this in the statement. See
 %  {http://www.ametsoc.org/PubsDataPolicy} for more info.
 
@@ -1075,7 +1073,7 @@ be well resolved is therefore another avenue that could be explored further.
 
 %% If more than one appendix, use \appendix[<letter>], e.g.,
 
-%\appendix[A] 
+%\appendix[A]
 
 %% Appendix title is necessary! For appendix title:
 
@@ -1097,11 +1095,11 @@ Data from \citet{ottobliesner2016} are the original input data of \iso{} as used
 their model simulations, where corresponding \gls{rf} and temperature data are found as
 the value of the time series at the time of an eruption (according to the \iso{} time
 series). Therefore, \gls{rf} and temperature values may be somewhat smaller in
-\ref{fig:parameter_scan}b,c,f than their true value. Specifically, an ensemble of 5 is
-used for both \gls{rf} and temperature, and a mean from the 5 is used as the de facto
-\gls{rf} and temperature time series. A control simulation of a single time series is
-used to remove seasonal dependence from the temperature, where the control simulation is
-averaged into a climatology mean. Further, a drift in the temperature is removed by
+figs.~\ref{fig:parameter_scan}b,c,f than their true value. Specifically, an ensemble of
+5 is used for both \gls{rf} and temperature, and a mean from the 5 is used as the de
+facto \gls{rf} and temperature time series. A control simulation of a single time series
+is used to remove seasonal dependence from the temperature, where the control simulation
+is averaged into a climatology mean. Further, a drift in the temperature is removed by
 subtracting a linear regression fit. \gls{rf} have seasonality removed in the Fourier
 domain. The forcing (\ce{SO2}) can be downloaded with direct link
 \url{https://svn-ccsm-inputdata.cgd.ucar.edu/trunk/inputdata/atm/cam/volc/IVI2LoadingLatHeight501-2000_L18_c20100518.nc},
