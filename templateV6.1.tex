@@ -322,7 +322,7 @@ reported more recently. Simulations done with synthetic volcanoes have also been
 and in \citet{marshall2020} they obtain a scaling factor of
 \(\SI{-20.5(2)}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) from \(82\) simulations of volcanic
 eruptions with varying injection height and latitude, ranging from \(10\) to
-\(\SI{100}{\tera\gram}\) of \iso{}.
+\(\SI{100}{\tera\gram(\ce{SO2})}\).
 
 A similar simulation setup, albeit with notable differences, was done by
 \citet{niemeier2015}, where \(14\) different levels of injected sulphur ranging between
@@ -341,7 +341,7 @@ literature, the peak \gls{rf} obtained in the super-volcano simulation was
 \(\SI{-60}{\watt\metre^{-2}}\), suggesting the \citet{niemeier2015} results might be
 transferable to a volcanic eruption simulation scenario. Moreover, \citet{timmreck2010}
 find a peak \gls{rf} anomaly of \(\SI{-18}{\watt\metre^{-2}}\) from
-\(\SI{1700}{\tera\gram}\) of \iso{}, which corresponds well with the function estimated
+\(\SI{1700}{\tera\gram(\ce{SO2})}\), which corresponds well with the function estimated
 by \citet{niemeier2015}.
 
 % \paragraph*{Similar contributions: Time-after-eruption dependence}
@@ -473,19 +473,20 @@ simulate volcanic eruptions.
 
 The simulations are summarized in table~\ref{tab:simulation-overview} and cover three
 \ce{SO2} injection magnitudes and four seasons; 15 February, 15 May, 15 August and 15
-November. The magnitudes vary across three orders of magnitude: \(\SI{26}{\tera\gram}\),
-\(\SI{400}{\tera\gram}\) and \(\SI{1629}{\tera\gram}\). The smallest eruption case
-(\gls{c2wm}) is of the same order of magnitude as Mt.\ Pinatubo
-\citep[\(\sim10\)--\(\SI{20}{\tera\gram}\);~e.g.][]{timmreck2018} and Mt.\ Tambora
-\citep[\(\sim\SI{56.2}{\tera\gram}\);~e.g.][]{zanchettin2016}, the intermediate case
-(\gls{c2wmp}) is similar to the 1257 Samalas eruption
-\citep[\(\sim{118.8}\)--\(\SI{173.1}{\tera\gram}\);~e.g.][]{toohey2017,ottobliesner2016},
+November. The magnitudes vary across three orders of magnitude:
+\(\SI{26}{\tera\gram(\ce{SO2})}\), \(\SI{400}{\tera\gram(\ce{SO2})}\) and
+\(\SI{1629}{\tera\gram(\ce{SO2})}\). The smallest eruption case (\gls{c2wm}) is of the
+same order of magnitude as Mt.\ Pinatubo
+\citep[\(\sim10\)--\(\SI{20}{\tera\gram(\ce{SO2})}\);~e.g.][]{timmreck2018} and Mt.\
+Tambora \citep[\(\sim\SI{56.2}{\tera\gram(\ce{SO2})}\);~e.g.][]{zanchettin2016}, the
+intermediate case (\gls{c2wmp}) is similar to the 1257 Samalas eruption
+\citep[\(\sim{118.8}\)--\(\SI{173.1}{\tera\gram(\ce{SO2})}\);~e.g.][]{toohey2017,ottobliesner2016},
 and the largest case (\gls{c2ws}) is similar to the \gls{ytt} eruption
-\citep[\(100\)--\(\SI{10000}{\tera\gram}\);~e.g.][]{jones2005}. They are all located at
-the equator, at \(\SI{0}{\degree N}\), \(\SI{1}{\degree E}\) and \ce{SO2} is injected
-between \(\SI{18}{\kilo\meter}\) and \(\SI{20}{\kilo\meter}\). An ensemble of two
-additional eruptions at high latitude were also simulated, separated by six months (15
-February and 15 August) (\gls{c2wsn}). They are of the same magnitude in \iso{} as
+\citep[\(100\)--\(\SI{10000}{\tera\gram(\ce{SO2})}\);~e.g.][]{jones2005}. They are all
+located at the equator, at \(\SI{0}{\degree N}\), \(\SI{1}{\degree E}\) and \ce{SO2} is
+injected between \(\SI{18}{\kilo\meter}\) and \(\SI{20}{\kilo\meter}\). An ensemble of
+two additional eruptions at high latitude were also simulated, separated by six months
+(15 February and 15 August) (\gls{c2wsn}). They are of the same magnitude in \iso{} as
 \gls{c2ws}, but located at \(\SI{56}{\degree \mathrm{N}}\). An advantage with having
 eruptions this big, in the large to super-volcano size, is improvement of the
 signal-to-noise ratio without having to run a large and computationally expensive
@@ -501,20 +502,20 @@ values for the forcing open \citep{gregory2016}.
     with different magnitudes to \gls{c2ws}}\label{tab:simulation-overview}%
   \begin{center}
     \begin{tabular}[c]{cccc}
-      \textbf{Name}                & \textbf{\ce{SO2}}         & \textbf{Lon, lat, alt} &
-      \textbf{Eruption months}                                                            \\
-      \gls{c2wsn}                  & \(\SI{1629}{\tera\gram}\) &
+      \textbf{Name}                & \textbf{\ce{SO2}}                   & \textbf{Lon, lat, alt} &
+      \textbf{Eruption months}                                                                      \\
+      \gls{c2wsn}                  & \(\SI{1629}{\tera\gram(\ce{SO2})}\) &
       \SI{1}{\degree\mathrm{E}}, \SI{56}{\degree\mathrm{N}},
-      \(18\)--\SI{20}{\kilo\metre} & Feb,Aug                                              \\
-      \gls{c2ws}                   & \(\SI{1629}{\tera\gram}\) &
+      \(18\)--\SI{20}{\kilo\metre} & Feb,Aug                                                        \\
+      \gls{c2ws}                   & \(\SI{1629}{\tera\gram(\ce{SO2})}\) &
       \SI{1}{\degree\mathrm{E}}, \SI{0}{\degree\mathrm{N}}, \(18\)--\SI{20}{\kilo\metre}
-                                   & Feb,May,Aug,Nov                                      \\
-      \gls{c2wmp}                  & \(\SI{400}{\tera\gram}\)  &
+                                   & Feb,May,Aug,Nov                                                \\
+      \gls{c2wmp}                  & \(\SI{400}{\tera\gram(\ce{SO2})}\)  &
       \SI{1}{\degree\mathrm{E}}, \SI{0}{\degree\mathrm{N}},
-      \(18\)--\SI{20}{\kilo\metre} & Feb,May,Aug,Nov                                      \\
-      \gls{c2wm}                   & \(\SI{26}{\tera\gram}\)   &
+      \(18\)--\SI{20}{\kilo\metre} & Feb,May,Aug,Nov                                                \\
+      \gls{c2wm}                   & \(\SI{26}{\tera\gram(\ce{SO2})}\)   &
       \SI{1}{\degree\mathrm{E}}, \SI{0}{\degree\mathrm{N}}, \(18\)--\SI{20}{\kilo\metre}
-                                   & Feb,May,Aug,Nov                                      \\
+                                   & Feb,May,Aug,Nov                                                \\
     \end{tabular}
   \end{center}
 \end{table}
@@ -784,8 +785,8 @@ find.
 % reference to the Bekki et al. (1996) paper. Bekki uses 6000 Mt SO2, Niemeier uses 3000
 % Tg(S).
 \citet{niemeier2015} did simulations of continually emitting injections of sulphur, up
-to \(\SI{100}{\tera\gram \mathrm{(S)}\mathrm{yr}^{-1}}\), in the middle atmosphere
-version of the GCM ECHAM5 \citep{giorgetta2006} and with aerosol microphysics from HAM
+to \(\SI{100}{\tera\gram(\ce{SO2})\mathrm{yr}^{-1}}\), in the middle atmosphere version
+of the GCM ECHAM5 \citep{giorgetta2006} and with aerosol microphysics from HAM
 \citep{stier2005}. They found that the impact of increasing the injection rate lead to
 an \gls{rf} as a function of injection rate \(x\) that had an exponential decay
 converging to \(\SI{-65}{\watt\meter^{-2}}\),
@@ -869,9 +870,9 @@ combination with strong noise make the data less reliable.
 Figures~\ref{fig:aod_vs_toa_ses_avg},~\ref{fig:aod_vs_toa_avg_loop_ratios} and
 \ref{fig:parameter_scan}d all show that as the \gls{aod} increases past \(\sim 1.0\),
 the scaling of \(\sim -20\) no longer map to corresponding values of \gls{rf}. When
-looking at the intermediate volcanic eruption with \(\SI{400}{\tera\gram}\) \iso{} there
-seem to be a mostly linear relationship between the \gls{aod} and \gls{rf} values, with
-a slope of approximately \(-10\). As for the largest eruption, scaling \gls{aod} by
+looking at the intermediate volcanic eruption with \(\SI{400}{\tera\gram(\ce{SO2})}\)
+there seem to be a mostly linear relationship between the \gls{aod} and \gls{rf} values,
+with a slope of approximately \(-10\). As for the largest eruption, scaling \gls{aod} by
 \(\sim-5\) yields reasonable \gls{rf} values. From fig.~\ref{fig:parameter_scan}a we
 have an almost linear relation between \iso{} and \gls{aod}, and previous results
 indicate that larger eruptions where more \ce{SO2} is injected creates larger aerosols

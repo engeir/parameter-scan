@@ -22,9 +22,6 @@ tectonic templateV5.tex
 
 ## Notes
 
-- [ ] Change "Tg of injected SO2" to "Tg(SO2)", as used by Niemeier and Timmreck, but
-      for "Tg(S)".
-
 ### Large eruptions compared to small
 
 - $\mathrm{SO_2}$ oxidises more slowly due to lack of OH, which delays the peak AOD
