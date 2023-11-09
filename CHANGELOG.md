@@ -1,5 +1,37 @@
 # Changelog
 
+## [0.2.0](https://github.com/engeir/parameter-scan/compare/v0.1.2...v0.2.0) (2023-11-09)
+
+
+### Features
+
+* **acronym:** remove acronym package for the more known glossaries ([07bcbed](https://github.com/engeir/parameter-scan/commit/07bcbed19757af3a57960ec2ba4f6600cf733f4d))
+* **ams-version:** remove the old v5 ([dcec7d0](https://github.com/engeir/parameter-scan/commit/dcec7d090aaa5b3a35f880379067e833b3072a42))
+* **amsv6.1:** update the AMS latex template to v6.1 ([7e44902](https://github.com/engeir/parameter-scan/commit/7e44902799c298c216f217fb663d9c2e52d5cf36))
+
+
+### Bug Fixes
+
+* **dos2unix:** fix eol of remaining ams files ([e24aa94](https://github.com/engeir/parameter-scan/commit/e24aa94c84cfbf93eb41a2245667e472510187dc))
+* **eol:** AMS used DOS line endings, I need unix ([b63eac5](https://github.com/engeir/parameter-scan/commit/b63eac52c3295a1b7fdd40197b49dfa3ceab12ff))
+
+
+### Miscellaneous
+
+* **plots:** update plots ([3020136](https://github.com/engeir/parameter-scan/commit/30201364521e65e0b899ef3811b9f9bbff3045f6))
+* remove unnecessary files ([4bfef7c](https://github.com/engeir/parameter-scan/commit/4bfef7c6fee6328e7bef469c7ee26fcf19573641))
+* **todo:** done moving the temp fig motivation ([6626350](https://github.com/engeir/parameter-scan/commit/6626350f132969451973d9c8a97a607889dcd7bb))
+
+
+### Code Refactoring
+
+* **ref:** fix all references after removing cleveref ([58476ce](https://github.com/engeir/parameter-scan/commit/58476ce3518bf01217e3a0abde3a4046056566a6))
+
+
+### Continuous Integration
+
+* **github:** add more fields to the release workflow ([afe7c56](https://github.com/engeir/parameter-scan/commit/afe7c564306e465c9ebd5a4ab3d536685f311854))
+
 ## [0.1.2](https://github.com/engeir/parameter-scan/compare/v0.1.1...v0.1.2) (2023-11-06)
 
 
