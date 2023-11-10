@@ -245,76 +245,81 @@
 
 % Toohey et al 2011 have a nice end of introduction.
 
+The \gls{rf} and \gls{aod}, expressing the energy imbalance at \gls{toa} and the opacity
+of the stratosphere due to aerosol scattering, are much used as measures to express the
+forcing from large volcanic eruptions. Often the \gls{rf} is assumed to depend linearly
+on the \gls{aod} \citep{myhre2013,andersson2015}, and several studies have shown such a
+linear relationship to be good estimates when running climate model simulations of
+volcanic eruptions \citep{mills2017,hansen2005,gregory2016,marshall2020,pitari2016b}.
+Despite this, there is a wide spread in the estimated volcanic forcing efficiencies
+among the studies, ranging between \(\sim \SI{15}{\watt\metre^{-2}\ce{AOD}^{-1}}\)
+\citep{pitari2016b} and \(\sim \SI{25}{\watt\metre^{-2}\ce{AOD}^{-1}}\)
+\citep{myhre2013}.
+
 % \paragraph*{Historical background: Volcanoes in climate science}
 
-During much of the past few thousand years, the Holocene, the natural climate
-variability on Earth has been mostly forced by volcanic eruptions \citep{sigl2022}.
-Despite the strong climate variability impact of volcanic eruptions, in particular up to
-the current anthropogenic forcing of the climate, few climate model experiments have
-included volcanic forcing when simulating climate evolution during the Holocene
-\citep{sigl2022}, implying an exaggerated positive forcing \citep{gregory2016}. Thus,
-even though the understanding of how volcanic eruptions force the climate has been given
-much attention, questions for example related to aerosol particle processes such as how
-they grow, which impacts their scattering efficiency and possibly the \gls{aod} to
-\gls{rf} relationship is still unanswered
+Before the current strong anthropogenic forcing of the climate, during the Holocene
+period, the climate variability on Earth was mostly forced by volcanic eruptions
+\citep{sigl2022}. Despite the strong climate variability impact of volcanic eruptions,
+few climate model experiments have included volcanic forcing when simulating climate
+evolution during the Holocene \citep{sigl2022}, implying an exaggerated positive forcing
+\citep{gregory2016,solomon2011}. This lack of a persistent cooling is one of several
+factors that contribute to a discrepancy commonly found between simulated and observed
+global warming \citep{andersson2015}. Even though the understanding of how volcanic
+eruptions force the climate have been given much attention, questions related to aerosol
+particle processes such as how they grow, which impacts their scattering efficiency and
+possibly the \gls{rf} to \gls{aod} relationship are still unanswered
 \citep[e.g.][]{robock2000,zanchettin2019,marshall2020,marshall2022}.
-
-% NOTE: Section on similarities between CO2 and volcanic forcing. (feedback params
-% references). Richardson is doing something that looks very similar to Gunther 2022.
-% Mention that as well? (Similarity bw 0.5CO2 and volcanoes.)
-
-% \paragraph*{Historical background: Can volcanoes aid \ce{CO2} in constraining \gls{ecs}?}
-
-% NOTE: take-away should be how RF is estimated and that it is sometimes defined as ERF
-% and IRF.
-
-One avenue that has been given much attention is how forcing from volcanoes or
-volcano-like forcings compares to the forcing that is due to increased \ce{CO2} levels.
-\citet{boer2007,marvel2016,merlis2014,ollila2016,richardson2019,salvi2022,wigley2005}
-all investigate the link, or if any exists, between volcanic forcing and the climate
-sensitivity to a doubling of \ce{CO2}. This comparison is motivated by the large
-uncertainty in estimates of the sensitivity of the real climate system, and inferring
-climate sensitivity from for example volcanoes have been used as an attempt to constrain
-the sensitivity \citep{boer2007}. Such a constraint rely on the assumption that volcanic
-forcing and \ce{CO2} forcing produce correlated feedbacks \citep{pauling2023}. Earlier
-studies suggest that it might be possible to constrain \gls{ecs} with volcanoes
-\citep{bender2010}, as long as \gls{ecs} is constrained by \gls{erf} and not \gls{irf},
-which differ in that \gls{erf} account for rapid atmospheric adjustments while \gls{irf}
-do not \citep{richardson2019}. Other studies suggest either that constraining \gls{ecs}
-by \gls{erf} is not possible and that the sensitivity to volcanic forcing and \ce{CO2}
-doubling are different \citep{douglass2006}, or that constraining the \gls{ecs} by
-\gls{erf} will be inaccurate since the precision at which climate simulations are run is
-not high enough \citep{boer2007,salvi2022}. Even though \gls{erf} is a more suited
-indicator of the temperature response to a forcing than \gls{irf}
-\citep{marvel2016,richardson2019}, more recent studies conclude that \gls{ecs} cannot be
-constrained from volcanoes \citep{pauling2023}.
-
-% \paragraph*{Theoretical background: Aerosol evolution and atm.\ dynamics}
+\citet{marshall2020} present results showing higher efficiencies in years 2 and 3 after
+an eruption, compared to year 1, suggesting that this is due to the aerosols being
+concentrated more spatially in the first year and more spread out in later years. This
+has the effect of increasing the albedo per global mean \gls{aod} which in turn
+increases the \gls{rf} to \gls{aod} ratio \citep{marshall2020}.
+% TODO: Also, \gls{aod} to \gls{rf} depend on insulation, cloudiness and surface albedo
+% among others, which vary across eruptions \citep{marshall2021,andersson2015}.
 
 \ce{H2O}, \ce{N2} and \ce{CO2} are the most abundant gases emitted by volcanoes
 \citep{robock2000}, but still, sulphur species like \ce{SO2} are the most influential
 due to the already relatively high concentrations of the former gases in the atmosphere.
-From \ce{SO2} \ce{H2SO4} is formed after reactions with \ce{OH} and \ce{H2O}
-\citep{robock2000}. Sulphate acid, \ce{H2SO4}, produces the largest effect by
-backscattering sunlight and thus increasing the planetary albedo and reducing the
-\gls{rf} from the Sun, and since its formation from \ce{SO2} is happening over weeks
-\citep{robock2000}, the peak \gls{rf} from the eruption has a slight delay from the
-onset of the eruption. The duration of time that the \ce{H2SO4} aerosols stay in the
-atmosphere depends on several factors, including the phase of the \gls{qbo}
-\citep{pitari2016b}, the season of the year (determining to which hemisphere aerosols
-are transported) \citep{toohey2011,toohey2019}, latitude \citep{marshall2019,
-  toohey2019}, volcanic plume height \citep{marshall2019} and the aerosol size
-\citep{marshall2019}. In the case of tropical eruptions, aerosols are typically
+From \ce{SO2} molecules of \ce{H2SO4} is formed after reactions with \ce{OH} and
+\ce{H2O} \citep{robock2000}. Sulphate acid, \ce{H2SO4}, is backscattering sunlight and
+hereby increasing the planetary albedo. Since its formation from \ce{SO2} is happening
+over weeks \citep{robock2000}, the peak \gls{rf} from the eruption has a slight delay
+from the onset of the eruption. The duration of time that the \ce{H2SO4} aerosols stay
+in the stratosphere depends on several factors, including latitude \citep{marshall2019,
+  toohey2019}, volcanic plume height \citep{marshall2019}, the aerosol size
+\citep{marshall2019}, the phase of the \gls{qbo} \citep{pitari2016b} and the season of
+the year (determining to which hemisphere aerosols are transported)
+\citep{toohey2011,toohey2019}. In the case of tropical eruptions, aerosols are typically
 transported poleward in the stratosphere and back to mid-latitude troposphere within one
-to two years \citep{robock2000}. As the aerosols move below the tropopause they are
-removed by wet deposition before retaining their background state \citep{liu2012}.
+to two years \citep{robock2000}. As the aerosols eventually move below the tropopause
+they are readily removed by wet deposition \citep{liu2012}.
 
-% \paragraph*{Similar contributions: Comparing \gls{rf} and \gls{aod}}
+One avenue that has been given much attention is the magnitude of forcing from volcanoes
+or volcano-like forcings compared to increased \ce{CO2} levels. Several studies
+investigate the link between volcanic forcing and the climate sensitivity to a doubling
+of \ce{CO2}
+\citep{boer2007,marvel2016,merlis2014,ollila2016,richardson2019,salvi2022,wigley2005}.
+This comparison is motivated by the large uncertainty in estimates of the sensitivity of
+the real climate system. Inferring climate sensitivity from for example volcanoes has
+been used as an attempt to constrain the sensitivity \citep{boer2007}. Such a constraint
+relies on the assumption that volcanic forcing and \ce{CO2} forcing produce similar
+feedbacks \citep{pauling2023}. Earlier studies suggest that it might be possible to
+constrain \gls{ecs} with volcanoes \citep{bender2010}, as long as \gls{ecs} is
+constrained by \gls{erf} rather than \gls{irf}, which differ in that \gls{erf} account
+for rapid atmospheric adjustments in contrast to \gls{irf} \citep{richardson2019}. Other
+studies suggest that constraining \gls{ecs} by \gls{erf} is not possible and that the
+sensitivity to volcanic forcing and \ce{CO2} doubling are different
+\citep{douglass2006}, or that constraining the \gls{ecs} by \gls{erf} will be inaccurate
+since the precision at which climate simulations are run is not high enough
+\citep{boer2007,salvi2022}. Even though \gls{erf} is a more suited indicator of the
+forcing than \gls{irf} \citep{marvel2016,richardson2019}, more recent studies conclude
+that \gls{ecs} cannot be constrained from volcanoes \citep{pauling2023}.
 
 Previous studies on both Mt.\ Pinatubo alone \citep{mills2017,hansen2005} and volcanoes
 in the instrumental era \citep{gregory2016} have been used to estimate the relationship
-between the \gls{rf} energy imbalance caused by volcanic eruptions and \gls{aod}.
-\citet{myhre2013} use a formula for \gls{rf} that scales \gls{aod} by
+between the \gls{rf} energy imbalance and change in \gls{aod} caused by volcanic
+eruptions. \citet{myhre2013} use a formula for \gls{rf} that scales \gls{aod} by
 \(\SI{-25}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) while estimates down to
 \(\SI{-19.0(5)}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) \citep{gregory2016} and
 \(\SI{-18.3(10)}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) \citep{mills2017} have been
@@ -344,31 +349,14 @@ find a peak \gls{rf} anomaly of \(\SI{-18}{\watt\metre^{-2}}\) from
 \(\SI{1700}{\tera\gram(\ce{SO2})}\), which corresponds well with the function estimated
 by \citet{niemeier2015}.
 
-% \paragraph*{Similar contributions: Time-after-eruption dependence}
-
-The aerosol evolution and lifetime in the stratosphere influence the \gls{aod} and the
-\gls{rf}, but not always in the same way. \citet{marshall2020} present results showing
-higher efficiencies in years 2 and 3 after an eruption, compared to year 1, suggesting
-that this is due to the aerosols being concentrated more spatially in the first year and
-more spread out in later years. This has the effect of increasing the albedo per global
-mean \gls{aod} which in turn increases the \gls{rf} to \gls{aod} ratio
-\citep{marshall2020}.
-% TODO: Also, \gls{aod} to \gls{rf} depend on insulation, cloudiness and surface albedo
-% among others, which vary across eruptions \citep{marshall2021,andersson2015}.
-% Andersson note that including the lowermost stratosphere is in some latitudes part in
-% increaseing the AOD by 45%, which means to include AOD estimates between the
-% tropopause and 380K potential temperature level.
-% gettleman2019 refer to AOD at being above the tropopause, so my initial guess is the
-% CESM2 do consider the full vertical profile that Andersson calls for.
-
-% \paragraph*{This paper's contributions}
-
-This work aims to evaluate the relationship between \gls{aod} and \gls{rf} for volcanic
-eruptions of super-volcano size. This is considering the linear relationship often found
-between \gls{aod} and \gls{rf} of approximately
-\(\SI{20}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) \citep{gregory2016, marshall2020,
-  mills2017, myhre2013} along with studies indicating a non-linear relationship
-\citep{niemeier2015}, as well as a time-after-eruption dependence \citep{marshall2020}.
+Studies have shown a linear relationship between \gls{aod} and \gls{rf} of approximately
+\(\SI{20}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) to perform well, but with a substantial
+spread in the slope across the studies
+\citep{mills2017,hansen2005,gregory2016,marshall2020,pitari2016b}. Moreover, a
+time-after-eruption dependence on the \gls{rf} to \gls{aod} ratio is found in
+\citet{marshall2020}, whereas \citet{niemeier2015} obtain a non-linear relationship
+between \iso{} and \gls{aod}. Hence, an agreement on the relationship between \gls{aod}
+and \gls{rf} has yet to be established.
 
 To address these issues we simulate ensembles of volcanic eruptions in the \gls{cesm2},
 with \iso{} spanning three orders of magnitude of \(\SI{26}{\tera\gram(\ce{SO2})}\),
