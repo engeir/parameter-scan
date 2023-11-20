@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0](https://github.com/engeir/parameter-scan/compare/v0.2.0...v0.3.0) (2023-11-20)
+
+
+### Features
+
+* **introduction:** full rewrite ([#6](https://github.com/engeir/parameter-scan/issues/6)) ([02c4dab](https://github.com/engeir/parameter-scan/commit/02c4daba48d01ea302a182ff99a1ef4b00d5a774))
+
+
+### Bug Fixes
+
+* **unit:** use Tg(SO2) as unit rather than Tg of injected SO2 ([8c4b2ac](https://github.com/engeir/parameter-scan/commit/8c4b2ac9058e332d992c95a77627ab0081b6dda3))
+
 ## [0.2.0](https://github.com/engeir/parameter-scan/compare/v0.1.2...v0.2.0) (2023-11-09)
 
 
