@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.3](https://github.com/engeir/parameter-scan/compare/v0.3.2...v0.3.3) (2023-11-21)
+
+
+### Bug Fixes
+
+* **action:** build must finish before release ([6e9aefc](https://github.com/engeir/parameter-scan/commit/6e9aefc073402391e717677113f8a7a309e85f7c))
+* **github:** make action run ([9c65666](https://github.com/engeir/parameter-scan/commit/9c6566688070b53c3f5751d13002c126f735daa8))
+
 ## [0.3.2](https://github.com/engeir/parameter-scan/compare/v0.3.1...v0.3.2) (2023-11-21)
 
 
