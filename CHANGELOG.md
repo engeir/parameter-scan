@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.4](https://github.com/engeir/parameter-scan/compare/v0.3.3...v0.3.4) (2023-11-21)
+
+
+### Bug Fixes
+
+* **github:** correct the artifact name ([98acdca](https://github.com/engeir/parameter-scan/commit/98acdca430e6ef97c0ab4706cacaa74a5c8a014a))
+
 ## [0.3.3](https://github.com/engeir/parameter-scan/compare/v0.3.2...v0.3.3) (2023-11-21)
 
 
