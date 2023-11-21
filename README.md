@@ -1,6 +1,6 @@
 # Parameter scan
 
-<sup>Latest version: v0.3.5</sup> <!-- x-release-please-version -->
+<sup>Latest version: v0.3.6</sup> <!-- x-release-please-version -->
 
 To run the continuous compiler, use the command
 
