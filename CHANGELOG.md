@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.6](https://github.com/engeir/parameter-scan/compare/v0.3.5...v0.3.6) (2023-11-21)
+
+
+### Bug Fixes
+
+* **github:** download artifact ([e4a0708](https://github.com/engeir/parameter-scan/commit/e4a0708be0879e976e859416dab5d5c906198663))
+
 ## [0.3.5](https://github.com/engeir/parameter-scan/compare/v0.3.4...v0.3.5) (2023-11-21)
 
 
