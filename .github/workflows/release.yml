@@ -45,8 +45,11 @@ jobs:
           extra-files: |
             README.md
           changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false},{"type":"style","section":"Styles","hidden":false},{"type":"refactor","section":"Code Refactoring","hidden":false},{"type":"perf","section":"Performance","hidden":false},{"type":"test","section":"Tests","hidden":false},{"type":"ci","section":"Continuous Integration","hidden":false},{"type":"build","section":"Build System","hidden":false},{"type":"docs","section":"Documentation","hidden":false}]'
+      - uses: actions/download-artifact@v3
+        with:
+          name: templateV6.1
       - name: Upload Release Artifact
         if: ${{ steps.release.outputs.release_created }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release upload ${{ steps.release.outputs.tag_name }} ./templateV6.1
+        run: gh release upload ${{ steps.release.outputs.tag_name }} templateV6.1
