@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.1](https://github.com/engeir/parameter-scan/compare/v0.3.0...v0.3.1) (2023-11-21)
+
+
+### Bug Fixes
+
+* **github:** wrong workflow file syntax ([0e4cf0e](https://github.com/engeir/parameter-scan/commit/0e4cf0ed85bfd8a3adfe0a6cc84a31c84e377435))
+* **github:** wrong workflow syntax ([b3f08de](https://github.com/engeir/parameter-scan/commit/b3f08de765212eaa4b2f8807c14da6be8443f953))
+* **github:** wrong workflow syntax ([3a0efea](https://github.com/engeir/parameter-scan/commit/3a0efea028df29d3b82b1c8881284e63a2c870ae))
+* **github:** wrong workflow syntax ([e9c5e7d](https://github.com/engeir/parameter-scan/commit/e9c5e7da757af127e7f1a9ad9365443936c078f4))
+* **table:** simulations position given in lat/lon/alt ([f8361c4](https://github.com/engeir/parameter-scan/commit/f8361c4ae3a70f0c2a5bd2f3bac161276e6798d4))
+
 ## [0.3.0](https://github.com/engeir/parameter-scan/compare/v0.2.0...v0.3.0) (2023-11-20)
 
 
