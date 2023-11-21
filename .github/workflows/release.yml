@@ -24,10 +24,11 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
-    needs: release-please
-    if: ${{ needs.release-please.steps.release.outputs.release_created }}
+    # if: ${{ jobs.release-please.steps.release.outputs.release_created }}
 
     steps:
+      - name: test_if
+        run: echo ${{ jobs.release-please.steps.release.outputs.release_created }}
       - name: Checkout
         uses: actions/checkout@v4
       - uses: actions/cache@v3
@@ -52,4 +53,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run:
-          gh release upload ${{ steps.release.outputs.tag_name }} ./artifact/templateV6.1.zip
+          gh release upload ${{ jobs.release-please.steps.release.outputs.tag_name }} ./artifact/templateV6.1.zip
