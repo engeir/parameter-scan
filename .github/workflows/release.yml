@@ -48,7 +48,7 @@ jobs:
           path: templateV6.1.tex 
 
       - name: Upload Release Artifact
-            env:
-              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            run:
-              gh release upload ${{ steps.release.outputs.tag_name }} ./artifact/templateV6.1.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run:
+          gh release upload ${{ steps.release.outputs.tag_name }} ./artifact/templateV6.1.zip
