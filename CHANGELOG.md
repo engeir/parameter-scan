@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.2](https://github.com/engeir/parameter-scan/compare/v0.3.1...v0.3.2) (2023-11-21)
+
+
+### Miscellaneous
+
+* **github:** check action output ([a63538f](https://github.com/engeir/parameter-scan/commit/a63538f2210fb72e85d59531953e841c01299c17))
+* **github:** check workflow output ([63f8ce4](https://github.com/engeir/parameter-scan/commit/63f8ce47572c7c9712872ed8eee75bdc9629c972))
+
 ## [0.3.1](https://github.com/engeir/parameter-scan/compare/v0.3.0...v0.3.1) (2023-11-21)
 
 
