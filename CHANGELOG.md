@@ -1,5 +1,30 @@
 # Changelog
 
+## [0.4.2](https://github.com/engeir/parameter-scan/compare/v0.4.1...v0.4.2) (2023-11-27)
+
+
+### Bug Fixes
+
+* **githib:** upload pdf, not tex file ([774cd56](https://github.com/engeir/parameter-scan/commit/774cd568f8380242ae724e0196e8792a64acefec))
+* **github:** checkout in upload step ([774cd56](https://github.com/engeir/parameter-scan/commit/774cd568f8380242ae724e0196e8792a64acefec))
+* **github:** correct workflow syntax ([774cd56](https://github.com/engeir/parameter-scan/commit/774cd568f8380242ae724e0196e8792a64acefec))
+* **github:** download artifact before adding to release ([774cd56](https://github.com/engeir/parameter-scan/commit/774cd568f8380242ae724e0196e8792a64acefec))
+* **github:** download artifact only when a new release is made ([6dc2884](https://github.com/engeir/parameter-scan/commit/6dc28847907c7dd1421d67a9199f450c40c5fd76))
+* **github:** download-artifact ([774cd56](https://github.com/engeir/parameter-scan/commit/774cd568f8380242ae724e0196e8792a64acefec))
+* **github:** list files ([774cd56](https://github.com/engeir/parameter-scan/commit/774cd568f8380242ae724e0196e8792a64acefec))
+* **github:** list files in artifact directory ([774cd56](https://github.com/engeir/parameter-scan/commit/774cd568f8380242ae724e0196e8792a64acefec))
+* **github:** more list files ([774cd56](https://github.com/engeir/parameter-scan/commit/774cd568f8380242ae724e0196e8792a64acefec))
+* **github:** print content of cache directory ([774cd56](https://github.com/engeir/parameter-scan/commit/774cd568f8380242ae724e0196e8792a64acefec))
+* **github:** try adding cache step ([774cd56](https://github.com/engeir/parameter-scan/commit/774cd568f8380242ae724e0196e8792a64acefec))
+* **github:** try download-artifact ([774cd56](https://github.com/engeir/parameter-scan/commit/774cd568f8380242ae724e0196e8792a64acefec))
+* **github:** try print again ([774cd56](https://github.com/engeir/parameter-scan/commit/774cd568f8380242ae724e0196e8792a64acefec))
+* **github:** try remove checkout ([774cd56](https://github.com/engeir/parameter-scan/commit/774cd568f8380242ae724e0196e8792a64acefec))
+
+
+### Miscellaneous
+
+* **github:** use more descriptive name on download step ([97de5d9](https://github.com/engeir/parameter-scan/commit/97de5d954966f1a49cf0694d2ff1393e9e862c38))
+
 ## [0.4.1](https://github.com/engeir/parameter-scan/compare/v0.4.0...v0.4.1) (2023-11-27)
 
 
