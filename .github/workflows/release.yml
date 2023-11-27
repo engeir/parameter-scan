@@ -9,6 +9,9 @@ permissions:
 
 name: release-please
 
+env:
+  TECTONIC_CACHE_PATH: ~/.cache/Tectonic
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -52,4 +55,4 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release upload ${{ steps.release.outputs.tag_name }} templateV6.1
+        run: gh release upload ${{ steps.release.outputs.tag_name }} $TECTONIC_CACHE_PATH/templateV6.1
