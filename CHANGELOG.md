@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.1](https://github.com/engeir/parameter-scan/compare/v0.4.0...v0.4.1) (2023-11-27)
+
+
+### Bug Fixes
+
+* **github:** use env variable to set path ([86a7fb0](https://github.com/engeir/parameter-scan/commit/86a7fb06f0579c1065e07e45062f66706d732a00))
+
 ## [0.4.0](https://github.com/engeir/parameter-scan/compare/v0.3.6...v0.4.0) (2023-11-27)
 
 
