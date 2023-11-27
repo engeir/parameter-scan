@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.4.0](https://github.com/engeir/parameter-scan/compare/v0.3.6...v0.4.0) (2023-11-27)
+
+
+### Features
+
+* **discussion:** finish first complete draft ([56fb7c6](https://github.com/engeir/parameter-scan/commit/56fb7c6136c5f6600fca15fb27b7be2d3671bf1c))
+
+
+### Miscellaneous
+
+* **style:** improve consistency in acronyms ([0b37fce](https://github.com/engeir/parameter-scan/commit/0b37fce783644b0b9cf98dae3932fdf71967ce79))
+
 ## [0.3.6](https://github.com/engeir/parameter-scan/compare/v0.3.5...v0.3.6) (2023-11-21)
 
 
