@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.3](https://github.com/engeir/parameter-scan/compare/v0.4.2...v0.4.3) (2023-11-27)
+
+
+### Bug Fixes
+
+* **github:** try checkout to fix gh command error ([8f3bbb5](https://github.com/engeir/parameter-scan/commit/8f3bbb582e2cc7cdc12a18aaa79542afe3e32a0f))
+
 ## [0.4.2](https://github.com/engeir/parameter-scan/compare/v0.4.1...v0.4.2) (2023-11-27)
 
 
