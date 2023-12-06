@@ -528,28 +528,29 @@ whether this will give realistic values for the forcing \citep{gregory2016}.
 \subsection{Inspecting the time series}
 
 We start by looking at the time series of the global mean surface air temperature.
-Medians with the 5th to 95th percentiles are shown in fig.~\ref{fig:compare-waveform},
-where the black lines are the medians across the four member ensembles, while shading
-indicate the percentiles. Three different forcing magnitudes have been used, namely the
-\gls{c2w} cases in table~\ref{tab:simulation-overview} (\gls{c2wm}, \gls{c2wmp} and
-\gls{c2ws}). The figures below show two alternative ways of normalizing the temperature
-response to these volcanic forcing events. First, the three temperature responses are
-normalized by setting the peak value equal to unity, shown in
-fig.~\ref{fig:compare-waveform}a. The second method of normalizing, shown in
-fig.~\ref{fig:compare-waveform}b, is to divide by the integral of the time series, such
-that the scaled time series integrate to unity.
+Medians with the 5th to 95th percentiles are shown in
+fig.~\ref{fig:compare-waveform-temp}, where the black lines are the medians across the
+four member ensembles, while shading indicate the percentiles. Three different forcing
+magnitudes have been used, namely the \gls{c2w} cases in
+table~\ref{tab:simulation-overview} (\gls{c2wm}, \gls{c2wmp} and \gls{c2ws}). The
+figures below show two alternative ways of normalizing the temperature response to these
+volcanic forcing events. First, the three temperature responses are normalized by
+setting the peak value equal to unity, shown in fig.~\ref{fig:compare-waveform-temp}a.
+The second method of normalizing, shown in fig.~\ref{fig:compare-waveform-temp}b, is to
+divide by the integral of the time series, such that the scaled time series integrate to
+unity.
 
 When normalizing by setting their amplitude to unity, the initial rise across all three
 time series is comparable. The difference among the three is how quickly the temperature
 reverts back to equilibrium, with the \gls{c2wm} case (solid black and blue shading in
-fig.~\ref{fig:compare-waveform}a) having a faster recovery. However, when normalizing by
-enforcing all time series to integrate to the same value, the tails of the temperature
-time series by construction become similar across the three eruption magnitudes. From
-both of these two normalizations, the amount of time spent at the peak temperature
-appears different. The temperature from the \gls{c2wm} case starts to revert sooner
-after it reaches the peak temperature. The shape of the initial rise and the tail is
-more similar across the three, while the peak is sharper in the \gls{c2wm} case compared
-to the two larger.
+fig.~\ref{fig:compare-waveform-temp}a) having a faster recovery. However, when
+normalizing by enforcing all time series to integrate to the same value, the tails of
+the temperature time series by construction become similar across the three eruption
+magnitudes. From both of these two normalizations, the amount of time spent at the peak
+temperature appears different. The temperature from the \gls{c2wm} case starts to revert
+sooner after it reaches the peak temperature. The shape of the initial rise and the tail
+is more similar across the three, while the peak is sharper in the \gls{c2wm} case
+compared to the two larger.
 
 Despite some differences, the shape of the temperature time series is similar across
 forcing magnitudes. No non-linear effects appear to have a strong impact even in the
@@ -567,13 +568,14 @@ play in all cases.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.95\linewidth]{figures/compare-waveform.png}
+  \includegraphics[width=0.95\linewidth]{figures/figure1.png}
 
   \caption{Temperature response to the three tropical volcanic eruptions cases,
     \gls{c2wm}, \gls{c2wmp} and \gls{c2ws}. The temperature time series have been normalized
     to have (a) peak values at unity and (b) so that they integrate to one, where \(C\) is
     the normalisation constant. Black lines indicate the median across the four member
-    ensembles, while shading mark the 5th and 95th percentiles.}\label{fig:compare-waveform}%
+    ensembles, while shading mark the 5th and 95th
+    percentiles.}\label{fig:compare-waveform-temp}%
 \end{figure}
 
 Whether the shape of the temperature time series can be inferred from the shape of
@@ -590,14 +592,14 @@ similar time after the eruption and at a similar rate.
 % TODO: Why? Marshall et al. (2019) and references therein may be the best source for a
 % suggested explanation.
 
-\begin{figure}
+\begin{figure*}
   \centering
-  \includegraphics[width=0.95\linewidth]{figures/arrays_combined_normalized.png}
+  \includegraphics[width=0.95\linewidth]{figures/figure2.png}
 
   \caption{The \gls{aod} time series (a) and \gls{rf} time series (b) from the simulations
     summarised in table~\ref{tab:simulation-overview}, scaled to have peak values at unity
   }\label{fig:arrays_normalised}
-\end{figure}
+\end{figure*}
 
 \subsection{\gls{rf} dependency on \gls{aod}}
 
@@ -632,7 +634,7 @@ close to a straight line.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.95\linewidth]{figures/aod_vs_toa_avg.png}
+  \includegraphics[width=0.95\linewidth]{figures/figure3.png}
 
   \caption{\gls{rf} as a function of \gls{aod}, yearly means. Data from the four
     simulations listed in table~\ref{tab:simulation-overview} (\gls{c2wm}, \gls{c2wmp},
@@ -729,7 +731,7 @@ efficiently, causing a smaller \gls{rf} to \gls{aod} ratio.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.95\linewidth]{figures/aod_vs_toa_loop.png}
+  \includegraphics[width=0.95\linewidth]{figures/figure4.png}
 
   \caption{(a): Ratio of \gls{rf} to \gls{aod}, with time-after-eruption on the horizontal
     axis. Slopes are linear regression fits and are described in
@@ -769,7 +771,7 @@ find.
 
 \begin{figure*}
   \centering
-  \includegraphics[width=0.95\linewidth]{figures/parameter_scan.png}
+  \includegraphics[width=0.95\linewidth]{figures/figure5.png}
 
   \caption{(a) \gls{aod} (b) \gls{rf} and (c) temperature as a function of \iso{}\@. (d)
     \gls{rf} and (e) temperature as a function of \gls{aod}. (f) Temperature as a function
