@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.4](https://github.com/engeir/parameter-scan/compare/v0.4.3...v0.4.4) (2023-12-06)
+
+
+### Miscellaneous
+
+* **figures:** use figures from figure repo ([0ad2e18](https://github.com/engeir/parameter-scan/commit/0ad2e18ae679cf4bd9492558d7bd582745cf0c71))
+
 ## [0.4.3](https://github.com/engeir/parameter-scan/compare/v0.4.2...v0.4.3) (2023-11-27)
 
 
