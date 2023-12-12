@@ -431,14 +431,13 @@ setup.
 
 We are using the \texttt{BWma1850} component
 setup\footnote{\url{https://docs.cesm.ucar.edu/models/cesm2/config/2.1.0/compsets.html}}
-to run the \gls{cesm2}, and an accompanying \gls{fsst}
-% WARN: how should the fSST compset be referred to
-simulation to obtain estimates of the \gls{rf}. The \gls{fsst} simulation used is not
-from a standardised component setup as of \gls{cesm2} (v2.1.3), but is instead specified
-in full.\footnote{\fssturl} They differ in \texttt{CICE -> CICE\%PRES}, which is
-prescribed sea-ice, \texttt{POP2\%ECO\%DEP -> DOCN\%DOM} which is from a dynamical ocean
-to a prescribed data ocean and the wave component \texttt{WW3 -> SWAV} which is now a
-stub wave component instead of the full \gls{ww3}.
+to run the \gls{cesm2}, and an accompanying \gls{fsst} simulation to obtain estimates of
+the \gls{rf}. The \gls{fsst} simulation used is not from a standardised component setup
+as of \gls{cesm2} (v2.1.3), but is instead specified in full.\footnote{\fssturl} They
+differ in \texttt{CICE -> CICE\%PRES}, which is prescribed sea-ice,
+\texttt{POP2\%ECO\%DEP -> DOCN\%DOM} which is from a dynamical ocean to a prescribed
+data ocean and the wave component \texttt{WW3 -> SWAV} which is now a stub wave
+component instead of the full \gls{ww3}.
 
 \subsection{Output variables}
 
@@ -483,7 +482,7 @@ improvement of the signal-to-noise ratio without having to run a large and
 computationally expensive ensemble. However, this still leaves open the question of
 whether this will give realistic values for the forcing \citep{gregory2016}.
 
-\begin{table}
+\begin{table*}
   \centering
 
   \caption{Simulations done with the \gls{cesm2}. \gls{c2wsn} and \gls{c2ws} are the same
@@ -510,7 +509,7 @@ whether this will give realistic values for the forcing \citep{gregory2016}.
                      & Feb,May,Aug,Nov                                                                                                            \\
     \end{tabular}
   \end{center}
-\end{table}
+\end{table*}
 
 \section{Results}\label{sec:results}
 
@@ -527,85 +526,66 @@ whether this will give realistic values for the forcing \citep{gregory2016}.
 
 \subsection{Inspecting the time series}
 
-We start by looking at the time series of the global mean surface air temperature.
-Medians with the 5th to 95th percentiles are shown in
-fig.~\ref{fig:compare-waveform-temp}, where the black lines are the medians across the
-four member ensembles, while shading indicate the percentiles. Three different forcing
-magnitudes have been used, namely the \gls{c2w} cases in
-table~\ref{tab:simulation-overview} (\gls{c2wm}, \gls{c2wmp} and \gls{c2ws}). The
-figures below show two alternative ways of normalizing the temperature response to these
-volcanic forcing events. First, the three temperature responses are normalized by
-setting the peak value equal to unity, shown in fig.~\ref{fig:compare-waveform-temp}a.
-The second method of normalizing, shown in fig.~\ref{fig:compare-waveform-temp}b, is to
-divide by the integral of the time series, such that the scaled time series integrate to
-unity.
+Time series of the global mean \gls{aod}, \gls{rf} and surface air temperature are shown
+in fig.~\ref{fig:compare-waveform-temp}. The black lines are the medians across the four
+member ensembles, while shading indicate the 5th to 95th percentiles. Three different
+forcing magnitudes have been used, namely the \gls{c2w} cases in
+table~\ref{tab:simulation-overview} (\gls{c2wm}, \gls{c2wmp} and \gls{c2ws}). The time
+series in fig.~\ref{fig:compare-waveform-temp} are normalized by setting the peak value
+equal to unity, where the peak value is defined based on the peak of a fit using a
+Savitzky-Golay filter of 3rd order and a one year window length.
 
-When normalizing by setting their amplitude to unity, the initial rise across all three
-time series is comparable. The difference among the three is how quickly the temperature
-reverts back to equilibrium, with the \gls{c2wm} case (solid black and blue shading in
-fig.~\ref{fig:compare-waveform-temp}a) having a faster recovery. However, when
-normalizing by enforcing all time series to integrate to the same value, the tails of
-the temperature time series by construction become similar across the three eruption
-magnitudes. From both of these two normalizations, the amount of time spent at the peak
-temperature appears different. The temperature from the \gls{c2wm} case starts to revert
-sooner after it reaches the peak temperature. The shape of the initial rise and the tail
-is more similar across the three, while the peak is sharper in the \gls{c2wm} case
-compared to the two larger.
+One feature that show up in all three subfigures is that the peak of the \gls{c2wm} case
+appear before the two larger eruption cases. Cases \gls{c2wmp} and \gls{c2ws} peak at
+similar times, but a faster rise is found in the \gls{aod} time series
+(fig.~\ref{fig:compare-waveform-temp}a). Additionally in
+fig.~\ref{fig:compare-waveform-temp}a we find that the stronger eruption cases have a
+sharper peak, or similarly a slower rise and faster decay. The rise across the eruption
+cases in fig.~\ref{fig:compare-waveform-temp}b is similar, but where the \gls{c2wm} case
+reach the peak just prior to the other two cases. During the decaying phase, all cases
+appear to decay at a similar rate, keeping the offset caused by the earlier peak arrival
+of \gls{c2wm}. Cases \gls{c2wmp} and \gls{c2ws} have indistinguishable \gls{rf} time
+series. Again in fig.~\ref{fig:compare-waveform-temp} where we look at the temperature
+evolution, cases \gls{c2wmp} and \gls{c2ws} are indistinguishable. The \gls{c2wm} case
+spends less time around the peak, but in importantly decays much faster compared to the
+\gls{c2wmp} and \gls{c2ws} cases.
 
-Despite some differences, the shape of the temperature time series is similar across
-forcing magnitudes. No non-linear effects appear to have a strong impact even in the
-\gls{c2ws} super-volcano case. Between the two strongest eruption cases (\gls{c2wmp} and
+Across all cases in each of the parameters show in fig.~\ref{fig:compare-waveform-temp},
+no non-linear effects appear to have a strong impact, even in the \gls{c2ws}
+super-volcano case. Between the two strongest eruption cases (\gls{c2wmp} and
 \gls{c2ws}) where noise play a much smaller role, shown as short stippled and long
-stippled lines with orange and green shading, the temperature time series are
-indistinguishable from one another. As such, it is expected that similar dynamics are at
-play in all cases.
-
-% NOTE: Any similar results that is consistent with a faster temperature recovery for
-% weaker volcanic forcing? Not, sure, but one curiosity is that in the AOD signals, the
-% smaller eruption spent more time at the peak, contrary to what seems to be the case
-% for the temperature. The RF time series have similar shape for all forcing magnitudes.
-% See figs. 9 (aod_arrays_normalised) and 10 (toa_arrays_normalised).
+stippled lines with orange and green shading, the \gls{rf} and temperature time series
+are indistinguishable from one another. As such, it is expected that similar dynamics
+are at play in all cases.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.95\linewidth]{figures/figure1.png}
+  \includegraphics{figures/figure1.png}
 
-  \caption{Temperature response to the three tropical volcanic eruptions cases,
-    \gls{c2wm}, \gls{c2wmp} and \gls{c2ws}. The temperature time series have been normalized
-    to have (a) peak values at unity and (b) so that they integrate to one, where \(C\) is
+  \caption{\gls{aod} (a), \gls{rf} (b) and temperature response (c) time series to the three tropical volcanic eruption cases,
+    \gls{c2wm}, \gls{c2wmp} and \gls{c2ws}. The time series have been normalized
+    to have peak values at unity, where \(C\) is
     the normalisation constant. Black lines indicate the median across the four member
     ensembles, while shading mark the 5th and 95th
-    percentiles.}\label{fig:compare-waveform-temp}%
+    percentiles}\label{fig:compare-waveform-temp}%
 \end{figure}
 
-Whether the shape of the temperature time series can be inferred from the shape of
-either of the forcing time series (\gls{aod} or \gls{rf}) is a natural question to raise
-next. When plotting the \gls{rf} time series, we find that their shapes are consistent
-over different eruption strengths (fig.~\ref{fig:arrays_normalised}b), and as such, that
+Next, we investigate whether the shape of the temperature time series can be inferred
+from the shape of either of the forcing time series (\gls{aod} or \gls{rf}). When
+plotting the \gls{rf} time series, we find that their shapes are consistent over
+different eruption strengths (fig.~\ref{fig:compare-waveform-temp}b), and as such, that
 the temperature seem to have a strong dependence on \gls{rf}. The same can largely be
 said about the \gls{aod} time series as well, but they do show a slight change in shape
-from smaller to larger eruptions (fig.~\ref{fig:arrays_normalised}a). Specifically, the
-\gls{aod} time series from the smaller eruptions have a fast rise and a flat peak before
-it decays back to its equilibrium state, while from the larger eruptions we find a
-slower rise time, but a sharper peak, making the decay to equilibrium happening at a
+from smaller to larger eruptions (fig.~\ref{fig:compare-waveform-temp}a). Specifically,
+the \gls{aod} time series from the smaller eruptions have a fast rise and a flat peak
+before it decays back to its equilibrium state, while from the larger eruptions we find
+a slower rise time, but a sharper peak, making the decay to equilibrium happening at a
 similar time after the eruption and at a similar rate.
-% TODO: Why? Marshall et al. (2019) and references therein may be the best source for a
-% suggested explanation.
-
-\begin{figure*}
-  \centering
-  \includegraphics[width=0.95\linewidth]{figures/figure2.png}
-
-  \caption{The \gls{aod} time series (a) and \gls{rf} time series (b) from the simulations
-    summarised in table~\ref{tab:simulation-overview}, scaled to have peak values at unity
-  }\label{fig:arrays_normalised}
-\end{figure*}
 
 \subsection{\gls{rf} dependency on \gls{aod}}
 
 We next focus our attention towards how the \gls{aod} and \gls{rf} time series develop
-relative to each other, which are both parameters commonly used for providing insight
-about how volcanic eruptions impact climate. A similar comparison was carried out in
+relative to each other. A similar comparison was carried out in
 \citet[][their Fig.\ 4]{gregory2016} and \citet[][their Fig.\ 1]{marshall2020}, with
 \gls{rf} to \gls{aod} plots. Figure~\ref{fig:aod_vs_toa_ses_avg} show annual mean values
 from the four simulation cases in table~\ref{tab:simulation-overview}; the small
@@ -634,7 +614,7 @@ close to a straight line.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.95\linewidth]{figures/figure3.png}
+  \includegraphics{figures/figure2.png}
 
   \caption{\gls{rf} as a function of \gls{aod}, yearly means. Data from the four
     simulations listed in table~\ref{tab:simulation-overview} (\gls{c2wm}, \gls{c2wmp},
@@ -649,9 +629,9 @@ close to a straight line.
     crosses). (b): Zooming in on the smallest values}\label{fig:aod_vs_toa_ses_avg}%
 \end{figure}
 
-To get a feeling for how the responses in \gls{aod} and \gls{rf} develop relative to
+To see how the responses in \gls{aod} and \gls{rf} develop relative to
 each other over time, as briefly mentioned in relation to
-fig.~\ref{fig:arrays_normalised}, we plot in fig.~\ref{fig:aod_vs_toa_avg_loop_ratios}
+fig.~\ref{fig:compare-waveform-temp}, we plot in fig.~\ref{fig:aod_vs_toa_avg_loop_ratios}
 seasonal means of the \gls{rf} to \gls{aod} ratio, where the start of the time series is
 taken as that of the eruption day. In fig.~\ref{fig:aod_vs_toa_avg_loop_ratios}a,
 straight lines are linear regression fits to the seasonal means across all four
@@ -660,7 +640,7 @@ standard deviation around the seasonal means. A similar shading is plotted in
 fig.~\ref{fig:aod_vs_toa_avg_loop_ratios}b, but where the regression fits have been
 omitted to avoid further cluttering the plot. The years where the signal-to-noise ratio
 is the lowest are years \(1\) and \(2\), as well as year \(0\) (the noise is mostly due
-to the \gls{rf} time series, shown in fig.~\ref{fig:arrays_normalised}b). For this
+to the \gls{rf} time series, shown in fig.~\ref{fig:compare-waveform-temp}b). For this
 reason the ratio of \gls{rf} to \gls{aod} is calculated for the second season of the
 first year until the end of the third year.
 
@@ -731,7 +711,7 @@ efficiently, causing a smaller \gls{rf} to \gls{aod} ratio.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.95\linewidth]{figures/figure4.png}
+  \includegraphics{figures/figure3.png}
 
   \caption{(a): Ratio of \gls{rf} to \gls{aod}, with time-after-eruption on the horizontal
     axis. Slopes are linear regression fits and are described in
@@ -771,7 +751,7 @@ find.
 
 \begin{figure*}
   \centering
-  \includegraphics[width=0.95\linewidth]{figures/figure5.png}
+  \includegraphics{figures/figure4.png}
 
   \caption{(a) \gls{aod} (b) \gls{rf} and (c) temperature as a function of \iso{}\@. (d)
     \gls{rf} and (e) temperature as a function of \gls{aod}. (f) Temperature as a function
@@ -863,7 +843,7 @@ exact temperature at day 400 (ca.\ 13 months) after the eruption according to th
 time series. Thus, missing the peak temperature means the estimates will be biased
 towards lower temperatures, while other eruptions occurring close in time will
 contribute a bias to higher temperatures. This, in combination with strong noise make
-the \gls{ob16} data less reliable.
+the results from the \gls{ob16} data less reliable.
 
 \section{Discussion}\label{sec:discussion}
 
@@ -894,20 +874,22 @@ radiation, making the cooling less efficient
 \citep{english2013,timmreck2010,timmreck2018}, an effect seen to influence the \gls{rf}
 and not \gls{aod}.
 
+% FIX: this paragraph is a mess
 \citet{timmreck2010} also remark that for very large eruptions, they look at Mt.\
 Pinatubo and \gls{ytt}, \ce{OH} radicals are not abundant enough which limit the
 \ce{SO2} oxidation. The peak in \gls{aod} levels for the \gls{ytt} simulation appear six
 months after the peak of Mt.\ Pinatubo in \citet{timmreck2010}, and at a much smaller
-value when compared to a \(100\times\) scaling, see their Fig.\ 1c, similar to what was
-found here and shown in fig.~\ref{fig:arrays_normalised}a where \gls{aod} peaks earlier
-for smaller eruptions. \citet{timmreck2010} obtain a peak \gls{rf} anomaly of
+value when compared to a \(100\times\) scaling (see Fig.\ 1c in \citet{timmreck2010}).
+This is similar to what was found here and shown in
+fig.~\ref{fig:compare-waveform-temp}a where \gls{aod} peaks earlier for smaller
+eruptions. \citet{timmreck2010} obtain a peak \gls{rf} anomaly of
 \(\SI{-18}{\watt\metre^{-2}}\) (\(7\)-\(8\) months after) compared to \citet{jones2005}
 of \(\SI{-60}{\watt\metre^{-2}}\) (one year after). \gls{rf} peak occurring before the
 \gls{aod} peak is again the same as what has been found here for \gls{cesm2},
 approximately \(6\)--\(8\) months after the eruption (see
-fig.~\ref{fig:arrays_normalised}). The magnitude of the \gls{rf} peak is much smaller in
-\citet{timmreck2010} than what we find, but does correspond well with both the
-functional fit obtained by \citet{niemeier2015} and the lower bounds from eruption
+fig.~\ref{fig:compare-waveform-temp}b). The magnitude of the \gls{rf} peak is much
+smaller in \citet{timmreck2010} than what we find, but does correspond well with both
+the functional fit obtained by \citet{niemeier2015} and the lower bounds from eruption
 simulations done by \citet{marshall2020}. As such, it is clear that the \gls{aod} time
 series are dependant on the magnitude of \iso{} to the extent of the timing of the peak,
 while the \gls{rf} time series are similar in shape but with smaller relative magnitudes
