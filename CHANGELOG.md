@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.4.5](https://github.com/engeir/parameter-scan/compare/v0.4.4...v0.4.5) (2023-12-19)
+
+
+### Bug Fixes
+
+* **figure:** remove previous fig2 and merge with fig1 ([9cb4d72](https://github.com/engeir/parameter-scan/commit/9cb4d729f4c50d832d8802bf08328b3a2ddb9773))
+
+
+### Miscellaneous
+
+* **grammar:** improve introduction and results ([75b3c91](https://github.com/engeir/parameter-scan/commit/75b3c919e6a06837d15823becebd5497dd7d5252))
+
+
+### Styles
+
+* **grammar:** improve discussion ([1f34d43](https://github.com/engeir/parameter-scan/commit/1f34d4328b0c586431d53d31bb17dca060ea9f6f))
+
 ## [0.4.4](https://github.com/engeir/parameter-scan/compare/v0.4.3...v0.4.4) (2023-12-06)
 
 
