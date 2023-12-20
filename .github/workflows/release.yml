@@ -31,7 +31,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           tectonic-version: 0.14.1
       - name: Run Tectonic
-        run: tectonic templateV6.1.tex
+        run: tectonic -Z shell-escape --keep-intermediates templateV6.1.tex
       - name: Upload pdf
         uses: actions/upload-artifact@v3
         with:
