@@ -22,6 +22,10 @@ jobs:
           key: ${{ runner.os }}-tectonic-${{ hashFiles('**/*.tex') }}
           restore-keys: |
             ${{ runner.os }}-tectonic-
+      - uses: teatimeguest/setup-texlive-action@v3
+        with:
+          packages: >-
+            makeindex
       - uses: wtfjoke/setup-tectonic@v3
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
