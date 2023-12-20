@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.4.6](https://github.com/engeir/parameter-scan/compare/v0.4.5...v0.4.6) (2023-12-20)
+
+
+### Bug Fixes
+
+* **github:** install makeindex manually from texlive action ([b5695ef](https://github.com/engeir/parameter-scan/commit/b5695ef5b26c2630c3fa64e96c4dfa6a9d14ca2c))
+* **github:** specify shell escape and keep intermediates in tectonic run ([528fe42](https://github.com/engeir/parameter-scan/commit/528fe4230ea5761094ed4705a8efe309393dc3ef))
+
+
+### Miscellaneous
+
+* **github:** pin tectonic version ([c19869b](https://github.com/engeir/parameter-scan/commit/c19869b4b49900da3d33bfe81f11b0d4bfca54b9))
+
+
+### Styles
+
+* **dictionary:** use British English ([0692943](https://github.com/engeir/parameter-scan/commit/0692943040b743b029b53756a2e851bf562a2d2e))
+
 ## [0.4.5](https://github.com/engeir/parameter-scan/compare/v0.4.4...v0.4.5) (2023-12-19)
 
 
