@@ -25,6 +25,7 @@ jobs:
       - uses: wtfjoke/setup-tectonic@v3
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          tectonic-version: 0.14.1
       - name: Run Tectonic
         run: tectonic templateV6.1.tex
       - name: Upload pdf
