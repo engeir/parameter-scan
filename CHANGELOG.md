@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.7](https://github.com/engeir/parameter-scan/compare/v0.4.6...v0.4.7) (2023-12-28)
+
+
+### Miscellaneous
+
+* **discussion:** small rewrite, need more work still ([1ada5e9](https://github.com/engeir/parameter-scan/commit/1ada5e9032ff95b454e563de9fbf69ab709b1dee))
+
 ## [0.4.6](https://github.com/engeir/parameter-scan/compare/v0.4.5...v0.4.6) (2023-12-20)
 
 
