@@ -113,7 +113,7 @@
   with the \gls{waccm} atmosphere. Ensembles containing four members are simulated, and
   the \gls{aod}, \gls{rf} and temperature anomaly from the eruptions are compared.
   Simulating a Pinatubo-like eruption yields results consistent with several previous
-  studies with a slope of \(\sim \SI{-20}{\watt\metre^{-2}}\) per unit \gls{aod} for
+  studies with a slope of \(\sim \SI{-20}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) for
   \gls{rf}. Larger eruptions, however, give a shallower slope indicative of a lower
   forcing efficiency. Moreover, a time-after-eruption dependence between \gls{aod} and
   \gls{rf} is found, where the \gls{rf} is relatively stronger than \gls{aod} the first
@@ -779,13 +779,13 @@ compared to the super-volcano eruption (\gls{j05}).
 
 For fig.~\ref{fig:parameter_scan}e, the \gls{c2w} data is anticipated to resemble the
 patterns observed in fig.~\ref{fig:parameter_scan}c due to the nearly linear association
-identified between \gls{aod} and \iso{} in fig.~\ref{fig:parameter_scan}a.
-This is indeed the case, and where both the \gls{c2wsn} and the \gls{j05} cases
-align well, in addition to the \gls{t10} following a similar trend. The results from the
-\gls{m20} data show temperature anomalies of smaller extent, similar to what was found
-in fig.~\ref{fig:parameter_scan}c. Notably, however, the \gls{m20} data were conducted
-with prescribed sea surface temperatures, preventing the temperature from being
-fully perturbed \citet{marshall2020}.
+identified between \gls{aod} and \iso{} in fig.~\ref{fig:parameter_scan}a. This is
+indeed the case, and where both the \gls{c2wsn} and the \gls{j05} cases align well, in
+addition to the \gls{t10} following a similar trend. The results from the \gls{m20} data
+show temperature anomalies of smaller extent, similar to what was found in
+fig.~\ref{fig:parameter_scan}c. Notably, however, the \gls{m20} data were conducted with
+prescribed sea surface temperatures, preventing the temperature from being fully
+perturbed \citet{marshall2020}.
 
 Finally, in fig.~\ref{fig:parameter_scan}f, we compare the temperature and \gls{rf}
 responses. Both the \gls{c2w} and \gls{ob16} datasets showcase a near-linear
@@ -870,10 +870,10 @@ on \gls{aod} for eruptions similar to or smaller than Mt.\ Pinatubo. However, fo
 eruptions, factors like \ce{OH} scarcity and aerosol growth, influencing reflectance and
 their gravitational pull, substantially impact both \gls{aod} and \gls{rf} evolution.
 
-From the \gls{c2w} cases, a post-eruption time dependency on the \gls{rf} to
-\gls{aod} ratio emerges. \citet{marshall2020} discusses a similar aspect, noting that
-while the efficiency increases from year 1 to year 2 when examining \gls{aod} and
-\gls{rf}, here, the efficiency decreases over time, as depicted in
+From the \gls{c2w} cases, a post-eruption time dependency on the \gls{rf} to \gls{aod}
+ratio emerges. \citet{marshall2020} discusses a similar aspect, noting that while the
+efficiency increases from year 1 to year 2 when examining \gls{aod} and \gls{rf}, here,
+the efficiency decreases over time, as depicted in
 fig.~\ref{fig:aod_vs_toa_avg_loop_ratios}. This is by \citet{marshall2020} attributed to
 the time taken for aerosol dispersion, affecting global albedo and consequently
 \gls{rf}, whereas \gls{aod} is less affected by aerosol dispersion. Focusing solely on
@@ -953,24 +953,32 @@ We determine the climate resistance using the integral-form computation outlined
 eq.~\ref{eq:climate-resistance} and adopting \(\tau =\SI{8}{\mathrm{yr}}\), coinciding
 with the duration of our simulations. The estimated climate resistance \(\rho \) from
 the three tropical simulation cases (with four in each ensemble) yields
-\(\num{3.3(9)}\), \(\num{3.12(9)}\), and \(\num{2.91(8)}\), and \gls{tcrp} (\(1/\rho\))
-values of \(\num{0.32(7)}\), \(\num{0.321(9)}\), and \(\num{0.34(1)}\), as demonstrated
-in table~\ref{tab:trcp}.
+\(\SI{3(2)}{\watt\metre^{-2}\kelvin^{-1}}\), and \gls{tcrp} (\(1/\rho\)) values of
+\(\SI{0.4(1)}{\kelvin\watt^{-1}\metre^{2}}\), as demonstrated in table~\ref{tab:trcp}.
+One outlier was found in the dataset from the \gls{c2wm} case, and omitting this data
+point leaves estimates of \(\SI{2.4(2)}{\watt\metre^{-2}\kelvin^{-1}}\) and
+\(\SI{0.42(4)}{\kelvin\watt^{-1}\metre^{2}}\).
 
 The climate resistance parameter \(\rho\) differs from the climate feedback parameter
-estimated by \citet{jones2005} (\(\alpha\)). However, considering both \(\alpha \) and
-\(\kappa \) are positive, and our calculated values of \(\rho (=\alpha +\kappa) \) are
-all smaller than the \citet{jones2005} estimate of \(\alpha \simeq
+estimated by \citet{jones2005} (\(\alpha\)). However, considering both \(\alpha\) and
+\(\kappa\) are positive, and our calculated values of \(\rho(=\alpha+\kappa)\) are
+smaller than the \citet{jones2005} estimate of \(\alpha \simeq
 \SI{4}{\watt\metre^{-2}\kelvin^{-1}}\), we deduce that the climate feedback parameter
 linked to the simulations conducted here must be notably lower than what
 \citet{jones2005} found. It is worth noting that the temperature time series are not
-fully equilibrated after eight years, which would add to the estimated values of \(\rho
-\) from the time-integral, but it is expected that this contribution is small compared
-to the estimates. Since the temperature perturbation obtained by \gls{j05} was higher
-than any achieved here, it indicates that the forcing used by \gls{j05} must be
-stronger. The primary contributor to this increased forcing strength is believed to stem
-from the shape of the \gls{aod} time series utilised, rather than the magnitude, as the
-magnitude was comparable to that used in the \gls{c2ws} and \gls{c2wsn} cases.
+fully equilibrated after eight years, but as this would only reduce the estimated values
+of \(\rho\), it is expected that this contribution is unimportant when comparing
+\(\rho\) and \(\alpha\).
+
+Since the temperature perturbation obtained by \gls{j05} was higher than any achieved
+here, it indicates that the forcing used by \gls{j05} must be stronger.
+\citet{gregory2016} mentioned that the peak forcing value was about \(20\) times smaller
+than expected, but from the results shown here, this reduced aerosol forcing efficiency
+is expected and akin to the \gls{rf} dependency on \gls{aod} found here. Inspecting
+fig.~\ref{fig:parameter_scan} we find that the aerosol forcing efficiency is somewhat
+smaller in \gls{j05}. We therefore expect the primary contributor to the overall
+increased forcing strength to stem from the shape of the forcing time series utilised,
+not the magnitude.
 
 \begin{table}
   \centering
@@ -979,12 +987,20 @@ magnitude was comparable to that used in the \gls{c2ws} and \gls{c2wsn} cases.
     \citet{merlis2014}. Estimates are based on ensembles with four members, and where \(\tau
     =\SI{8}{\mathrm{yr}}\) in eq.~\ref{eq:climate-resistance}}\label{tab:trcp}%
   \begin{tabular}{ccc}
-    Simulation type & \(\rho [\si{\watt\metre^{-2}\kelvin^{-1}}]\) & \(1/\rho\)         \\
-    \gls{c2ws}      & \(\num{2.91(8)}\)                            & \(\num{0.34(1)}\)  \\
-    \gls{c2wmp}     & \(\num{3.12(9)}\)                            & \(\num{0.321(9)}\) \\
-    \gls{c2wm}      & \(\num{3.3(9)}\)                             & \(\num{0.32(7)}\)  \\
+    Simulation type     & \(\rho [\si{\watt\metre^{-2}\kelvin^{-1}}]\) & \(1/\rho\)        \\
+    \gls{c2ws}          & \(\num{2.2(1)}\)                             & \(\num{0.46(3)}\) \\
+    \gls{c2wmp}         & \(\num{2.5(1)}\)                             & \(\num{0.41(2)}\) \\
+    \gls{c2wm}          & \(\num{5(4)}\)                               & \(\num{0.3(1)}\)  \\
+    Total               & \(\num{3(2)}\)                               & \(\num{0.4(1)}\)  \\
+    Total (w/o outlier) & \(\num{2.4(2)}\)                             & \(\num{0.42(4)}\) \\
   \end{tabular}
 \end{table}
+
+% C2W^:         2.2+-0.1        0.46+-0.03
+% C2W-:         2.5+-0.1        0.41+-0.02
+% C2W_:         5+-4            0.3+-0.1
+% Total:        3+-2            0.4+-0.1
+% Total (1:):   2.4+-0.2        0.42+-0.04
 
 \section{Summary and conclusions}\label{sec:conclusions}
 
@@ -1061,10 +1077,12 @@ Infrastructure for High Performance Computing and Data Storage in Norway.
 
 % https://documentation.sigma2.no/nird_archive/user-guide.html
 Data generated directly from output fields of \gls{cesm2} are available at \emph{refer
-  to Sigma2 archive}. Analysis scripts are available at
+  to Sigma2 archive}, and were generated using scripts available at
+\url{https://github.com/engeir/cesm-data-aggregator}. Analysis scripts are available at
 \url{https://github.com/engeir/paper1-code} and is published to
-\url{https://zenodo.org/doi/10.5281/zenodo.10229427}. Source files used to generate
-\gls{cesm2} input files are available at \emph{github repo}.
+\url{https://zenodo.org/doi/10.5281/zenodo.10229427}. Source code used to generate
+\gls{cesm2} input files are available at
+\url{https://github.com/engeir/cesm2-volcano-setup}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % APPENDIXES
@@ -1097,7 +1115,7 @@ Data generated directly from output fields of \gls{cesm2} are available at \emph
 
 \appendixtitle{Simulation set up and output}
 
-Simulations were created using a modified version of the file
+Input files used in the simulations were created using a modified version of the file
 \url{http://svn.code.sf.net/p/codescripts/code/trunk/ncl/emission/createVolcEruptV3.ncl},
 via a Python project developed on GitHub at
 \url{https://github.com/engeir/volcano-cooking}. The project is also available from the
@@ -1176,8 +1194,10 @@ table~\ref{tab:model-family}, based on the model code genealogy map created by
 
 \begin{table*}
   \centering
-  \caption{Model families and to which the different studies referred to in this paper
-    reside. Based on the model code genealogy map by \citet{kuma2023}.}\label{tab:model-family}
+  \caption{Overview of various model codes grouped into families according to the model
+    code genealogy map by \citet{kuma2023}, with each table entry also indicating the
+    specific model code used in the referenced papers of this
+    study.}\label{tab:model-family}
 
   \begin{tabular}{ccc}
     Family relation                                                         & Model name           & Data point \\

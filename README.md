@@ -22,22 +22,6 @@ tectonic templateV5.tex
 
 ## Notes
 
-### Large eruptions compared to small
-
-- $\mathrm{SO_2}$ oxidises more slowly due to lack of OH, which delays the peak AOD
-  level
-- Aerosols grow to larger radii, which makes them less efficient at scattering
-  radiation, so you have less cooling for the same amount of injected $\mathrm{SO_2}$
-- Larger aerosols stay for a shorter time due to being heavier (and other causes?
-  Verify.)
-- RF plot show similar shape when they are scaled; smaller eruptions are more efficient
-  throughout, but especially in the early phase, why?
-
-- [x] Create an estimate of climate sensitivity from volcanoes. G16 talks about what
-      they got in J05, so maybe comparing is worthwhile. _Did find the TCRP according to
-      M14, which gives some ground for comparison, but the climate feedback parameter is
-      missing._
-
 ### Climate sensitivity estimate
 
 - Would smaller alpha give smaller or larger temp in Jones et al.?
