@@ -290,8 +290,8 @@ included volcanic forcing when simulating climate evolution during the Holocene
 factors that has been suggested to contribute to the common disparity between simulated
 and observed global warming \citep{andersson2015}. Despite extensive attention on
 understanding how volcanic eruptions influence climate, questions regarding aerosol
-particle processes---such as their growth and creation rates when \ce{OH} is
-scarce---remain unanswered
+particle processes --- such as their growth and creation rates when \ce{OH} is scarce
+--- remain unanswered
 \citep[e.g.][]{robock2000,zanchettin2019,marshall2020,marshall2022}. These processes
 impact aerosol scattering efficiency and potentially the \gls{rf} to \gls{aod}
 relationship. \citet{marshall2020} observed higher efficiencies in years \(2\) and \(3\)
@@ -538,14 +538,15 @@ blue downward pointing triangles, the intermediate eruption case (\gls{c2wmp}) a
 thick diamonds, the large tropical eruption case (\gls{c2ws}) as green upward pointing
 triangles, and the large northern hemisphere eruption case (\gls{c2wsn}) as brown upward
 pointing three-branched twigs. Also shown are the data from \citet[][Fig.\ 4, black
-  crosses from HadCM3 sstPiHistVol]{gregory2016} as grey crosses labelled \gls{g16}.
-Additionally, the estimated peak values from the Mt.\ Pinatubo and Mt.\ Tambora
-eruptions are plotted as a purple star and a yellow plus, while the peak from the
-\citet{jones2005} simulation is shown as a pink square labelled \gls{j05}. Finally, red
-circles represent the peak values obtained from the \gls{c2w} tropical eruption cases.
-The gradient lines are the same as shown by \citet{gregory2016}. The full data range is
-shown in fig.~\ref{fig:aod_vs_toa_ses_avg}a while fig.~\ref{fig:aod_vs_toa_ses_avg}b
-highlights a narrow range, focusing on the \gls{c2wm} case.
+  crosses from HadCM3 sstPiHistVol]{gregory2016} as grey crosses labelled \gls{g16}
+(described in Appendix B, section~\ref{ap:g16}). Additionally, the estimated peak values
+from the Mt.\ Pinatubo and Mt.\ Tambora eruptions are plotted as a purple star and a
+yellow plus, while the peak from the \citet{jones2005} simulation is shown as a pink
+square labelled \gls{j05}. Finally, red circles represent the peak values obtained from
+the \gls{c2w} tropical eruption cases. The gradient lines are the same as shown by
+\citet{gregory2016}. The full data range is shown in fig.~\ref{fig:aod_vs_toa_ses_avg}a
+while fig.~\ref{fig:aod_vs_toa_ses_avg}b highlights a narrow range, focusing on the
+\gls{c2wm} case.
 
 The annual mean data from the Pinatubo-like \gls{c2wm} case in
 fig.~\ref{fig:aod_vs_toa_ses_avg}b have \gls{rf} values as a function of \gls{aod} that
@@ -649,6 +650,7 @@ significantly weaker slope than the tropical cases, aligning with the \gls{m20} 
 Considering the \gls{m20} data and the results depicted in
 fig.~\ref{fig:aod_vs_toa_avg_loop_ratios}, it appears that various and competing effects
 determine the values of \gls{aod} and \gls{rf}, with latitude playing a pivotal role.
+The \gls{m20} data is briefly described in Appendix B, section~\ref{ap:m20}.
 
 The change in ratio, where the weakest ratio corresponds to larger eruptions and the
 strongest ratio corresponds to smaller eruptions, aligns with the shift observed in peak
@@ -695,9 +697,9 @@ suggest a comparable trend for \gls{rf} versus \iso{} as seen in \gls{rf} versus
 absolute value of \gls{rf} on the \(y\)-axis) indicates a substantial damping effect on
 \gls{rf} as \iso{} increases for the \gls{c2w} data, aligning with expectations, with
 the same behaviour seen in the \gls{ob16} data. The analysis details of the \gls{ob16}
-data can be found in Appendix B. Despite the model complexity difference,
-\citet{ottobliesner2016}'s simulations using \gls{cesm1} with a low-top atmosphere
-(\gls{cam5}) produce \glspl{rf} comparable to our findings.
+data can be found in Appendix B, section~\ref{ap:ob16}. Despite the model complexity
+difference, \citet{ottobliesner2016}'s simulations using \gls{cesm1} with a low-top
+atmosphere (\gls{cam5}) produce \glspl{rf} comparable to our findings.
 
 \begin{figure*}
   \centering
@@ -1158,7 +1160,9 @@ simulate volcanic eruptions.
 
 \appendix[B]
 
-\appendixtitle{Otto-Bliesner data analysis}\label{ap:ob16}
+\appendixtitle{External data}
+
+\subsection{Otto-Bliesner data analysis}\label{ap:ob16}
 
 Data from \citet{ottobliesner2016} are the original input data of \iso{} as used in
 their model simulations, where corresponding \gls{rf} and temperature data are found as
@@ -1182,6 +1186,20 @@ values at day 340 (\gls{rf}) and 400 (temperature) after the eruption according 
 \iso{} time series. Thus, missing the peak means the estimates will be biased towards
 lower values, while other eruptions occurring close in time will contribute a bias to
 higher values.
+
+\subsection{Marshall data analysis}\label{ap:m20}
+
+Data used to generate the \gls{m20} data points was from \citet{marshall2020dataset},
+available at \url{https://doi.org/10.5285/232164e8b1444978a41f2acf8bbbfe91}. As each
+file contain a single eruption, peak values of \gls{aod}, \gls{rf} and temperature was
+found by applying a Savitzky-Golay filter of third order and one year window length, and
+choosing the maximum value.
+
+\subsection{Gregory data analysis}\label{ap:g16}
+
+Data used to generate the \gls{g16} data points was kindly provided by Jonathan Gregory
+(personal communication). The full 160-year long time series were further analysed by
+computing annual means.
 
 \appendix[C]
 
