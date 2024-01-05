@@ -40,8 +40,6 @@ tectonic templateV5.tex
 > | TCS                          | $F_{2\times}/\rho$ | $F_{2\times}/\tilde{\beta}$ | $-$         |
 > | Ocean heat uptake efficiency | $\kappa$           | $\gamma$                    | $-$         |
 
-<!-- dprint-ignore-start -->
-G16: https://doi.org/10.1007/s00382-016-3055-1
-M14: https://doi.org/10.1175/JCLI-D-14-00214.1
-J05: https://doi.org/10.1007/s00382-005-0066-8
-<!-- dprint-ignore-end -->
+[G16]: https://doi.org/10.1007/s00382-016-3055-1
+[M14]: https://doi.org/10.1175/JCLI-D-14-00214.1
+[J05]: https://doi.org/10.1007/s00382-005-0066-8
