@@ -20,56 +20,28 @@ latexmk -c
 tectonic templateV5.tex
 ```
 
-## Notes
-
-### Climate sensitivity estimate
-
-- Would smaller alpha give smaller or larger temp in Jones et al.?
-- Climate resistance estimates. Maybe the difference in climate resistance we get
-  compared to what J05 used can be a pointer on that the small RF to AOD ratio they got
-  was too small even for such a large eruption.
-
-> The peak forcing was about $-60\mathrm{Wm^{-2}}$, only $20$ times greater than
-> Pinatubo, and the climate feedback parameter $\alpha \simeq 4\mathrm{Wm^{-2}K^{-1}}$,
-> more than twice the value (half the climate sensitivity parameter [which is the
-> reciprocal]) that we found for Pinatubo in HadCM3.
->
-> G16
-
-$1/\rho$ is the "transient climate response parameter" (where
-$\mathrm{TCS}=F_{2\times}\times \mathrm{TCRP}$ is the transient climate sensitivity),
-where $\rho $ is a climate resistance obtained from $F(t)=\rho T(t)$, where the forcing
-increase at a roughly constant rate.
-
-The climate feedback parameter $\alpha$ and the ocean heat uptake efficiency $\kappa$
-are both positive, and $\rho =\alpha +\kappa$. In this picture, $T$ is a surface skin
-temperature, with negligible thermal inertia, determined by the Earth energy balance
-$F=N+\alpha T$, where $N$ is the net downward radiative heat flux at the top of the
-atmosphere, and $N=\kappa T$ if we neglect heat storage other than in the ocean. We call
-$F=\rho T$ the "zero-layer model".
-
-"For volcanic forcing which is large in magnitude for only a year or two, the {tcrp} and
-the zero-layer model are therefore not applicable." They (G16) use an abruptPin
-simulation to estimate the climate feedback parameter $\alpha$ for volcanic forcing in
-comparison to forcing from for example $4\times \mathrm{CO_2}$. Possible to use method
-outlined by M14? That is,
-
-G16 use $F=N+\alpha T$ while J05 use $Q=N+\lambda \Delta T$ to describe the same thing.
-Also, M14 is using $\tilde{\beta}=\rho$, $\beta =\alpha =\lambda $, $\gamma =\kappa$ and
-$\mathcal{F}=F$.
+<!-- dprint-ignore-start -->
+[_View the generated PDF at the latest release!_](https://github.com/engeir/parameter-scan/releases/download/v0.4.8/templateV6.1.pdf) <!-- x-release-please-version -->
+<!-- dprint-ignore-end -->
 
 > Caption
 >
 > For my own convenience, a comparison table comprising symbols used across the papers
 > G16, M14 and J05. They all use $T$ for the temperature and $N$ for the net downward
-> radiative heat flux at TOA
+> radiative heat flux at TOA.
+>
+> | Name                         | [G16]              | [M14]                       | [J05]       |
+> | ---------------------------- | ------------------ | --------------------------- | ----------- |
+> | Forcing                      | $F$                | $\mathcal{F}$               | $Q$         |
+> | Climate feedback parameter   | $\alpha$           | $\beta$                     | $\lambda$   |
+> | Climate sensitivity          | $1/\alpha$         | $1/\beta$                   | $1/\lambda$ |
+> | Climate resistance           | $\rho$             | $\tilde{\beta}$             | $-$         |
+> | TCRP                         | $1/\rho$           | $1/\tilde{\beta}$           | $-$         |
+> | TCS                          | $F_{2\times}/\rho$ | $F_{2\times}/\tilde{\beta}$ | $-$         |
+> | Ocean heat uptake efficiency | $\kappa$           | $\gamma$                    | $-$         |
 
-| Name                         | G16                | M14                         | J05         |
-| ---------------------------- | ------------------ | --------------------------- | ----------- |
-| Forcing                      | $F$                | $\mathcal{F}$               | $Q$         |
-| Climate feedback parameter   | $\alpha$           | $\beta$                     | $\lambda$   |
-| Climate sensitivity          | $1/\alpha$         | $1/\beta$                   | $1/\lambda$ |
-| Climate resistance           | $\rho$             | $\tilde{\beta}$             | $-$         |
-| TCRP                         | $1/\rho$           | $1/\tilde{\beta}$           | $-$         |
-| TCS                          | $F_{2\times}/\rho$ | $F_{2\times}/\tilde{\beta}$ | $-$         |
-| Ocean heat uptake efficiency | $\kappa$           | $\gamma$                    | $-$         |
+<!-- dprint-ignore-start -->
+G16: https://doi.org/10.1007/s00382-016-3055-1
+M14: https://doi.org/10.1175/JCLI-D-14-00214.1
+J05: https://doi.org/10.1007/s00382-005-0066-8
+<!-- dprint-ignore-end -->
