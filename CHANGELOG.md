@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.4.8](https://github.com/engeir/parameter-scan/compare/v0.4.7...v0.4.8) (2024-01-05)
+
+
+### Bug Fixes
+
+* **discussion:** specify the kind of efficiency ([ee2b1b5](https://github.com/engeir/parameter-scan/commit/ee2b1b565d7764153a81ddaa0277603f6a54be9d))
+* **discussion:** update climate resistance estimates ([cd0916c](https://github.com/engeir/parameter-scan/commit/cd0916cba666a3de14ef6562bd1af199fade31bf))
+
+
+### Miscellaneous
+
+* **abstract:** update abstract (longer, more results but less detail) ([fb427d8](https://github.com/engeir/parameter-scan/commit/fb427d88806b5c418557745b143475582e10f682))
+* **appendix:** add M20 and G16 data ([657ab18](https://github.com/engeir/parameter-scan/commit/657ab185a245f45fd05b26bd4e5c9eb6a46ba70c))
+* **discussion:** add outliter estimate for small eruption as well ([add97c4](https://github.com/engeir/parameter-scan/commit/add97c4d294b07b7903e3ae7b82adf7189e52d1f))
+* **grammar:** improve formulations and overall language ([ddec286](https://github.com/engeir/parameter-scan/commit/ddec2865749cc616013d834fbb37742c8dd8ad85))
+* **title:** update title ([6c7331d](https://github.com/engeir/parameter-scan/commit/6c7331db540391b4fb934733e237b8786ebbd449))
+
 ## [0.4.7](https://github.com/engeir/parameter-scan/compare/v0.4.6...v0.4.7) (2023-12-28)
 
 
