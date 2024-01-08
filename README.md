@@ -5,7 +5,7 @@
 To run the continuous compiler, use the command
 
 ```bash
-latexmk -cd -pvc -pdf templateV5.tex
+latexmk -cd -pvc -pdf templateV6.1.tex
 ```
 
 You clean up files with
@@ -17,18 +17,16 @@ latexmk -c
 `tectonic` also works in place of `latexmk`:
 
 ```bash
-tectonic templateV5.tex
+tectonic templateV6.1.tex
 ```
 
 <!-- dprint-ignore-start -->
 [_View the generated PDF at the latest release!_](https://github.com/engeir/parameter-scan/releases/download/v0.4.8/templateV6.1.pdf) <!-- x-release-please-version -->
 <!-- dprint-ignore-end -->
 
-> Caption
->
 > For my own convenience, a comparison table comprising symbols used across the papers
-> G16, M14 and J05. They all use $T$ for the temperature and $N$ for the net downward
-> radiative heat flux at TOA.
+> [G16], [M14] and [J05]. They all use $T$ for the temperature and $N$ for the net
+> downward radiative heat flux at TOA.
 >
 > | Name                         | [G16]              | [M14]                       | [J05]       |
 > | ---------------------------- | ------------------ | --------------------------- | ----------- |
