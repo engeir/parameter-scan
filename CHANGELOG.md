@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.4.9](https://github.com/engeir/parameter-scan/compare/v0.4.8...v0.4.9) (2024-01-08)
+
+
+### Miscellaneous
+
+* **README:** remove old notes and add PDF link ([2a60cae](https://github.com/engeir/parameter-scan/commit/2a60cae57cff0f2e4585e1df0b0cad46ac788d67))
+* **title:** change title and update abstract ([4c96781](https://github.com/engeir/parameter-scan/commit/4c967817c977a5ad4b2b78af5ece9bea998f2150))
+
+
+### Styles
+
+* **README:** fix link syntax ([1afef79](https://github.com/engeir/parameter-scan/commit/1afef79aed451dc541f42de54a65b6ba9fe9e73a))
+
+
+### Documentation
+
+* **README:** update from wrong tex file name ([6ea953c](https://github.com/engeir/parameter-scan/commit/6ea953cf39112bd7d3fb6c5e85a9df7c08996265))
+
 ## [0.4.8](https://github.com/engeir/parameter-scan/compare/v0.4.7...v0.4.8) (2024-01-05)
 
 
