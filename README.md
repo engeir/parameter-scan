@@ -1,6 +1,6 @@
 # Parameter scan
 
-<sup>Latest version: v0.4.8</sup> <!-- x-release-please-version -->
+<sup>Latest version: v0.4.9</sup> <!-- x-release-please-version -->
 
 To run the continuous compiler, use the command
 
@@ -21,7 +21,7 @@ tectonic templateV6.1.tex
 ```
 
 <!-- dprint-ignore-start -->
-[_View the generated PDF at the latest release!_](https://github.com/engeir/parameter-scan/releases/download/v0.4.8/templateV6.1.pdf) <!-- x-release-please-version -->
+[_View the generated PDF at the latest release!_](https://github.com/engeir/parameter-scan/releases/download/v0.4.9/templateV6.1.pdf) <!-- x-release-please-version -->
 <!-- dprint-ignore-end -->
 
 > For my own convenience, a comparison table comprising symbols used across the papers
