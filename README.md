@@ -17,7 +17,7 @@ latexmk -c
 `tectonic` also works in place of `latexmk`:
 
 ```bash
-tectonic templateV6.1.tex
+tectonic -Z shell-escape --keep-intermediates templateV6.1.tex
 ```
 
 <!-- dprint-ignore-start -->
