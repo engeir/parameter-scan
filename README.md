@@ -37,7 +37,9 @@ tectonic -Z shell-escape --keep-intermediates templateV6.1.tex
 ```
 
 <!-- dprint-ignore-start -->
-[_View the generated PDF at the latest release!_](https://github.com/engeir/parameter-scan/releases/download/v0.4.9/templateV6.1.pdf) <!-- x-release-please-version -->
+> [!TIP]
+>
+> [_View the generated PDF at the latest release!_](https://github.com/engeir/parameter-scan/releases/download/v0.4.9/templateV6.1.pdf) <!-- x-release-please-version -->
 <!-- dprint-ignore-end -->
 
 > For my own convenience, a comparison table comprising symbols used across the papers
