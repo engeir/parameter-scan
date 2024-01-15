@@ -4,6 +4,19 @@
 
 [![Build history](https://buildstats.info/github/chart/engeir/parameter-scan?branch=main)](https://github.com/engeir/parameter-scan/actions)
 
+<!-- dprint-ignore-start -->
+> [!NOTE]
+>
+> I compile this using an installation of [tinytex] via [mise]. Additional packages I
+> installed with `tlmgr` after this was
+>
+> - `tlmgr install glossaries`
+> - `tlmgr install glossaries-extra`
+> - Fonts (just one is needed):
+>   - `tlmgr install txfonts helvetic times tex-gyre`
+>   - `tlmgr install collection-fontsrecommended`
+<!-- dprint-ignore-end -->
+
 To run the continuous compiler, use the command
 
 ```bash
@@ -16,7 +29,8 @@ You clean up files with
 latexmk -c
 ```
 
-`tectonic` also works in place of `latexmk`:
+[`tectonic`] also works in place of `latexmk`, without the need to install anything from
+`tlmgr`:
 
 ```bash
 tectonic -Z shell-escape --keep-intermediates templateV6.1.tex
@@ -43,3 +57,6 @@ tectonic -Z shell-escape --keep-intermediates templateV6.1.tex
 [G16]: https://doi.org/10.1007/s00382-016-3055-1
 [M14]: https://doi.org/10.1175/JCLI-D-14-00214.1
 [J05]: https://doi.org/10.1007/s00382-005-0066-8
+[mise]: https://mise.jdx.dev/
+[tinytex]: https://yihui.org/tinytex/
+[`tectonic`]: https://github.com/tectonic-typesetting/tectonic
