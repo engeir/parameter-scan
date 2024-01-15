@@ -2,6 +2,8 @@
 
 <sup>Latest version: v0.4.9</sup> <!-- x-release-please-version -->
 
+[![Build history](https://buildstats.info/github/chart/engeir/parameter-scan?branch=main)](https://github.com/engeir/parameter-scan/actions)
+
 To run the continuous compiler, use the command
 
 ```bash
