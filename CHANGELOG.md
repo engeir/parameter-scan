@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.4.10](https://github.com/engeir/parameter-scan/compare/v0.4.9...v0.4.10) (2024-01-15)
+
+
+### Build System
+
+* **mise:** add tinytex tool to mise and describe other needed packages in README ([f7c92e5](https://github.com/engeir/parameter-scan/commit/f7c92e50f135ab2060413546a48f7c594fbbba5c))
+
+
+### Documentation
+
+* improve style around link to PDF ([633012e](https://github.com/engeir/parameter-scan/commit/633012e394712d732324eac7913660adb25b4bd4))
+* **README:** add build stats ([c0865bc](https://github.com/engeir/parameter-scan/commit/c0865bcebf9d42731c898d0d04df64fd4a49cc35))
+* **README:** update tectonic command ([17b25b5](https://github.com/engeir/parameter-scan/commit/17b25b5f45f60b22241aa74b977aba65bef498f6))
+
 ## [0.4.9](https://github.com/engeir/parameter-scan/compare/v0.4.8...v0.4.9) (2024-01-08)
 
 
