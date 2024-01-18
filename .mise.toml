@@ -1,2 +1,22 @@
 [tools]
 tinytex = "latest"
+
+[tasks.install]
+description = "Install minimum packages"
+run = """
+#!/bin/bash
+tlmgr install glossaries
+tlmgr install glossaries-extra
+tlmgr install txfonts helvetic times tex-gyre
+"""
+alias = "i"
+
+[tasks.build]
+description = "Build the project"
+run = """
+#!/bin/bash
+latexmk -cd -pdf templateV6.1.tex
+latexmk -c
+"""
+alias = "b"
+depends = ["install"]
