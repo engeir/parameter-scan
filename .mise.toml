@@ -13,10 +13,10 @@ alias = "i"
 
 [tasks.build]
 description = "Build the project"
-run = """
-#!/bin/bash
-latexmk -cd -pdf templateV6.1.tex
-latexmk -c
-"""
+run = "latexmk -cd -pdf templateV6.1.tex"
 alias = "b"
-depends = ["install"]
+
+[tasks.clean]
+description = "Clean up after compiling PDF"
+run = "latexmk -c"
+depends = ["build"]
