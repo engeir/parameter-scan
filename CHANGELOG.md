@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.5.0](https://github.com/engeir/parameter-scan/compare/v0.4.11...v0.5.0) (2024-01-24)
+
+
+### Features
+
+* **iteration:** clean up manuscript for its next iteration ([60faa2b](https://github.com/engeir/parameter-scan/commit/60faa2b68356bc61eebdaa825941abdb9bfedad3))
+
+
+### Code Refactoring
+
+* use "slope" rather than "gradient" ([5d24d4e](https://github.com/engeir/parameter-scan/commit/5d24d4e506f8cdc4a46181d9a85b948f562272d1))
+
 ## [0.4.11](https://github.com/engeir/parameter-scan/compare/v0.4.10...v0.4.11) (2024-01-24)
 
 
