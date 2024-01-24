@@ -1,5 +1,32 @@
 # Changelog
 
+## [0.4.11](https://github.com/engeir/parameter-scan/compare/v0.4.10...v0.4.11) (2024-01-24)
+
+
+### Miscellaneous
+
+* **contributors:** remove maria ([07f9600](https://github.com/engeir/parameter-scan/commit/07f9600563d925e0862282da4bf02efa91857568))
+* **figure:** improve contrast and increase size ([aaaba80](https://github.com/engeir/parameter-scan/commit/aaaba805537dda3dd3ea49648dc8491b1912b053))
+* **rune:** started added fixes ([e270dc5](https://github.com/engeir/parameter-scan/commit/e270dc570587fde6427d6d35e0bf111c203f9910))
+* **rune:** update up to discussion ([5416456](https://github.com/engeir/parameter-scan/commit/54164560bdf4dfc89c876018ebd3a1f8df18c47e))
+
+
+### Code Refactoring
+
+* **rune:** finish re-write after comments by rune ([c74c765](https://github.com/engeir/parameter-scan/commit/c74c7658e34306579d4f292c33db59dbb6602b58))
+
+
+### Continuous Integration
+
+* add latexmk install and compile steps to mise ([591fb1c](https://github.com/engeir/parameter-scan/commit/591fb1c7afeceae4b062aedb4a7d2c242586cb0a))
+* add tectonic compile step to just ([591fb1c](https://github.com/engeir/parameter-scan/commit/591fb1c7afeceae4b062aedb4a7d2c242586cb0a))
+* **github:** add token to use my bot account ([4a2382e](https://github.com/engeir/parameter-scan/commit/4a2382e9d254c08002674139815a88d234cb4803))
+
+
+### Build System
+
+* **mise:** separate build and install steps ([d880798](https://github.com/engeir/parameter-scan/commit/d880798ee821208276bc5dab4c3f1d63cb7dfb0f))
+
 ## [0.4.10](https://github.com/engeir/parameter-scan/compare/v0.4.9...v0.4.10) (2024-01-15)
 
 
