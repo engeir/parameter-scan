@@ -421,13 +421,17 @@ referred to as \gls{c2w}. Two additional high-latitude eruptions, labelled \gls{
 of the same \iso{} magnitude as \gls{c2ws} were simulated at \(\SI{56}{\degree N}\),
 \(\SI{287.7}{\degree E}\) with a six-month separation (February 15th and August 15th).
 
-% FIX: this should be a more clear motivation for/against the use of AOD time series to
-% initialise eruption simulations of AOD time series to initialise eruption simulations
 Employing eruptions in the medium to super-volcano size enhances the signal-to-noise
-ratio without necessitating an extensive and computationally expensive ensemble.
-However, the forcing values obtained from the climate model simulations may not be
-realistic, or more specifically, be an inappropriate representation of smaller eruptions
-typical of the instrumental era \citep{gregory2016}.
+ratio without necessitating an extensive and computationally expensive ensemble, and as
+such, is a tempting way to mimic a large ensemble of smaller volcanic eruptions.
+However, there is no guarantee that the \gls{aod}, \gls{rf} and temperature signatures
+will be a simple scaling of that of smaller volcanic eruptions. Previous studies have
+also attempted to simulated super-volcanoes using \gls{aod} as the input forcing, where
+the \gls{aod} was that of Mt.\ Pinatubo scaled by one hundred \citep{jones2005}. This
+approach may yield incorrect results, both since the peak of the \gls{aod} may be too
+small or big, but also since the evolution of the \gls{aod} could be wrong. Similarly, a
+different \gls{aod} evolution may be found from similar size volcanoes but at different
+latitudes.
 
 \begin{table*}
   \centering
@@ -687,17 +691,18 @@ findings.
   \centering
   \includegraphics{figures/figure4.png}
 
-  \caption{(a) \gls{aod} (b) \gls{rf} and (c) temperature as a function of \iso{}\@. (d)
-    \gls{rf} and (e) temperature as a function of \gls{aod}. (f) Temperature as a function
-    of \gls{rf}. Blue diamonds labelled \gls{c2w} represent tropical cases (\gls{c2wm},
-    \gls{c2wmp}, \gls{c2ws}), the brown three-branched twig signifies the \gls{c2wsn} case,
-    and green downward triangles denote \gls{ob16} data from \citet{ottobliesner2016}. The
-    red thin diamonds labelled \gls{m20} display the \citet{marshall2020dataset} data. Black
-    star and plus indicate Mt.\ Pinatubo and Mt.\ Tambora estimates based on observations.
-    The pink square labelled \gls{j05} refers to the one-hundred times Mt.\ Pinatubo
-    super-volcano from \citet{jones2005}, and the pink disk labelled \gls{t10} represents
-    the \gls{ytt} super-volcano from \citet{timmreck2010}. The pink dashed line labelled
-    \gls{n15} is from \citet{niemeier2015}, indicating the function in
+  \caption{(a) \gls{aod} (b) \gls{rf} and (c) temperature anomaly as a function of
+    \iso{}\@. (d) \gls{rf} and (e) temperature anomaly as a function of \gls{aod}. (f)
+    Temperature anomaly as a function of \gls{rf}. Blue diamonds labelled \gls{c2w}
+    represent tropical cases (\gls{c2wm}, \gls{c2wmp}, \gls{c2ws}), the brown three-branched
+    twig signifies the \gls{c2wsn} case, and green downward triangles denote \gls{ob16} data
+    from \citet{ottobliesner2016}. The red thin diamonds labelled \gls{m20} display the
+    \citet{marshall2020dataset} data. Black star and plus indicate Mt.\ Pinatubo and Mt.\
+    Tambora estimates based on observations. The pink square labelled \gls{j05} refers to
+    the one-hundred times Mt.\ Pinatubo super-volcano from \citet{jones2005}, and the pink
+    disk labelled \gls{t10} represents the \gls{ytt} super-volcano from
+    \citet{timmreck2010}. The pink dashed line labelled \gls{n15} is from
+    \citet{niemeier2015}, indicating the function in
     Eq.~\ref{eq:niemeier_exponential}.}\label{fig:parameter_scan}%
 \end{figure*}
 
@@ -835,7 +840,7 @@ output parameters when comparing across models. Conversion from \iso{} to \gls{a
 consistent within similar models, even when comparing simulations of volcanic eruptions
 \citep{timmreck2010} and continuous injection of \ce{SO2} \citep{niemeier2015}, but has
 a wide spread at large values of \iso{} across model families
-(figs.~\ref{fig:parameter_scan}a,b,c). Comparatively, the \gls{rf}
+(Figs.~\ref{fig:parameter_scan}a,b,c). Comparatively, the \gls{rf}
 (Fig.~\ref{fig:parameter_scan}d) and temperature (Fig.~\ref{fig:parameter_scan}e) as a
 function of \gls{aod} demonstrate a smaller spread across models, and consequently, the
 spread for temperature as a function of \gls{rf} (Fig.~\ref{fig:parameter_scan}f) is
@@ -861,8 +866,9 @@ the \gls{rf} to \gls{aod} ratio closely resembles the findings from the \gls{c2w
 Thus, while \iso{} is crucial for estimating the time-average of the \gls{rf} to
 \gls{aod} ratio, latitude and in particular aerosol dispersion seem more influential in
 determining the post-eruption evolution of the ratio. Given that the \gls{c2wsn} case
-lack a significant increase in ratio as compared to the tropical eruption cases (\gls{c2w}),
-the substantial difference in eruption latitude appears to be a likely cause.
+lack a significant increase in ratio as compared to the tropical eruption cases
+(\gls{c2w}), the substantial difference in eruption latitude appears to be a likely
+cause.
 
 \citet{marshall2019, marshall2020, marshall2021} utilise a code with seven log-normal
 modes to simulate aerosol mass and number concentrations, along with an atmosphere-only
@@ -899,13 +905,13 @@ thereby decreasing the forcing efficiency per \iso{} \citep{english2013, timmrec
 
 As previously mentioned, the results from \gls{j05} agree well with our \gls{c2ws}
 experiment concerning both \gls{aod} and \gls{rf} values, yet these results differ in
-temperature. To investigate this discrepancy, we here aim to conduct a comparison
-between their climate feedback parameter \(\alpha \) (where \(s=1/\alpha \) is the
-climate sensitivity parameter) with our climate resistance, denoted as \(\rho \), and
-the \gls{tcrp} \(1/\rho\) (where \(\mathrm{TCS}=F_{2\times}\times \mathrm{TCRP}\) is the
-transient climate sensitivity). As forcing of volcanic eruptions typically last for
-about a year, a duration too brief for the timescales at which \(F=\rho T\) remains
-valid \citep{gregory2016}, an alternative approach involves using a time-integral form
+temperature. To investigate this discrepancy, we here conduct a comparison between their
+climate feedback parameter \(\alpha \) (where \(s=1/\alpha \) is the climate sensitivity
+parameter) with our climate resistance, denoted as \(\rho \), and the \gls{tcrp}
+\(1/\rho\) (where \(\mathrm{TCS}=F_{2\times}\times \mathrm{TCRP}\) is the transient
+climate sensitivity). As forcing of volcanic eruptions typically last for about a year,
+a duration too brief for the timescales at which \(F=\rho T\) remains valid
+\citep{gregory2016}, an alternative approach involves using a time-integral form
 introduced by \citet{merlis2014}:
 
 \begin{equation}
@@ -916,57 +922,52 @@ introduced by \citet{merlis2014}:
   \label{eq:climate-resistance}
 \end{equation}
 
-If the upper bound of the integral, \(\tau \), is sufficiently large so that the upper
-ocean heat capacity is the same at \(t=0\) and \(t=\tau \), this aligns with \(F=\rho
-T\) \citep{gregory2016} (\citet{merlis2014} utilised \(\tau =\SI{15}{\mathrm{y}}\)).
-Additionally, it's worth noting that the climate resistance and the climate feedback
-parameter are associated with the ocean heat uptake efficiency (\(\kappa \)) through
-\(\rho =\alpha +\kappa \).
+If the upper bound of the integral, \(\tau \), is sufficiently large, so that the upper
+ocean heat content is the same at \(t=0\) and \(t=\tau \), this approach agrees with
+\(F=\rho T\) for long-term forcing \citep{gregory2016} (\citet{merlis2014} utilised
+\(\tau =\SI{15}{\mathrm{yr}}\)). Additionally, it is worth noting that the climate
+resistance and the climate feedback parameter are associated with the ocean heat uptake
+efficiency (\(\kappa \)) through \(\rho =\alpha +\kappa \) \citep{gregory2016}.
 
-The climate feedback parameter, as estimated by \citet{jones2005}, stands at
-approximately \(\alpha \simeq \SI{4}{\watt\metre^{-2}\kelvin^{-1}}\), exceeding twice
-the value obtained by \citet{gregory2016} in their simulations using Mt.\ Pinatubo
-within the HadCM3 climate model.
+The climate feedback parameter estimated by \citet{jones2005} is \(\alpha \simeq
+\SI{4}{\watt\metre^{-2}\kelvin^{-1}}\), exceeding twice the value obtained by
+\citet{gregory2016} in their simulations of Mt.\ Pinatubo using the HadCM3 climate
+model. We determine the climate resistance using the integral-form computation outlined
+in Eq.~\ref{eq:climate-resistance} and adopting \(\tau =\SI{20}{\mathrm{yr}}\). The
+estimated climate resistance \(\rho \) from the three tropical simulation cases (with
+four in each ensemble) yields \(\SI{3(2)}{\watt\metre^{-2}\kelvin^{-1}}\), and
+\gls{tcrp} (\(1/\rho\)) values of \(\SI{0.39(9)}{\kelvin\watt^{-1}\metre^{2}}\), as
+reported in table~\ref{tab:trcp}. One outlier was found in the dataset from the
+\gls{c2wm} case, and omitting this ensemble member results in
+\(\SI{2.4(2)}{\watt\metre^{-2}\kelvin^{-1}}\) and
+\(\SI{0.41(4)}{\kelvin\watt^{-1}\metre^{2}}\).
 
-We determine the climate resistance using the integral-form computation outlined in
-Eq.~\ref{eq:climate-resistance} and adopting \(\tau =\SI{8}{\mathrm{yr}}\), coinciding
-with the duration of our simulations. The estimated climate resistance \(\rho \) from
-the three tropical simulation cases (with four in each ensemble) yields
-\(\SI{3(2)}{\watt\metre^{-2}\kelvin^{-1}}\), and \gls{tcrp} (\(1/\rho\)) values of
-\(\SI{0.4(1)}{\kelvin\watt^{-1}\metre^{2}}\), as demonstrated in table~\ref{tab:trcp}.
-One outlier was found in the dataset from the \gls{c2wm} case, and omitting this data
-point leaves estimates of \(\SI{2.4(2)}{\watt\metre^{-2}\kelvin^{-1}}\) and
-\(\SI{0.42(4)}{\kelvin\watt^{-1}\metre^{2}}\).
+Even after \(20\) years, the temperature has not fully recovered, as seen in
+Fig.~\ref{fig:compare-waveform-temp}. Yet, we assume the estimate of \(\rho
+=\SI{2.4(2)}{\watt\metre^{-2}\kelvin^{-1}}\) to be a good estimate of \(\alpha \).
+Importantly, the estimate of \(\alpha \simeq \SI{4}{\watt\metre^{-2}\kelvin^{-1}}\) by
+\citet{jones2005} is still significantly larger than our estimate, similar to what
+\citet{gregory2016} found.
 
-The climate resistance parameter \(\rho\) differs from the climate feedback parameter
-estimated by \citet{jones2005} (\(\alpha\)). However, considering both \(\alpha\) and
-\(\kappa\) are positive, and our calculated values of \(\rho(=\alpha+\kappa)\) are
-smaller than the \citet{jones2005} estimate of \(\alpha \simeq
-\SI{4}{\watt\metre^{-2}\kelvin^{-1}}\), we deduce that the climate feedback parameter
-linked to the simulations conducted here must be notably lower than what
-\citet{jones2005} found. It is worth noting that the temperature time series are not
-fully equilibrated after eight years, but as integrating over a longer time would only
-reduce the estimated values of \(\rho\), it is expected that this contribution is
-unimportant when comparing our \(\rho\) to the \(\alpha\) used in \gls{j05}.
-
-Since the temperature perturbation obtained by \gls{j05} was higher than any achieved
-here, it indicates that the forcing used by \gls{j05} must be stronger.
-\citet{gregory2016} mentioned that the peak forcing value was about \(20\) times smaller
-than expected, but from the results shown here, this reduced aerosol forcing efficiency
-is expected and akin to the \gls{rf} dependency on \gls{aod} found here. Inspecting
-Fig.~\ref{fig:parameter_scan} we find that the aerosol forcing efficiency is somewhat
-smaller in \gls{j05}. We therefore expect the primary contributor to the overall
-increased forcing strength to stem from the shape of the forcing time series utilised,
-not the magnitude.
+Since the temperature perturbation obtained by \gls{j05} was higher than achieved here,
+it indicates that the forcing used by \gls{j05} must be stronger. Even though the
+\gls{aod} peak value used by \gls{j05} was \(100\) times that of Mt.\ Pinatubo, the
+\gls{rf} peak value was only about \(20\) times that of Mt.\ Pinatubo
+\citep{gregory2016}. From the results shown here, this reduced aerosol forcing
+efficiency for large volcanic eruptions is expected and akin to the \gls{rf} dependency
+on \gls{aod} found here. By inspection of Fig.~\ref{fig:parameter_scan} we find that the
+aerosol forcing efficiency is somewhat smaller in \gls{j05}. We therefore expect the
+primary contributor to the overall increased forcing strength to originate from the
+development of the forcing time series, not the magnitude.
 
 \begin{table}
   \centering
 
   \caption{Estimated climate resistance and \gls{tcrp} by use of the method outlined by
-    \citet{merlis2014}. Estimates are based on ensembles with four members, and where \(\tau
-    =\SI{8}{\mathrm{yr}}\) in Eq.~\ref{eq:climate-resistance}. One data point within the
-    \gls{c2wm} case had an outlier, and the same estimate but with the outliter removed is
-    indicated as ``w/o outliter'' (without outlier).}\label{tab:trcp}%
+    \citet{merlis2014}. Estimates are based on ensembles with four members and \(\tau
+    =\SI{20}{\mathrm{yr}}\) using Eq.~\ref{eq:climate-resistance}. One ensemble member
+    within \gls{c2wm} had an outlier, and the same estimate but with this outlier removed is
+    indicated as ``w/o outlier'' (without outlier).}\label{tab:trcp}%
   \begin{tabular}{ccc}
     Simulation type          & \(\rho [\si{\watt\metre^{-2}\kelvin^{-1}}]\) & \(1/\rho\)        \\
     \gls{c2ws}               & \(\num{2.2(1)}\)                             & \(\num{0.45(2)}\) \\
@@ -987,23 +988,22 @@ not the magnitude.
 
 \section{Summary and conclusions}\label{sec:conclusions}
 
-In this paper we considered three medium to super-volcano sized eruptions and compared
-them to previously reported results. We find that the peak arrival in the \gls{aod} time
-series is later post-eruption for larger volcanoes than smaller, and also that larger
-volcanoes produce a sharper peak in the \gls{aod} time series. The \gls{rf} time series
-are similar across all volcano sizes, and while the smallest volcano experience a faster
+We consider three medium to super-volcano sized eruptions and compared them to
+previously reported results. We find that the peak arrival in the \gls{aod} time series
+is later post-eruption for larger volcanoes than smaller, and also that larger volcanoes
+produce a sharper peak in the \gls{aod} time series. The \gls{rf} time series are
+similar across all volcano sizes, and while the smallest volcano experience a faster
 temperature decay, the two larger volcanoes produce time series indistinguishable in
-shape for both \gls{rf} and temperature. Thus, a simple scaling of the \gls{aod} time
-series from a smaller volcano is insufficient in representing a larger volcanic
-eruption.
+development for both \gls{rf} and temperature. Thus, a simple scaling of the \gls{aod}
+time series from a smaller volcano is insufficient in representing that of a larger
+volcanic eruption.
 
 We investigate the \gls{rf} as a function of \gls{aod}, and find that an \gls{rf}
-dependence of \(\sim\SI{-20}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) is consistent with our
-results for volcanoes of similar size in terms of \iso{} as Mt.\ Pinatubo. Larger
-volcanoes with one to two orders of magnitude more \iso{} is found to produce a much
-more shallow \gls{rf} gradient closer to \(\sim
-\SI{-5}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\). A more shallow gradient for larger
-volcanoes is also consistent with data from previous studies of super-volcanoes.
+dependence of \(\sim\SI{-20}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) is representative for
+Mt.\ Pinatubo size volcanoes. Larger volcanoes with one to two orders of magnitude
+larger injections of \ce{SO2} are found to have an \gls{rf} dependence on \gls{aod}
+closer to \(\sim \SI{-5}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\). A more shallow slope for
+larger volcanoes is also consistent with data from previous studies of super-volcanoes.
 
 The time-after-eruption dependence of the ratio between \gls{rf} and \gls{aod} is found
 to weaken with time resulting in a reduced aerosol forcing efficiency. The effect is
@@ -1011,22 +1011,21 @@ found across all volcano sizes, but only the tropical cases show a clear trend. 
 high-latitude case experience an almost constant efficiency with time. A similar
 analysis has been carried out before by \citet{marshall2020}, who found that the
 efficiency increase with time when all eruptions were considered. However, we find that
-when only their tropical eruptions are considered, a reduced efficiency is found as well
-as a similar ratio to what our volcanoes of similar size produced. Thus, the results
-align well when comparing tropical eruptions, and it is evident that latitude is
-significant in deciding the aerosol forcing efficiency generally, and as a function of
-time-after-eruption specifically.
+when only their tropical eruptions are considered, a reduced efficiency is found, as
+well as a similar ratio compared to volcanoes of similar size in our experiments. Thus,
+it is evident that latitude generally is significant in determining the aerosol forcing
+efficiency, and in particular as a function of time-after-eruption.
 
 There is a large spread in the conversion between \iso{} and \gls{aod} and \gls{rf}
-across models and in particular model families. Improving the consistency in how
-\ce{SO2} and \ce{H2SO4} is treated in models would be an important step in improving the
-accuracy of volcanic eruptions influence on climate. Simulations of larger volcanic
-eruptions with \iso{} of at least \(200\)--\(\SI{400}{\tera\gram(\mathrm{SO2})}\) would
-provide useful data for a more precise determination of the functional shape of the
-\gls{rf} to \gls{aod} ratio. Allowing for different latitudes, similar to the \gls{m20}
-dataset, would also provide fruitful data to study more closely whether the functional
-given in Eq.~\ref{eq:niemeier_exponential} is indeed a lower bound for \gls{rf} as a
-function of \iso{}.
+across models, in particular among model families. Improving the consistency of the
+chemistry and physics of \ce{SO2} and \ce{H2SO4} in models would be an important step in
+improving the accuracy of volcanic eruptions influence on climate simulated by models.
+Simulations of larger volcanic eruptions with \iso{} of at least
+\(200\)--\(\SI{400}{\tera\gram(\mathrm{SO2})}\) would provide useful information for a
+more precise determination of the evolution of the \gls{rf} to \gls{aod} ratio. Allowing
+for different latitudes, similar to the \gls{m20} dataset, would also be useful to study
+if the function in Eq.~\ref{eq:niemeier_exponential} works as a lower bound on the
+\gls{rf} dependence on \iso{}, as indicated by Fig.~\ref{fig:parameter_scan}.
 
 \clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1098,42 +1097,41 @@ Data generated directly from output fields of \gls{cesm2} are available at \emph
 
 \appendixtitle{Simulation set up and output}
 
-Input files used in the simulations were created using a modified version of the file
+Input files used in the simulations were created by modifying the file
 \url{http://svn.code.sf.net/p/codescripts/code/trunk/ncl/emission/createVolcEruptV3.ncl},
-via a Python project developed on GitHub at
-\url{https://github.com/engeir/volcano-cooking}. The project is also available from the
-Python package manager PyPI\@. The program creates volcanoes with a given \ce{SO2}
-amount that is injected over six
+using a Python package available on GitHub at
+\url{https://github.com/engeir/volcano-cooking} or the Python package manager PyPI\@.
+The package is available both as a library and a CLI, and is used to create volcanoes
+with a given \ce{SO2} amount that is injected during six
 hours\footnote{\url{http://svn.code.sf.net/p/codescripts/code/trunk/ncl/emission/createVolcEruptV3.ncl}}
-at a given latitude, longitude and altitude. All volcanic \ce{SO2} files are created by
-setting the eruption details in a~.json file that is read to the
-\texttt{volcano-cooking} CLI at a fixed version, making for a reproducible experiment
+at a given latitude, longitude and altitude. All volcanic \ce{SO2} files are created
+from a shell script by setting the eruption details in a ``.json'' file that is read to
+the \texttt{volcano-cooking} CLI at a fixed version, ensuring a reproducible experiment
 setup.
 
-We are using the \texttt{BWma1850} component
+We are using the coupled model version \texttt{BWma1850} component
 setup\footnote{\url{https://docs.cesm.ucar.edu/models/cesm2/config/2.1.0/compsets.html}}
-to run the \gls{cesm2}, and an accompanying \gls{fsst} simulation to obtain estimates of
-the \gls{rf}. The \gls{fsst} simulation used is not from a standardised component setup
-as of \gls{cesm2} (v2.1.3), but is instead specified in full.\footnote{\fssturl} They
-differ in \texttt{CICE -> CICE\%PRES}, which is prescribed sea-ice,
-\texttt{POP2\%ECO\%DEP -> DOCN\%DOM} which is from a dynamical ocean to a prescribed
-data ocean and the wave component \texttt{WW3 -> SWAV} which is now a stub wave
-component instead of the full \gls{ww3}.
+to run the \gls{cesm2}, and an accompanying fixed sea-surface temperature version,
+\texttt{fSST1850}, to obtain estimates of the \gls{rf}. The applied \texttt{fSST1850} is
+not from a standardised component setup, but is instead explicitly
+specified.\footnote{\fssturl} The standard component setup \texttt{BWma1850} and
+\texttt{fSST1850} differ in that the latter uses a prescribed sea-ice (\texttt{CICE ->
+  CICE\%PRES}), , a prescribed data ocean (\texttt{POP2\%ECO\%DEP -> DOCN\%DOM}) and a
+stub wave component instead of the full \gls{ww3} (\texttt{WW3 -> SWAV}).
 
 \gls{rf} is calculated as the combined (\gls{sw} and \gls{lw}) all-sky \gls{toa} energy
 imbalance, where the \gls{cesm2} provide the output variables \gls{fsnt} and \gls{flnt}.
 Thus, \(\mathrm{RF_*}= \mathrm{FSNT} - \mathrm{FLNT}\), and taking the difference
 between volcanic simulations and a control simulation gives the final estimate of
 \gls{rf} (\(\mathrm{RF}=\mathrm{RF_{VOLC}}-\mathrm{RF_{CONTROL}}\))
-\citep{marshall2020}. The output parameters that go into this estimate are from he
-\gls{fsst} simulation, hence this outline specifically describe how to calculate
-\gls{erf} as opposed to \gls{irf}, which instead is the difference between the \gls{erf}
-and the sum of all rapid atmospheric adjustments \citep{marshall2020,smith2018}. The
-\gls{aod} is obtained from the output variable \gls{aodm}, while global temperature is
-saved by \gls{cesm2} to the variable \gls{trefht}. These four output variables are all
-that are used throughout this paper. The important input data used in the model
-simulations are \iso{} in units of teragrams (\(\si{\tera\gram(\ce{SO2})}\)), used to
-simulate volcanic eruptions.
+\citep{marshall2020}. The \gls{rf} calculation is based on \texttt{fSST1850}, hence this
+outline specifically describe how to calculate \gls{erf} as opposed to \gls{irf}, which
+instead is the difference between the \gls{erf} and the sum of all rapid atmospheric
+adjustments \citep{marshall2020,smith2018}. The \gls{aod} is obtained from the output
+variable \gls{aodm}, while global temperature is saved by \gls{cesm2} to the variable
+\gls{trefht}. The analysis of this work is performed using these four variables. The
+important input data used in the model simulations are \iso{} in units of teragrams
+(\(\si{\tera\gram(\ce{SO2})}\)), used to simulate volcanic eruptions.
 
 \appendix[B]
 
@@ -1142,41 +1140,42 @@ simulate volcanic eruptions.
 \subsection{Otto-Bliesner data analysis}\label{ap:ob16}
 
 Data from \citet{ottobliesner2016} are the original input data of \iso{} as used in
-their model simulations, where corresponding \gls{rf} and temperature data are found as
-the value of the time series at the time of an eruption (according to the \iso{} time
-series). Therefore, \gls{rf} and temperature values may be somewhat smaller in
-figs.~\ref{fig:parameter_scan}b,c,f than their true value. Specifically, an ensemble of
-5 is used for both \gls{rf} and temperature, and a mean from the 5 is used as the de
-facto \gls{rf} and temperature time series. A control simulation of a single time series
-is used to remove seasonal dependence from the temperature, where the control simulation
-is averaged into a climatology mean. Further, a drift in the temperature is removed by
-subtracting a linear regression fit. \gls{rf} have seasonality removed in the Fourier
-domain. The forcing (\ce{SO2}) can be downloaded with direct link
+their model simulations, along with \gls{rf} and temperature output data. The \iso{} can
+be downloaded with direct link
 \url{https://svn-ccsm-inputdata.cgd.ucar.edu/trunk/inputdata/atm/cam/volc/IVI2LoadingLatHeight501-2000_L18_c20100518.nc},
 or found at \url{https://www.cesm.ucar.edu/working-groups/paleo/simulations/ccsm4-lm}
-and \url{https://svn-ccsm-inputdata.cgd.ucar.edu/trunk/inputdata/atm/cam/volc/}.
+and \url{https://svn-ccsm-inputdata.cgd.ucar.edu/trunk/inputdata/atm/cam/volc/}. Output
+variables are available at
+\url{https://www.earthsystemgrid.org/dataset/ucar.cgd.cesm2le.atm.proc.daily_ave.html}.
 
-The time of an eruption is decided based on a best attempt at aligning the \ce{SO2} time
-series with both the \gls{rf} time series and the temperature time series individually.
-The \gls{rf} and temperature values used in the \gls{ob16} data points are the exact
-values at day 340 (\gls{rf}) and 400 (temperature) after the eruption according to the
-\iso{} time series. Thus, missing the peak means the estimates will be biased towards
-lower values, while other eruptions occurring close in time will contribute a bias to
-higher values.
+The time of an eruption is found based on a best attempt at aligning the \ce{SO2} time
+series with both the \gls{rf} time series and the temperature time series. The \gls{rf}
+and temperature peak values are further found as the value of the time series at the
+time of an eruption according to the \ce{SO2} time series. Missing the true peak means
+the found peaks will be biased towards lower values. However, instances where eruptions
+occur close in time will contribute a bias to higher values. These biases contribute to
+a greater uncertainty related to \gls{ob16} in Figs.~\ref{fig:parameter_scan}b,c,f.
+
+Since the \gls{ob16} dataset contain a five-member ensemble, the final \gls{rf} and
+temperature time series used were ensemble means. A single control simulation time
+series is used to remove seasonal dependence from the temperature, where the control
+simulation is averaged into a climatology mean. Further, a drift in the temperature is
+removed by subtracting a linear regression fit. \gls{rf} has seasonality removed in the
+Fourier domain.
 
 \subsection{Marshall data analysis}\label{ap:m20}
 
-Data used to generate the \gls{m20} data points was from \citet{marshall2020dataset},
+Data used to generate the \gls{m20} values were from \citet{marshall2020dataset},
 available at \url{https://doi.org/10.5285/232164e8b1444978a41f2acf8bbbfe91}. As each
-file contain a single eruption, peak values of \gls{aod}, \gls{rf} and temperature was
+file includes a single eruption, peak values of \gls{aod}, \gls{rf} and temperature were
 found by applying a Savitzky-Golay filter of third order and one year window length, and
-choosing the maximum value.
+choosing the maximum value \citep{savitzky1964}.
 
 \subsection{Gregory data analysis}\label{ap:g16}
 
-Data used to generate the \gls{g16} data points was kindly provided by Jonathan Gregory
-(personal communication). The full 160-year long time series were further analysed by
-computing annual means.
+Data used to generate \gls{g16} were kindly provided by Jonathan Gregory (personal
+communication). The full 160-year long time series were further analysed by computing
+annual means.
 
 \appendix[C]
 
@@ -1199,7 +1198,7 @@ table~\ref{tab:model-family}, based on the model code genealogy map created by
     study.}\label{tab:model-family}
 
   \begin{tabular}{ccc}
-    Family relation                                                         & Model name           & Data point \\
+    Family relation                                                         & Model name           & Data name  \\
     \multirow{2}{*}{CESM1 \(\rightarrow\) CESM1-CAM5 \(\rightarrow\) CESM2} & CESM1                & \gls{ob16} \\
                                                                             & CESM2
                                                                             & \emph{This
