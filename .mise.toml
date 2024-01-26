@@ -20,3 +20,7 @@ alias = "b"
 description = "Clean up after compiling PDF"
 run = "latexmk -c"
 depends = ["build"]
+
+[tasks.tectonic]
+description = "Build the JGR template with Tectonic"
+run = "tectonic ./agujournaltemplate.tex"
