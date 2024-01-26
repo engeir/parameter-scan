@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.1](https://github.com/engeir/parameter-scan/compare/v0.5.0...v0.5.1) (2024-01-26)
+
+
+### Miscellaneous
+
+* **jgr:** attempt to use the JGR template instead ([d2250b6](https://github.com/engeir/parameter-scan/commit/d2250b672b6e460ed0a3a384abfab8d42ea04e28))
+
 ## [0.5.0](https://github.com/engeir/parameter-scan/compare/v0.4.11...v0.5.0) (2024-01-24)
 
 
