@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.2](https://github.com/engeir/parameter-scan/compare/v0.5.1...v0.5.2) (2024-01-29)
+
+
+### Styles
+
+* **jgr:** format JGR version ([afc67e2](https://github.com/engeir/parameter-scan/commit/afc67e245a08a3de5bc557e8e18730477713e480))
+
 ## [0.5.1](https://github.com/engeir/parameter-scan/compare/v0.5.0...v0.5.1) (2024-01-26)
 
 
