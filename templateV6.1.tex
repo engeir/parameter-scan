@@ -35,6 +35,8 @@
 \usepackage[version=4]{mhchem}
 \usepackage{glossaries}
 \usepackage[automake]{glossaries-extra}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
 % \setacronymstyle{long-short}
 \setabbreviationstyle[acronym]{long-short}
 \setabbreviationstyle{short}
@@ -308,8 +310,8 @@ factor of \(\SI{-20.5(2)}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) across an ensembl
 \(82\) simulations featuring varying injection heights and latitudes of volcanic
 emissions, with \iso{} ranging from \(10\) to \(\SI{100}{\tera\gram(\ce{SO2})}\).
 
-A similar simulation setup, albeit with notable differences, was conducted
-by \citet{niemeier2015}, involving an ensemble of \(14\) levels of injected sulphur
+A similar simulation setup, albeit with notable differences, was conducted by
+\citet{niemeier2015}, involving an ensemble of \(14\) levels of injected sulphur
 spanning between \(\SI{1}{\tera\gram(\ce{S})\mathrm{yr}^{-1}}\)
 (\(\SI{2}{\tera\gram(\ce{SO2})\mathrm{yr}^{-1}}\)) and
 \(\SI{100}{\tera\gram(\ce{S})\mathrm{yr}^{-1}}\)
@@ -317,8 +319,8 @@ spanning between \(\SI{1}{\tera\gram(\ce{S})\mathrm{yr}^{-1}}\)
 maintained continuous sulphur injections, running until a steady sulphur level was
 achieved. Results indicated an inverse exponential relationship between \gls{rf} and
 \iso{} rate, converging to \(\SI{-65}{\watt\metre^{-2}}\)
-(Eq.~\ref{eq:niemeier_exponential}). Even the \(100\times\) Mt.\ Pinatubo
-super-volcano simulation by \citet{jones2005}, which obtained a peak \gls{rf} of
+(Eq.~\ref{eq:niemeier_exponential}). Even the \(100\times\) Mt.\ Pinatubo super-volcano
+simulation by \citet{jones2005}, which obtained a peak \gls{rf} of
 \(\SI{-60}{\watt\metre^{-2}}\), is below the suggested limit of
 \(\SI{-65}{\watt\metre^{-2}}\). Moreover, \citet{timmreck2010} find a peak \gls{rf}
 anomaly of \(\SI{-18}{\watt\metre^{-2}}\) from a \(\SI{1700}{\tera\gram(\ce{SO2})}\)
@@ -384,12 +386,17 @@ developed from MAM7, consisting of the seven modes Aitken, accumulation, primary
 fine dust, fine sea salt, coarse dust and coarse sea salt. Instantaneous internal mixing
 of primary carbonaceous aerosols with secondary aerosols and instantaneous ageing of
 primary carbonaceous particles is assumed by emitting primary carbon in the accumulation
-mode \citep{liu2016}. 
-As dust absorbs water efficiently and is expected to be removed by wet deposition similarly to sea salt, fine dust is merged with fine sea salt into the accumulation mode and coarse dust is merged with coarse sea salt into a coarse mode. 
-%Fine sea salt is assimilated into the accumulation mode, and as dust absorbs water efficiently, aerosols are expected to be removed by wet deposition similarly to sea salt, allowing fine dust to be merged into the accumulation mode as well. 
-%Likewise, coarse dust is merged with coarse sea salt into a coarse mode, and as both absorb water efficiently, 
-The coarse mode will quickly retain its background state below the tropopause \citep{liu2012}. Consequently, \gls{mam3} features the three modes
-Aitken, accumulation and coarse \citep{liu2016}.
+mode \citep{liu2016}. As dust absorbs water efficiently and is expected to be removed by
+wet deposition similarly to sea salt, fine dust is merged with fine sea salt into the
+accumulation mode and coarse dust is merged with coarse sea salt into a coarse mode.
+% Fine sea salt is assimilated into the accumulation mode, and as dust absorbs water
+% efficiently, aerosols are expected to be removed by wet deposition similarly to sea
+% salt, allowing fine dust to be merged into the accumulation mode as well. Likewise,
+% coarse dust is merged with coarse sea salt into a coarse mode, and as both absorb
+% water efficiently, 
+The coarse mode will quickly retain its background state below the tropopause
+\citep{liu2012}. Consequently, \gls{mam3} features the three modes Aitken, accumulation
+and coarse \citep{liu2016}.
 
 \subsection{Simulations}
 
@@ -431,12 +438,12 @@ latitudes. To avoid this issue, we \dots
 \begin{table*}
   \centering
 
-  \caption{\gls{cesm2} simulations. The ensembles \gls{c2wsn} and \gls{c2ws}
-    have the same eruption magnitude, but while \gls{c2ws} is located at the equator,
-    \gls{c2wsn} is located at high northern latitude. \gls{c2wmp} and \gls{c2wm} are located
-    at the equator, but with different magnitudes as compared to \gls{c2ws}. All tropical
-    ensembles have four members, indicated by the amount of eruption months, while the
-    northern latitude ensemble consist of two members}\label{tab:simulation-overview}%
+  \caption{\gls{cesm2} simulations. The ensembles \gls{c2wsn} and \gls{c2ws} have the same
+    eruption magnitude, but while \gls{c2ws} is located at the equator, \gls{c2wsn} is
+    located at high northern latitude. \gls{c2wmp} and \gls{c2wm} are located at the
+    equator, but with different magnitudes as compared to \gls{c2ws}. All tropical ensembles
+    have four members, indicated by the amount of eruption months, while the northern
+    latitude ensemble consist of two members}\label{tab:simulation-overview}%
   \begin{center}
     \begin{tabular}[c]{cccc}
       Ensemble name                                                                    & \(\si{\tera\gram(\ce{SO2})}\)         &
@@ -489,16 +496,17 @@ cases. Cases \gls{c2wmp} and \gls{c2ws} peak at similar times, but \gls{c2wmp} e
 a faster rise and slower decay in the \gls{aod} time series
 (Fig.~\ref{fig:compare-waveform-temp}a). Generally, the \gls{aod} time series from
 stronger eruption cases seem to display a sharper peak, or a slower rise and faster
-decay. The rise in RF across the three eruption cases in Fig.~\ref{fig:compare-waveform-temp}b
-is similar, although \gls{c2wm} reaches the peak just prior to the other two cases.
-During the decay phase, all cases appear to decay at a similar rate, however maintaining
-the offset caused by the earlier peak arrival of \gls{c2wm}. Cases \gls{c2wmp} and
-\gls{c2ws} exhibit indistinguishable \gls{rf} time series. Similarly, when observing the
-temperature evolution in Fig.~\ref{fig:compare-waveform-temp}c, \gls{c2wmp} and
-\gls{c2ws} are indistinguishable, while \gls{c2wm} has a sharper peak relative to the
-two other cases. Nevertheless, across all cases for the parameters shown in
-Fig.~\ref{fig:compare-waveform-temp}, a similar temporal development is found.
-Therefore, similar dynamics are expected to be at play in all cases.
+decay. The rise in RF across the three eruption cases in
+Fig.~\ref{fig:compare-waveform-temp}b is similar, although \gls{c2wm} reaches the peak
+just prior to the other two cases. During the decay phase, all cases appear to decay at
+a similar rate, however maintaining the offset caused by the earlier peak arrival of
+\gls{c2wm}. Cases \gls{c2wmp} and \gls{c2ws} exhibit indistinguishable \gls{rf} time
+series. Similarly, when observing the temperature evolution in
+Fig.~\ref{fig:compare-waveform-temp}c, \gls{c2wmp} and \gls{c2ws} are indistinguishable,
+while \gls{c2wm} has a sharper peak relative to the two other cases. Nevertheless,
+across all cases for the parameters shown in Fig.~\ref{fig:compare-waveform-temp}, a
+similar temporal development is found. Therefore, similar dynamics are expected to be at
+play in all cases.
 
 \begin{figure}
   \centering
@@ -549,11 +557,10 @@ The annual mean data from the Pinatubo-like \gls{c2wm} case in
 Fig.~\ref{fig:aod_vs_toa_ses_avg}b have \gls{rf} values as a function of \gls{aod} that
 follow almost the same constant slope as the \gls{g16} data. However, in
 Fig.~\ref{fig:aod_vs_toa_ses_avg}a we observe that the stronger eruptions lead to
-dissimilar responses in \gls{aod} and \gls{rf}, where \gls{c2wmp}
-seems to follow close to a \(-10\) slope and \gls{c2ws} is closer to a
-\(-5\) slope. The peak values (red circles) suggest a non-linear dependence, while
-within each eruption strength (same colour) the annual mean values fall relatively close
-to a straight line.
+dissimilar responses in \gls{aod} and \gls{rf}, where \gls{c2wmp} seems to follow close
+to a \(-10\) slope and \gls{c2ws} is closer to a \(-5\) slope. The peak values (red
+circles) suggest a non-linear dependence, while within each eruption strength (same
+colour) the annual mean values fall relatively close to a straight line.
 
 \begin{figure}
   \centering
@@ -562,14 +569,14 @@ to a straight line.
   \caption{\gls{rf} as a function of \gls{aod}, yearly means. Data from the four
     simulations listed in table~\ref{tab:simulation-overview} (\gls{c2wm}, \gls{c2wmp},
     \gls{c2ws} and \gls{c2wsn}) are shown along with the data from the HadCM3 sstPiHistVol
-    simulation by \citet{gregory2016} (grey crosses, \gls{g16}). Also shown are the estimated peak
-    values of the Mt.\ Pinatubo (black star) and Mt.\ Tambora (black plus) eruptions. In (a)
-    the simulated super-volcano of \citet{jones2005} (pink square) is shown, as well as the
-    peak values from the simulations \gls{c2wm}, \gls{c2wmp} and \gls{c2ws} (red circles).
-    All peak values (as opposed to annual means) have an asterisk (\(\ast{}\)) in their
-    label. The grey lines are the same regression fits as in \citet[][Fig.\ 4]{gregory2016},
-    where the solid line is the fit to \gls{g16}. (b): Zooming
-    in on the smallest \gls{aod} values.}\label{fig:aod_vs_toa_ses_avg}%
+    simulation by \citet{gregory2016} (grey crosses, \gls{g16}). Also shown are the
+    estimated peak values of the Mt.\ Pinatubo (black star) and Mt.\ Tambora (black plus)
+    eruptions. In (a) the simulated super-volcano of \citet{jones2005} (pink square) is
+    shown, as well as the peak values from the simulations \gls{c2wm}, \gls{c2wmp} and
+    \gls{c2ws} (red circles). All peak values (as opposed to annual means) have an asterisk
+    (\(\ast{}\)) in their label. The grey lines are the same regression fits as in
+    \citet[][Fig.\ 4]{gregory2016}, where the solid line is the fit to \gls{g16}. (b):
+    Zooming in on the smallest \gls{aod} values.}\label{fig:aod_vs_toa_ses_avg}%
 \end{figure}
 
 To find the development of \gls{aod} and \gls{rf} relative to each other over time, we
@@ -676,7 +683,17 @@ labelled \gls{t10}.
 
 The almost linear relationship between \gls{aod} and \iso{} for the \gls{c2w} data
 suggest a comparable trend for \gls{rf} versus \iso{} as seen in \gls{rf} versus
-\gls{aod}. In Fig.~\ref{fig:parameter_scan}b, \gls{rf} plotted against \iso{} (with the
+\gls{aod}. This relationship along with the functional relationships between all other
+parameters shown in Fig.~\ref{fig:parameter_scan} are illustrated in
+Fig.~\ref{fig:diagram_function_relations}. There, we find that by assuming a linear
+dependency of \gls{aod} on \iso{} (\(ax+b\)), and of temperature on \gls{rf} (\(cx+d\)),
+we must have that \(f\), \(g\), \(h\) and \(k\) all have the same functional form, where
+\(f: \ce{SO2} \to \mathrm{RF}\), \(g: \mathrm{AOD} \to \mathrm{T}\), \(h: \ce{SO2} \to
+\mathrm{T}\) and \(k: \mathrm{AOD} \to \mathrm{RF}\). From this, we deduce that
+\(f(x)=k(ax+b)\) and \(h(x)=f(cx+d)=g(ax+b)\), and finally that \(h(x)=k(acx+ad+b)\)
+with the conclusion that \(f\), \(g\), \(h\) and \(k\) have the same functional form.
+
+In Fig.~\ref{fig:parameter_scan}b, \gls{rf} plotted against \iso{} (with the
 absolute value of \gls{rf} on the \(y\)-axis) indicates a substantial damping effect on
 \gls{rf} as \iso{} increases for the \gls{c2w} data, in agreement with results from
 \citet{ottobliesner2016}, labelled \gls{ob16}. The analysis details of \gls{ob16} can be
@@ -702,6 +719,24 @@ found in Appendix B, section~\ref{ap:ob16}. Despite the model complexity differe
     \citet{niemeier2015}, indicating the function in
     Eq.~\ref{eq:niemeier_exponential}.}\label{fig:parameter_scan}%
 \end{figure*}
+
+\begin{figure}
+  \centering
+
+  \begin{tikzpicture}[>={Stealth[length=1mm,width=2mm]}]
+    % Place the letters in the corners
+    \node (A) at (0,0) {AOD}; \node (T) at (4,0) {T}; \node (RF) at (4,4) {RF}; \node (S) at
+    (0,4) {\ce{SO2}};
+    % Draw arrows between the letters
+    \draw[->] (A) -- node[midway, below] {\(g\)} (T); \draw[->] (RF) -- node[midway, right]
+    {\(cx+d\)} (T); \draw[->] (S) -- node[midway, above] {\(f\)} (RF); \draw[->] (S) --
+    node[midway, left] {\(ax+b\)} (A); \draw[->] (S) -- node[pos=0.7, above] {\(h\)} (T);
+    \draw[->] (A) -- node[pos=0.7, above] {\(k\)} (RF);
+  \end{tikzpicture}
+
+  \caption{Diagram describing the functional relationships of the parameters shown in
+  Fig.~\ref{fig:parameter_scan}.}\label{fig:diagram_function_relations}%
+\end{figure}
 
 % INFO: the conversion between S and SO2 is confirmed by Niemeier and Timmreck (2015)'s
 % reference to the Bekki et al. (1996) paper. Bekki uses 6000 Mt SO2, Niemeier uses 3000
@@ -1113,7 +1148,7 @@ to run the \gls{cesm2}, and an accompanying fixed sea-surface temperature versio
 not from a standardised component setup, but is instead explicitly
 specified.\footnote{\fssturl} The component setup \texttt{BWma1850} and
 \texttt{fSST1850} differ in that the latter uses a prescribed sea-ice (\texttt{CICE ->
-CICE\%PRES}), a prescribed data ocean (\texttt{POP2\%ECO\%DEP -> DOCN\%DOM}) and a stub
+  CICE\%PRES}), a prescribed data ocean (\texttt{POP2\%ECO\%DEP -> DOCN\%DOM}) and a stub
 wave component instead of the full \gls{ww3} (\texttt{WW3 -> SWAV}).
 
 The important input data used in the model simulations are \iso{} in units of teragrams
@@ -1128,7 +1163,7 @@ describe how to calculate \gls{erf} as opposed to \gls{irf}, which instead is th
 difference between the \gls{erf} and the sum of all rapid atmospheric adjustments
 \citep{marshall2020,smith2018}. The \gls{aod} is obtained from the output variable
 \gls{aodm}, while global temperature is saved by \gls{cesm2} to the variable
-\gls{trefht}. The analysis of this work is performed using these four variables. 
+\gls{trefht}. The analysis of this work is performed using these four variables.
 
 \appendix[B]
 
