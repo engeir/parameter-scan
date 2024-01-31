@@ -102,18 +102,15 @@
 %
 
 \abstract{%
-We investigate the climatic effects of volcanic eruptions spanning from medium-size
-events, such as Mt.\ Pinatubo still having a global impact, to super-volcanoes. The
+We investigate the climatic effects of volcanic eruptions spanning from Mt.\ Pinatubo-sized events to super-volcanoes. The
 study is based on ensemble simulations in the \gls{cesm2} climate model using the
-\gls{waccm} atmosphere model. Here we focus on the dependence of the climate response to
-the magnitude of the volcanic eruption. Our analysis centres on the impact of injections
+\gls{waccm} atmosphere model. Our analysis centres on the impact of injections
 of different magnitudes of \ce{SO2} on \gls{aod}, \gls{rf}, and global temperature
 anomalies. Unlike the traditional linear models used for smaller eruptions, our
 results reveal a non-linear relationship between \gls{rf} and \gls{aod} for larger
 eruptions. We also uncover a notable time-dependent decrease in post-eruption aerosol
 forcing efficiency across all eruption magnitudes. In addition, the study reveals that
-larger volcanic events produce a delayed and sharper peak in \gls{aod}, alongside a
-similar development of the \gls{rf} and temperature time series. These findings
+larger volcanic events produce a delayed and sharper peak in \gls{aod}, and a longer-lasting temperature resopnse while the ime evolution of $\gls{rf}$ remains consistent.  These findings
 emphasise the complexity of volcanic impacts on climate, demonstrating significant
 differences in climatic response depending on eruption magnitude.
 }
@@ -481,7 +478,7 @@ distinct forcing magnitudes (\gls{c2wm}, \gls{c2wmp}, and \gls{c2ws}) outlined i
 table~\ref{tab:simulation-overview} have been used. The time series in
 Fig.~\ref{fig:compare-waveform-temp} are normalised by setting the peak value to unity,
 defined based on the peak of a fit from a Savitzky-Golay filter of 3rd order and a
-one-year window length \citep{savitzky1964}.
+one-year window length \citep{savitzky1964}. We investigate the relationship between the peak values in section \dots
 
 A notable feature across all three subfigures of Fig.~\ref{fig:compare-waveform-temp} is
 the earlier peak occurrence of the \gls{c2wm} case compared to the larger eruption
@@ -522,7 +519,7 @@ they show a slight change in shape from smaller to larger eruptions
 smaller eruptions displays a fast rise and a flat peak before decaying back to its
 equilibrium state. From the larger eruptions, we find a slower rise but a sharper peak,
 resulting in a decay to equilibrium happening at a similar time after the eruption and
-at a similar rate.
+at a similar rate compared to the smallest eruption.
 
 \subsection{\gls{rf} dependency on \gls{aod}}
 
@@ -572,13 +569,13 @@ to a straight line.
     in on the smallest \gls{aod} values.}\label{fig:aod_vs_toa_ses_avg}%
 \end{figure}
 
-To find the development of \gls{aod} and \gls{rf} relative to each other over time, we
-plot in Fig.~\ref{fig:aod_vs_toa_avg_loop_ratios} seasonal means of the \gls{rf} to
-\gls{aod} ratio, where the start of the time series is taken as the eruption day. The
+To investigate the time dependence of the ratio between \gls{aod} and \gls{rf}, we present seasonal means of this ratio in Fig.~\ref{fig:aod_vs_toa_avg_loop_ratios},
+%To find the development of \gls{aod} and \gls{rf} relative to each other over time, we plot in Fig.~\ref{fig:aod_vs_toa_avg_loop_ratios} seasonal means of the \gls{rf} to \gls{aod} ratio,
+where the start of the time series is taken as the eruption day. The
 plot shows all the eruption cases given in table~\ref{tab:simulation-overview}, as well
 as the tropical eruptions from the \citet{marshall2020dataset} dataset (\(6\) of \(82\)
 eruptions), labelled \gls{m20} and described in Appendix B, section~\ref{ap:m20}. In
-Fig.~\ref{fig:aod_vs_toa_avg_loop_ratios}a, slopes are linear regression fits to the
+Fig.~\ref{fig:aod_vs_toa_avg_loop_ratios}a, lines are linear regression fits to the
 seasonal means across all ensemble members, summarised in
 table~\ref{tab:slope-gradients}. Shaded regions are the standard deviation around the
 seasonal means. A similar shading is plotted in
@@ -590,10 +587,9 @@ Fig.~\ref{fig:compare-waveform-temp}b). For this reason, the ratio of \gls{rf} t
 third year.
 
 Although the ratio changes across the eruption magnitudes, we find that all the tropical
-cases (\gls{c2w}) follow a positive slope during the first period, as seen in
+cases follow a positive slope during the first period, as seen in
 Fig.~\ref{fig:aod_vs_toa_avg_loop_ratios}a and described in
-table~\ref{tab:slope-gradients}. A positive slope is also found from the tropical
-eruptions in the \gls{m20} dataset. The northern latitude case in \gls{c2wsn} show a
+table~\ref{tab:slope-gradients}. The northern latitude case in \gls{c2wsn} show a
 much flatter slope compared to \gls{c2w} and \gls{m20}. The distinction between the
 slopes from the tropical and non-tropical cases is perhaps more clear in
 Fig.~\ref{fig:aod_vs_toa_avg_loop_ratios}b and corresponding rows in
@@ -660,10 +656,10 @@ eruption latitude.
 
 \subsection{Parameter scan}
 
-In Fig.~\ref{fig:parameter_scan}, we compare all relevant parameters against each other.
-The primary input parameter in the \gls{cesm2} is \iso{}. For our tropical cases
-(\gls{c2w}), we observe an almost linear relationship between \gls{aod} peak values
-against \iso{}. The latitude also plays a role for the magnitude of the \gls{aod}
+In Fig.~\ref{fig:parameter_scan}, we compare the peak values of all investigated \gls{cesm2} output parameters against each other as well as to \iso{}.
+%The primary input parameter in the \gls{cesm2} is \iso{}. 
+For our tropical cases (\gls{c2w}), we observe an almost linear relationship between \gls{aod} peak values
+against \iso{}, Fig. 4a. The latitude also plays a role for the magnitude of the \gls{aod}
 perturbation, evident from \gls{c2wsn}. This weak yet significant latitude dependence
 aligns with findings by \citet{marshall2019}, indicating that \(\SI{72}{\percent}\) of
 the \gls{aod} variance can be attributed to \iso{}, while latitude accounts for only
@@ -744,21 +740,22 @@ Eq.~\ref{eq:niemeier_exponential}.
 
 Figure~\ref{fig:parameter_scan}c illustrates the response of temperature against \iso{}.
 Similar to Fig.~\ref{fig:parameter_scan}b, the increase of temperature response with
-\iso{} decreases for higher \iso{}. Notably, \gls{ob16} takes a different trajectory
-compared to \gls{c2w}, showing smaller temperature dependence on \iso{}. In contrast to
-our findings, \gls{t10} finds a considerably weaker temperature perturbation, noting a
-maximum temperature anomaly of only \(\SI{-3.5}{\kelvin}\) for their
+\iso{} decreases for higher \iso{}. 
+Notably, \gls{ob16} and \gls{t10} have a weaker temperature response \iso{} than \gls{c2w}. 
+%Notably, \gls{ob16} takes a different trajectory compared to \gls{c2w}, showing smaller temperature dependence on \iso{}. 
+%In contrast to our findings, \gls{t10} finds a considerably weaker temperature perturbation, noting 
+\gls{t10} has a maximum temperature anomaly of only \(\SI{-3.5}{\kelvin}\) for their
 \(\SI{1700}{\tera\gram(\ce{SO2})}\) eruption, while \gls{j05} records a substantially
 larger maximum temperature anomaly of \(\SI{-10.7}{\kelvin}\) compared to our \gls{c2w}
 simulations.
 
-Moving to Fig.~\ref{fig:parameter_scan}d, we revisit the relationship between \gls{rf}
+In Fig.~\ref{fig:parameter_scan}d, we revisit the relationship between \gls{rf}
 and \gls{aod}, focusing on peak values rather than annual and seasonal averages. As
 previously discussed, the \gls{rf} to \gls{aod} ratio displays weaker slopes than
 previous studies \citep{jones2005, marshall2020, timmreck2010}, with the \gls{c2w} peak
 values not conforming to a linear trend. This comparison suggests potential significant
 dependencies on the model and its input parameters, such as latitude, but most notably
-to an inherent non-linear \gls{rf} dependence on \gls{aod}. Both the \gls{g16} and
+to an inherent non-linear \gls{rf} dependence on \gls{aod}. Both the \gls{g16} data in Fig. 2 and the
 \gls{j05} data originate from the same climate model, and similarly to what we find from
 the \gls{c2w} data, the ratio is much stronger for small eruptions in the industrial era
 (\gls{g16}) compared to the super-volcano eruption (\gls{j05}).
@@ -820,7 +817,7 @@ abundance, affecting the peak timing as well as the magnitude.
 
 Although \gls{j05} is comparable to \gls{c2ws} concerning \gls{aod} and \gls{rf} peak
 values, the temperature response reported by \citet{jones2005} appears much stronger
-than what our strongest eruption leads too. Since \citet{jones2005} multiplies the
+than what our strongest eruption leads to. Since \citet{jones2005} multiplies the
 \gls{aod} time series from Mt.\ Pinatubo by one hundred to represent the \gls{aod} time
 series of a super-volcano, this simple approach could potentially deviate significantly
 from the real \gls{aod} time series of the super-volcano, both in shape and magnitude.
@@ -857,13 +854,13 @@ ratio emerges. \citet{marshall2020} discusses a similar aspect, finding that aer
 forcing efficiency strengths from year 1 to year 2. This is by \citet{marshall2020}
 attributed to the time taken for aerosol dispersion, affecting global albedo and
 consequently \gls{rf}, whereas \gls{aod} is less affected by aerosol dispersion. Here,
-the aerosol forcing efficiency become weaker during the first period, as depicted in
+the aerosol forcing efficiency becomes weaker during the first period, as depicted in
 Fig.~\ref{fig:aod_vs_toa_avg_loop_ratios}. Focusing solely on tropical eruptions in
 \gls{m20} (between \(-10\) and \(\SI{10}{\degree\mathrm{N}}\)), the \gls{rf} to
 \gls{aod} ratio closely resembles the findings from the \gls{c2wm} case. Thus, while
 \iso{} is crucial for estimating the time-average of the \gls{rf} to \gls{aod} ratio,
 latitude and in particular aerosol dispersion seem more influential in determining the
-post-eruption evolution of the ratio. Given that the \gls{c2wsn} case lack a significant
+post-eruption evolution of the ratio. Given that the \gls{c2wsn} case lacka a significant
 increase in ratio as compared to \gls{c2w}, the substantial difference in eruption
 latitude appears to be a likely cause.
 
@@ -952,7 +949,7 @@ it indicates that the forcing used by \gls{j05} must be stronger. Even though th
 \gls{rf} peak value was only about \(20\) times that of Mt.\ Pinatubo
 \citep{gregory2016}. From the results shown here, this reduced aerosol forcing
 efficiency for large volcanic eruptions is expected and akin to the \gls{rf} dependency
-on \gls{aod} found here. By inspection of Fig.~\ref{fig:parameter_scan} we find that the
+on \gls{aod}. By inspection of Fig.~\ref{fig:parameter_scan} we find that the
 aerosol forcing efficiency is somewhat smaller in \gls{j05}. We therefore expect the
 primary contributor to the overall increased forcing strength to originate from the
 development of the forcing time series, not the magnitude.
@@ -986,41 +983,42 @@ development of the forcing time series, not the magnitude.
 \section{Summary and conclusions}\label{sec:conclusions}
 
 We consider three medium to super-volcano sized eruptions and compared them to
-previously reported results. We find that the peak arrival in the \gls{aod} time series
-is later post-eruption for larger volcanoes than smaller, and also that larger volcanoes
+previously reported results. We find that the \gls{aod} peak arrives later for larger volcanoes than for smaller, and also that larger volcanoes
 produce a sharper peak in the \gls{aod} time series. The \gls{rf} time series are
-similar across all volcano sizes, and while the smallest volcano experience a faster
+similar across all volcano sizes, and while the smallest volcano experiences a faster
 temperature decay, the two larger volcanoes produce time series indistinguishable in
 development for both \gls{rf} and temperature. Thus, a simple scaling of the \gls{aod}
 time series from a smaller volcano is insufficient in representing that of a larger
 volcanic eruption.
 
-We investigate the \gls{rf} as a function of \gls{aod}, and find that an \gls{rf}
+A \gls{rf}
 dependence of \(\sim\SI{-20}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) is representative for
 Mt.\ Pinatubo size volcanoes. Larger volcanoes with one to two orders of magnitude
 larger injections of \ce{SO2} are found to have an \gls{rf} dependence on \gls{aod}
-closer to \(\sim \SI{-5}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\). A more shallow slope for
+closer to \(\sim \SI{-5}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\). A shallower slope for
 larger volcanoes is also consistent with data from previous studies of super-volcanoes.
 
 The time-after-eruption dependence of the ratio between \gls{rf} and \gls{aod} is found
 to weaken with time resulting in a reduced aerosol forcing efficiency. The effect is
 found across all volcano sizes, but only the tropical cases show a clear trend. The
-high-latitude case experience an almost constant efficiency with time. A similar
-analysis has been carried out before by \citet{marshall2020}, who found that the
-efficiency increase with time when all eruptions were considered. However, we find that
-when only their tropical eruptions are considered, a reduced efficiency is found, as
-well as a similar ratio compared to volcanoes of similar size in our experiments. Thus,
-it is evident that latitude generally is significant in determining the aerosol forcing
+high-latitude case displays an almost constant efficiency with time. These results is in agreement with a reanalysis of the tropical data in \citet{marshall2020dataset}, contrary to the results using all latittudes in the data set \citet{marshall2020}.
+%A similar analysis has been carried out before by \citet{marshall2020}, who found that the
+%efficiency increase with time when all eruptions were considered. However, we find that
+%when only their tropical eruptions are considered, a reduced efficiency is found, as
+%well as a similar ratio compared to volcanoes of similar size in our experiments. 
+Thus,it is evident that latitude generally is significant in determining the aerosol forcing
 efficiency, and in particular as a function of time-after-eruption.
 
-There is a large spread in the conversion between \iso{} and \gls{aod} and \gls{rf}
-across models, in particular among model families. Improving the consistency of the
+Considering \iso{} and the peak values of {aod}, \gls{rf} and \gls{}, there is a large spread in the across models, in particular across model families. Improving the consistency of the
 chemistry and physics of \ce{SO2} and \ce{H2SO4} in models would be an important step in
 improving the accuracy of volcanic eruptions influence on climate simulated by models.
+
+
 Simulations of larger volcanic eruptions with \iso{} of at least
 \(200\)--\(\SI{400}{\tera\gram(\mathrm{SO2})}\) would provide useful information for a
-more precise determination of the evolution of the \gls{rf} to \gls{aod} ratio. Allowing
-for different latitudes, similar to the \gls{m20} dataset, would also be useful to study
+more precise determination of the evolution of the \gls{rf} to \gls{aod} ratio. 
+
+Allowingfor different latitudes, similar to the \gls{m20} dataset, would also be useful to study
 if the function in Eq.~\ref{eq:niemeier_exponential} works as a lower bound on the
 \gls{rf} dependence on \iso{}, as indicated by Fig.~\ref{fig:parameter_scan}b.
 
@@ -1041,6 +1039,8 @@ if the function in Eq.~\ref{eq:niemeier_exponential} works as a lower bound on t
 % https://www.sigma2.no/acknowledgements
 The simulations were performed on resources provided by Sigma2 --- the National
 Infrastructure for High Performance Computing and Data Storage in Norway.
+
+This work was supported by the Tromsø Research Foundation under Grant Number 19\_SG\_AT.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % DATA AVAILABILITY STATEMENT
