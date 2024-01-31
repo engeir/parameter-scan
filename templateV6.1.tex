@@ -308,7 +308,7 @@ factor of \(\SI{-20.5(2)}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) across an ensembl
 \(82\) simulations featuring varying injection heights and latitudes of volcanic
 emissions, with \iso{} ranging from \(10\) to \(\SI{100}{\tera\gram(\ce{SO2})}\).
 
-An in-some-way similar simulation setup, albeit with notable differences, was conducted
+A similar simulation setup, albeit with notable differences, was conducted
 by \citet{niemeier2015}, involving an ensemble of \(14\) levels of injected sulphur
 spanning between \(\SI{1}{\tera\gram(\ce{S})\mathrm{yr}^{-1}}\)
 (\(\SI{2}{\tera\gram(\ce{SO2})\mathrm{yr}^{-1}}\)) and
@@ -317,8 +317,8 @@ spanning between \(\SI{1}{\tera\gram(\ce{S})\mathrm{yr}^{-1}}\)
 maintained continuous sulphur injections, running until a steady sulphur level was
 achieved. Results indicated an inverse exponential relationship between \gls{rf} and
 \iso{} rate, converging to \(\SI{-65}{\watt\metre^{-2}}\)
-(Eq.~\ref{eq:niemeier_exponential}). However, even the \(100\times\) Mt.\ Pinatubo
-super-volcano simulation by \citet{jones2005}, who obtained a peak \gls{rf} of
+(Eq.~\ref{eq:niemeier_exponential}). Even the \(100\times\) Mt.\ Pinatubo
+super-volcano simulation by \citet{jones2005}, which obtained a peak \gls{rf} of
 \(\SI{-60}{\watt\metre^{-2}}\), is below the suggested limit of
 \(\SI{-65}{\watt\metre^{-2}}\). Moreover, \citet{timmreck2010} find a peak \gls{rf}
 anomaly of \(\SI{-18}{\watt\metre^{-2}}\) from a \(\SI{1700}{\tera\gram(\ce{SO2})}\)
@@ -351,7 +351,7 @@ substantial variability exists in the slope among studies
 \citep{mills2017,hansen2005,gregory2016,marshall2020,pitari2016b}. Moreover, a
 time-after-eruption dependence on the \gls{rf} to \gls{aod} ratio is found in
 \citet{marshall2020}, whereas \citet{niemeier2015} revealed a non-linear relationship
-between \gls{rf} and \iso{}. Thus, a consensus on the relationship between \iso{},
+between \gls{rf} and \iso{} rate. Thus, a consensus on the relationship between \iso{},
 \gls{aod} and \gls{rf} has yet to be established.
 
 To address these issues, we conducted ensemble simulations of volcanic eruptions in the
@@ -384,12 +384,11 @@ developed from MAM7, consisting of the seven modes Aitken, accumulation, primary
 fine dust, fine sea salt, coarse dust and coarse sea salt. Instantaneous internal mixing
 of primary carbonaceous aerosols with secondary aerosols and instantaneous ageing of
 primary carbonaceous particles is assumed by emitting primary carbon in the accumulation
-mode \citep{liu2016}. Fine sea salt is assimilated into the accumulation mode, and as
-dust absorbs water efficiently, aerosols are expected to be removed by wet deposition
-similarly to sea salt, allowing fine dust to be merged into the accumulation mode as
-well. Likewise, coarse dust is merged with coarse sea salt into a coarse mode, and as
-both absorb water efficiently, the coarse mode will quickly retain its background state
-below the tropopause \citep{liu2012}. Consequently, \gls{mam3} features the three modes
+mode \citep{liu2016}. 
+As dust absorbs water efficiently and is expected to be removed by wet deposition similarly to sea salt, fine dust is merged with fine sea salt into the accumulation mode and coarse dust is merged with coarse sea salt into a coarse mode. 
+%Fine sea salt is assimilated into the accumulation mode, and as dust absorbs water efficiently, aerosols are expected to be removed by wet deposition similarly to sea salt, allowing fine dust to be merged into the accumulation mode as well. 
+%Likewise, coarse dust is merged with coarse sea salt into a coarse mode, and as both absorb water efficiently, 
+The coarse mode will quickly retain its background state below the tropopause \citep{liu2012}. Consequently, \gls{mam3} features the three modes
 Aitken, accumulation and coarse \citep{liu2016}.
 
 \subsection{Simulations}
@@ -427,12 +426,12 @@ that of Mt.\ Pinatubo scaled by one hundred \citep{jones2005}. This approach may
 incorrect results, both since the peak of the \gls{aod} may be too small or big, but
 also since the evolution of the \gls{aod} could be wrong. Similarly, a different
 \gls{aod} evolution may be found from similar size volcanoes, but at different
-latitudes.
+latitudes. To avoid this issue, we \dots
 
 \begin{table*}
   \centering
 
-  \caption{Simulations done with the \gls{cesm2}. The ensembles \gls{c2wsn} and \gls{c2ws}
+  \caption{\gls{cesm2} simulations. The ensembles \gls{c2wsn} and \gls{c2ws}
     have the same eruption magnitude, but while \gls{c2ws} is located at the equator,
     \gls{c2wsn} is located at high northern latitude. \gls{c2wmp} and \gls{c2wm} are located
     at the equator, but with different magnitudes as compared to \gls{c2ws}. All tropical
@@ -477,9 +476,9 @@ latitudes.
 
 Figure~\ref{fig:compare-waveform-temp} illustrates time series of global mean \gls{aod},
 \gls{rf}, and surface air temperature. The black lines represent the medians across the
-four-member ensembles, while shading indicates the 5th to 95th percentiles. Three
-distinct forcing magnitudes (\gls{c2wm}, \gls{c2wmp}, and \gls{c2ws}), outlined in
-table~\ref{tab:simulation-overview}, have been used. The time series in
+four-member ensembles, while shading indicates the 5th to 95th percentiles. The three
+distinct forcing magnitudes (\gls{c2wm}, \gls{c2wmp}, and \gls{c2ws}) outlined in
+table~\ref{tab:simulation-overview} have been used. The time series in
 Fig.~\ref{fig:compare-waveform-temp} are normalised by setting the peak value to unity,
 defined based on the peak of a fit from a Savitzky-Golay filter of 3rd order and a
 one-year window length \citep{savitzky1964}.
@@ -490,7 +489,7 @@ cases. Cases \gls{c2wmp} and \gls{c2ws} peak at similar times, but \gls{c2wmp} e
 a faster rise and slower decay in the \gls{aod} time series
 (Fig.~\ref{fig:compare-waveform-temp}a). Generally, the \gls{aod} time series from
 stronger eruption cases seem to display a sharper peak, or a slower rise and faster
-decay. The rise across the three eruption cases in Fig.~\ref{fig:compare-waveform-temp}b
+decay. The rise in RF across the three eruption cases in Fig.~\ref{fig:compare-waveform-temp}b
 is similar, although \gls{c2wm} reaches the peak just prior to the other two cases.
 During the decay phase, all cases appear to decay at a similar rate, however maintaining
 the offset caused by the earlier peak arrival of \gls{c2wm}. Cases \gls{c2wmp} and
