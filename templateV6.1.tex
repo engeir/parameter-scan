@@ -471,23 +471,18 @@ defined based on the peak of a fit from a Savitzky-Golay filter of 3rd order and
 one-year window length \citep{savitzky1964}. We investigate the relationship between the
 peak values in section \dots
 
-A notable feature across all three subfigures of Fig.~\ref{fig:compare-waveform-temp} is
-the earlier peak occurrence of the \gls{c2wm} case compared to the larger eruption
-cases. Cases \gls{c2wmp} and \gls{c2ws} peak at similar times, but \gls{c2wmp} exhibits
-a faster rise and slower decay in the \gls{aod} time series
-(Fig.~\ref{fig:compare-waveform-temp}a). Generally, the \gls{aod} time series from
-stronger eruption cases seem to display a sharper peak, or a slower rise and faster
-decay. The rise in \gls{rf} across the three eruption cases in
-Fig.~\ref{fig:compare-waveform-temp}b is similar, although \gls{c2wm} reaches the peak
-just prior to the other two cases. During the decay phase, all cases appear to decay at
-a similar rate, however maintaining the offset caused by the earlier peak arrival of
-\gls{c2wm}. Cases \gls{c2wmp} and \gls{c2ws} exhibit indistinguishable \gls{rf} time
-series. Similarly, when observing the temperature evolution in
-Fig.~\ref{fig:compare-waveform-temp}c, \gls{c2wmp} and \gls{c2ws} are indistinguishable,
-while \gls{c2wm} has a sharper peak relative to the two other cases. Nevertheless,
-across all cases for the parameters shown in Fig.~\ref{fig:compare-waveform-temp}, a
-similar temporal development is found. Therefore, similar dynamics are expected to be at
-play in all cases.
+A notable feature across the subfigures of Fig.~\ref{fig:compare-waveform-temp} is
+the peak occurrence of the \gls{c2wm} case compared to the larger eruption
+cases. The peak of \gls{c2wm} arrive earlier for both \gls{aod}
+(Fig.~\ref{fig:compare-waveform-temp}a) and temperature
+(Fig.~\ref{fig:compare-waveform-temp}c), while the \gls{rf} time series in
+Fig.~\ref{fig:compare-waveform-temp}b are all indistinguishable. Cases \gls{c2wmp} and
+\gls{c2ws} are indistinguishable in their temperature development, and while \gls{c2wm}
+peak at an earlier time, it decays similarly to the other two cases. Interestingly, the
+same development is not found in the \gls{aod} time series. \gls{c2wm} peak at an
+earlier time, but also spend more time around the peak and as such decay later
+post-eruption. Similarly, \gls{c2wmp} has a faster rise and slower decay compared to
+\gls{c2ws}, but where both peak at a similar time.
 
 \begin{figure}
   \centering
@@ -501,21 +496,12 @@ play in all cases.
     percentiles.}\label{fig:compare-waveform-temp}%
 \end{figure}
 
-% TODO:
-% 1. Question at the top is not answered. Is AOD or RF more influential?
-% 2. Update the general text comparing shape of RF to T. Does it make sense to say they are strongly related?
-% 3. Make a point out of the faster decay of AOD and RF compared to T, which is heavily perturbed still after several years
-To investigate if the shape of the temperature time series can be inferred from the
-shape of either of the forcing time series (\gls{aod} or \gls{rf}), we find that the
-shapes of the \gls{rf} time series are consistent over the different eruption strengths
-(Fig.~\ref{fig:compare-waveform-temp}b), suggesting a strong dependence of temperature
-on \gls{rf}. About the same can largely be said about the \gls{aod} time series, though
-they show a slight change in shape from smaller to larger eruptions
-(Fig.~\ref{fig:compare-waveform-temp}a). Specifically, the \gls{aod} time series from
-smaller eruptions displays a fast rise and a flat peak before decaying back to its
-equilibrium state. From the larger eruptions, we find a slower rise but a sharper peak,
-resulting in a decay to equilibrium happening at a similar time after the eruption and
-at a similar rate compared to the smallest eruption.
+From Fig.~\ref{fig:compare-waveform-temp} it is clear that the time scale of the
+perturbation of \gls{aod} and \gls{rf} is much shorter than that of the temperature.
+While the \gls{aod} and \gls{rf} time series are back to their equilibrium state within
+roughly three years, the temperature time series are still heavily perturbed three years
+post-eruption. Even when allowing the simulations to run for 20 years post-eruption, the
+temperature time series are still decaying.
 
 \subsection{\gls{rf} dependency on \gls{aod}}
 
@@ -538,7 +524,10 @@ tropical eruption cases. The straight lines are the same as shown by
 while Fig.~\ref{fig:aod_vs_toa_ses_avg}b highlights a narrow range, focusing on the
 \gls{c2wm} case.
 
-% NOTE: can add that the strongest feature in this fig and fig3 is that different eruption strength has different ratio. Compared to other eruption strengths, any ratio may seem roughly constant, but focusing on a single strength there is a clear aod forcing efficiency decrease for tropical eruptions.
+% NOTE: can add that the strongest feature in this fig and fig3 is that different
+% eruption strength has different ratio. Compared to other eruption strengths, any ratio
+% may seem roughly constant, but focusing on a single strength there is a clear aod
+% forcing efficiency decrease for tropical eruptions.
 The annual mean data from the Pinatubo-like \gls{c2wm} case in
 Fig.~\ref{fig:aod_vs_toa_ses_avg}b have \gls{rf} values as a function of \gls{aod} that
 follow almost the same constant slope as the \gls{g16} data. However, in
@@ -557,17 +546,16 @@ colour) the annual mean values fall relatively close to a straight line.
     \gls{c2ws} and \gls{c2wsn}) are shown along with the data from the HadCM3 sstPiHistVol
     simulation by \citet{gregory2016} (grey crosses, \gls{g16}). Also shown are the
     estimated peak values of the Mt.\ Pinatubo (black star) and Mt.\ Tambora (black plus)
-    eruptions. In (a) the simulated super-volcano of \citet{jones2005} (pink square) is
-    shown, as well as the peak values from the simulations \gls{c2wm}, \gls{c2wmp} and
-    \gls{c2ws} (red circles). All peak values (as opposed to annual means) have an asterisk
+    eruptions. The peak values from the simulations \gls{c2wm}, \gls{c2wmp} and
+    \gls{c2ws} are shown as red circles. Additionally in (a) the simulated super-volcano of \citet{jones2005} (pink square) is
+    shown. All peak values (as opposed to annual means) have an asterisk
     (\(\ast{}\)) in their label. The grey lines are the same regression fits as in
     \citet[][Fig.\ 4]{gregory2016}, where the solid line is the fit to \gls{g16}. (b):
     Zooming in on the smallest \gls{aod} values.}\label{fig:aod_vs_toa_ses_avg}%
 \end{figure}
 
-To investigate the time dependence of the ratio between \gls{aod} and \gls{rf}, we
+To investigate the time dependence of the ratio between \gls{rf} and \gls{aod}, we
 present seasonal means of this ratio in Fig.~\ref{fig:aod_vs_toa_avg_loop_ratios},
-%To find the development of \gls{aod} and \gls{rf} relative to each other over time, we plot in Fig.~\ref{fig:aod_vs_toa_avg_loop_ratios} seasonal means of the \gls{rf} to \gls{aod} ratio,
 where the start of the time series is taken as the eruption day. The plot shows all the
 eruption cases given in table~\ref{tab:simulation-overview}, as well as the tropical
 eruptions from the \citet{marshall2020dataset} dataset (\(6\) of \(82\) eruptions),
@@ -577,14 +565,14 @@ seasonal means across all ensemble members, summarised in
 table~\ref{tab:slope-gradients}. Shaded regions are the standard deviation around the
 seasonal means. A similar shading is plotted in
 Fig.~\ref{fig:aod_vs_toa_avg_loop_ratios}b, but where the regression fits have been
-omitted for clarity. Years \(1\) and \(2\) have the lowest signal-to-noise ratio, as
-well as year \(0\) (the noise is mostly due to the \gls{rf} time series, shown in
-Fig.~\ref{fig:compare-waveform-temp}b). For this reason, the ratio of \gls{rf} to
-\gls{aod} is calculated for the second season of the first year until the end of the
-third year.
+omitted for clarity. As the \gls{aod} and \gls{rf} time series start from zero, the
+ratio from the first season is not included. Similarly, after three years both time
+series are almost fully equilibrated (Fig.~\ref{fig:compare-waveform-temp}a,b). The data
+is further divided into two periods; a pre-peak period where the peak of both the \gls{aod}
+and the \gls{rf} is included, and a post-peak period for the decaying part.
 
 Although the ratio changes across the eruption magnitudes, we find that all the tropical
-cases follow a positive slope during the first period, as seen in
+cases follow a positive slope during the pre-peak period, as seen in
 Fig.~\ref{fig:aod_vs_toa_avg_loop_ratios}a and described in
 table~\ref{tab:slope-gradients}. The northern latitude case in \gls{c2wsn} show a much
 flatter slope compared to \gls{c2w} and \gls{m20}. The distinction between the slopes
@@ -600,13 +588,13 @@ tendency of negative slopes is found among the tropical cases.
   \caption{Slope and standard deviation for the data in
     Fig.~\ref{fig:aod_vs_toa_avg_loop_ratios}. The regression fits in the top half of the
     table are for Fig.~\ref{fig:aod_vs_toa_avg_loop_ratios}a, while the bottom half is for
-    Fig.~\ref{fig:aod_vs_toa_avg_loop_ratios}b. The columns ``1st period'' and ``2nd
-    period'' refer to the period year \(0\)--\(1\) and \(1\)--\(3\), respectively. The
+    Fig.~\ref{fig:aod_vs_toa_avg_loop_ratios}b. The columns ``pre-peak'' and ``post-peak''
+    refer to the two periods as shown in Fig.~\ref{fig:aod_vs_toa_avg_loop_ratios}. The
     ensembles are the same as those given in table~\ref{tab:simulation-overview}, in
     addition to the \(6\) tropical eruptions from the \(82\) member ensemble in
     \citet{marshall2020}.}\label{tab:slope-gradients}%
   \begin{tabular}{cccc}
-    Figure                                                  & Ensemble name & 1st period      & 2nd period       \\
+    Figure                                                  & Ensemble name & Pre-peak        & Post-peak        \\
     \rowcolor{LightGray}                                    & \gls{c2wsn}   & \(0.45\pm1.15\) & \(1.51\pm1.45\)  \\
     \rowcolor{LightGray}                                    & \gls{c2ws}    & \(3.85\pm0.52\) & \(-3.29\pm0.60\) \\
     \rowcolor{LightGray}                                    & \gls{c2wmp}   & \(4.36\pm0.82\) & \(-3.37\pm0.59\) \\
@@ -645,7 +633,8 @@ eruption latitude.
   \caption{(a): The ratio of \gls{rf} to \gls{aod}, with time-after-eruption on the
     horizontal axis. Straight lines indicate linear regression fits and are described in
     table~\ref{tab:slope-gradients}, while shaded regions are the standard deviation across
-    the ensembles for each season. (b): Same as in (a), but where the underlying \gls{aod}
+    the ensembles for each season. Regression fits and shadings are made for the
+    pre-peak and post-peak periods. (b): Same as in (a), but where the underlying \gls{aod}
     and \gls{rf} time series have been scaled to have peak values at unity. Shown are data
     from table~\ref{tab:simulation-overview} along with tropical eruptions from
     \gls{m20}.}\label{fig:aod_vs_toa_avg_loop_ratios}%
@@ -841,7 +830,8 @@ spread for temperature as a function of \gls{rf} (Fig.~\ref{fig:parameter_scan}f
 also small. Previous studies assumed a roughly linear relationship between \gls{rf} and
 \gls{aod}, particularly for lower values of \gls{aod} and \gls{rf}, where the estimated
 slope was notably steeper at around \(\SI{-20}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) for
-\(\mathrm{AOD}<1\) compared to the approximately
+\(\mathrm{AOD}<1\) compared to the slopes of approximately
+\(\SI{-10}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) and
 \(\SI{-5}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) observed here at \(\mathrm{AOD}\gg1\).
 Hence, a linear relationship appears to be an accurate estimate of \gls{rf} dependence
 on \gls{aod} for eruptions similar to or smaller than Mt.\ Pinatubo. However, for larger
