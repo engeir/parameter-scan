@@ -108,11 +108,9 @@ study is based on ensemble simulations in the \gls{cesm2} climate model using th
 of different magnitudes of \ce{SO2} on \gls{aod}, \gls{rf}, and global temperature
 anomalies. Unlike the traditional linear models used for smaller eruptions, our
 results reveal a non-linear relationship between \gls{rf} and \gls{aod} for larger
-eruptions. We also uncover a notable time-dependent decrease in post-eruption aerosol
-forcing efficiency across all eruption magnitudes. In addition, the study reveals that
-larger volcanic events produce a delayed and sharper peak in \gls{aod}, and a longer-lasting temperature response while the time evolution of \gls{rf} remains consistent.  These findings
-emphasise the complexity of volcanic impacts on climate, demonstrating significant
-differences in climatic response depending on eruption magnitude.
+eruptions. We also uncover a notable time-dependent decrease in aerosol
+forcing efficiency across all eruption magnitudes during the first year post-eruption. In addition, the study reveals that
+larger volcanic events produce a delayed and sharper peak in \gls{aod}, and a longer-lasting temperature response while the time evolution of \gls{rf} remains consistent. When comparing with previous studies, we find that relating \ce{SO2} to any other parameter is inconsistent across models compared to the relationships between \gls{aod}, \gls{rf} and temperature anomaly, and as such expect the largest uncertainty in model codes to relate to the chemistry and physics of \ce{SO2} evolution.
 }
 
 \begin{document}
@@ -321,13 +319,21 @@ super-volcano simulation by \citet{jones2005}, which obtained a peak \gls{rf} of
 anomaly of \(\SI{-18}{\watt\metre^{-2}}\) from a \(\SI{1700}{\tera\gram(\ce{SO2})}\)
 eruption simulation, which corresponds well with the function estimated by
 \citet{niemeier2015} at the given \ce{SO2} level.
+Several studies have demonstrated a linear relationship of approximately
+\(-\SI{20}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) between \gls{rf} and \gls{aod}, although
+substantial variability exists in the slope among studies
+\citep{mills2017,hansen2005,gregory2016,marshall2020,pitari2016b}. Moreover, a
+time-after-eruption dependence on the \gls{rf} to \gls{aod} ratio is found in
+\citet{marshall2020}, whereas \citet{niemeier2015} revealed a non-linear relationship
+between \gls{rf} and \iso{} rate. Thus, a consensus on the relationship between \iso{},
+\gls{aod} and \gls{rf} has yet to be established.
 
 One avenue that has garnered considerable attention is comparing the magnitude of
 volcanic or volcano-like forcings to increased \ce{CO2} levels. Several studies explore
 the connection between volcanic forcing and the climate sensitivity to a doubling of
 \ce{CO2}
 \citep{boer2007,marvel2016,merlis2014,ollila2016,richardson2019,salvi2022,wigley2005}.
-This comparison aims to mitigate the large uncertainty in estimates of the sensitivity
+Comparison of forcing from volcanoes and \ce{CO2} aims to mitigate the large uncertainty in estimates of the sensitivity
 of the real climate system. Inferring climate sensitivity from volcanic events has been
 attempted as a way to constrain the sensitivity \citep{boer2007}, assuming that volcanic
 and \ce{CO2} forcings produce similar feedbacks \citep{pauling2023}. Earlier studies
@@ -342,14 +348,18 @@ offers a more suitable indicator of forcing than \gls{irf}
 \citep{marvel2016,richardson2019}, more recent studies conclude that \gls{ecs} cannot be
 constrained from volcanic events \citep{pauling2023}.
 
-Several studies have demonstrated a linear relationship of approximately
-\(-\SI{20}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) between \gls{rf} and \gls{aod}, although
-substantial variability exists in the slope among studies
-\citep{mills2017,hansen2005,gregory2016,marshall2020,pitari2016b}. Moreover, a
-time-after-eruption dependence on the \gls{rf} to \gls{aod} ratio is found in
-\citet{marshall2020}, whereas \citet{niemeier2015} revealed a non-linear relationship
-between \gls{rf} and \iso{} rate. Thus, a consensus on the relationship between \iso{},
-\gls{aod} and \gls{rf} has yet to be established.
+% TODO: fill in the dots
+Employing eruptions in the medium to super-volcano size enhances the signal-to-noise
+ratio without necessitating an extensive and computationally expensive ensemble, and as
+such, is a tempting way to mimic a large ensemble of smaller volcanic eruptions.
+However, there is no guarantee that the \gls{aod}, \gls{rf} and temperature signatures
+will be a simple scaling of that of smaller volcanic eruptions. Previous studies have
+simulated super-volcanoes using \gls{aod} as the input forcing, where the \gls{aod} was
+that of Mt.\ Pinatubo scaled by one hundred \citep{jones2005}. This approach may yield
+incorrect results, both since the peak of the \gls{aod} may be too small or big, but
+also since the evolution of the \gls{aod} could be wrong. Similarly, a different
+\gls{aod} evolution may be found from similar size volcanoes, but at different
+latitudes. To avoid this issue, we \dots
 
 To address these issues, we conducted ensemble simulations of volcanic eruptions in the
 \gls{cesm2} coupled with the \gls{waccm}. The ensembles span \iso{} levels of three
@@ -377,15 +387,7 @@ configuration.
 The \gls{waccm} version employed in the \gls{ma} configuration uses the \gls{mam3}
 \citep{gettleman2019}, a simplified and computationally efficient default setting within
 the \gls{cam5} \citep{liu2016}, as described in \citet{liu2012}. The \gls{mam3} was
-developed from MAM7, consisting of the seven modes Aitken, accumulation, primary carbon,
-fine dust, fine sea salt, coarse dust and coarse sea salt. Instantaneous internal mixing
-of primary carbonaceous aerosols with secondary aerosols and instantaneous ageing of
-primary carbonaceous particles is assumed by emitting primary carbon in the accumulation
-mode \citep{liu2016}. 
-As dust absorbs water efficiently and is expected to be removed by wet deposition similarly to sea salt, fine dust is merged with fine sea salt into the accumulation mode and coarse dust is merged with coarse sea salt into a coarse mode. 
-%Fine sea salt is assimilated into the accumulation mode, and as dust absorbs water efficiently, aerosols are expected to be removed by wet deposition similarly to sea salt, allowing fine dust to be merged into the accumulation mode as well. 
-%Likewise, coarse dust is merged with coarse sea salt into a coarse mode, and as both absorb water efficiently, 
-The coarse mode will quickly retain its background state below the tropopause \citep{liu2012}. Consequently, \gls{mam3} features the three modes
+developed from MAM7 and features the modes
 Aitken, accumulation and coarse \citep{liu2016}.
 
 \subsection{Simulations}
@@ -402,8 +404,8 @@ like Mt.\ Pinatubo
 \citep[\(\sim10\)--\(\SI{20}{\tera\gram(\ce{SO2})}\);][]{timmreck2018} and Mt.\ Tambora
 \citep[\(\sim\SI{56.2}{\tera\gram(\ce{SO2})}\);][]{zanchettin2016}. The intermediate
 case, \gls{c2wmp}, resembles the Samalas eruption in 1257
-\citep[\(\sim{118.8}\)--\(\SI{173.1}{\tera\gram(\ce{SO2})}\);][]{toohey2017,ottobliesner2016},
-while the largest eruption case, \gls{c2ws}, is similar to the \gls{ytt} eruption
+\citep[\(\sim{144}\)--\(\SI{170}{\tera\gram(\ce{SO2})}\);][]{vidal2016},
+while the largest eruption case, \gls{c2ws}, is in the likely range of the \gls{ytt} eruption
 occurring about \(\SI{75000}{\mathrm{yr}}\) ago
 \citep[\(100\)--\(\SI{10000}{\tera\gram(\ce{SO2})}\);][]{jones2005}. All eruptions were
 situated at the equator (\(\SI{0}{\degree N}\), \(\SI{1}{\degree E}\)) with \ce{SO2}
@@ -412,18 +414,6 @@ Collectively, the three eruption cases \gls{c2wm}, \gls{c2wmp} and \gls{c2ws} ar
 referred to as \gls{c2w}. Two additional high-latitude eruptions, labelled \gls{c2wsn},
 of the same \iso{} magnitude as \gls{c2ws} were simulated at \(\SI{56}{\degree N}\),
 \(\SI{287.7}{\degree E}\) with a six-month separation (February 15th and August 15th).
-
-Employing eruptions in the medium to super-volcano size enhances the signal-to-noise
-ratio without necessitating an extensive and computationally expensive ensemble, and as
-such, is a tempting way to mimic a large ensemble of smaller volcanic eruptions.
-However, there is no guarantee that the \gls{aod}, \gls{rf} and temperature signatures
-will be a simple scaling of that of smaller volcanic eruptions. Previous studies have
-simulated super-volcanoes using \gls{aod} as the input forcing, where the \gls{aod} was
-that of Mt.\ Pinatubo scaled by one hundred \citep{jones2005}. This approach may yield
-incorrect results, both since the peak of the \gls{aod} may be too small or big, but
-also since the evolution of the \gls{aod} could be wrong. Similarly, a different
-\gls{aod} evolution may be found from similar size volcanoes, but at different
-latitudes. To avoid this issue, we \dots
 
 \begin{table*}
   \centering
@@ -435,22 +425,22 @@ latitudes. To avoid this issue, we \dots
     ensembles have four members, indicated by the amount of eruption months, while the
     northern latitude ensemble consist of two members}\label{tab:simulation-overview}%
   \begin{center}
-    \begin{tabular}[c]{cccc}
+    \begin{tabular}[c]{cccccc}
       Ensemble name                                                                    & \(\si{\tera\gram(\ce{SO2})}\)         &
-      Lat, lon, alt [\si{\degree\mathrm{N}}, \si{\degree\mathrm{E}}, \si{\kilo\metre}] & Eruption months                         \\
+      Lat [\si{\degree\mathrm{N}}] & Lon [\si{\degree\mathrm{E}}] & Alt [\si{\kilo\metre}] & Eruption months                         \\
       \gls{c2wsn}                                                                      & \(1629\)                              &
-      \(56\), \(287.7\),
+      \(56\)& \(287.7\)&
       \(18\)--\(20\)                                                                   & Feb,\hphantom{May,}Aug\hphantom{,Nov}   \\
       \gls{c2ws}                                                                       & \(1629\)                              &
-      \(\hphantom{1}0\), \(\hphantom{28}1\hphantom{.7}\), \(18\)--\(20\)
+      \(\hphantom{1}0\)& \(\hphantom{28}1\hphantom{.7}\)& \(18\)--\(20\)
                                                                                        & Feb,May,Aug,Nov                         \\
       \gls{c2wmp}                                                                      & \(\hphantom{1}400\)                   &
-      \(\hphantom{1}0\),
-      \(\hphantom{28}1\hphantom{.7}\),
+      \(\hphantom{1}0\)&
+      \(\hphantom{28}1\hphantom{.7}\)&
       \(18\)--\(20\)                                                                   & Feb,May,Aug,Nov                         \\
       \gls{c2wm}                                                                       & \(\hphantom{14}26\)                   &
-      \(\hphantom{1}0\),
-      \(\hphantom{28}1\hphantom{.7}\), \(18\)--\(20\)
+      \(\hphantom{1}0\)&
+      \(\hphantom{28}1\hphantom{.7}\)& \(18\)--\(20\)
                                                                                        & Feb,May,Aug,Nov                         \\
     \end{tabular}
   \end{center}
@@ -461,7 +451,7 @@ latitudes. To avoid this issue, we \dots
 % NOTE: the results should be laid out in a logical way, with the most
 % interesting/important stuff first, then tangents that dig deeper at specific things
 % later.
-% 1. RF to AOD time-after-eruption dependence should be top priority (8 figs atm.)
+% 1. RF to AOD time-after-eruption dependence should be top priority
 % 2. Then probably temperature scaling since we discuss the shape of both AOD and RF
 %    time series before that (MOTIVATION: can we expect a specific temperature time
 %    series shape based on the shape of either of or both of the RF and AOD time
@@ -471,7 +461,8 @@ latitudes. To avoid this issue, we \dots
 
 \subsection{Analysis of the time series}
 
-Figure~\ref{fig:compare-waveform-temp} illustrates time series of global mean \gls{aod},
+% TODO: fill in the dots
+Figure~\ref{fig:compare-waveform-temp} presents time series of global mean \gls{aod},
 \gls{rf}, and surface air temperature. The black lines represent the medians across the
 four-member ensembles, while shading indicates the 5th to 95th percentiles. The three
 distinct forcing magnitudes (\gls{c2wm}, \gls{c2wmp}, and \gls{c2ws}) outlined in
@@ -509,7 +500,11 @@ Therefore, similar dynamics are expected to be at play in all cases.
     percentiles.}\label{fig:compare-waveform-temp}%
 \end{figure}
 
-Upon asking whether the shape of the temperature time series can be inferred from the
+% TODO:
+% 1. Question at the top is not answered. Is AOD or RF more influential?
+% 2. Update the general text comparing shape of RF to T. Does it make sense to say they are strongly related?
+% 3. Make a point out of the faster decay of AOD and RF compared to T, which is heavily perturbed still after several years
+To investigate if the shape of the temperature time series can be inferred from the
 shape of either of the forcing time series (\gls{aod} or \gls{rf}), we find that the
 shapes of the \gls{rf} time series are consistent over the different eruption strengths
 (Fig.~\ref{fig:compare-waveform-temp}b), suggesting a strong dependence of temperature
@@ -542,6 +537,7 @@ tropical eruption cases. The straight lines are the same as shown by
 while Fig.~\ref{fig:aod_vs_toa_ses_avg}b highlights a narrow range, focusing on the
 \gls{c2wm} case.
 
+% NOTE: can add that the strongest feature in this fig and fig3 is that different eruption strength has different ratio. Compared to other eruption strengths, any ratio may seem roughly constant, but focusing on a single strength there is a clear aod forcing efficiency decrease for tropical eruptions.
 The annual mean data from the Pinatubo-like \gls{c2wm} case in
 Fig.~\ref{fig:aod_vs_toa_ses_avg}b have \gls{rf} values as a function of \gls{aod} that
 follow almost the same constant slope as the \gls{g16} data. However, in
@@ -1021,6 +1017,11 @@ Allowing for different latitudes, similar to the \gls{m20} dataset, would also b
 if the function in Eq.~\ref{eq:niemeier_exponential} works as a lower bound on the
 \gls{rf} dependence on \iso{}, as indicated by Fig.~\ref{fig:parameter_scan}b.
 
+% TODO: From abstract. Reformulate
+These findings
+emphasise the complexity of volcanic impacts on climate, demonstrating significant
+differences in climatic response depending on eruption magnitude.
+
 \clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ACKNOWLEDGMENTS
@@ -1053,6 +1054,7 @@ This work was supported by the Tromsø Research Foundation under Grant Number 19
 %  If data access is restricted, authors must mention this in the statement. See
 %  {http://www.ametsoc.org/PubsDataPolicy} for more info.
 
+% FIX: NRIS archive DOI
 % https://documentation.sigma2.no/nird_archive/user-guide.html
 Data generated directly from output fields of \gls{cesm2} are available at \emph{refer
   to Sigma2 archive}, and were generated using scripts available at
@@ -1185,6 +1187,21 @@ through ECHAM5 (\gls{n15}) and MPI-ESM (\gls{t10}), where the latter is related 
 former via the ECHAM6. A summary of the model code genealogy is detailed in
 table~\ref{tab:model-family}, based on the model code genealogy map created by
 \citet{kuma2023}.
+
+% TODO: think about how this might be included
+The \gls{waccm} version employed in the \gls{ma} configuration uses the \gls{mam3}
+\citep{gettleman2019}, a simplified and computationally efficient default setting within
+the \gls{cam5} \citep{liu2016}, as described in \citet{liu2012}. The \gls{mam3} was
+developed from MAM7, consisting of the seven modes Aitken, accumulation, primary carbon,
+fine dust, fine sea salt, coarse dust and coarse sea salt. Instantaneous internal mixing
+of primary carbonaceous aerosols with secondary aerosols and instantaneous ageing of
+primary carbonaceous particles is assumed by emitting primary carbon in the accumulation
+mode \citep{liu2016}. 
+As dust absorbs water efficiently and is expected to be removed by wet deposition similarly to sea salt, fine dust is merged with fine sea salt into the accumulation mode and coarse dust is merged with coarse sea salt into a coarse mode. 
+%Fine sea salt is assimilated into the accumulation mode, and as dust absorbs water efficiently, aerosols are expected to be removed by wet deposition similarly to sea salt, allowing fine dust to be merged into the accumulation mode as well. 
+%Likewise, coarse dust is merged with coarse sea salt into a coarse mode, and as both absorb water efficiently, 
+The coarse mode will quickly revert to its background state below the tropopause \citep{liu2012}. Consequently, \gls{mam3} features the three modes
+Aitken, accumulation and coarse \citep{liu2016}.
 
 \begin{table*}
   \centering
