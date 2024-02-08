@@ -1,5 +1,29 @@
 # Changelog
 
+## [0.6.0](https://github.com/engeir/parameter-scan/compare/v0.5.2...v0.6.0) (2024-02-08)
+
+
+### Features
+
+* **audun:** initial corrections ([684e205](https://github.com/engeir/parameter-scan/commit/684e205e2db61f8fcd73ab493eae8d2f288119b3))
+
+
+### Miscellaneous
+
+* **audun:** complete fixes from overleaf ([5db6a50](https://github.com/engeir/parameter-scan/commit/5db6a501578659441afbcdddf6348c99df38dee6))
+* **audun:** push to remote ([d77c29b](https://github.com/engeir/parameter-scan/commit/d77c29bc46641cff681e9379a66d64c203b1c089))
+* **figure:** use ensemble 5 instead of 1 (no outlier) ([83638a8](https://github.com/engeir/parameter-scan/commit/83638a80c5b3de45a9348eb4200dae1c4e2c4785))
+
+
+### Styles
+
+* format code ([9683006](https://github.com/engeir/parameter-scan/commit/9683006a725f075f418799e4a343b631d492dc9c))
+
+
+### Code Refactoring
+
+* **chatgpt:** fix grammar and stuff using chatgpt ([93e923b](https://github.com/engeir/parameter-scan/commit/93e923b1bff63816ec2cc3f3d28e285879de1219))
+
 ## [0.5.2](https://github.com/engeir/parameter-scan/compare/v0.5.1...v0.5.2) (2024-01-29)
 
 
