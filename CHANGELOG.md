@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.1](https://github.com/engeir/parameter-scan/compare/v0.6.0...v0.6.1) (2024-02-12)
+
+
+### Miscellaneous
+
+* **rune:** small corrections to AOD as forcing section and its discussion ([5de62fd](https://github.com/engeir/parameter-scan/commit/5de62fd92beb3b22e1b81726ab5588fad1d7bcdd))
+
 ## [0.6.0](https://github.com/engeir/parameter-scan/compare/v0.5.2...v0.6.0) (2024-02-08)
 
 
