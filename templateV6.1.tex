@@ -111,18 +111,18 @@
 We investigate the climatic effects of volcanic eruptions spanning from Mt.\
 Pinatubo-sized events to super-volcanoes. The study is based on ensemble simulations in
 the \gls{cesm2} climate model using the \gls{waccm} atmosphere model. Our analysis
-centres on the impact of injections of different magnitudes of \ce{SO2} on \gls{aod},
-\gls{rf}, and global temperature anomalies. Unlike the traditional linear models used
-for smaller eruptions, our results reveal a non-linear relationship between \gls{rf} and
-\gls{aod} for larger eruptions. We also uncover a notable time-dependent decrease in
-aerosol forcing efficiency across all eruption magnitudes during the first post-eruption
-year. In addition, the study reveals that larger eruption events produce a delayed and
-sharper peak in \gls{aod}, and a longer-lasting temperature response while the time
-evolution of \gls{rf} remains consistent. When including the results of previous
-studies, we find that relating \ce{SO2} to any other parameter is inconsistent across
-models compared to the relationships between \gls{aod}, \gls{rf}, and temperature
-anomaly. Thus, we expect the largest uncertainty in model codes to relate to the
-chemistry and physics of \ce{SO2} evolution.
+focuses on the impact of different \ce{SO2}-amount injections on \gls{aod}, \gls{rf},
+and global temperature anomalies. Unlike the traditional linear models used for smaller
+eruptions, our results reveal a non-linear relationship between \gls{rf} and \gls{aod}
+for larger eruptions. We also uncover a notable time-dependent decrease in aerosol
+forcing efficiency across all eruption magnitudes during the first post-eruption year.
+In addition, the study reveals that larger as compared to medium-sized eruption events
+produce a delayed and sharper peak in \gls{aod}, and a longer-lasting temperature
+response while the time evolution of \gls{rf} remains similar between the two eruption
+types. When including the results of previous studies, we find that relating \ce{SO2} to
+any other parameter is inconsistent across models compared to the relationships between
+\gls{aod}, \gls{rf}, and temperature anomaly. Thus, we expect the largest uncertainty in
+model codes to relate to the chemistry and physics of \ce{SO2} evolution.
 }
 
 \begin{document}
@@ -363,15 +363,16 @@ studies conclude that \gls{ecs} cannot be constrained from volcanic eruption eve
 Employing eruptions in the medium to super-volcano size enhances the signal-to-noise
 ratio without necessitating an extensive and computationally expensive ensemble, and as
 such, is a tempting way to mimic a large ensemble of smaller volcanic eruptions.
-However, the \gls{aod}, \gls{rf}, and temperature signatures are not guaranteed to be a
+However, the \gls{aod}, \gls{rf}, and temperature signatures are not necessarily a
 simple scaling of that of smaller volcanic eruptions. Previous studies have simulated
 super-volcanoes using \gls{aod} as the input forcing, where the \gls{aod} was that of
-Mt.\ Pinatubo scaled by one hundred \citep{jones2005}. This approach may yield incorrect
-results, both because the peak of the \gls{aod} may be too small or big, but also
-because the evolution of the \gls{aod} could be inappropriate. Likewise, a different
-\gls{aod} evolution may be found from similar size eruptions, but at different
+Mt.\ Pinatubo scaled by a factor of one hundred \citep{jones2005}. This approach may
+yield incorrect results, both because the peak of the \gls{aod} may be too small or too
+big, but also because the evolution of the \gls{aod} could be inappropriate. Likewise, a
+different \gls{aod} evolution may be found from similar size eruptions, but at different
 latitudes. To investigate this issue, our simulations are based on \iso{} covering three
-orders of magnitude.
+orders of magnitude and the inclusion of one high latitude eruption of the largest
+\iso{} case.
 
 We conducted ensemble simulations of volcanic eruptions in the \gls{cesm2} coupled with
 the \gls{waccm}. The ensembles span \iso{} levels of three orders of magnitude with four
@@ -836,17 +837,17 @@ functional form.
 
 \subsection{Climate sensitivity estimate}
 
-As previously mentioned, \gls{j05} is similar to \gls{c2ws} concerning \gls{rf} values,
-yet differ in both \gls{aod} and temperature. To investigate this discrepancy, we here
-conduct a comparison between their climate feedback parameter \(\alpha\) (where
-\(s=1/\alpha\) is the climate sensitivity parameter) with our climate resistance,
-denoted as \(\rho\), and the \gls{tcrp} \(1/\rho\) (where
+As previously mentioned, the \gls{j05} experiment is similar to \gls{c2ws} concerning
+\gls{rf} values, yet differ in both \gls{aod} and temperature. To investigate this
+discrepancy, we here conduct a comparison between the \gls{j05} climate feedback
+parameter \(\alpha\) (where \(s=1/\alpha\) is the climate sensitivity parameter) with
+our climate resistance, denoted as \(\rho\), and the \gls{tcrp} \(1/\rho\) (where
 \(\mathrm{TCS}=F_{2\times\ce{CO2}}\times \mathrm{TCRP}\) is the transient climate
 sensitivity and \(F_{2\times\ce{CO2}}\) is the forcing due to a doubling of
 pre-industrial \ce{CO2} concentration). As the forcing of volcanic eruptions typically
-lasts for about a year, a duration too brief for the timescales at which \(F=\rho T\)
-remains valid, an alternative approach involves using a time-integral form introduced by
-\citet{merlis2014}:
+lasts for about a year, a duration too short for \(F=\rho T\) to remain valid, an
+alternative approach using a time-integral form introduced by \citet{merlis2014} is
+applied:
 
 \begin{equation}
   \int_0^{\tau}F \mathrm{d}t=\rho\int_{0}^{\tau}T \mathrm{d}t
@@ -858,11 +859,11 @@ remains valid, an alternative approach involves using a time-integral form intro
 \end{equation}
 
 If the upper bound of the integral, \(\tau\), is sufficiently large, so that the upper
-ocean heat content is the same at \(t=0\) and \(t=\tau\), this approach agrees with
-\(F=\rho T\) for long-term forcing \citep{gregory2016} (\citet{merlis2014} used \(\tau
-=\SI{15}{\mathrm{yr}}\)). Additionally, we note that the climate resistance and the
-climate feedback parameter are associated with the ocean heat uptake efficiency
-(\(\kappa\)) through \(\rho =\alpha +\kappa\) \citep{gregory2016}.
+ocean heat content is the same at \(t=0\) and \(t=\tau\) (\citet{merlis2014} used \(\tau
+=\SI{15}{\mathrm{yr}}\)), this approach agrees with \(F=\rho T\) for long-term forcing
+\citep{gregory2016}. Additionally, we note that the climate resistance and the climate
+feedback parameter are associated with the ocean heat uptake efficiency (\(\kappa\))
+through \(\rho =\alpha +\kappa\) \citep{gregory2016}.
 
 The climate feedback parameter estimated by \citet{jones2005} is \(\alpha \simeq
 \SI{4}{\watt\metre^{-2}\kelvin^{-1}}\), exceeding twice the value obtained by
@@ -875,12 +876,12 @@ ensemble) converges to \(\rho =\SI{2.5(4)}{\watt\metre^{-2}\kelvin^{-1}}\), and
 in table~\ref{tab:trcp}, and is therefore assumed to be a good estimate of \(\alpha\).
 
 Importantly, our estimate agrees well with \gls{g16}, while the \gls{j05} estimate of
-\(\alpha \simeq \SI{4}{\watt\metre^{-2}\kelvin^{-1}}\) is still notably higher than
-both. Since the temperature perturbation obtained by \gls{j05} was higher than any of
-our \gls{cesm2} cases, it indicates that the forcing used by \gls{j05} must be stronger.
-The peak value of the \gls{j05} \gls{rf} is similar to the \gls{c2ws} case, and as such,
-the overall stronger forcing must originate from the development of the forcing time
-series rather than the peak value.
+\(\alpha \simeq \SI{4}{\watt\metre^{-2}\kelvin^{-1}}\) is still notably higher. Since
+the temperature perturbation obtained by \gls{j05} was larger than in any of our
+\gls{cesm2} cases, it indicates that the forcing used by \gls{j05} must be stronger. The
+peak value of the \gls{j05} \gls{rf} is similar to the \gls{c2ws} case, and as such, the
+overall stronger forcing must originate from the development of the forcing time series
+rather than the peak value.
 
 \begin{table}
   \centering
