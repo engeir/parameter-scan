@@ -1,5 +1,27 @@
 # Changelog
 
+## [0.7.1](https://github.com/engeir/parameter-scan/compare/v0.7.0...v0.7.1) (2024-02-23)
+
+
+### Bug Fixes
+
+* **latex:** remove old syntax I missed ([0bf91d0](https://github.com/engeir/parameter-scan/commit/0bf91d0ec9db1162bd2710f41941131e672ca325))
+
+
+### Miscellaneous
+
+* **ref:** fix up some differences in references ([af10a19](https://github.com/engeir/parameter-scan/commit/af10a1999fb6208f5a1157f1b188ec5373c89c3d))
+
+
+### Continuous Integration
+
+* **latex:** update build instructions in workflow ([d444b20](https://github.com/engeir/parameter-scan/commit/d444b20cc6174c442da6d7ad5e31fa96a1fa79f8))
+
+
+### Documentation
+
+* **latex:** update README to the new JGR template ([d444b20](https://github.com/engeir/parameter-scan/commit/d444b20cc6174c442da6d7ad5e31fa96a1fa79f8))
+
 ## [0.7.0](https://github.com/engeir/parameter-scan/compare/v0.6.1...v0.7.0) (2024-02-23)
 
 
