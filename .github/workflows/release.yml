@@ -31,12 +31,12 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           tectonic-version: 0.14.1
       - name: Run Tectonic
-        run: tectonic -Z shell-escape --keep-intermediates templateV6.1.tex
+        run: tectonic -Z shell-escape --keep-intermediates agujournaltemplate.tex
       - name: Upload pdf
         uses: actions/upload-artifact@v3
         with:
-          name: templateV6.1
-          path: templateV6.1.pdf
+          name: agujournaltemplate
+          path: agujournaltemplate.pdf
 
   release-please:
     runs-on: ubuntu-latest
@@ -58,9 +58,9 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
         uses: actions/download-artifact@v3
         with:
-          name: templateV6.1
+          name: agujournaltemplate 
       - name: Upload Release Artifact
         if: ${{ steps.release.outputs.release_created }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release upload ${{ steps.release.outputs.tag_name }} templateV6.1.pdf
+        run: gh release upload ${{ steps.release.outputs.tag_name }} agujournaltemplate.pdf

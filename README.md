@@ -7,14 +7,8 @@
 <!-- dprint-ignore-start -->
 > [!NOTE]
 >
-> I compile this using an installation of [tinytex] via [mise]. Additional packages I
-> installed with `tlmgr` after this was
->
-> - `tlmgr install glossaries`
-> - `tlmgr install glossaries-extra`
-> - Fonts (just one is needed):
->   - `tlmgr install txfonts helvetic times tex-gyre`
->   - `tlmgr install collection-fontsrecommended`
+> I compile this using an installation of [tinytex] via [mise]. No additional packages
+> need to be installed with `tlmgr` after this.
 <!-- dprint-ignore-end -->
 
 To run the continuous compiler, use the command
@@ -29,17 +23,17 @@ You clean up files with
 latexmk -c
 ```
 
-[`tectonic`] also works in place of `latexmk`, without the need to install anything from
-`tlmgr`:
+[`tectonic`] also works in place of `latexmk`, which is independent of any texlive or
+similar distribution as it embeds all in a single binary.
 
 ```bash
-tectonic -Z shell-escape --keep-intermediates templateV6.1.tex
+tectonic -Z shell-escape --keep-intermediates agujournaltemplate.tex
 ```
 
 <!-- dprint-ignore-start -->
 > [!TIP]
 >
-> [_View the generated PDF at the latest release!_](https://github.com/engeir/parameter-scan/releases/download/v0.7.0/templateV6.1.pdf) <!-- x-release-please-version -->
+> [_View the generated PDF at the latest release!_](https://github.com/engeir/parameter-scan/releases/download/v0.7.0/agujournaltemplate.pdf) <!-- x-release-please-version -->
 <!-- dprint-ignore-end -->
 
 > For my own convenience, a comparison table comprising symbols used across the papers
