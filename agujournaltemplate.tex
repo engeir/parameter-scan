@@ -29,6 +29,7 @@
 \urldef\fssturl\url{
 1850_CAM60%WCCM_CLM50%BGC-CROP_CICE%PRES_DOCN%DOM_MOSART_CISM2%NOEVOLVE_SWAV_TEST
 }
+% FIXME: they do not allow `newcommand`, and escpecially not commands using `#`, so this needs to be updated.
 \newcommand{\iso}[1][i]{{#1}njected \ce{SO2}}
 \newcommand{\cw}{C2W}
 \newcommand{\cwt}{C2WTrop}
@@ -157,6 +158,9 @@
   \item The linear RF dependence on AOD break down for eruptions larger than Pinatubo
 \end{keypoints}
 
+% FIXME: related to this, there is an index that can be added during publishing. Find the list here: https://www.agu.org/publish-with-agu/publish/author-resources/index-terms
+% 0370, 0305, 8408, 8409
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %  ABSTRACT and PLAIN LANGUAGE SUMMARY
@@ -198,7 +202,9 @@
   to the chemistry and physics of \ce{SO2} evolution.
 \end{abstract}
 
-% \section*{Plain Language Summary}
+% FIXME: according to the website, this is required for JGR: Atmospheres now.
+% https://www.agu.org/Publish-with-AGU/Publish/Author-Resources/Text-requirements
+\section*{Plain Language Summary}
 % Enter your Plain Language Summary here or delete this section.
 % Here are instructions on writing a Plain Language Summary:
 % https://www.agu.org/Share-and-Advocate/Share/Community/Plain-language-summary
@@ -1045,7 +1051,9 @@ evolution of the ratio, particularly during the pre-peak period.
 % Bruk mer tid på konklusjonene fra fig 4 her. Lineære sammenhenger, mulig RF max på -65 W/m^2 etc.
 We find that the suggested upper threshold from Eq.~\ref{eq:niemeier_exponential} is not
 violated by any eruption simulation, and most notably that the temperature peak value
-follow the RF trend in reaching a limiting value.
+follow the RF trend in reaching a limiting value. The \cwt{} cases follow a close to
+linear temperature dependency on RF, with the J05, T10, and \cwsn{} aligning close to
+the same slope.
 
 % Models vary in their SO2 to H2SO4 chemistry/physics, but are comparatively consistent in representing AOD, RF and temperature.
 The biggest spread in the data shown in Fig.~\ref{fig:4_parameter_scan} is found when
@@ -1158,6 +1166,7 @@ injected over six hours at a given latitude, longitude, and altitude. All volcan
 file that is read by the \texttt{volcano-cooking} CLI at a fixed version, ensuring a
 reproducible experiment setup.
 
+% FIXME: footnotes in the text is not allowed
 We are using the coupled model version \texttt{BWma1850} component setup to run the
 CESM2, and an accompanying fixed sea-surface temperature version, \texttt{fSST1850}, to
 obtain estimates of the RF. The applied \texttt{fSST1850} is not from a standardised
