@@ -488,8 +488,6 @@ Fig.~\ref{fig:1_compare_waveform} are normalised by setting the peak value to un
 defined based on the peak of a fit from a Savitzky-Golay filter of 3rd order and a
 one-year window length \citep{savitzky1964}.
 
-% NOTAT:
-% Jeg forstår ikke dette argumentet - hvis RF er lik for alle, hvordan kan temperaturen (som er forskjellig mellom dem) være avhenging av RF?
 A notable feature across the subfigures of Fig.~\ref{fig:1_compare_waveform} is the peak
 occurrence of the \gls{c2wm} case compared to the larger eruption cases. The peak of
 \gls{c2wm} arrives earlier for both \gls{aod} (Fig.~\ref{fig:1_compare_waveform}a) and
@@ -717,6 +715,7 @@ with a low-top atmosphere (\gls{cam5}) produce \glspl{rf} comparable to our find
 % INFO: the conversion between S and SO2 is confirmed by Niemeier and Timmreck (2015)'s
 % reference to the Bekki et al. (1996) paper. Bekki uses 6000 Mt SO2, Niemeier uses 3000
 % Tg(S).
+
 \citet{niemeier2015} conducted simulations of continuous sulphur injections up to
 \(\SI{200}{\tera\gram(\ce{SO2})\mathrm{yr}^{-1}}\) in the ECHAM5's middle atmosphere
 version \citep{giorgetta2006} with aerosol microphysics from HAM \citep{stier2005}. They
@@ -1030,27 +1029,19 @@ time series indistinguishable in development for both \gls{rf} and temperature. 
 simple scaling of the \gls{aod} or temperature time series from a smaller eruption is
 insufficient in representing that of larger volcanic eruptions.
 
-% NOTAT:
-% Du kan godt diskutere hvordan modellfamilie ser ut til å bestemme en god del av variasjonen, men plaser future work i konklusjonene
-% NOTAT:
-% Reformuler dette som en forskjell mellom modellfamilier, og poengter forskjellene det gir seg utslag i.
 Considering \iso{} and the peak values of \gls{aod} and \gls{rf}, a large spread is
 found across model families in Fig.~\ref{fig:4_parameter_scan}. Improving the
 consistency between model families in how the chemistry and physics of \ce{SO2} and
 \ce{H2SO4} are represented is an important step in enhancing the accuracy of simulated
-volcanic eruptions' influence on climate by models.
-% NOTAT:
-% Jeg ser ikke helt hva dette henspeiler på? Er det i sammenheng med flere modeller (over?)
-% NOTAT:
-% Jeg foreslår at du reformulerer dette som å studere sammenhengen mellom enkeltutbrudd og kontinuerlige utslipp
-More simulations of larger volcanic eruptions with \iso{} greater than
-\(\SI{200}{\tera\gram(\mathrm{SO2})}\) would provide useful information for a more
-precise determination of the \gls{rf} to \gls{aod} ratio in the non-linear regime. This
-would also serve as a useful test to check if a comparison between \ce{SO2} injection
-events and continuous \ce{SO2} injection is reasonable. Introducing a spread in latitude
-similar to the \citet{marshall2020dataset} dataset would allow for better comparison
-between eruptions across all latitudes and the suggested lower limit following
-Eq.~\ref{eq:niemeier_exponential}, describing a situation of aerosol saturation.
+volcanic eruptions' influence on climate by models. More simulations of larger volcanic
+eruptions with \iso{} greater than \(\SI{200}{\tera\gram(\mathrm{SO2})}\) would provide
+useful information for a more precise determination of the \gls{rf} to \gls{aod} ratio
+in the non-linear regime. This would also serve as a useful test to check if a
+comparison between \ce{SO2} injection events and continuous \ce{SO2} injection is
+reasonable. Introducing a spread in latitude similar to the \citet{marshall2020dataset}
+dataset would allow for better comparison between eruptions across all latitudes and the
+suggested lower limit following Eq.~\ref{eq:niemeier_exponential}, describing a
+situation of aerosol saturation.
 
 % FIXME:
 % Move this up as one of the important take-aways, and expand.
