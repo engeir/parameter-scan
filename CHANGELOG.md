@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.7.0](https://github.com/engeir/parameter-scan/compare/v0.6.1...v0.7.0) (2024-02-23)
+
+
+### Features
+
+* add C2WSS simulation case to figures and text ([cc70d86](https://github.com/engeir/parameter-scan/commit/cc70d864e925a6983839c989203701dd1b843862))
+* **latex:** change to the JGR template, remove AMS ([bfc8b45](https://github.com/engeir/parameter-scan/commit/bfc8b45cf8ae2705af178b8c11676b9a73b0fac6))
+
+
+### Miscellaneous
+
+* **nird:** add DOI to the NIRD data archive ([ba7fadc](https://github.com/engeir/parameter-scan/commit/ba7fadccec9f6384ff5f4b98a0cbe9b718473cb3))
+
 ## [0.6.1](https://github.com/engeir/parameter-scan/compare/v0.6.0...v0.6.1) (2024-02-12)
 
 
