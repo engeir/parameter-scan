@@ -1,5 +1,25 @@
 # Changelog
 
+## [0.7.2](https://github.com/engeir/parameter-scan/compare/v0.7.1...v0.7.2) (2024-02-26)
+
+
+### Bug Fixes
+
+* **refactor:** remove commands, \newcommand ([428a14e](https://github.com/engeir/parameter-scan/commit/428a14e308a8d686c6c721431e93d3e1902cdcb8))
+
+
+### Miscellaneous
+
+* **discussion:** add more to T vs RF lin.dep., and -65 limit ([67a7834](https://github.com/engeir/parameter-scan/commit/67a78346fbf100463f540816c334d62d596b6681))
+* **docs:** update to use the agu template ([bc2c926](https://github.com/engeir/parameter-scan/commit/bc2c9261788985c7789c81bc5bba9e026a2c6f47))
+* **latex:** add comments for things I must update ([43bc54e](https://github.com/engeir/parameter-scan/commit/43bc54e8469a1327542d93950e6be6d610a62a50))
+* **pls:** first draft of the plain language summary ([65d2029](https://github.com/engeir/parameter-scan/commit/65d2029614427d614c8ebc85282b9c121c0fb210))
+
+
+### Build System
+
+* **just:** update justfile build steps ([3f6749e](https://github.com/engeir/parameter-scan/commit/3f6749eb7fcb67795419dff725e316e4ccc6922b))
+
 ## [0.7.1](https://github.com/engeir/parameter-scan/compare/v0.7.0...v0.7.1) (2024-02-23)
 
 
