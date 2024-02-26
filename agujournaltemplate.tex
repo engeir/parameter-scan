@@ -543,7 +543,7 @@ high-latitude eruption ensemble, labelled C2WN\(\uparrow\), of the same injected
       Ensemble name                   & \(\si{\tera\gram(\ce{SO2})}\)         &
       Lat [\si{\degree\mathrm{N}}]    & Lon [\si{\degree\mathrm{E}}]          & Alt [\si{\kilo\metre}] & Eruption months \\
       \midrule
-      C2W\(\uparrow\uparrow\)         & \(1629\)                              &
+      C2W\(\uparrow\uparrow\)         & \(3000\)                              &
       \(\hphantom{1}0\)               & \(\hphantom{28}1\hphantom{.7}\)       &
       \(18\)--\(20\)                  & \hphantom{Feb,}May,\hphantom{Aug,}Nov                                            \\
       C2WN\(\uparrow\)                & \(1629\)                              &
@@ -714,21 +714,21 @@ C2WN\(\uparrow\) case up to the last season where the noise is also the largest.
     Fig.~\ref{fig:3_rf_to_aod_ratios}\(^{a}\)}\label{tab:slope-gradients}%
   \begin{tabular}{cccc}
     \toprule
-    Figure                        & Ensemble name           & 1st period      & 2nd period       \\
+    Figure                                         & Ensemble name           & 1st period      & 2nd period       \\
     \midrule
-                                  & C2WN\(\uparrow\)        & \(0.45\pm1.15\) & \(1.51\pm1.45\)  \\
-                                  & C2W\(\uparrow\uparrow\) & \(3.38\pm0.97\) & \(-2.74\pm0.77\) \\
-                                  & C2W\(\uparrow\)         & \(3.85\pm0.52\) & \(-3.29\pm0.60\) \\
-    \ref{fig:3_rf_to_aod_ratios}a & C2W\(-\)                & \(4.36\pm0.82\) & \(-3.37\pm0.59\) \\
-                                  & C2W\(\downarrow\)       & \(3.64\pm2.41\) & \(-1.41\pm3.25\) \\
-                                  & M20                     & \(6.34\pm1.77\) & \(-0.36\pm1.33\) \\
+                                                   & C2WN\(\uparrow\)        & \(0.45\pm1.15\) & \(1.51\pm1.45\)  \\
+                                                   & C2W\(\uparrow\uparrow\) & \(3.38\pm0.97\) & \(-2.74\pm0.77\) \\
+    \multirow{2}{*}{\ref{fig:3_rf_to_aod_ratios}a} & C2W\(\uparrow\)         & \(3.85\pm0.52\) & \(-3.29\pm0.60\) \\
+                                                   & C2W\(-\)                & \(4.36\pm0.82\) & \(-3.37\pm0.59\) \\
+                                                   & C2W\(\downarrow\)       & \(3.64\pm2.41\) & \(-1.41\pm3.25\) \\
+                                                   & M20                     & \(6.34\pm1.77\) & \(-0.36\pm1.33\) \\
     \midrule
-                                  & C2WN\(\uparrow\)        & \(0.08\pm0.20\) & \(0.27\pm0.26\)  \\
-                                  & C2W\(\uparrow\uparrow\) & \(0.86\pm0.25\) & \(-0.70\pm0.19\) \\
-                                  & C2W\(\uparrow\)         & \(0.75\pm0.10\) & \(-0.64\pm0.12\) \\
-    \ref{fig:3_rf_to_aod_ratios}b & C2W\(-\)                & \(0.43\pm0.08\) & \(-0.34\pm0.06\) \\
-                                  & C2W\(\downarrow\)       & \(0.18\pm0.12\) & \(-0.07\pm0.16\) \\
-                                  & M20                     & \(0.33\pm0.07\) & \(-0.02\pm0.08\) \\
+                                                   & C2WN\(\uparrow\)        & \(0.08\pm0.20\) & \(0.27\pm0.26\)  \\
+                                                   & C2W\(\uparrow\uparrow\) & \(0.86\pm0.25\) & \(-0.70\pm0.19\) \\
+    \multirow{2}{*}{\ref{fig:3_rf_to_aod_ratios}b} & C2W\(\uparrow\)         & \(0.75\pm0.10\) & \(-0.64\pm0.12\) \\
+                                                   & C2W\(-\)                & \(0.43\pm0.08\) & \(-0.34\pm0.06\) \\
+                                                   & C2W\(\downarrow\)       & \(0.18\pm0.12\) & \(-0.07\pm0.16\) \\
+                                                   & M20                     & \(0.33\pm0.07\) & \(-0.02\pm0.08\) \\
     \toprule
     \multicolumn{4}{l}{\parbox{\linewidth}{\(^{a}\)The regression fits in the top half of the table are for
         Fig.~\ref{fig:3_rf_to_aod_ratios}a, while the bottom half is for
@@ -736,7 +736,7 @@ C2WN\(\uparrow\) case up to the last season where the noise is also the largest.
         the two periods as shown in Fig.~\ref{fig:3_rf_to_aod_ratios}. The ensembles are the
         same as those given in table~\ref{tab:simulation-overview}, in addition to the \(6\)
         tropical eruptions from the \(82\) member ensemble in
-    \citeA{marshall2020}.}}                                                                      \\
+    \citeA{marshall2020}.}}                                                                                       \\
   \end{tabular}
 \end{table}
 
@@ -847,8 +847,8 @@ Both our simulations and OB16 exhibit a notably faster increase than this expone
 relationship. The results by N15, on which Eq.~\ref{eq:niemeier_exponential} is based,
 are all averages over at least three years of steady sulphur burdens, substantially
 longer than the time it takes for RF to reach peak values after an eruption. Combined
-with their lack of a full chemistry model, a direct comparison between
-Eq.~\ref{eq:niemeier_exponential} to peak RF values (occurring about one year
+with their lack of a full chemistry model \cite{niemeier2015}, a direct comparison
+between Eq.~\ref{eq:niemeier_exponential} to peak RF values (occurring about one year
 post-eruption) may not reflect the same chemical and physical processes. In
 Eq.~\ref{eq:niemeier_exponential}, \(x\) represents \ce{S}, while the axis shows values
 of \ce{SO2}, thus halving of the \ce{SO2} values on the axis gives the appropriate shape
@@ -1041,14 +1041,14 @@ Figs.~\ref{fig:2_rf_vs_aod_slopes} and~\ref{fig:3_rf_to_aod_ratios}. Across erup
 the same strength, the ratio stays relatively constant, leading to a close to
 \(\SI{-10}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) slope for C2W\(-\) and a
 \(\SI{-5}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) slope for C2W\(\uparrow\) and
-C2W\(\uparrow\uparrow\). Still, a non-linear development in the RF to AOD ratio is
-found, most notably across all tropical eruptions. Similar to the results of
-\citeA{marshall2020}, we find in C2W\(-\), C2W\(\uparrow\), and C2W\(\uparrow\uparrow\)
-that the post-peak period (second and third post-eruption years) has a stronger aerosol
-forcing efficiency compared to the pre-peak period (first post-eruption year). The
-post-peak period of C2W\(\downarrow\) is elevated as compared to the pre-peak period,
-resulting in a decreasing aerosol forcing efficiency from the first to the second and
-third post-eruption years, in contrast to the other tropical eruptions.
+C2W\(\uparrow\uparrow\). Still, a non-linear development in the RF to AOD ratio is found
+across all tropical eruptions. Similar to the results of \citeA{marshall2020}, we find
+in C2W\(-\), C2W\(\uparrow\), and C2W\(\uparrow\uparrow\) that the post-peak period
+(second and third post-eruption years) has a stronger aerosol forcing efficiency
+compared to the pre-peak period (first post-eruption year). The post-peak period of
+C2W\(\downarrow\) is elevated as compared to the pre-peak period, resulting in a
+decreasing aerosol forcing efficiency from the first to the second and third
+post-eruption years, in contrast to the other tropical eruptions.
 
 Focusing on the pre-peak period, we find tropical eruptions to differ from eruptions at
 high latitudes. During the pre-peak period, all tropical eruptions show a decreasing
@@ -1056,25 +1056,27 @@ aerosol forcing efficiency, while no significant change in the RF to AOD ratio i
 from the C2WN\(\uparrow\) case. The full M20 dataset indicates an increasing aerosol
 forcing efficiency also during the pre-peak period, contrasting the decreasing
 efficiency found from their tropical eruptions and supporting the latitudinal dependence
-we find in C2WN\(\uparrow\). While we find a linear relationship to be a useful
+we find with C2WN\(\uparrow\). While we find a linear relationship to be a useful
 approximation of RF dependence on AOD for eruptions similar to or smaller than Mt.\
 Pinatubo, additional factors must be considered for larger eruptions. These factors,
 such as \ce{OH} scarcity and aerosol growth, influence reflectance and their
-gravitational pull, substantially impacting both AOD and RF evolution, as highlighted by
+gravitational pull, substantially impacting both AOD and RF evolution, is highlighted by
 \citeA{timmreck2010}. The large difference in ratio found when comparing eruption
 magnitudes suggests that injected \ce{SO2} is crucial when estimating the time-average
 of the RF to AOD ratio. However, latitude and, in particular, aerosol dispersion are
 more influential in determining the post-eruption evolution of the ratio, particularly
 during the pre-peak period.
 
-% FIXME: Move this up as one of the important take-aways, and expand.
-% NOTAT:
-% Bruk mer tid på konklusjonene fra fig 4 her. Lineære sammenhenger, mulig RF max på -65 W/m^2 etc.
 We find that the suggested upper threshold from Eq.~\ref{eq:niemeier_exponential} is not
 violated by any eruption simulation, and most notably that the temperature peak value
 follow the RF trend in reaching a limiting value. The C2WTrop cases follow a close to
 linear temperature dependency on RF, with the J05, T10, and C2WN\(\uparrow\) aligning
-close to the same slope.
+close to the same slope. The linear relationship between temperature and RF is the
+strongest dependence found between the parameters in Fig.~\ref{fig:4_parameter_scan},
+and a strong signature across both eruption magnitudes and latitudes, but also across
+highly different climate models. Thus, from a maximum RF of
+\(\SI{-65}{\watt\metre^{-2}}\), we expect temperature anomalies to be limited to around
+\(\sim\SI{-12}{\kelvin}\).
 
 % Models vary in their SO2 to H2SO4 chemistry/physics, but are comparatively consistent in representing AOD, RF and temperature.
 The biggest spread in the data shown in Fig.~\ref{fig:4_parameter_scan} is found when
@@ -1382,12 +1384,13 @@ table~\ref{tab:model-family}, based on the model code genealogy map created by
 % Examples and complete information are here: https://www.agu.org/Publish with
 % AGU/Publish/Author Resources/Data for Authors
 
-Data generated directly from output fields of CESM2 are available at \citeA{enger2024},
-and were generated using scripts available at
-\url{https://github.com/engeir/cesm-data-aggregator}. Analysis scripts are available at
-\url{https://github.com/engeir/paper1-code} and is published to
-\url{https://zenodo.org/doi/10.5281/zenodo.10229427}. Source code used to generate CESM2
-input files are available at \url{https://github.com/engeir/cesm2-volcano-setup}.
+The direct output data of CESM2 are too large to be easily archived and transferred.
+Instead, data generated directly from output fields of CESM2 are made available in a
+NIRD Research Data Archive \cite{enger2024}, and were generated using scripts available
+at \url{https://github.com/engeir/cesm-data-aggregator}. Analysis scripts are available
+at GitHub (\url{https://github.com/engeir/paper1-code}) and is published to Zenodo
+(\url{https://zenodo.org/doi/10.5281/zenodo.10229427}). Source code used to generate
+CESM2 input files are available at \url{https://github.com/engeir/cesm2-volcano-setup}.
 
 % \add[editor]{Text to add}
 
