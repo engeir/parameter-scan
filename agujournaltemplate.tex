@@ -25,19 +25,6 @@
 \usepackage{booktabs} % To thicken table lines
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta}
-\definecolor{LightGray}{gray}{0.9}
-\urldef\fssturl\url{
-1850_CAM60%WCCM_CLM50%BGC-CROP_CICE%PRES_DOCN%DOM_MOSART_CISM2%NOEVOLVE_SWAV_TEST
-}
-% FIXME: they do not allow `newcommand`, and escpecially not commands using `#`, so this needs to be updated.
-\newcommand{\iso}[1][i]{{#1}njected \ce{SO2}}
-\newcommand{\cw}{C2W}
-\newcommand{\cwt}{C2WTrop}
-\newcommand{\cwm}{C2W\(\downarrow\)}
-\newcommand{\cwmp}{C2W\(-\)}
-\newcommand{\cws}{C2WN\(\uparrow\)}
-\newcommand{\cwss}{C2WN\(\uparrow\uparrow\)}
-\newcommand{\cwsn}{C2W\(\uparrow\)}
 %%%%%%%
 % As of 2018 we recommend use of the TrackChanges package to mark revisions.
 % The trackchanges package adds five new LaTeX commands:
@@ -158,9 +145,6 @@
   \item The linear RF dependence on AOD break down for eruptions larger than Pinatubo
 \end{keypoints}
 
-% FIXME: related to this, there is an index that can be added during publishing. Find the list here: https://www.agu.org/publish-with-agu/publish/author-resources/index-terms
-% 0370, 0305, 8408, 8409
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %  ABSTRACT and PLAIN LANGUAGE SUMMARY
@@ -208,6 +192,9 @@
 % Enter your Plain Language Summary here or delete this section.
 % Here are instructions on writing a Plain Language Summary:
 % https://www.agu.org/Share-and-Advocate/Share/Community/Plain-language-summary
+
+% FIXME: related to this, there is an index that can be added during publishing. Find the list here: https://www.agu.org/publish-with-agu/publish/author-resources/index-terms
+% 0370, 0305, 8408, 8409
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -412,7 +399,7 @@ down to \(\SI{-19.0(5)}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) \cite{gregory2016} 
 volcano simulations in \citeA{marshall2020} yield a scaling factor of
 \(\SI{-20.5(2)}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) across an ensemble of \(82\)
 simulations featuring varying injection heights and latitudes of volcanic emissions,
-with \iso{} ranging from \(10\) to \(\SI{100}{\tera\gram(\ce{SO2})}\).
+with injected \ce{SO2} ranging from \(10\) to \(\SI{100}{\tera\gram(\ce{SO2})}\).
 
 A similar simulation setup, albeit with notable differences, was conducted by
 \citeA{niemeier2015}, involving an ensemble of \(14\) levels of injected sulphur
@@ -421,21 +408,22 @@ spanning between \(\SI{1}{\tera\gram(\ce{S})\mathrm{yr}^{-1}}\)
 \(\SI{100}{\tera\gram(\ce{S})\mathrm{yr}^{-1}}\)
 (\(\SI{200}{\tera\gram(\ce{SO2})\mathrm{yr}^{-1}}\)). These geoengineering simulations
 maintained continuous sulphur injections, running until a steady sulphur level was
-achieved. Results indicated an inverse exponential relationship between RF and \iso{}
-rate, converging to \(\SI{-65}{\watt\metre^{-2}}\) (Eq.~\ref{eq:niemeier_exponential}).
-Even the \(100\times\) Mt.\ Pinatubo super-volcano simulation by \citeA{jones2005},
-which obtained a peak RF of \(\SI{-60}{\watt\metre^{-2}}\), is below the suggested limit
-of \(\SI{-65}{\watt\metre^{-2}}\). Moreover, \citeA{timmreck2010} find a peak RF anomaly
-of \(\SI{-18}{\watt\metre^{-2}}\) from a \(\SI{1700}{\tera\gram(\ce{SO2})}\) eruption
+achieved. Results indicated an inverse exponential relationship between RF and injected
+\ce{SO2} rate, converging to \(\SI{-65}{\watt\metre^{-2}}\)
+(Eq.~\ref{eq:niemeier_exponential}). Even the \(100\times\) Mt.\ Pinatubo super-volcano
+simulation by \citeA{jones2005}, which obtained a peak RF of
+\(\SI{-60}{\watt\metre^{-2}}\), is below the suggested limit of
+\(\SI{-65}{\watt\metre^{-2}}\). Moreover, \citeA{timmreck2010} find a peak RF anomaly of
+\(\SI{-18}{\watt\metre^{-2}}\) from a \(\SI{1700}{\tera\gram(\ce{SO2})}\) eruption
 simulation, which corresponds well with the function estimated by \citeA{niemeier2015}
 at the given \ce{SO2} level. Several studies have demonstrated a linear relationship of
 approximately \(-\SI{20}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) between RF and AOD,
 although substantial variability exists in the slope among studies
 \cite{mills2017,hansen2005,gregory2016,marshall2020,pitari2016b}. Moreover, a
 time-after-eruption dependence on the RF to AOD ratio is found in \citeA{marshall2020},
-whereas \citeA{niemeier2015} revealed a non-linear relationship between RF and \iso{}
-rate. Thus, a consensus on the relationship between \iso{}, AOD, and RF has yet to be
-established.
+whereas \citeA{niemeier2015} revealed a non-linear relationship between RF and injected
+\ce{SO2} rate. Thus, a consensus on the relationship between injected \ce{SO2}, AOD, and
+RF has yet to be established.
 
 One avenue that has garnered considerable attention is comparing the magnitude of
 volcanic or volcano-like forcings to increased \ce{CO2} levels. Several studies explore
@@ -468,11 +456,13 @@ factor of one hundred \cite{jones2005}. This approach may yield incorrect result
 because the peak of the AOD may be too small or too big, but also because the evolution
 of the AOD could be inappropriate. Likewise, a different AOD evolution may be found from
 similar size eruptions, but at different latitudes. To investigate this issue, our
-simulations are based on four levels of \iso{} covering three orders of magnitude and
-the inclusion of one high latitude eruption of the second largest \iso{} case.
+simulations are based on four levels of injected \ce{SO2} covering three orders of
+magnitude and the inclusion of one high latitude eruption of the second largest injected
+\ce{SO2} case.
 
-We conducted ensemble simulations of volcanic eruptions in the CESM2 coupled with the
-WACCM6. The ensembles span four different levels of \iso{}:
+We conducted ensemble simulations of volcanic eruptions in the Community Earth System
+Model Version 2 (CESM2) coupled with the Whole Atmosphere Community Climate Model
+Version 6 (WACCM6). The ensembles span four different levels of injected \ce{SO2}:
 \(\SI{26}{\tera\gram(\ce{SO2})}\), \(\SI{400}{\tera\gram(\ce{SO2})}\),
 \(\SI{1629}{\tera\gram(\ce{SO2})}\) and \(\SI{3000}{\tera\gram(\ce{SO2})}\). Details
 regarding the experimental setup are provided in section~\ref{sec:method}. Our findings
@@ -480,8 +470,8 @@ reveal non-linear RF to AOD dependencies for medium to super-volcano size erupti
 Additionally, we observe a time-dependent variation in the RF to AOD ratio, detailed in
 section~\ref{sec:results} and discussed in section~\ref{sec:discussion}. Furthermore,
 our data, along with insights from previous studies, suggest that the RF dependency on
-\iso{} identified by \citeA{niemeier2015} acts as a lower boundary. Our conclusions are
-presented in section~\ref{sec:conclusions}.
+injected \ce{SO2} identified by \citeA{niemeier2015} acts as a lower boundary. Our
+conclusions are presented in section~\ref{sec:conclusions}.
 
 \section{Method}\label{sec:method}
 
@@ -508,19 +498,22 @@ and 15 November. The magnitudes vary over three orders of magnitude:
 \(\SI{26}{\tera\gram(\ce{SO2})}\), \(\SI{400}{\tera\gram(\ce{SO2})}\),
 \(\SI{1629}{\tera\gram(\ce{SO2})}\), and \(\SI{3000}{\tera\gram(\ce{SO2})}\).
 
-The smallest eruption case, \cwm{}, is similar in magnitude as compared to events like
-Mt.\ Pinatubo \cite<\(\sim10\)--\(\SI{20}{\tera\gram(\ce{SO2})}\);>[]{timmreck2018} and
-Mt.\ Tambora \cite<\(\sim\SI{56.2}{\tera\gram(\ce{SO2})}\);>[]{zanchettin2016}. The
-intermediate case, \cwmp{}, resembles the magnitude of the Samalas eruption in 1257
+The smallest eruption case, C2W\(\downarrow\), is similar in magnitude as compared to
+events like Mt.\ Pinatubo
+\cite<\(\sim10\)--\(\SI{20}{\tera\gram(\ce{SO2})}\);>[]{timmreck2018} and Mt.\ Tambora
+\cite<\(\sim\SI{56.2}{\tera\gram(\ce{SO2})}\);>[]{zanchettin2016}. The intermediate
+case, C2W\(-\), resembles the magnitude of the Samalas eruption in 1257
 \cite<\(\sim{144}\)--\(\SI{170}{\tera\gram(\ce{SO2})}\);>[]{vidal2016}, while the second
-largest and largest eruption cases, \cws{} and \cwss{}, is in the likely range of the
-Young Toba Tuff (YTT) eruption occurring about \(\SI{72000}{\mathrm{yr}}\) ago
+largest and largest eruption cases, C2W\(\uparrow\) and C2W\(\uparrow\uparrow\), is in
+the likely range of the Young Toba Tuff (YTT) eruption occurring about
+\(\SI{72000}{\mathrm{yr}}\) ago
 \cite<\(100\)--\(\SI{10000}{\tera\gram(\ce{SO2})}\);>[]{jones2005}. All eruptions were
 situated at the equator (\(\SI{0}{\degree N}\), \(\SI{1}{\degree E}\)) with \ce{SO2}
 injected between \(\SI{18}{\kilo\meter}\) and \(\SI{20}{\kilo\meter}\) altitude.
-Collectively, the four tropical eruption cases \cwm{}, \cwmp{}, \cws{}, and \cwss{} are
-referred to as \cwt{}. An additional high-latitude eruption ensemble, labelled \cwsn{},
-of the same \iso{} magnitude as \cws{} was simulated at \(\SI{56}{\degree N}\),
+Collectively, the four tropical eruption cases C2W\(\downarrow\), C2W\(-\),
+C2W\(\uparrow\), and C2W\(\uparrow\uparrow\) are referred to as C2WTrop. An additional
+high-latitude eruption ensemble, labelled C2WN\(\uparrow\), of the same injected
+\ce{SO2} magnitude as C2W\(\uparrow\) was simulated at \(\SI{56}{\degree N}\),
 \(\SI{287.7}{\degree E}\) with a six-month separation (15 February and 15 August).
 
 \begin{table*}
@@ -533,29 +526,29 @@ of the same \iso{} magnitude as \cws{} was simulated at \(\SI{56}{\degree N}\),
       Ensemble name                   & \(\si{\tera\gram(\ce{SO2})}\)         &
       Lat [\si{\degree\mathrm{N}}]    & Lon [\si{\degree\mathrm{E}}]          & Alt [\si{\kilo\metre}] & Eruption months \\
       \midrule
-      \cwss{}                         & \(1629\)                              &
+      C2W\(\uparrow\uparrow\)         & \(1629\)                              &
       \(\hphantom{1}0\)               & \(\hphantom{28}1\hphantom{.7}\)       &
       \(18\)--\(20\)                  & \hphantom{Feb,}May,\hphantom{Aug,}Nov                                            \\
-      \cwsn{}                         & \(1629\)                              &
+      C2WN\(\uparrow\)                & \(1629\)                              &
       \(56\)                          & \(287.7\)                             &
       \(18\)--\(20\)                  & Feb,\hphantom{May,}Aug\hphantom{,Nov}                                            \\
-      \cws{}                          & \(1629\)                              &
+      C2W\(\uparrow\)                 & \(1629\)                              &
       \(\hphantom{1}0\)               & \(\hphantom{28}1\hphantom{.7}\)       & \(18\)--\(20\)
                                       & Feb,May,Aug,Nov                                                                  \\
-      \cwmp{}                         & \(\hphantom{1}400\)                   &
+      C2W\(-\)                        & \(\hphantom{1}400\)                   &
       \(\hphantom{1}0\)               &
       \(\hphantom{28}1\hphantom{.7}\) &
       \(18\)--\(20\)                  & Feb,May,Aug,Nov                                                                  \\
-      \cwm{}                          & \(\hphantom{14}26\)                   &
+      C2W\(\downarrow\)               & \(\hphantom{14}26\)                   &
       \(\hphantom{1}0\)               &
       \(\hphantom{28}1\hphantom{.7}\) & \(18\)--\(20\)
                                       &
       Feb,May,Aug,Nov                                                                                                    \\
       \toprule
-      \multicolumn{6}{l}{\parbox{\linewidth}{\(^{a}\)The ensembles \cwsn{} and \cws{} have the same
-          eruption magnitude, but while \cws{} is located at the equator, \cwsn{} is
-          located at a high northern latitude. \cwss{}, \cwmp{} and \cwm{} are located
-          at the equator, but with different magnitudes compared to \cws{}. The three smallest
+      \multicolumn{6}{l}{\parbox{\linewidth}{\(^{a}\)The ensembles C2WN\(\uparrow\) and C2W\(\uparrow\) have the same
+          eruption magnitude, but while C2W\(\uparrow\) is located at the equator, C2WN\(\uparrow\) is
+          located at a high northern latitude. C2W\(\uparrow\uparrow\), C2W\(-\) and C2W\(\downarrow\) are located
+          at the equator, but with different magnitudes compared to C2W\(\uparrow\). The three smallest
           tropical ensembles have four members, indicated by the number of eruption months, while
           the northern latitude and the extra large super-volcano ensemble consists of two
           members.}}
@@ -581,24 +574,26 @@ of the same \iso{} magnitude as \cws{} was simulated at \(\SI{56}{\degree N}\),
 Figure~\ref{fig:1_compare_waveform} presents time series of global mean AOD, RF, and
 surface air temperature. The black lines represent the medians across the ensembles,
 while shading indicates the 5th to 95th percentiles. The four distinct forcing
-magnitudes (\cwm{}, \cwmp{}, \cws{}, and \cwss{}) outlined in
-table~\ref{tab:simulation-overview} have been used. The time series in
+magnitudes (C2W\(\downarrow\), C2W\(-\), C2W\(\uparrow\), and C2W\(\uparrow\uparrow\))
+outlined in table~\ref{tab:simulation-overview} have been used. The time series in
 Fig.~\ref{fig:1_compare_waveform} are normalised by setting the peak value to unity,
 defined based on the peak of a fit from a Savitzky-Golay filter of 3rd order and a
 one-year window length \cite{savitzky1964}.
 
 A notable feature across the subfigures of Fig.~\ref{fig:1_compare_waveform} is the peak
-occurrence of the \cwm{} case compared to the larger eruption cases. The peak of \cwm{}
-arrives earlier for both AOD (Fig.~\ref{fig:1_compare_waveform}a) and temperature
-(Fig.~\ref{fig:1_compare_waveform}c), while the RF time series in
-Fig.~\ref{fig:1_compare_waveform}b are all indistinguishable. Cases \cwmp{}, \cws{}, and
-\cwss{} are indistinguishable in their temperature development, and while \cwm{} peaks
-at an earlier time, it decays similarly to the other cases. Interestingly, the same
-development between \cwmp{} and \cws{} is not found in the AOD time series. \cwm{} peaks
-at an earlier time, but also spends more time around the peak and as such decays at a
-later time post-eruption. Likewise, \cwmp{} has a faster rise and slower decay compared
-to \cws{}, but where both peak at a similar time. \cws{} and \cwss{} have similar AOD
-developments, but where \cwss{} show a slightly faster decay from the peak.
+occurrence of the C2W\(\downarrow\) case compared to the larger eruption cases. The peak
+of C2W\(\downarrow\) arrives earlier for both AOD (Fig.~\ref{fig:1_compare_waveform}a)
+and temperature (Fig.~\ref{fig:1_compare_waveform}c), while the RF time series in
+Fig.~\ref{fig:1_compare_waveform}b are all indistinguishable. Cases C2W\(-\),
+C2W\(\uparrow\), and C2W\(\uparrow\uparrow\) are indistinguishable in their temperature
+development, and while C2W\(\downarrow\) peaks at an earlier time, it decays similarly
+to the other cases. Interestingly, the same development between C2W\(-\) and
+C2W\(\uparrow\) is not found in the AOD time series. C2W\(\downarrow\) peaks at an
+earlier time, but also spends more time around the peak and as such decays at a later
+time post-eruption. Likewise, C2W\(-\) has a faster rise and slower decay compared to
+C2W\(\uparrow\), but where both peak at a similar time. C2W\(\uparrow\) and
+C2W\(\uparrow\uparrow\) have similar AOD developments, but where C2W\(\uparrow\uparrow\)
+show a slightly faster decay from the peak.
 
 The timescale of the perturbation of AOD and RF is shorter than that of the temperature.
 While the AOD and RF time series return to their equilibrium state within roughly three
@@ -611,10 +606,11 @@ series are still decaying.
   \includegraphics{figures/figure1.png}
 
   \caption{AOD (a), RF (b) and temperature response (c) time series to the four tropical
-    volcanic eruption cases, \cwm{}, \cwmp{}, \cws{}, and \cwss{}. The time series have been
-    normalised to have peak values at unity, where \(C\) is the normalisation constant.
-    Black lines indicate the median across the ensembles, while shading marks the 5th and
-    95th percentiles.}\label{fig:1_compare_waveform}%
+    volcanic eruption cases, C2W\(\downarrow\), C2W\(-\), C2W\(\uparrow\), and
+    C2W\(\uparrow\uparrow\). The time series have been normalised to have peak values at
+    unity, where \(C\) is the normalisation constant. Black lines indicate the median across
+    the ensembles, while shading marks the 5th and 95th
+    percentiles.}\label{fig:1_compare_waveform}%
 \end{figure}
 
 \subsection{RF dependency on AOD}
@@ -623,74 +619,76 @@ We next focus on the development of the AOD and RF time series relative to each 
 Similar comparisons were conducted in \citeA<>[their Fig.\ 4]{gregory2016} and
 \citeA<>[their Fig.\ 1]{marshall2020}, with RF plotted against AOD.
 Figure~\ref{fig:2_rf_vs_aod_slopes} displays annual mean values from the five simulation
-cases in table~\ref{tab:simulation-overview}; the small eruption case (\cwm{}) as blue
-downward-pointing triangles, the intermediate eruption case (\cwmp{}) as orange thick
-diamonds, the large tropical eruption case (\cws{}) as green upward-pointing triangles,
-the extra large eruption case (\cwss{}) as small pink upward-pointing carets, and the
-large northern hemisphere eruption case (\cwsn{}) as brown upward-pointing
-three-branched twigs. Also shown are the data from \citeA<>[Fig.\ 4, black crosses from
-  HadCM3 sstPiHistVol]{gregory2016} as grey crosses labelled G16 (described in Appendix B,
+cases in table~\ref{tab:simulation-overview}; the small eruption case
+(C2W\(\downarrow\)) as blue downward-pointing triangles, the intermediate eruption case
+(C2W\(-\)) as orange thick diamonds, the large tropical eruption case (C2W\(\uparrow\))
+as green upward-pointing triangles, the extra large eruption case
+(C2W\(\uparrow\uparrow\)) as small pink upward-pointing carets, and the large northern
+hemisphere eruption case (C2WN\(\uparrow\)) as brown upward-pointing three-branched
+twigs. Also shown are the data from \citeA<>[Fig.\ 4, black crosses from HadCM3
+  sstPiHistVol]{gregory2016} as grey crosses labelled G16 (described in Appendix B,
 section~\ref{ap:g16}). Additionally, the estimated peak values from the Mt.\ Pinatubo
 and Mt.\ Tambora eruptions are plotted as a black star and plus, while the peak from the
 \citeA{jones2005} simulation is shown as a pink square labelled J05. Finally, red
-circles represent the peak values obtained from the \cwt{} eruption cases. The straight
+circles represent the peak values obtained from the C2WTrop eruption cases. The straight
 lines are the same as shown by \citeA{gregory2016}. The full data range is shown in
 Fig.~\ref{fig:2_rf_vs_aod_slopes}a while Fig.~\ref{fig:2_rf_vs_aod_slopes}b highlights a
-narrow range, focusing on the \cwm{} case.
+narrow range, focusing on the C2W\(\downarrow\) case.
 
-The annual mean data from the Pinatubo-like \cwm{} case in
+The annual mean data from the Pinatubo-like C2W\(\downarrow\) case in
 Fig.~\ref{fig:2_rf_vs_aod_slopes}b have RF values as a function of AOD that follow
 almost the same constant slope as the G16 data. However, in
 Fig.~\ref{fig:2_rf_vs_aod_slopes}a we observe that the stronger eruptions lead to
-dissimilar responses in AOD and RF, where \cwmp{} seems to follow close to a \(-10\)
-slope and \cws{} is closer to a \(-5\) slope. The peak values (red circles) suggest a
-non-linear dependence, while within each eruption strength (same colour) the annual mean
-values fall relatively close to a straight line.
+dissimilar responses in AOD and RF, where C2W\(-\) seems to follow close to a \(-10\)
+slope and C2W\(\uparrow\) is closer to a \(-5\) slope. The peak values (red circles)
+suggest a non-linear dependence, while within each eruption strength (same colour) the
+annual mean values fall relatively close to a straight line.
 
 \begin{figure}
   \centering
   \includegraphics{figures/figure2.png}
 
   \caption{RF as a function of AOD, yearly means. Data from the five simulations listed in
-    table~\ref{tab:simulation-overview} (\cwm{}, \cwmp{}, \cws{}, \cwsn{}, and \cwss{}) are
-    shown along with the data from the HadCM3 sstPiHistVol simulation by \citeA{gregory2016}
-    (grey crosses, G16). Also shown are the estimated peak values of the Mt.\ Pinatubo
-    (black star) and Mt.\ Tambora (black plus) eruptions. The peak values from the \cw{}
-    simulations are shown as red circles. Additionally in (a) the simulated super-volcano of
-    \citeA{jones2005} (pink square) is shown. All peak values (as opposed to annual means)
-    have an asterisk (\(\ast{}\)) in their label. The grey lines are the same regression
-    fits as in \citeA<>[Fig.\ 4]{gregory2016}, where the solid line is the fit to G16. (b):
-    Zooming in on the smallest AOD values.}\label{fig:2_rf_vs_aod_slopes}%
+    table~\ref{tab:simulation-overview} (C2W\(\downarrow\), C2W\(-\), C2W\(\uparrow\),
+    C2WN\(\uparrow\), and C2W\(\uparrow\uparrow\)) are shown along with the data from the
+    HadCM3 sstPiHistVol simulation by \citeA{gregory2016} (grey crosses, G16). Also shown
+    are the estimated peak values of the Mt.\ Pinatubo (black star) and Mt.\ Tambora (black
+    plus) eruptions. The peak values from the C2W simulations are shown as red circles.
+    Additionally in (a) the simulated super-volcano of \citeA{jones2005} (pink square) is
+    shown. All peak values (as opposed to annual means) have an asterisk (\(\ast{}\)) in
+    their label. The grey lines are the same regression fits as in \citeA<>[Fig.\
+      4]{gregory2016}, where the solid line is the fit to G16. (b): Zooming in on the smallest
+    AOD values.}\label{fig:2_rf_vs_aod_slopes}%
 \end{figure}
 
 To investigate the time dependence of the ratio between RF and AOD, we present seasonal
 means of this ratio in Fig.~\ref{fig:3_rf_to_aod_ratios}. The plot shows the eruption
 cases given in table~\ref{tab:simulation-overview}, as well as the tropical eruptions
 from \citeA{marshall2020dataset} (\(6\) of \(82\) eruptions), labelled M20 and described
-in Appendix B, section~\ref{ap:m20}. The \cws{} case is similar to \cwss{} as indicated
-in table~\ref{tab:slope-gradients}, but is not shown in the plot to better highlight
-\cwsn{}. In Fig.~\ref{fig:3_rf_to_aod_ratios}a, lines are linear regression fits to the
-seasonal means across all ensemble members, summarised in
-table~\ref{tab:slope-gradients}. Shaded regions are the standard deviation around the
-seasonal means. A similar shading is plotted in Fig.~\ref{fig:3_rf_to_aod_ratios}b, but
-where the regression fits have been omitted for clarity. As the AOD and RF time series
-start from zero, the ratio from the first season is not included. Likewise, after three
-years both time series are almost fully equilibrated
-(Fig.~\ref{fig:1_compare_waveform}a,b). The data is further divided into two periods; a
-pre-peak period where the peak of both the AOD and the RF is included (consisting of the
-first post-eruption year), and a post-peak period for the decaying part (consisting of
-the second and third post-eruption years).
+in Appendix B, section~\ref{ap:m20}. The C2W\(\uparrow\) case is similar to
+C2W\(\uparrow\uparrow\) as indicated in table~\ref{tab:slope-gradients}, but is not
+shown in the plot to better highlight C2WN\(\uparrow\). In
+Fig.~\ref{fig:3_rf_to_aod_ratios}a, lines are linear regression fits to the seasonal
+means across all ensemble members, summarised in table~\ref{tab:slope-gradients}. Shaded
+regions are the standard deviation around the seasonal means. A similar shading is
+plotted in Fig.~\ref{fig:3_rf_to_aod_ratios}b, but where the regression fits have been
+omitted for clarity. As the AOD and RF time series start from zero, the ratio from the
+first season is not included. Likewise, after three years both time series are almost
+fully equilibrated (Fig.~\ref{fig:1_compare_waveform}a,b). The data is further divided
+into two periods; a pre-peak period where the peak of both the AOD and the RF is
+included (consisting of the first post-eruption year), and a post-peak period for the
+decaying part (consisting of the second and third post-eruption years).
 
 Although the ratio changes across the eruption magnitudes, we find that all the tropical
 cases follow a positive slope during the pre-peak period, as seen in
 Fig.~\ref{fig:3_rf_to_aod_ratios}a and described in table~\ref{tab:slope-gradients}. The
-northern latitude case in \cwsn{c2wsn} shows a much flatter slope compared to \cwt{} and
-M20. The distinction between the slopes from the tropical and non-tropical cases is
-perhaps more clear in Fig.~\ref{fig:3_rf_to_aod_ratios}b and corresponding rows in
-table~\ref{tab:slope-gradients}. Again, \cwsn{} shows an almost flat slope compared to
-the tropical cases. During the second period, more noise is introduced, but a weak
-tendency of negative slopes is found among the tropical cases, as well as in the \cwsn{}
-case up to the last season where the noise is also the largest.
+northern latitude case in C2WN\(\uparrow\) shows a much flatter slope compared to
+C2WTrop and M20. The distinction between the slopes from the tropical and non-tropical
+cases is perhaps more clear in Fig.~\ref{fig:3_rf_to_aod_ratios}b and corresponding rows
+in table~\ref{tab:slope-gradients}. Again, C2WN\(\uparrow\) shows an almost flat slope
+compared to the tropical cases. During the second period, more noise is introduced, but
+a weak tendency of negative slopes is found among the tropical cases, as well as in the
+C2WN\(\uparrow\) case up to the last season where the noise is also the largest.
 
 \begin{table}
   \centering
@@ -699,21 +697,21 @@ case up to the last season where the noise is also the largest.
     Fig.~\ref{fig:3_rf_to_aod_ratios}\(^{a}\)}\label{tab:slope-gradients}%
   \begin{tabular}{cccc}
     \toprule
-    Figure                        & Ensemble name & 1st period      & 2nd period       \\
+    Figure                        & Ensemble name           & 1st period      & 2nd period       \\
     \midrule
-                                  & \cwsn{}       & \(0.45\pm1.15\) & \(1.51\pm1.45\)  \\
-                                  & \cwss{}       & \(3.38\pm0.97\) & \(-2.74\pm0.77\) \\
-                                  & \cws{}        & \(3.85\pm0.52\) & \(-3.29\pm0.60\) \\
-    \ref{fig:3_rf_to_aod_ratios}a & \cwmp{}       & \(4.36\pm0.82\) & \(-3.37\pm0.59\) \\
-                                  & \cwm{}        & \(3.64\pm2.41\) & \(-1.41\pm3.25\) \\
-                                  & M20           & \(6.34\pm1.77\) & \(-0.36\pm1.33\) \\
+                                  & C2WN\(\uparrow\)        & \(0.45\pm1.15\) & \(1.51\pm1.45\)  \\
+                                  & C2W\(\uparrow\uparrow\) & \(3.38\pm0.97\) & \(-2.74\pm0.77\) \\
+                                  & C2W\(\uparrow\)         & \(3.85\pm0.52\) & \(-3.29\pm0.60\) \\
+    \ref{fig:3_rf_to_aod_ratios}a & C2W\(-\)                & \(4.36\pm0.82\) & \(-3.37\pm0.59\) \\
+                                  & C2W\(\downarrow\)       & \(3.64\pm2.41\) & \(-1.41\pm3.25\) \\
+                                  & M20                     & \(6.34\pm1.77\) & \(-0.36\pm1.33\) \\
     \midrule
-                                  & \cwsn{}       & \(0.08\pm0.20\) & \(0.27\pm0.26\)  \\
-                                  & \cwss{}       & \(0.86\pm0.25\) & \(-0.70\pm0.19\) \\
-                                  & \cws{}        & \(0.75\pm0.10\) & \(-0.64\pm0.12\) \\
-    \ref{fig:3_rf_to_aod_ratios}b & \cwmp{}       & \(0.43\pm0.08\) & \(-0.34\pm0.06\) \\
-                                  & \cwm{}        & \(0.18\pm0.12\) & \(-0.07\pm0.16\) \\
-                                  & M20           & \(0.33\pm0.07\) & \(-0.02\pm0.08\) \\
+                                  & C2WN\(\uparrow\)        & \(0.08\pm0.20\) & \(0.27\pm0.26\)  \\
+                                  & C2W\(\uparrow\uparrow\) & \(0.86\pm0.25\) & \(-0.70\pm0.19\) \\
+                                  & C2W\(\uparrow\)         & \(0.75\pm0.10\) & \(-0.64\pm0.12\) \\
+    \ref{fig:3_rf_to_aod_ratios}b & C2W\(-\)                & \(0.43\pm0.08\) & \(-0.34\pm0.06\) \\
+                                  & C2W\(\downarrow\)       & \(0.18\pm0.12\) & \(-0.07\pm0.16\) \\
+                                  & M20                     & \(0.33\pm0.07\) & \(-0.02\pm0.08\) \\
     \toprule
     \multicolumn{4}{l}{\parbox{\linewidth}{\(^{a}\)The regression fits in the top half of the table are for
         Fig.~\ref{fig:3_rf_to_aod_ratios}a, while the bottom half is for
@@ -721,7 +719,7 @@ case up to the last season where the noise is also the largest.
         the two periods as shown in Fig.~\ref{fig:3_rf_to_aod_ratios}. The ensembles are the
         same as those given in table~\ref{tab:simulation-overview}, in addition to the \(6\)
         tropical eruptions from the \(82\) member ensemble in
-    \citeA{marshall2020}.}}                                                            \\
+    \citeA{marshall2020}.}}                                                                      \\
   \end{tabular}
 \end{table}
 
@@ -740,14 +738,15 @@ constraining the ensemble to only include eruptions within \(-10\) to
 \(\SI{10}{\degree\mathrm{N}}\). The post-peak period shows an increasing aerosol forcing
 efficiency, and during the full first three post-eruption years (pre-peak and
 post-peak), both the tropical subset and the full M20 data yield an increasing
-efficiency. Likewise, the first three post-eruption years of the \cwmp{}, \cwss{}, and
-\cwsn{} cases show a weak negative slope and thus an increasing efficiency, while \cwm{}
-shows an elevated post-peak ratio as seen in Fig.~\ref{fig:3_rf_to_aod_ratios}b.
+efficiency. Likewise, the first three post-eruption years of the C2W\(-\),
+C2W\(\uparrow\uparrow\), and C2WN\(\uparrow\) cases show a weak negative slope and thus
+an increasing efficiency, while C2W\(\downarrow\) shows an elevated post-peak ratio as
+seen in Fig.~\ref{fig:3_rf_to_aod_ratios}b.
 
 We also note that while the aerosol forcing efficiency is decreasing for tropical M20
 data in the pre-peak period, the full dataset shows increasing efficiency. This is in
-line with what we find from \cwsn{}, which is the only eruption case that does not show
-a clear aerosol forcing efficiency decrease during the pre-peak period.
+line with what we find from C2WN\(\uparrow\), which is the only eruption case that does
+not show a clear aerosol forcing efficiency decrease during the pre-peak period.
 
 \begin{figure}
   \centering
@@ -766,45 +765,47 @@ a clear aerosol forcing efficiency decrease during the pre-peak period.
 \subsection{Parameter scan}
 
 In Fig.~\ref{fig:4_parameter_scan}, we compare the peak values of all investigated CESM2
-output parameters against each other as well as to \iso{}. For our tropical cases
-(\cwt{}), we observe in Fig.~\ref{fig:4_parameter_scan}a an almost linear yet notably
-weakening relationship between AOD peak values and \iso{}. The latitude also plays a
-role in the magnitude of the AOD perturbation, evident from \cwsn{}. This weak yet
-notable latitude dependence aligns with findings by \citeA{marshall2019}, indicating
-that \(\SI{72}{\percent}\) of the AOD variance can be attributed to \iso{}, while
-latitude accounts for only \(\SI{16}{\percent}\) of the variance. Peak values from their
-data (82 simulations) plotted as red thin diamonds display a similar pattern, with AOD
-exhibiting close to linear dependence on \iso{}, but with latitude introducing a spread
-in AOD. Peak values from Mt.\ Pinatubo (P) and Mt.\ Tambora (T) are shown for reference,
-along with peak values from \citeA{jones2005} labelled J05 and \citeA{timmreck2010}
-labelled T10. The J05 is a simulation of a super-volcano based on a \(100\) times
-scaling of the AOD from Mt.\ Pinatubo, while T10 is a simulation of the YTT eruption
-based on \ce{SO2} injections.
+output parameters against each other as well as to injected \ce{SO2}. For our tropical
+cases (C2WTrop), we observe in Fig.~\ref{fig:4_parameter_scan}a an almost linear yet
+notably weakening relationship between AOD peak values and injected \ce{SO2}. The
+latitude also plays a role in the magnitude of the AOD perturbation, evident from
+C2WN\(\uparrow\). This weak yet notable latitude dependence aligns with findings by
+\citeA{marshall2019}, indicating that \(\SI{72}{\percent}\) of the AOD variance can be
+attributed to injected \ce{SO2}, while latitude accounts for only \(\SI{16}{\percent}\)
+of the variance. Peak values from their data (82 simulations) plotted as red thin
+diamonds display a similar pattern, with AOD exhibiting close to linear dependence on
+injected \ce{SO2}, but with latitude introducing a spread in AOD. Peak values from Mt.\
+Pinatubo (P) and Mt.\ Tambora (T) are shown for reference, along with peak values from
+\citeA{jones2005} labelled J05 and \citeA{timmreck2010} labelled T10. The J05 is a
+simulation of a super-volcano based on a \(100\) times scaling of the AOD from Mt.\
+Pinatubo, while T10 is a simulation of the YTT eruption based on \ce{SO2} injections.
 
-In Fig.~\ref{fig:4_parameter_scan}b, RF plotted against \iso{} (with the absolute value
-of RF on the \(y\)-axis) indicates a substantial damping effect on RF as \iso{}
-increases for the \cw{} data, in agreement with results from \citeA{ottobliesner2016},
-labelled OB16. The OB16 data come from a \(2500\) year long simulation using historic
-volcanoes as the only external forcing. The analysis details of OB16 can be found in
-Appendix B, section~\ref{ap:ob16}. Despite the model complexity difference,
-\citeA{ottobliesner2016}'s simulations using Community Earth System Model version 1
-(CESM1) with a low-top atmosphere (CAM5) produce RFs comparable to our findings.
+In Fig.~\ref{fig:4_parameter_scan}b, RF plotted against injected \ce{SO2} (with the
+absolute value of RF on the \(y\)-axis) indicates a substantial damping effect on RF as
+injected \ce{SO2} increases for the C2W data, in agreement with results from
+\citeA{ottobliesner2016}, labelled OB16. The OB16 data come from a \(2500\) year long
+simulation using historic volcanoes as the only external forcing. The analysis details
+of OB16 can be found in Appendix B, section~\ref{ap:ob16}. Despite the model complexity
+difference, \citeA{ottobliesner2016}'s simulations using Community Earth System Model
+version 1 (CESM1) with a low-top atmosphere (CAM5) produce RFs comparable to our
+findings.
 
 \begin{figure*}
   \centering
   \includegraphics{figures/figure4.png}
 
-  \caption{(a) AOD, (b) RF, and (c) temperature anomaly as a function of \iso{}\@. (d) RF
-    and (e) temperature anomaly as a function of AOD. (f) Temperature anomaly as a function
-    of RF. Blue diamonds labelled \cwt{} represent tropical cases (\cwm{}, \cwmp{}, \cws{},
-    \cwss{}), the brown three-branched twig signifies the \cwsn{} case, and green downward
-    triangles denote OB16 data from \citeA{ottobliesner2016}. The red thin diamonds labelled
-    M20 display the \citeA{marshall2020dataset} data. Black star and plus indicate Mt.\
-    Pinatubo and Mt.\ Tambora estimates based on observations. The pink square labelled J05
-    refers to the one-hundred times Mt.\ Pinatubo super-volcano from \citeA{jones2005}, and
-    the pink disk labelled T10 represents the YTT super-volcano from \citeA{timmreck2010}.
-    The pink dashed line labelled N15 is from \citeA{niemeier2015}, indicating the function
-    in Eq.~\ref{eq:niemeier_exponential}.}\label{fig:4_parameter_scan}%
+  \caption{(a) AOD, (b) RF, and (c) temperature anomaly as a function of injected
+    \ce{SO2}\@. (d) RF and (e) temperature anomaly as a function of AOD. (f) Temperature
+    anomaly as a function of RF. Blue diamonds labelled C2WTrop represent tropical cases
+    (C2W\(\downarrow\), C2W\(-\), C2W\(\uparrow\), C2W\(\uparrow\uparrow\)), the brown
+    three-branched twig signifies the C2WN\(\uparrow\) case, and green downward triangles
+    denote OB16 data from \citeA{ottobliesner2016}. The red thin diamonds labelled M20
+    display the \citeA{marshall2020dataset} data. Black star and plus indicate Mt.\ Pinatubo
+    and Mt.\ Tambora estimates based on observations. The pink square labelled J05 refers to
+    the one-hundred times Mt.\ Pinatubo super-volcano from \citeA{jones2005}, and the pink
+    disk labelled T10 represents the YTT super-volcano from \citeA{timmreck2010}. The pink
+    dashed line labelled N15 is from \citeA{niemeier2015}, indicating the function in
+    Eq.~\ref{eq:niemeier_exponential}.}\label{fig:4_parameter_scan}%
 \end{figure*}
 
 % INFO: the conversion between S and SO2 is confirmed by Niemeier and Timmreck (2015)'s
@@ -847,7 +848,7 @@ likely stems from the utilization of the same aerosol microphysical model in bot
 \citeA{timmreck2010} and \citeA{niemeier2015}, as well as the application of similar
 climate models, MPI-ESM and ECHAM5, respectively. The relationship between climate model
 families and their implications are further discussed in Appendix C. Notably, the peak
-values from M20 fit well within an upper boundary defined by \cwt{} and OB16, and a
+values from M20 fit well within an upper boundary defined by C2WTrop and OB16, and a
 lower boundary defined by Eq.~\ref{eq:niemeier_exponential}. Eruptions closer to the
 equator within M20 align with data points near the upper boundary, whereas eruptions at
 more extreme latitudes tend to yield weaker peak RF values, closer to the lower
@@ -855,10 +856,11 @@ boundary. Importantly, none of the eruption simulations exceeded the upper thres
 \(\SI{-65}{\watt\meter^{-2}}\) as suggested in Eq.~\ref{eq:niemeier_exponential}.
 
 Figure~\ref{fig:4_parameter_scan}c illustrates the response of temperature against
-\iso{}. The increase in temperature response with \iso{} decreases for higher \iso{},
-showing a similar relationship between \cwt{}, \cwsn{}, and OB16. Notably, T10 and J05
-exhibit respectively much weaker and much stronger temperature responses to \iso{} than
-\cwt{}. T10 has a maximum temperature anomaly of only \(\SI{-3.5}{\kelvin}\) for their
+injected \ce{SO2}. The increase in temperature response with injected \ce{SO2} decreases
+for higher injected \ce{SO2}, showing a similar relationship between C2WTrop,
+C2WN\(\uparrow\), and OB16. Notably, T10 and J05 exhibit respectively much weaker and
+much stronger temperature responses to injected \ce{SO2} than C2WTrop. T10 has a maximum
+temperature anomaly of only \(\SI{-3.5}{\kelvin}\) for their
 \(\SI{1700}{\tera\gram(\ce{SO2})}\) eruption, while J05 records a substantially larger
 maximum temperature anomaly of \(\SI{-10.7}{\kelvin}\). Since the M20 experiment was
 conducted with prescribed sea-surface temperatures \cite{marshall2020}, preventing the
@@ -868,44 +870,45 @@ temperature plots but include them for completeness.
 In Fig.~\ref{fig:4_parameter_scan}d, we revisit the relationship between RF and AOD,
 focusing on peak values rather than annual and seasonal averages. As previously
 discussed, the RF to AOD ratio displays weaker slopes than previous studies, with the
-\cw{} peak values not conforming to a linear trend. The relationship between RF and AOD
+C2W peak values not conforming to a linear trend. The relationship between RF and AOD
 suggests potential substantial dependencies on the model and its input parameters, such
 as latitude, but most notably to an inherent non-linear RF dependence on AOD. Both the
 G16 data in Fig.~\ref{fig:2_rf_vs_aod_slopes} and the J05 data originate from the same
-climate model. Similarly to what we find from the \cw{} data, the ratio is much stronger
+climate model. Similarly to what we find from the C2W data, the ratio is much stronger
 for small eruptions in the industrial era (G16) compared to the super-volcano eruption
 (J05).
 
-In Fig.~\ref{fig:4_parameter_scan}e, we again find that the response of the \cwt{} data
-decreases with \iso{}, this time in temperature anomaly. Additionally, both the \cwsn{}
-and the J05 cases align well with \cwt{}, with the T10 case following a similar
-dependence.
+In Fig.~\ref{fig:4_parameter_scan}e, we again find that the response of the C2WTrop data
+decreases with injected \ce{SO2}, this time in temperature anomaly. Additionally, both
+the C2WN\(\uparrow\) and the J05 cases align well with C2WTrop, with the T10 case
+following a similar dependence.
 
 Finally, in Fig.~\ref{fig:4_parameter_scan}f, we compare the temperature and RF
-responses. Both \cwt{} and OB16 show a near-linear relationship between temperature and
-RF. The \cwt{} data indicate a steeper slope, implying stronger temperature
+responses. Both C2WTrop and OB16 show a near-linear relationship between temperature and
+RF. The C2WTrop data indicate a steeper slope, implying stronger temperature
 perturbations as compared to OB16. However, potential biases exist in the values from
 the analysis of OB16, as outlined in Appendix B, section~\ref{ap:ob16}. This, along with
 considerable noise, results in the analysis of OB16 temperature anomalies being less
-reliable. As in Fig.~\ref{fig:4_parameter_scan}e, the \cwsn{} case along with both the
-T10 and J05 cases closely follow the temperature to RF dependence of \cwt{}.
+reliable. As in Fig.~\ref{fig:4_parameter_scan}e, the C2WN\(\uparrow\) case along with
+both the T10 and J05 cases closely follow the temperature to RF dependence of C2WTrop.
 
-The almost linear relationship between AOD and \iso{} for the \cwt{} data in
-Fig.~\ref{fig:4_parameter_scan}a suggests a comparable trend for RF versus \iso{} in
-Fig.~\ref{fig:4_parameter_scan}b, as seen for RF versus AOD in
+The almost linear relationship between AOD and injected \ce{SO2} for the C2WTrop data in
+Fig.~\ref{fig:4_parameter_scan}a suggests a comparable trend for RF versus injected
+\ce{SO2} in Fig.~\ref{fig:4_parameter_scan}b, as seen for RF versus AOD in
 Fig.~\ref{fig:4_parameter_scan}d. For the same reason, we expect
-Fig.~\ref{fig:4_parameter_scan}e to show a similar pattern for \cwt{} as observed in
+Fig.~\ref{fig:4_parameter_scan}e to show a similar pattern for C2WTrop as observed in
 Fig.~\ref{fig:4_parameter_scan}c.
 
 This relationship, along with the functional relationships between all other parameters
 shown in Fig.~\ref{fig:4_parameter_scan}, are illustrated in
 Fig.~\ref{fig:5_diagram_of_function_relations}. There, we show that from assuming a
-linear dependency of AOD on \iso{} (\(ax+b\)), and of temperature on RF (\(cx+d\)), we
-must have that \(f\), \(g\), \(h\), and \(k\) all have the same functional form, where
-\(f: \ce{SO2} \to \mathrm{RF}\), \(g: \mathrm{AOD} \to \mathrm{T}\), \(h: \ce{SO2} \to
-\mathrm{T}\), and \(k: \mathrm{AOD} \to \mathrm{RF}\). From this, we deduce that
-\(f(x)=k(ax+b)\) and \(h(x)=f(cx+d)=g(ax+b)\), and finally that \(h(x)=k(acx+ad+b)\),
-concluding that \(f\), \(g\), \(h\), and \(k\) have the same functional form.
+linear dependency of AOD on injected \ce{SO2} (\(ax+b\)), and of temperature on RF
+(\(cx+d\)), we must have that \(f\), \(g\), \(h\), and \(k\) all have the same
+functional form, where \(f: \ce{SO2} \to \mathrm{RF}\), \(g: \mathrm{AOD} \to
+\mathrm{T}\), \(h: \ce{SO2} \to \mathrm{T}\), and \(k: \mathrm{AOD} \to \mathrm{RF}\).
+From this, we deduce that \(f(x)=k(ax+b)\) and \(h(x)=f(cx+d)=g(ax+b)\), and finally
+that \(h(x)=k(acx+ad+b)\), concluding that \(f\), \(g\), \(h\), and \(k\) have the same
+functional form.
 
 \begin{figure}
   \centering
@@ -927,12 +930,12 @@ concluding that \(f\), \(g\), \(h\), and \(k\) have the same functional form.
 
 \subsection{Climate sensitivity estimate}
 
-As previously mentioned, the J05 experiment is similar to \cws{} concerning RF values,
-yet differ in both AOD and temperature. At the same time J05 is similar to \cwss{} in
-AOD and RF. To investigate this discrepancy, we here conduct a comparison between the
-J05 climate feedback parameter \(\alpha\) (where \(s=1/\alpha\) is the climate
-sensitivity parameter) with our climate resistance, denoted as \(\rho\), and the
-transient climate response parameter (TCRP) \(1/\rho\) (where
+As previously mentioned, the J05 experiment is similar to C2W\(\uparrow\) concerning RF
+values, yet differ in both AOD and temperature. At the same time J05 is similar to
+C2W\(\uparrow\uparrow\) in AOD and RF. To investigate this discrepancy, we here conduct
+a comparison between the J05 climate feedback parameter \(\alpha\) (where \(s=1/\alpha\)
+is the climate sensitivity parameter) with our climate resistance, denoted as \(\rho\),
+and the transient climate response parameter (TCRP) \(1/\rho\) (where
 \(\mathrm{TCS}=F_{2\times\ce{CO2}}\times \mathrm{TCRP}\) is the transient climate
 sensitivity and \(F_{2\times\ce{CO2}}\) is the forcing due to a doubling of
 pre-industrial \ce{CO2} concentration). As the forcing of volcanic eruptions typically
@@ -970,8 +973,8 @@ Importantly, our estimate agrees well with G16, while the J05 estimate of \(\alp
 \simeq \SI{4}{\watt\metre^{-2}\kelvin^{-1}}\) is still notably higher. Since the
 temperature perturbation obtained by J05 was larger than in any of our CESM2 cases, it
 indicates that the forcing used by J05 must be stronger. The peak value of the J05 RF is
-similar to the \cws{} case, and as such, the overall stronger forcing must originate
-from the development of the forcing time series rather than the peak value.
+similar to the C2W\(\uparrow\) case, and as such, the overall stronger forcing must
+originate from the development of the forcing time series rather than the peak value.
 
 \begin{table}
   \centering
@@ -979,15 +982,15 @@ from the development of the forcing time series rather than the peak value.
   \caption{Estimated climate resistance and TCRP\(^{a}\)}\label{tab:trcp}%
   \begin{tabular}{ccc}
     \toprule
-    Simulation type & \(\rho [\si{\watt\metre^{-2}\kelvin^{-1}}]\) & \(1/\rho\)            \\
+    Simulation type   & \(\rho [\si{\watt\metre^{-2}\kelvin^{-1}}]\) & \(1/\rho\)            \\
     \midrule
-    \cws{}          & \(\num{2.21\pm0.05}\)                        & \(\num{0.45\pm0.01}\) \\
-    \cwmp{}         & \(\num{2.51\pm0.06}\)                        & \(\num{0.40\pm0.01}\) \\
-    \cwm{}          & \(\num{2.9\pm0.6}\)                          & \(\num{0.36\pm0.07}\) \\
-    Total           & \(\num{2.5\pm0.4}\)                          & \(\num{0.41\pm0.05}\) \\
+    C2W\(\uparrow\)   & \(\num{2.21\pm0.05}\)                        & \(\num{0.45\pm0.01}\) \\
+    C2W\(-\)          & \(\num{2.51\pm0.06}\)                        & \(\num{0.40\pm0.01}\) \\
+    C2W\(\downarrow\) & \(\num{2.9\pm0.6}\)                          & \(\num{0.36\pm0.07}\) \\
+    Total             & \(\num{2.5\pm0.4}\)                          & \(\num{0.41\pm0.05}\) \\
     \toprule
     \multicolumn{3}{l}{\parbox{\linewidth}{\(^{a}\)Estimates are based on ensembles with four members and \(\tau
-    =\SI{20}{\mathrm{yr}}\) using Eq.~\ref{eq:climate-resistance}.}}                       \\
+    =\SI{20}{\mathrm{yr}}\) using Eq.~\ref{eq:climate-resistance}.}}                         \\
   \end{tabular}
 \end{table}
 
@@ -1008,42 +1011,44 @@ Figures~\ref{fig:2_rf_vs_aod_slopes},~\ref{fig:3_rf_to_aod_ratios}, and
 \ref{fig:4_parameter_scan}d demonstrate that as the AOD exceeds approximately \(1.0\),
 the linear RF dependence of approximately
 \(\SI{-20}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) no longer holds. The sublinear increase
-in RF with \iso{} in Fig.~\ref{fig:4_parameter_scan}b for large eruptions is consistent
-with previous results from simulations using similar climate models of smaller historic
-eruptions (G16) and of super-volcanoes (J05). Such a change in ratio has been attributed
-to larger eruptions, injecting more \ce{SO2}, leading to larger aerosols, and hence less
-effective radiation scattering, thereby reducing the RF for the same \iso{}
-\cite{english2013, timmreck2010, timmreck2018}.
+in RF with injected \ce{SO2} in Fig.~\ref{fig:4_parameter_scan}b for large eruptions is
+consistent with previous results from simulations using similar climate models of
+smaller historic eruptions (G16) and of super-volcanoes (J05). Such a change in ratio
+has been attributed to larger eruptions, injecting more \ce{SO2}, leading to larger
+aerosols, and hence less effective radiation scattering, thereby reducing the RF for the
+same injected \ce{SO2} \cite{english2013, timmreck2010, timmreck2018}.
 
 % Latitude is more important for the development of the RF / AOD ratio
 The non-linear relationship between peak RF and AOD values is a strong signature in both
 Figs.~\ref{fig:2_rf_vs_aod_slopes} and~\ref{fig:3_rf_to_aod_ratios}. Across eruptions of
 the same strength, the ratio stays relatively constant, leading to a close to
-\(\SI{-10}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) slope for \cwmp{} and a
-\(\SI{-5}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) slope for \cws{} and \cwss{}. Still, a
-non-linear development in the RF to AOD ratio is found, most notably across all tropical
-eruptions. Similar to the results of \citeA{marshall2020}, we find in \cwmp{}, \cws{},
-and \cwss{} that the post-peak period (second and third post-eruption years) has a
-stronger aerosol forcing efficiency compared to the pre-peak period (first post-eruption
-year). The post-peak period of \cwm{} is elevated as compared to the pre-peak period,
+\(\SI{-10}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) slope for C2W\(-\) and a
+\(\SI{-5}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) slope for C2W\(\uparrow\) and
+C2W\(\uparrow\uparrow\). Still, a non-linear development in the RF to AOD ratio is
+found, most notably across all tropical eruptions. Similar to the results of
+\citeA{marshall2020}, we find in C2W\(-\), C2W\(\uparrow\), and C2W\(\uparrow\uparrow\)
+that the post-peak period (second and third post-eruption years) has a stronger aerosol
+forcing efficiency compared to the pre-peak period (first post-eruption year). The
+post-peak period of C2W\(\downarrow\) is elevated as compared to the pre-peak period,
 resulting in a decreasing aerosol forcing efficiency from the first to the second and
 third post-eruption years, in contrast to the other tropical eruptions.
 
 Focusing on the pre-peak period, we find tropical eruptions to differ from eruptions at
 high latitudes. During the pre-peak period, all tropical eruptions show a decreasing
 aerosol forcing efficiency, while no significant change in the RF to AOD ratio is found
-from the \cwsn{} case. The full M20 dataset indicates an increasing aerosol forcing
-efficiency also during the pre-peak period, contrasting the decreasing efficiency found
-from their tropical eruptions and supporting the latitudinal dependence we find in
-\cwsn{}. While we find a linear relationship to be a useful approximation of RF
-dependence on AOD for eruptions similar to or smaller than Mt.\ Pinatubo, additional
-factors must be considered for larger eruptions. These factors, such as \ce{OH} scarcity
-and aerosol growth, influence reflectance and their gravitational pull, substantially
-impacting both AOD and RF evolution, as highlighted by \citeA{timmreck2010}. The large
-difference in ratio found when comparing eruption magnitudes suggests that \iso{} is
-crucial when estimating the time-average of the RF to AOD ratio. However, latitude and,
-in particular, aerosol dispersion are more influential in determining the post-eruption
-evolution of the ratio, particularly during the pre-peak period.
+from the C2WN\(\uparrow\) case. The full M20 dataset indicates an increasing aerosol
+forcing efficiency also during the pre-peak period, contrasting the decreasing
+efficiency found from their tropical eruptions and supporting the latitudinal dependence
+we find in C2WN\(\uparrow\). While we find a linear relationship to be a useful
+approximation of RF dependence on AOD for eruptions similar to or smaller than Mt.\
+Pinatubo, additional factors must be considered for larger eruptions. These factors,
+such as \ce{OH} scarcity and aerosol growth, influence reflectance and their
+gravitational pull, substantially impacting both AOD and RF evolution, as highlighted by
+\citeA{timmreck2010}. The large difference in ratio found when comparing eruption
+magnitudes suggests that injected \ce{SO2} is crucial when estimating the time-average
+of the RF to AOD ratio. However, latitude and, in particular, aerosol dispersion are
+more influential in determining the post-eruption evolution of the ratio, particularly
+during the pre-peak period.
 
 % FIXME:
 % Move this up as one of the important take-aways, and expand.
@@ -1051,49 +1056,51 @@ evolution of the ratio, particularly during the pre-peak period.
 % Bruk mer tid på konklusjonene fra fig 4 her. Lineære sammenhenger, mulig RF max på -65 W/m^2 etc.
 We find that the suggested upper threshold from Eq.~\ref{eq:niemeier_exponential} is not
 violated by any eruption simulation, and most notably that the temperature peak value
-follow the RF trend in reaching a limiting value. The \cwt{} cases follow a close to
-linear temperature dependency on RF, with the J05, T10, and \cwsn{} aligning close to
-the same slope.
+follow the RF trend in reaching a limiting value. The C2WTrop cases follow a close to
+linear temperature dependency on RF, with the J05, T10, and C2WN\(\uparrow\) aligning
+close to the same slope.
 
 % Models vary in their SO2 to H2SO4 chemistry/physics, but are comparatively consistent in representing AOD, RF and temperature.
 The biggest spread in the data shown in Fig.~\ref{fig:4_parameter_scan} is found when
-relating \iso{} to any of the three output parameters. As the amount of \iso{}
-increases, both AOD, RF, and temperature across models have a big spread. The AOD to
-\iso{} relationship is consistent within similar models, even when comparing simulations
-of volcanic eruptions \cite{timmreck2010} and continuous injection of \ce{SO2}
-\cite{niemeier2015}, but has a wide spread at high values of \iso{} across model
-families (Figs.~\ref{fig:4_parameter_scan}a,b,c). Comparatively, the RF
-(Fig.~\ref{fig:4_parameter_scan}d) and temperature (Fig.~\ref{fig:4_parameter_scan}e) as
-a function of AOD, as well as temperature as a function of RF
-(Fig.~\ref{fig:4_parameter_scan}f), demonstrate a smaller spread across models.
-\citeA{marshall2019, marshall2020, marshall2021} use a code with seven log-normal modes
-to simulate aerosol mass and number concentrations, along with an atmosphere-only
-configuration of the UM-UKCA with prescribed sea-surface temperatures and sea-ice extent
-\cite{marshall2019}. This approach is in contrast with CESM2, operating as an Earth
-System Model, but with a simpler aerosol chemistry model in the MAM3. The family of
-models to which M20 is based is different from that of \cw{} and OB16, and also
-different from the T10 and N15, as described in Appendix C. Based on
+relating injected \ce{SO2} to any of the three output parameters. As the amount of
+injected \ce{SO2} increases, both AOD, RF, and temperature across models have a big
+spread. The AOD to injected \ce{SO2} relationship is consistent within similar models,
+even when comparing simulations of volcanic eruptions \cite{timmreck2010} and continuous
+injection of \ce{SO2} \cite{niemeier2015}, but has a wide spread at high values of
+injected \ce{SO2} across model families (Figs.~\ref{fig:4_parameter_scan}a,b,c).
+Comparatively, the RF (Fig.~\ref{fig:4_parameter_scan}d) and temperature
+(Fig.~\ref{fig:4_parameter_scan}e) as a function of AOD, as well as temperature as a
+function of RF (Fig.~\ref{fig:4_parameter_scan}f), demonstrate a smaller spread across
+models. \citeA{marshall2019, marshall2020, marshall2021} use a code with seven
+log-normal modes to simulate aerosol mass and number concentrations, along with an
+atmosphere-only configuration of the UM-UKCA with prescribed sea-surface temperatures
+and sea-ice extent \cite{marshall2019}. This approach is in contrast with CESM2,
+operating as an Earth System Model, but with a simpler aerosol chemistry model in the
+MAM3. The family of models to which M20 is based is different from that of C2W and OB16,
+and also different from the T10 and N15, as described in Appendix C. Based on
 Fig.~\ref{fig:4_parameter_scan}, we find the model family to be pivotal in determining
-the estimated AOD and RF magnitudes from \iso{}, whereas the various models generally
-demonstrate more consistency in representing RF from AOD. Despite the large spread in
-\iso{} and corresponding response in RF, none of the eruption simulations shown in
-Fig.~\ref{fig:4_parameter_scan} violated the suggested upper threshold of
-\(\SI{-65}{\watt\metre^{-2}}\) as defined in Eq.~\ref{eq:niemeier_exponential}.
+the estimated AOD and RF magnitudes from injected \ce{SO2}, whereas the various models
+generally demonstrate more consistency in representing RF from AOD. Despite the large
+spread in injected \ce{SO2} and corresponding response in RF, none of the eruption
+simulations shown in Fig.~\ref{fig:4_parameter_scan} violated the suggested upper
+threshold of \(\SI{-65}{\watt\metre^{-2}}\) as defined in
+Eq.~\ref{eq:niemeier_exponential}.
 
 % AOD time series are different across eruption magnitudes, and peak at later times
 \citeA{timmreck2010} highlights that for sufficiently large eruptions, \ce{OH} radicals
 are too scarce, which limits \ce{SO2} oxidation. The AOD peak in the YTT simulation of
 T10 occurs six months after Mt.\ Pinatubo's peak. This aligns with our results, as
-illustrated in Fig.~\ref{fig:1_compare_waveform}a, where \cwm{} shows an earlier AOD
-peak compared to \cwmp{}, \cws{}, and \cwss{}. While the peak RF value of T10 occurs
-\(7\)--\(8\) months post-eruption, similar to \cw{}, the J05 peak anomaly occurs one
-year post-eruption. Additionally, as \citeA{jones2005} obtains a climate feedback
-parameter larger than both what \citeA{gregory2016} found for the same climate model and
-larger than the climate resistance obtained here from \cw{}, we conclude that such a
-simple approach of scaling the AOD of smaller eruptions to represent larger eruptions is
-insufficient. Moreover, having a small ensemble of large eruptions to represent smaller
-eruptions is also insufficient when simulating from \iso{}, as both AOD and temperature
-evolution are found to develop differently.
+illustrated in Fig.~\ref{fig:1_compare_waveform}a, where C2W\(\downarrow\) shows an
+earlier AOD peak compared to C2W\(-\), C2W\(\uparrow\), and C2W\(\uparrow\uparrow\).
+While the peak RF value of T10 occurs \(7\)--\(8\) months post-eruption, similar to C2W,
+the J05 peak anomaly occurs one year post-eruption. Additionally, as \citeA{jones2005}
+obtains a climate feedback parameter larger than both what \citeA{gregory2016} found for
+the same climate model and larger than the climate resistance obtained here from C2W, we
+conclude that such a simple approach of scaling the AOD of smaller eruptions to
+represent larger eruptions is insufficient. Moreover, having a small ensemble of large
+eruptions to represent smaller eruptions is also insufficient when simulating from
+injected \ce{SO2}, as both AOD and temperature evolution are found to develop
+differently.
 
 \section{Summary and conclusions}\label{sec:conclusions}
 
@@ -1125,19 +1132,19 @@ indistinguishable in development for both RF and temperature. Thus, a simple sca
 the AOD or temperature time series from a smaller eruption is insufficient in
 representing that of larger volcanic eruptions.
 
-Considering \iso{} and the peak values of AOD and RF, a large spread is found across
-model families in Fig.~\ref{fig:4_parameter_scan}. Improving the consistency between
-model families in how the chemistry and physics of \ce{SO2} and \ce{H2SO4} are
+Considering injected \ce{SO2} and the peak values of AOD and RF, a large spread is found
+across model families in Fig.~\ref{fig:4_parameter_scan}. Improving the consistency
+between model families in how the chemistry and physics of \ce{SO2} and \ce{H2SO4} are
 represented is an important step in enhancing the accuracy of simulated volcanic
 eruptions' influence on climate by models. More simulations of larger volcanic eruptions
-with \iso{} greater than \(\SI{200}{\tera\gram(\mathrm{SO2})}\) would provide useful
-information for a more precise determination of the RF to AOD ratio in the non-linear
-regime. This would also serve as a useful test to check if a comparison between \ce{SO2}
-injection events and continuous \ce{SO2} injection is reasonable. Introducing a spread
-in latitude similar to the \citeA{marshall2020dataset} dataset would allow for better
-comparison between eruptions across all latitudes and the suggested lower limit
-following Eq.~\ref{eq:niemeier_exponential}, describing a situation of aerosol
-saturation.
+with injected \ce{SO2} greater than \(\SI{200}{\tera\gram(\mathrm{SO2})}\) would provide
+useful information for a more precise determination of the RF to AOD ratio in the
+non-linear regime. This would also serve as a useful test to check if a comparison
+between \ce{SO2} injection events and continuous \ce{SO2} injection is reasonable.
+Introducing a spread in latitude similar to the \citeA{marshall2020dataset} dataset
+would allow for better comparison between eruptions across all latitudes and the
+suggested lower limit following Eq.~\ref{eq:niemeier_exponential}, describing a
+situation of aerosol saturation.
 
 %%% End of body of article
 
@@ -1166,23 +1173,24 @@ injected over six hours at a given latitude, longitude, and altitude. All volcan
 file that is read by the \texttt{volcano-cooking} CLI at a fixed version, ensuring a
 reproducible experiment setup.
 
-% FIXME: footnotes in the text is not allowed
 We are using the coupled model version \texttt{BWma1850} component setup to run the
 CESM2, and an accompanying fixed sea-surface temperature version, \texttt{fSST1850}, to
 obtain estimates of the RF. The applied \texttt{fSST1850} is not from a standardised
-component setup but is instead explicitly specified.\footnote{\fssturl} The component
-setup \texttt{BWma1850} and \texttt{fSST1850} differ in that the latter uses a
-prescribed sea-ice (\texttt{CICE -> CICE\%PRES}), a prescribed data ocean
+component setup but is instead explicitly specified as \url{1850_CAM60%WCCM_CLM50%BGC-CROP_CICE%PRES_DOCN%DOM_MOSART_CISM2%NOEVOLVE_SWAV_TEST
+  %
+}. % Necessary to make the formatter not break the URL / literal text
+The component setup \texttt{BWma1850} and \texttt{fSST1850} differ in that the latter
+uses a prescribed sea-ice (\texttt{CICE -> CICE\%PRES}), a prescribed data ocean
 (\texttt{POP2\%ECO\%DEP -> DOCN\%DOM}) and a stub wave component instead of the full
 Wave Watch version 3 (\texttt{WW3 -> SWAV}).
 
-The important input data used in the model simulations are \iso{} in units of teragrams
-(\(\si{\tera\gram(\ce{SO2})}\)), used to simulate volcanic eruptions. RF is calculated
-as the combined (short wave and long wave) all-sky TOA energy imbalance, where the CESM2
-provide the output variables ``net solar flux at the top of the model'' (FSNT) and ``net
-longwave flux at the top of the model'' (FLNT). Thus, \(\mathrm{RF_*}= \mathrm{FSNT} -
-\mathrm{FLNT}\), and taking the difference between volcanic forcing simulations and a
-control simulation gives the final estimate of RF
+The important input data used in the model simulations are injected \ce{SO2} in units of
+teragrams (\(\si{\tera\gram(\ce{SO2})}\)), used to simulate volcanic eruptions. RF is
+calculated as the combined (short wave and long wave) all-sky TOA energy imbalance,
+where the CESM2 provide the output variables ``net solar flux at the top of the model''
+(FSNT) and ``net longwave flux at the top of the model'' (FLNT). Thus, \(\mathrm{RF_*}=
+\mathrm{FSNT} - \mathrm{FLNT}\), and taking the difference between volcanic forcing
+simulations and a control simulation gives the final estimate of RF
 (\(\mathrm{RF}=\mathrm{RF_{VOLC}}-\mathrm{RF_{CONTROL}}\)) \cite{marshall2020}. The RF
 calculation is based on \texttt{fSST1850}, hence this outline specifically describes how
 to calculate ERF as opposed to IRF, which instead is the difference between the ERF and
@@ -1192,19 +1200,19 @@ nigth'' (AODVISstdn), while global temperature is saved by CESM2 to the variable
 ``reference height temperature'' (TREFHT). The analysis of this work is performed using
 these four variables.
 
-During analysis, one outlier was found in the ensemble representing \cwm{}, specifically
-in the temperature time series. This ensemble member was the February 15, 1850,
-eruption, which was changed in favor of a February 15, 1851, eruption in the \cwm{},
-\cwmp{}, and \cws{} ensembles. For completeness, the February 15, 1850, eruption is
-still included in the online archive.
+During analysis, one outlier was found in the ensemble representing C2W\(\downarrow\),
+specifically in the temperature time series. This ensemble member was the February 15,
+1850, eruption, which was changed in favor of a February 15, 1851, eruption in the
+C2W\(\downarrow\), C2W\(-\), and C2W\(\uparrow\) ensembles. For completeness, the
+February 15, 1850, eruption is still included in the online archive.
 
 \section{External data}
 
 \subsection{Otto-Bliesner data analysis}\label{ap:ob16}
 
-Data from \citeA{ottobliesner2016} are the original input data of \iso{} as used in
-their model simulations, along with RF and temperature output data. The \iso{} can be
-downloaded with a direct link from
+Data from \citeA{ottobliesner2016} are the original input data of injected \ce{SO2} as
+used in their model simulations, along with RF and temperature output data. The injected
+\ce{SO2} can be downloaded with a direct link from
 \url{https://svn-ccsm-inputdata.cgd.ucar.edu/trunk/inputdata/atm/cam/volc/IVI2LoadingLatHeight501-2000_L18_c20100518.nc},
 or found at \url{https://www.cesm.ucar.edu/working-groups/paleo/simulations/ccsm4-lm}
 and \url{https://svn-ccsm-inputdata.cgd.ucar.edu/trunk/inputdata/atm/cam/volc/}. Only
@@ -1329,8 +1337,7 @@ table~\ref{tab:model-family}, based on the model code genealogy map created by
   oscillation \acro{RF} effective radiative forcing \acro{SWCF} ``short wave cloud
   forcing'' \acro{SW} short wave \acro{TCRP} transient climate response parameter
   \acro{TOA} top-of-the-atmosphere \acro{TREFHT} ``reference height temperature''
-  \acro{WACCM6} Whole Atmosphere Community Climate Model Version 6 \acro{WW3} Wave Watch
-  Version 3 \acro{YTT} Young Toba Tuff
+  \acro{WACCM6} Whole Atmosphere Community Climate Model Version 6 \acro{YTT} Young Toba Tuff
 \end{acronyms}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
