@@ -14,7 +14,7 @@
 To run the continuous compiler, use the command
 
 ```bash
-latexmk -cd -pvc -pdf templateV6.1.tex
+latexmk -cd -pvc -pdf agujournaltemplate.tex
 ```
 
 You clean up files with
