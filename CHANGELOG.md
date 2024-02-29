@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.8.1](https://github.com/engeir/parameter-scan/compare/v0.8.0...v0.8.1) (2024-02-29)
+
+
+### Miscellaneous
+
+* **figure:** move figures to top level / flat file tree ([60a00c1](https://github.com/engeir/parameter-scan/commit/60a00c11fd160ef60ed3a7adc2dcbfcaa72dc8cd))
+* **ref:** update reference types on "misc" elements ([92034fb](https://github.com/engeir/parameter-scan/commit/92034fb8786ae663305b560420dadcf32b90c843))
+
 ## [0.8.0](https://github.com/engeir/parameter-scan/compare/v0.7.2...v0.8.0) (2024-02-29)
 
 
