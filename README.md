@@ -1,6 +1,6 @@
 # Parameter scan
 
-<sup>Latest version: v0.7.2</sup> <!-- x-release-please-version -->
+<sup>Latest version: v0.8.0</sup> <!-- x-release-please-version -->
 
 [![Build history](https://buildstats.info/github/chart/engeir/parameter-scan?branch=main)](https://github.com/engeir/parameter-scan/actions)
 
@@ -33,7 +33,7 @@ tectonic -Z shell-escape --keep-intermediates agujournaltemplate.tex
 <!-- dprint-ignore-start -->
 > [!TIP]
 >
-> [_View the generated PDF at the latest release!_](https://github.com/engeir/parameter-scan/releases/download/v0.7.2/agujournaltemplate.pdf) <!-- x-release-please-version -->
+> [_View the generated PDF at the latest release!_](https://github.com/engeir/parameter-scan/releases/download/v0.8.0/agujournaltemplate.pdf) <!-- x-release-please-version -->
 <!-- dprint-ignore-end -->
 
 > For my own convenience, a comparison table comprising symbols used across the papers
