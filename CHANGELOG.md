@@ -1,5 +1,24 @@
 # Changelog
 
+## [0.8.0](https://github.com/engeir/parameter-scan/compare/v0.7.2...v0.8.0) (2024-02-29)
+
+
+### Features
+
+* **pls:** fix the plain language summary ([c1b850b](https://github.com/engeir/parameter-scan/commit/c1b850bd6802f7b4c441ce181bb3eb76bf54338c))
+
+
+### Miscellaneous
+
+* **acronym:** remove unused acronyms ([cb0989a](https://github.com/engeir/parameter-scan/commit/cb0989a697c281a0588beb13133fbdd91890f98a))
+* finish text before submission ([a9f6a9d](https://github.com/engeir/parameter-scan/commit/a9f6a9de22b12f4a747e0f1de3d1e189836fced1))
+* update keypoints and remove comments ([1d26c95](https://github.com/engeir/parameter-scan/commit/1d26c956f57470b55c323b5ebb536be730b65d1a))
+
+
+### Code Refactoring
+
+* clean up .tex file and remove old AMS template ([#37](https://github.com/engeir/parameter-scan/issues/37)) ([b5fbb05](https://github.com/engeir/parameter-scan/commit/b5fbb056aec25525593f998b00bd3d0f633b92f3))
+
 ## [0.7.2](https://github.com/engeir/parameter-scan/compare/v0.7.1...v0.7.2) (2024-02-26)
 
 
