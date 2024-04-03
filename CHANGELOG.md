@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.8.1](https://github.com/engeir/parameter-scan/compare/v0.8.0...v0.8.1) (2024-04-01)
+
+
+### Bug Fixes
+
+* **tex:** remove figure filetype file endings ([e5779f9](https://github.com/engeir/parameter-scan/commit/e5779f9b8318643e213dcd7da3ed28f9f7415bc8))
+
+
+### Miscellaneous
+
+* **figure:** move figures to top level / flat file tree ([60a00c1](https://github.com/engeir/parameter-scan/commit/60a00c11fd160ef60ed3a7adc2dcbfcaa72dc8cd))
+* **ref:** update reference types on "misc" elements ([92034fb](https://github.com/engeir/parameter-scan/commit/92034fb8786ae663305b560420dadcf32b90c843))
+
 ## [0.8.0](https://github.com/engeir/parameter-scan/compare/v0.7.2...v0.8.0) (2024-02-29)
 
 
