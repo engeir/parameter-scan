@@ -1,5 +1,13 @@
 # Feedback after first review
 
+## Main takeaways
+
+- Change AOD into exp(-tau) (but what is tau?)
+- More emphasis on aerosol size
+- Consideration of AOD, ERF and GMST in reference to volcanic eruptions and their
+  radiation and climate impact (long-standing question), not only of AOD and ERF and
+  their relationship (known)
+
 ## Reviewer #1 Evaluations
 
 - Recommendation: Return to author for major revisions
@@ -54,6 +62,8 @@ study. Failing this, at least the importance of aerosol size should be included 
 introduction and discussion sections.
 
 ### Specific comments
+
+(_Now added to the latex source using `trackchanges.sty`_)
 
 L11: Here and throughout, be careful whether to refer to "super-volcanoes" or
 "super-eruptions". A supervolcano is just a volcano that has produced a super eruption
@@ -151,46 +161,42 @@ therefore not very surprising.
 
 ### References
 
-Timmreck, C., Lorenz, S. J., Crowley, T. J., Kinne, S., Raddatz, T. J., Thomas, M. A.,
-and Jungclaus, J. H.: Limited temperature response to the very large AD 1258 volcanic
-eruption, Geophys. Res. Lett., 36, https://doi.org/10.1029/2009GL040083, 2009.
-
-Timmreck, C., Graf, H.-F., Lorenz, S. J., Niemeier, U., Zanchettin, D., Matei, D.,
-Jungclaus, J. H., and Crowley, T. J.: Aerosol size confines climate response to volcanic
-super-eruptions, Geophys. Res. Lett., 37, L24705,
-https://doi.org/10.1029/2010GL045464, 2010.
-
-Schurer, A. P., Hegerl, G. C., Mann, M. E., Tett, S. F. B., and Phipps, S. J.:
-Separating Forced from Chaotic Climate Variability over the Past Millennium, J. Clim.,
-26, 6954-6973, https://doi.org/10.1175/JCLI-D-12-00826.1, 2013.
-
-Pinto, J. P., Turco, R. P., and Toon, O. B.: Self-limiting physical and chemical effects
-in volcanic eruption clouds, J. Geophys. Res., 94, 11165,
-https://doi.org/10.1029/JD094iD08p11165, 1989.
-
-Lacis, A., Hansen, J., and Sato, M.: Climate forcing by stratospheric aerosols, Geophys.
-Res. Lett., 19, 1607, https://doi.org/10.1029/92GL01620, 1992.
-
-Clyne, M., Lamarque, J. F., Mills, M. J., Khodri, M., Ball, W., Bekki, S., Dhomse, S.
-S., Lebas, N., Mann, G., Marshall, L., Niemeier, U., Poulain, V., Robock, A., Rozanov,
-E., Schmidt, A., Stenke, A., Sukhodolov, T., Timmreck, C., Toohey, M., Tummon, F.,
-Zanchettin, D., Zhu, Y., and Toon, O. B.: Model physics and chemistry causing intermodel
-disagreement within the VolMIP-Tambora Interactive Stratospheric Aerosol ensemble,
-Atmos. Chem. Phys., 21, 3317-3343, https://doi.org/10.5194/ACP-21-3317-2021, 2021.
-
-Marshall, L. R., Smith, C. J., Forster, P. M., Aubry, T. J., Andrews, T., and Schmidt,
-A.: Large variations in volcanic aerosol forcing efficiency due to eruption source
-parameters and rapid adjustments, Geophys. Res. Lett., 47,
-https://doi.org/10.1029/2020gl090241, 2020.
-
-Hansen, J., Sato, M., Ruedy, R., Nazarenko, L., Lacis, A., Schmidt, G. A., Russell, G.,
-Aleinov, I., Bauer, M., Bauer, S., Bell, N., Cairns, B., Canuto, V., Chandler, M.,
-Cheng, Y., Genio, A. Del, Faluvegi, G., Fleming, E., Friend, A., Hall, T., Jackman, C.,
-Kelley, M., Kiang, N., Koch, D., Lean, J., Lerner, J., Lo, K., Menon, S., Miller, R.,
-Minnis, P., Novakov, T., Oinas, V., Perlwitz, J. J., Perlwitz, J. J., Rind, D., Romanou,
-A., Shindell, D., Stone, P., Sun, S., Tausnev, N., Thresher, D., Wielicki, B., Wong, T.,
-Yao, M., and Zhang, S.: Efficacy of climate forcings, J. Geophys. Res., 110, D18104,
-https://doi.org/10.1029/2005JD005776, 2005.
+- [x] Timmreck, C., Lorenz, S. J., Crowley, T. J., Kinne, S., Raddatz, T. J., Thomas, M.
+      A., and Jungclaus, J. H.: Limited temperature response to the very large AD 1258
+      volcanic eruption, Geophys. Res. Lett., 36,
+      <https://doi.org/10.1029/2009GL040083>, 2009.
+- [x] Timmreck, C., Graf, H.-F., Lorenz, S. J., Niemeier, U., Zanchettin, D., Matei, D.,
+      Jungclaus, J. H., and Crowley, T. J.: Aerosol size confines climate response to
+      volcanic super-eruptions, Geophys. Res. Lett., 37, L24705,
+      <https://doi.org/10.1029/2010GL045464>, 2010.
+- [ ] Schurer, A. P., Hegerl, G. C., Mann, M. E., Tett, S. F. B., and Phipps, S. J.:
+      Separating Forced from Chaotic Climate Variability over the Past Millennium, J.
+      Clim., 26, 6954-6973, <https://doi.org/10.1175/JCLI-D-12-00826.1>, 2013.
+- [ ] Pinto, J. P., Turco, R. P., and Toon, O. B.: Self-limiting physical and chemical
+      effects in volcanic eruption clouds, J. Geophys. Res., 94, 11165,
+      <https://doi.org/10.1029/JD094iD08p11165>, 1989.
+- [ ] Lacis, A., Hansen, J., and Sato, M.: Climate forcing by stratospheric aerosols,
+      Geophys. Res. Lett., 19, 1607, <https://doi.org/10.1029/92GL01620>, 1992.
+- [ ] Clyne, M., Lamarque, J. F., Mills, M. J., Khodri, M., Ball, W., Bekki, S., Dhomse,
+      S. S., Lebas, N., Mann, G., Marshall, L., Niemeier, U., Poulain, V., Robock, A.,
+      Rozanov, E., Schmidt, A., Stenke, A., Sukhodolov, T., Timmreck, C., Toohey, M.,
+      Tummon, F., Zanchettin, D., Zhu, Y., and Toon, O. B.: Model physics and chemistry
+      causing intermodel disagreement within the VolMIP-Tambora Interactive
+      Stratospheric Aerosol ensemble, Atmos. Chem. Phys., 21, 3317-3343,
+      <https://doi.org/10.5194/ACP-21-3317-2021>, 2021.
+- [x] Marshall, L. R., Smith, C. J., Forster, P. M., Aubry, T. J., Andrews, T., and
+      Schmidt, A.: Large variations in volcanic aerosol forcing efficiency due to
+      eruption source parameters and rapid adjustments, Geophys. Res. Lett., 47,
+      <https://doi.org/10.1029/2020gl090241>, 2020.
+- [x] Hansen, J., Sato, M., Ruedy, R., Nazarenko, L., Lacis, A., Schmidt, G. A.,
+      Russell, G., Aleinov, I., Bauer, M., Bauer, S., Bell, N., Cairns, B., Canuto, V.,
+      Chandler, M., Cheng, Y., Genio, A. Del, Faluvegi, G., Fleming, E., Friend, A.,
+      Hall, T., Jackman, C., Kelley, M., Kiang, N., Koch, D., Lean, J., Lerner, J., Lo,
+      K., Menon, S., Miller, R., Minnis, P., Novakov, T., Oinas, V., Perlwitz, J. J.,
+      Perlwitz, J. J., Rind, D., Romanou, A., Shindell, D., Stone, P., Sun, S., Tausnev,
+      N., Thresher, D., Wielicki, B., Wong, T., Yao, M., and Zhang, S.: Efficacy of
+      climate forcings, J. Geophys. Res., 110, D18104,
+      <https://doi.org/10.1029/2005JD005776>, 2005.
 
 ## Reviewer #3 Evaluations
 
@@ -206,23 +212,29 @@ https://doi.org/10.1029/2005JD005776, 2005.
 
 ## Reviewer #3 (Formal Review for Author (shown to authors))
 
-This study investigates the atmospheric radiative forcing by super eruptions. The new
-aspect of this paper is on the relationship of effective radiative forcing, aerosol
-optical depth and surface temperature by eruptions larger than Pinatubo, which is a
-long-standing topic in the field of volcanic eruptions and their impacts on radiation
-and climate. The paper presents new model results from the CESM2(WACCM6) model with 2
-deg horizontal resolution, prescribed sea surface temperature and sea ice, 1850
-conditions, and a Middle Atmosphere chemistry configuration taking different strength of
-sulfur-only emissions into the stratosphere, from Pinatubo strength to super-size
-eruption, into account. A non-linear behavior is modelled for Effective Radiative
-Forcing (ERF) and Aerosol Optical Depth (AOD) for eruptions larger than Pinatubo. This
-has been shown for Radiative Forcing (RF) estimates and model calculations before and is
-well accepted and taken over by the community. Thus, the authors need to substantially
-revise the paper to clarify the new angle in the context of the existing, large body of
-literature. I believe this will be feasible for the authors when addressing my below
-comments carefully. In that case I would be happy to review a thoroughly revised
-manuscript again. See my general major and minor comments, and a list of references to
-take care of below.
+This study investigates the atmospheric radiative forcing by super eruptions.
+
+_The new aspect of this paper is on the relationship of effective radiative forcing,
+aerosol optical depth and surface temperature by eruptions larger than Pinatubo, which
+is a long-standing topic in the field of volcanic eruptions and their impacts on
+radiation and climate._
+
+The paper presents new model results from the CESM2(WACCM6) model with 2 deg horizontal
+resolution, prescribed sea surface temperature and sea ice, 1850 conditions, and a
+Middle Atmosphere chemistry configuration taking different strength of sulfur-only
+emissions into the stratosphere, from Pinatubo strength to super-size eruption, into
+account.
+
+_A non-linear behavior is modelled for Effective Radiative Forcing (ERF) and Aerosol
+Optical Depth (AOD) for eruptions larger than Pinatubo. This has been shown for
+Radiative Forcing (RF) estimates and model calculations before and is well accepted and
+taken over by the community._
+
+Thus, the authors need to substantially revise the paper to clarify the new angle in the
+context of the existing, large body of literature. I believe this will be feasible for
+the authors when addressing my below comments carefully. In that case I would be happy
+to review a thoroughly revised manuscript again. See my general major and minor
+comments, and a list of references to take care of below.
 
 ### General major comments
 
@@ -244,8 +256,8 @@ take care of below.
 
 - There are several super-eruptions publications which are relevant for this study, but
   they are not included and referred to: Bekki et al 1996; Robock et al 2009; Timmreck
-  et al 2010 and 2012; Brenna et al 2020, MacGraw& Polvani, 2024. Brenna et al 2020
-  shows the non- linear effect and the disagreement between models with increasing
+  et al 2010 and 2012; Brenna et al 2020, MacGraw & Polvani, 2024. Brenna et al 2020
+  shows the non-linear effect and the disagreement between models with increasing
   strength of eruption.
 
 - AOD-RF relationship depends on the effective radius etc (Pinto et al 1989; Bekki et al
@@ -295,108 +307,134 @@ take care of below.
 
 ### References
 
-Non-linear behavior: Pinto et al. 1989, Hyde and Crowley 2000; Ammann et al. 2003; Gao
-et al. 2008; Metzner et al 2014 for large eruptions (see Methodology Section and
-References in Metzner et al 2014) Metzner, D., Kutterolf, S., Toohey, M. et al.
-Radiative forcing and climate impact resulting from SO2 injections based on a
-200,000-year record of Plinian eruptions along the Central American Volcanic Arc. Int J
-Earth Sci (Geol Rundsch) 103, 2063-2079 (2014).
-https://doi.org/10.1007/s00531-012-0814-z
+#### Non-linear behavior
 
-Effective radius: Pinto, J. R., R. P. Turco, and O. B. Toon (1989), Self-limiting
-physical and chemical effects in volcanic eruption clouds, J. Geophys. Res., 94,
-11,165-11,174. Bekki et al 1995 Oxidation of volcanic SO2: A sink for stratospheric OH
-and H2O - Geophysical Research Letters Bekki et al 1996 The role of microphysical and
-chemical processes in prolonging the climate forcing of the Toba Eruption - Geophysical
-Research Letters Timmreck et al 2009 - Limited temperature response to the very large AD
-1258 volcanic eruption - Geophysical Research Letters Quaglia, I., Timmreck, C.,
-Niemeier, U., Visioni, D., Pitari, G., Brodowsky, C., Brühl, C., Dhomse, S. S., Franke,
-H., Laakso, A., Mann, G. W., Rozanov, E., and Sukhodolov, T.: Interactive stratospheric
-aerosol models' response to different amounts and altitudes of SO2 injection during the
-1991 Pinatubo eruption, Atmos. Chem. Phys., 23, 921-948,
-https://doi.org/10.5194/acp-23-921-2023, 2023.
+- [ ] Pinto et al. 1989, Hyde and Crowley 2000; Ammann et al. 2003; Gao et al. 2008;
+      Metzner et al 2014 for large eruptions (see Methodology Section and References in
+      Metzner et al 2014)
+- [ ] Metzner, D., Kutterolf, S., Toohey, M. et al. Radiative forcing and climate impact
+      resulting from SO2 injections based on a 200,000-year record of Plinian eruptions
+      along the Central American Volcanic Arc. Int J Earth Sci (Geol Rundsch) 103,
+      2063-2079 (2014). <https://doi.org/10.1007/s00531-012-0814-z>
 
-Effective Radiative Forcing: Forster, P. M., T. Richardson, A. C. Maycock, C. J. Smith,
-B. H. Samset, G. Myhre, T. Andrews, R. Pincus, and M. Schulz (2016), Recommendations for
-diagnosing effective radiative forcing from climate models for CMIP6, J. Geophys. Res.
-Atmos., 121, 12,460-12,475, doi:10.1002/ 2016JD025320. Marshall et al 2021 - Unknown
-Eruption Source Parameters Cause Large Uncertainty in Historical Volcanic Radiative
-Forcing Reconstructions - Journal of Geophysical Research: Atmospheres
+#### Effective radius
 
-Super eruptions: Bekki et al 1996 The role of microphysical and chemical processes in
-prolonging the climate forcing of the Toba Eruption - Geophysical Research Letters
-Brenna, H., Kutterolf, S., Mills, M. J., and Krüger, K.: The potential impacts of a
-sulfur- and halogen-rich supereruption such as Los Chocoyos on the atmosphere and
-climate, Atmos. Chem. Phys., 20, 6521-6539,
-https://doi.org/10.5194/acp-20-6521-2020, 2020. Brenna et al 2021 Decadal Disruption of
-the QBO by Tropical Volcanic Supereruptions - Geophysical Research Letters English et al
-2013 - Microphysical simulations of large volcanic eruptions: Pinatubo and Toba -
-Journal of Geophysical Research: Atmospheres McGraw, Z., K. DallaSanta, L. M. Polvani,
-K. Tsigaridis, C. Orbe, and S. E. Bauer, 2024: Severe Global Cooling After Volcanic
-Super-Eruptions? The Answer Hinges on Unknown Aerosol Size. J. Climate, 37, 1449-1464,
-https://doi.org/10.1175/JCLI-D-23-0116.1. Osipov, S., G. Stenchikov, K. Tsigaridis, A.N.
-LeGrande, S.E. Bauer, M. Fnais, and J. Lelieveld, 2021: The Toba supervolcano eruption
-caused severe tropical stratospheric ozone depletion. Commun. Earth Environ., 2, no. 1,
-71, doi:10.1038/s43247-021-00141-7. Robock, A., C.M. Ammann, L. Oman, D. Shindell, S.
-Levis, and G. Stenchikov, 2009: Did the Toba volcanic eruption of ∼74k BP produce
-widespread glaciation? J. Geophys. Res., 114, D10107, doi:10.1029/2008JD011652. Timmreck
-et al 2010, Aerosol size confines climate response to volcanic super‐eruptions -
-Geophysical Research Letters Timmreck et al, Climate response to the Toba
-super-eruption: Regional changes, Quaternary International, Volume 258,
-https://doi.org/10.1016/j.quaint.2011.10.008., 2012, Wilson, C.J.N., Cooper, G.F.,
-Chamberlain, K.J. et al. No single model for supersized eruptions and their magma
-bodies. Nat Rev Earth Environ 2, 610-627 (2021).
-https://doi.org/10.1038/s43017-021-00191-7
+- [ ] Pinto, J. R., R. P. Turco, and O. B. Toon (1989), Self-limiting physical and
+      chemical effects in volcanic eruption clouds, J. Geophys. Res., 94, 11,165-11,174.
+- [ ] Bekki et al 1995 Oxidation of volcanic SO2: A sink for stratospheric OH and H2O -
+      Geophysical Research Letters
+- [ ] Bekki et al 1996 The role of microphysical and chemical processes in prolonging
+      the climate forcing of the Toba Eruption - Geophysical Research Letters
+- [ ] Timmreck et al 2009 - Limited temperature response to the very large AD 1258
+      volcanic eruption - Geophysical Research Letters
+- [ ] Quaglia, I., Timmreck, C., Niemeier, U., Visioni, D., Pitari, G., Brodowsky, C.,
+      Brühl, C., Dhomse, S. S., Franke, H., Laakso, A., Mann, G. W., Rozanov, E., and
+      Sukhodolov, T.: Interactive stratospheric aerosol models' response to different
+      amounts and altitudes of SO2 injection during the 1991 Pinatubo eruption, Atmos.
+      Chem. Phys., 23, 921-948, <https://doi.org/10.5194/acp-23-921-2023>, 2023.
 
-Different aerosol climate models and their uncertainties (for Tambora): Zanchettin, D.,
-Khodri, M., Timmreck, C., Toohey, M., Schmidt, A., Gerber, E. P., Hegerl, G., Robock,
-A., Pausata, F. S. R., Ball, W. T., Bauer, S. E., Bekki, S., Dhomse, S. S., LeGrande, A.
-N., Mann, G. W., Marshall, L., Mills, M., Marchand, M., Niemeier, U., Poulain, V.,
-Rozanov, E., Rubino, A., Stenke, A., Tsigaridis, K., and Tummon, F.: The Model
-Intercomparison Project on the climatic response to Volcanic forcing (VolMIP):
-experimental design and forcing input data for CMIP6, Geosci. Model Dev., 9, 2701-2719,
-https://doi.org/10.5194/gmd-9-2701-2016, 2016. Marshall, L., A. Schmidt, M. Toohey, K.S.
-Carslaw, G.W. Mann, M. Sigl, M. Khodri, C. Timmreck, D. Zanchettin, W. Ball, S. Bekki,
-J.S.A. Brooke, S. Dhomse, C. Johnson, J.-F. Lamarque, A. LeGrande, M.J. Mills, U.
-Niemeier, J.O. Pope, V. Poulain, A. Robock, E. Rozanov, A. Stenke, T. Sukhodolov, S.
-Tilmes, K. Tsigaridis, and F. Tummon, 2018: Multi-model comparison of the volcanic
-sulfate deposition from the 1815 eruption of Mt. Tambora. Atmos. Chem. Phys., 18,
-2307-2328, doi:10.5194/acp-18-2307-2018.
+#### Effective Radiative Forcing
 
-Different size/ strength of eruptions on AOD, RF, climate: Metzner, D., Kutterolf, S.,
-Toohey, M. et al. Radiative forcing and climate impact resulting from SO2 injections
-based on a 200,000-year record of Plinian eruptions along the Central American Volcanic
-Arc. Int J Earth Sci (Geol Rundsch) 103, 2063-2079 (2014).
-https://doi.org/10.1007/s00531-012-0814-z Miles et al 2004 The significance of volcanic
-eruption strength and frequency for climate - - Quarterly Journal of the Royal
-Meteorological Society Schmidt & Black, 2022, Reckoning with the Rocky Relationship
-Between Eruption Size and Climate Response: Toward a Volcano-Climate Index | Annual
-Reviews
+- [ ] Forster, P. M., T. Richardson, A. C. Maycock, C. J. Smith, B. H. Samset, G. Myhre,
+      T. Andrews, R. Pincus, and M. Schulz (2016), Recommendations for diagnosing
+      effective radiative forcing from climate models for CMIP6, J. Geophys. Res.
+      Atmos., 121, 12,460-12,475, doi:10.1002/ 2016JD025320.
+- [x] Marshall et al 2021 - Unknown Eruption Source Parameters Cause Large Uncertainty
+      in Historical Volcanic Radiative Forcing Reconstructions - Journal of Geophysical
+      Research: Atmospheres
 
-Different eruption strength and season on AOD, RF, and atmospheric circulation: Toohey,
-M. et al: The influence of eruption season on the global aerosol evolution and radiative
-impact of tropical volcanic eruptions, Atmos. Chem. Phys., 11, 12351-12367,
-https://doi.org/10.5194/acp-11-12351-2011, 2011. Toohey et al 2013 - Volcanic sulfate
-deposition to Greenland and Antarctica: A modeling sensitivity study - Journal of
-Geophysical Research: Atmospheres
+#### Super eruptions
 
-Different eruption latitude and altitude on AOD, RF, and atmospheric circulation:
-Marshall et al 2019 Exploring How Eruption Source Parameters Affect Volcanic Radiative
-Forcing Using Statistical Emulation - Journal of Geophysical Research: Atmospheres
-Toohey, M. et al. Disproportionately strong climate forcing from extratropical explosive
-volcanic eruptions. Nature Geosci 12, 100-107 (2019).
-https://doi.org/10.1038/s41561-018-0286-2
+- [ ] Bekki et al 1996 The role of microphysical and chemical processes in prolonging
+      the climate forcing of the Toba Eruption - Geophysical Research Letters
+- [ ] Brenna, H., Kutterolf, S., Mills, M. J., and Krüger, K.: The potential impacts of
+      a sulfur- and halogen-rich supereruption such as Los Chocoyos on the atmosphere
+      and climate, Atmos. Chem. Phys., 20, 6521-6539,
+      <https://doi.org/10.5194/acp-20-6521-2020>, 2020.
+- [ ] Brenna et al 2021 Decadal Disruption of the QBO by Tropical Volcanic
+      Supereruptions - Geophysical Research Letters
+- [x] English et al 2013 - Microphysical simulations of large volcanic eruptions:
+      Pinatubo and Toba - Journal of Geophysical Research: Atmospheres
+- [ ] McGraw, Z., K. DallaSanta, L. M. Polvani, K. Tsigaridis, C. Orbe, and S. E. Bauer,
+      2024: Severe Global Cooling After Volcanic Super-Eruptions? The Answer Hinges on
+      Unknown Aerosol Size. J. Climate, 37, 1449-1464,
+      <https://doi.org/10.1175/JCLI-D-23-0116.1>.
+- [ ] Osipov, S., G. Stenchikov, K. Tsigaridis, A.N. LeGrande, S.E. Bauer, M. Fnais, and
+      J. Lelieveld, 2021: The Toba supervolcano eruption caused severe tropical
+      stratospheric ozone depletion. Communications Earth Environ., 2, no. 1, 71,
+      doi:10.1038/s43247-021-00141-7.
+- [ ] Robock, A., C.M. Ammann, L. Oman, D. Shindell, S. Levis, and G. Stenchikov, 2009:
+      Did the Toba volcanic eruption of ∼74k BP produce widespread glaciation? J.
+      Geophys. Res., 114, D10107, doi:10.1029/2008JD011652.
+- [x] Timmreck et al 2010, Aerosol size confines climate response to volcanic
+      super‐eruptions -Geophysical Research Letters
+- [ ] Timmreck et al, Climate response to the Tobasuper-eruption: Regional changes,
+      Quaternary International, Volume 258,
+      <https://doi.org/10.1016/j.quaint.2011.10.008.>, 2012
+- [ ] Wilson, C.J.N., Cooper, G.F.,Chamberlain, K.J. et al. No single model for
+      supersized eruptions and their magmabodies. Nat Rev Earth Environ 2, 610-627
+      (2021). <https://doi.org/10.1038/s43017-021-00191-7>
 
-Different latitudes of eruptions - impacts on climate: Schneider, D. P., C. M. Ammann,
-B. L. Otto-Bliesner, and D. S. Kaufman (2009), Climate response to large, high-latitude
-and low-latitude volcanic eruptions in the Community Climate System Model, J. Geophys.
-Res., 114, D15101, doi:10.1029/2008JD011222. Zhuo, Z. et al: Initial atmospheric
-conditions control transport of volcanic volatiles, forcing and impacts, Atmos. Chem.
-Phys., 24, 6233-6249, https://doi.org/10.5194/acp-24-6233-2024, 2024.
+#### Different aerosol climate models and their uncertainties (for Tambora)
 
-CESM2(WACCM6) Pinatubo strength model runs in the tropics and NH extratropics:
-Fuglestvedt et al. Volcanic forcing of high-latitude Northern Hemisphere eruptions. npj
-Clim Atmos Sci 7, 10 (2024). https://doi.org/10.1038/s41612-023-00539-4 Zhuo, Z. et al.:
-Initial atmospheric conditions control transport of volcanic volatiles, forcing and
-impacts, Atmos. Chem. Phys., 24, 6233-6249,
-https://doi.org/10.5194/acp-24-6233-2024, 2024.
+- [x] Zanchettin, D., Khodri, M., Timmreck, C., Toohey, M., Schmidt, A., Gerber, E. P.,
+      Hegerl, G., Robock, A., Pausata, F. S. R., Ball, W. T., Bauer, S. E., Bekki, S.,
+      Dhomse, S. S., LeGrande, A. N., Mann, G. W., Marshall, L., Mills, M., Marchand,
+      M., Niemeier, U., Poulain, V., Rozanov, E., Rubino, A., Stenke, A., Tsigaridis,
+      K., and Tummon, F.: The Model Intercomparison Project on the climatic response to
+      Volcanic forcing (VolMIP): experimental design and forcing input data for CMIP6,
+      Geosci. Model Dev., 9, 2701-2719, <https://doi.org/10.5194/gmd-9-2701-2016>, 2016.
+- [ ] Marshall, L., A. Schmidt, M. Toohey, K.S. Carslaw, G.W. Mann, M. Sigl, M. Khodri,
+      C. Timmreck, D. Zanchettin, W. Ball, S. Bekki, J.S.A. Brooke, S. Dhomse, C.
+      Johnson, J.-F. Lamarque, A. LeGrande, M.J. Mills, U. Niemeier, J.O. Pope, V.
+      Poulain, A. Robock, E. Rozanov, A. Stenke, T. Sukhodolov, S. Tilmes, K.
+      Tsigaridis, and F. Tummon, 2018: Multi-model comparison of the volcanic sulfate
+      deposition from the 1815 eruption of Mt. Tambora. Atmos. Chem. Phys., 18,
+      2307-2328, doi:10.5194/acp-18-2307-2018.
+
+#### Different size/strength of eruptions on AOD, RF, climate
+
+- [ ] Metzner, D., Kutterolf, S., Toohey, M. et al. Radiative forcing and climate impact
+      resulting from SO2 injections based on a 200,000-year record of Plinian eruptions
+      along the Central American Volcanic Arc. Int J Earth Sci (Geol Rundsch) 103,
+      2063-2079 (2014). <https://doi.org/10.1007/s00531-012-0814-z>
+- [ ] Miles et al 2004 The significance of volcanic eruption strength and frequency for
+      climate - - Quarterly Journal of the Royal Meteorological Society
+- [ ] Schmidt & Black, 2022, Reckoning with the Rocky Relationship Between Eruption Size
+      and Climate Response: Toward a Volcano-Climate Index | Annual Reviews
+
+#### Different eruption strength and season on AOD, RF, and atmospheric circulation
+
+- [x] Toohey, M. et al: The influence of eruption season on the global aerosol evolution
+      and radiative impact of tropical volcanic eruptions, Atmos. Chem. Phys., 11,
+      12351-12367, <https://doi.org/10.5194/acp-11-12351-2011>, 2011.
+- [ ] Toohey et al 2013 - Volcanic sulfate deposition to Greenland and Antarctica: A
+      modeling sensitivity study - Journal of Geophysical Research: Atmospheres
+
+#### Different eruption latitude and altitude on AOD, RF, and atmospheric circulation
+
+- [x] Marshall et al 2019 Exploring How Eruption Source Parameters Affect Volcanic
+      Radiative Forcing Using Statistical Emulation - Journal of Geophysical Research:
+      Atmospheres
+- [x] Toohey, M. et al. Disproportionately strong climate forcing from extratropical
+      explosive volcanic eruptions. Nature Geosci 12, 100-107 (2019).
+      <https://doi.org/10.1038/s41561-018-0286-2>
+
+#### Different latitudes of eruptions - impacts on climate
+
+- [ ] Schneider, D. P., C. M. Ammann, B. L. Otto-Bliesner, and D. S. Kaufman (2009),
+      Climate response to large, high-latitude and low-latitude volcanic eruptions in
+      the Community Climate System Model, J. Geophys. Res., 114, D15101,
+      doi:10.1029/2008JD011222.
+- [ ] Zhuo, Z. et al: Initial atmospheric conditions control transport of volcanic
+      volatiles, forcing and impacts, Atmos. Chem. Phys., 24, 6233-6249,
+      <https://doi.org/10.5194/acp-24-6233-2024>, 2024.
+
+#### CESM2(WACCM6) Pinatubo strength model runs in the tropics and NH extratropics
+
+- [ ] Fuglestvedt et al. Volcanic forcing of high-latitude Northern Hemisphere
+      eruptions. npj Clim Atmos Sci 7, 10 (2024).
+      <https://doi.org/10.1038/s41612-023-00539-4>
+- [ ] Zhuo, Z. et al.: Initial atmospheric conditions control transport of volcanic
+      volatiles, forcing and impacts, Atmos. Chem. Phys., 24, 6233-6249,
+      <https://doi.org/10.5194/acp-24-6233-2024>, 2024.
