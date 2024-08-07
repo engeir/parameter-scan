@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.9.0](https://github.com/engeir/parameter-scan/compare/v0.8.1...v0.9.0) (2024-08-07)
+
+
+### Features
+
+* **review:** add trackchanges notes from reviewer 1 ([0527267](https://github.com/engeir/parameter-scan/commit/052726718ce0983eea9f5bef1e1b6f343527568c))
+
+
+### Miscellaneous
+
+* convert doi short-link to https URL ([73f35fc](https://github.com/engeir/parameter-scan/commit/73f35fcfa420569c3a7c964fff394d9ea7e0f110))
+* **review:** track feedback from first review in markdown ([b7101e4](https://github.com/engeir/parameter-scan/commit/b7101e41dd2c2b41240160238121be8dd44046bb))
+
+
+### Styles
+
+* **format:** use llf instead of latexindent ([3c6885b](https://github.com/engeir/parameter-scan/commit/3c6885ba3e7e1d637ec6245f454150dee23243c4))
+
 ## [0.8.1](https://github.com/engeir/parameter-scan/compare/v0.8.0...v0.8.1) (2024-04-01)
 
 
