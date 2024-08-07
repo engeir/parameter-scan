@@ -42,11 +42,12 @@
 % complete documentation is here: http://trackchanges.sourceforge.net/
 %%%%%%%
 
-\draftfalse
+% \draftfalse
 
 \journalname{JGR: Atmospheres}
 
 \begin{document}
+  \addeditor{eirik} \addeditor{reviewer1}
 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %  TITLE
@@ -83,23 +84,35 @@
 
   \begin{abstract}
     We investigate the climatic effects of volcanic eruptions spanning from Mt.\
-    Pinatubo-sized events to super-volcanoes. The study is based on ensemble simulations
-    in the Community Earth System Model Version 2 (CESM2) climate model using the Whole
+    Pinatubo-sized events to \annote[reviewer1]{super-volcanoes}{Here and throughout, be
+      careful whether to refer to "super-volcanoes" or "super-eruptions". A supervolcano
+      is just a volcano that has produced a super eruption at some point in its history.
+      Volcanoes are just mountains most of the time. An eruption is what puts sulfur and
+      other stuff into the atmosphere.}. The study is based on ensemble simulations in
+    the Community Earth System Model Version 2 (CESM2) climate model using the Whole
     Atmosphere Community Climate Model Version 6 (WACCM6) atmosphere model. Our analysis
     focuses on the impact of different \ce{SO2}-amount injections on stratospheric
-    aerosol optical depth (AOD), effective radiative forcing (RF), and global
-    temperature anomalies. Unlike the traditional linear models used for smaller
-    eruptions, our results reveal a non-linear relationship between RF and AOD for
-    larger eruptions. We also uncover a notable time-dependent decrease in aerosol
-    forcing efficiency across all eruption magnitudes during the first post-eruption
-    year. In addition, the study reveals that larger as compared to medium-sized
-    eruption events produce a delayed and sharper peak in AOD, and a longer-lasting
-    temperature response while the time evolution of RF remains similar between the two
-    eruption types. When including the results of previous studies, we find that
-    relating \ce{SO2} to any other parameter is inconsistent across models compared to
-    the relationships between AOD, RF, and temperature anomaly. Thus, we expect the
-    largest uncertainty in model codes to relate to the chemistry and physics of
-    \ce{SO2} evolution. Finally, we find that the peak RF approaches a limiting value,
+    aerosol optical depth (AOD), \annote[reviewer1]{effective radiative forcing
+      (RF)}{Radiative forcing (RF) is a general term, effective radiative forcing (ERF)
+      and instantaneous radiative forcing (IRF) are two types of RF. If you are
+      specifically dealing with ERF, I would suggest using this more specific name and
+      acronym throughout.}, and global temperature anomalies. Unlike the traditional
+    linear models used for smaller eruptions, our results reveal a non-linear
+    relationship between RF and AOD for larger eruptions. We also uncover a notable
+    time-dependent decrease in aerosol forcing efficiency across all eruption magnitudes
+    during the first post-eruption year. In addition, the study reveals that larger as
+    compared to medium-sized eruption events produce a delayed and sharper peak in AOD,
+    and a longer-lasting temperature response while the time evolution of RF remains
+    similar between the two eruption types. When including the results of previous
+    studies, we find that relating \ce{SO2} to any other parameter is inconsistent
+    across models compared to the relationships between AOD, RF, and temperature
+    anomaly. Thus, we expect the largest uncertainty in model codes to relate to
+    \annote[reviewer1]{the chemistry and physics of \protect\ce{SO2} evolution.}{The
+      evolution is SO2 is rather simple to describe, it is chemically converted to
+      H2SO4. The evolution of sulfate aerosol is more complicated as it involves the
+      formation and growth of the aerosol size distribution. I assume it's the evolution
+      of aerosol that is most important to the radiative forcing and climate impacts in
+      the simulations?} Finally, we find that the peak RF approaches a limiting value,
     and that the peak temperature response follows linearly, effectively bounding the
     temperature anomaly to at most \(\sim\SI{-12}{\kelvin}\).
   \end{abstract}
@@ -112,20 +125,24 @@
   % https://www.agu.org/Share-and-Advocate/Share/Community/Plain-language-summary
 
   Volcanic eruptions can have a significant impact on the Earth's climate. Eruptions
-  large enough that the aerosols they emit reach the stratosphere cause a cooling effect
-  by reflecting sunlight. Typically, an eruption is measured by its impact on the
-  opacity of the stratosphere and the change in the energy balance at the top of the
-  atmosphere. The two measures are often assumed to be linearly related, but the
-  linearity is tested only against eruptions seen in the last two millennia. We use a
-  coupled climate model to simulate the impact of eruptions of sizes up to the largest
-  known eruptions. The smallest eruptions we simulate are still large enough to cause
-  global climate effects. We find a clear non-linear relationship for eruptions larger
-  than the ones seen in the past two millennia. Our simulations and supporting data
-  shows that the eruption latitude significantly influences the development of the
-  relationship between energy imbalance and stratospheric opacity with time after the
-  eruption. Additionally, we find evidence that the peak energy imbalance reaches a
-  limit, and that the peak temperature response follows linearly with the peak energy
-  imbalance, also reaching a limiting value.
+  large enough that \annote[reviewer1]{the aerosols they emit}{Unfortunately for our
+    intro sentences, the eruptions don't directly emit sulfate aerosols (at least not
+    very much), they emit gases which produce aerosols. Best to be accurate even if it
+    costs a few more words.} reach the stratosphere cause a cooling effect by reflecting
+  sunlight. Typically, an eruption is measured by its impact on the opacity of the
+  stratosphere and the change in the \annote[reviewer1]{energy balance at the top of the
+    atmosphere}{the ERF is not quite the change in energy balance at TOA - it is that
+    when surface temperature is held fixed.}. The two measures are often assumed to be
+  linearly related, but the linearity is tested only against eruptions seen in the last
+  two millennia. We use a coupled climate model to simulate the impact of eruptions of
+  sizes up to the largest known eruptions. The smallest eruptions we simulate are still
+  large enough to cause global climate effects. We find a clear non-linear relationship
+  for eruptions larger than the ones seen in the past two millennia. Our simulations and
+  supporting data shows that the eruption latitude significantly influences the
+  development of the relationship between energy imbalance and stratospheric opacity
+  with time after the eruption. Additionally, we find evidence that the peak energy
+  imbalance reaches a limit, and that the peak temperature response follows linearly
+  with the peak energy imbalance, also reaching a limiting value.
 
   % FIXME: related to this, there is an index that can be added during publishing. Find
   % the list here:
@@ -160,7 +177,10 @@
   \cite{mills2017,hansen2005,gregory2016,marshall2020,pitari2016b}. Yet, a wide spread
   in the estimated aerosol forcing efficiencies (RF normalised by AOD) exists among
   studies, spanning approximately from \(\sim \SI{-15}{\watt\metre^{-2}\ce{AOD}^{-1}}\)
-  \cite{pitari2016b} to \(\sim \SI{-25}{\watt\metre^{-2}\ce{AOD}^{-1}}\)
+  \cite{pitari2016b} to \annote[reviewer1]{\protect\(\sim
+    \SI{-25}{\watt\metre^{-2}\ce{AOD}^{-1}}\)}{the origin of RF=-25*AOD is Hansen et al.
+    (2005), best to cite that study here. It is also relevant that this scaling has been
+    used in subsequent IPCC reports, but that is worth its own statement.}
   \cite{myhre2013}. Additionally, these estimates are predominantly based on small
   eruptions with AOD values up to at most \(\sim 0.7\).
 
@@ -170,29 +190,36 @@
   in the atmosphere. The transformation of \ce{SO2} molecules through reactions with
   \ce{OH} and \ce{H2O} leads to the formation of sulphuric acid (\ce{H2SO4})
   \cite{robock2000}, which scatters sunlight thereby elevating planetary albedo and
-  reducing the RF. As the conversion from \ce{SO2} to \ce{H2SO4} occurs over weeks
-  \cite{robock2000}, the peak RF experiences a slight delay from the eruption's peak
-  \ce{SO2} injection. The lifetime of the \ce{H2SO4} aerosols in the stratosphere
-  depends on various factors, including latitude \cite{marshall2019, toohey2019},
-  volcanic plume height \cite{marshall2019}, aerosol size \cite{marshall2019}, the
-  quasi-biennial oscillation phase \cite{pitari2016b} and the season of the year
-  (determining to which hemisphere aerosols are transported)
-  \cite{toohey2011,toohey2019}. In the case of tropical eruptions, aerosols are
-  typically transported poleward in the stratosphere and descend back to mid-latitude
-  troposphere within one to two years \cite{robock2000}. Upon descending below the
-  tropopause, these aerosols are readily removed by wet deposition \cite{liu2012}.
+  reducing the RF. As the conversion from \ce{SO2} to \ce{H2SO4}
+  \annote[reviewer1]{occurs over weeks}{the peak in AOD (at 500 nm) and thus the RF
+    depends also on the aerosol size distribution, which evolves on a longer time scale
+    than the conversion of SO2 to aerosol.}
+  \annote[reviewer1]{\protect\cite{robock2000}}{Robock (2000) is a review paper, better
+    to cite direct observational studies to support this estimate of the SO2 lifetime.},
+  the peak RF experiences a slight delay from the eruption's peak \ce{SO2} injection.
+  The lifetime of the \ce{H2SO4} aerosols in the stratosphere depends on various
+  factors, including latitude \cite{marshall2019, toohey2019}, volcanic plume height
+  \cite{marshall2019}, aerosol size \cite{marshall2019}, the quasi-biennial oscillation
+  phase \cite{pitari2016b} and the season of the year (determining to which hemisphere
+  aerosols are transported) \cite{toohey2011,toohey2019}. In the case of tropical
+  eruptions, aerosols are typically transported poleward in the stratosphere and descend
+  back to mid-latitude troposphere within one to two years \cite{robock2000}. Upon
+  descending below the tropopause, these aerosols are readily removed by wet deposition
+  \cite{liu2012}.
 
-  Before the current era of significant anthropogenic climate forcing, volcanic
-  eruptions were the primary forcing mechanism dictating Earth's climate variability
-  during the Holocene period \cite{sigl2022}. Despite this substantial impact, few
-  climate-model experiments have included volcanic forcing when simulating climate
-  evolution during the Holocene \cite{sigl2022}, likely implying an exaggerated positive
-  forcing \cite{gregory2016,solomon2011}. This absence of persistent cooling is one of
-  several factors that have been suggested to contribute to the common disparity between
-  simulated and observed global warming \cite{andersson2015}. Despite extensive
-  attention on understanding the way volcanic eruptions influence climate, questions
-  regarding aerosol particle processes---such as growth and creation rates when \ce{OH}
-  is scarce---remain unanswered
+  \annote[reviewer1]{Before the current era of significant anthropogenic climate
+    forcing, volcanic eruptions were the primary forcing mechanism dictating Earth's
+    climate variability during the Holocene period \protect\cite{sigl2022}}{I don't
+    remember Sigl et al. (2022) quantifying the impact of eruptions vs other sources of
+    variability. Schurer et al. (2013) might be a more appropriate citation here.}.
+  Despite this substantial impact, few climate-model experiments have included volcanic
+  forcing when simulating climate evolution during the Holocene \cite{sigl2022}, likely
+  implying an exaggerated positive forcing \cite{gregory2016,solomon2011}. This absence
+  of persistent cooling is one of several factors that have been suggested to contribute
+  to the common disparity between simulated and observed global warming
+  \cite{andersson2015}. Despite extensive attention on understanding the way volcanic
+  eruptions influence climate, questions regarding aerosol particle processes---such as
+  growth and creation rates when \ce{OH} is scarce---remain unanswered
   \cite<e.g.~>[]{robock2000,zanchettin2019,marshall2020,marshall2022}. These processes
   impact aerosol scattering efficiency and potentially the RF to AOD relationship.
   \citeA{marshall2020} observe higher aerosol forcing efficiency in post-eruption years
@@ -207,9 +234,13 @@
   relationship between the RF energy imbalance and change in AOD caused by volcanic
   eruptions. While \citeA{myhre2013} employ a formula scaling RF by AOD to obtain
   \(\SI{-25}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\), recent literature reports estimates
-  down to \(\SI{-19.0(5)}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) \cite{gregory2016} and
-  \(\SI{-18.3(10)}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) \cite{mills2017}. Synthetic
-  volcano simulations in \citeA{marshall2020} yield a scaling factor of
+  down to
+  \annote[reviewer1]{\protect\(\SI{-19.0(5)}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\)}{I
+    believe the standard format would be to use the plus/minus symbol rather than
+    brackets on these numbers.} \annote[reviewer1]{\protect\cite{gregory2016} and
+    \(\SI{-18.3(10)}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) \cite{mills2017}}{These are
+    stratospheric aerosol simulations, not volcano simulations.}. Synthetic volcano
+  simulations in \citeA{marshall2020} yield a scaling factor of
   \(\SI{-20.5(2)}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) across an ensemble of \(82\)
   simulations featuring varying injection heights and latitudes of volcanic emissions,
   with injected \ce{SO2} ranging from \(10\) to \(\SI{100}{\tera\gram(\ce{SO2})}\).
@@ -222,16 +253,20 @@
   (\(\SI{200}{\tera\gram(\ce{SO2})\mathrm{yr}^{-1}}\)). These geoengineering simulations
   maintained continuous sulphur injections, running until a steady sulphur level was
   achieved. Results indicated an inverse exponential relationship between RF and
-  injected \ce{SO2} rate, converging to \(\SI{-65}{\watt\metre^{-2}}\)
-  (Eq.~\ref{eq:niemeier_exponential}). Even the \(100\times\) Mt.\ Pinatubo
-  super-volcano simulation by \citeA{jones2005}, which obtained a peak RF of
-  \(\SI{-60}{\watt\metre^{-2}}\), is below the suggested limit of
-  \(\SI{-65}{\watt\metre^{-2}}\). Moreover, \citeA{timmreck2010} find a peak RF anomaly
-  of \(\SI{-18}{\watt\metre^{-2}}\) from a \(\SI{1700}{\tera\gram(\ce{SO2})}\) eruption
-  simulation, which corresponds well with the function estimated by \citeA{niemeier2015}
-  at the given \ce{SO2} level. Several studies have demonstrated a linear relationship
-  of approximately \(-\SI{20}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) between RF and AOD,
-  although substantial variability exists in the slope among studies
+  injected \ce{SO2} \annote[reviewer1]{rate}{SO2 injection rate would be mass per unit
+    time, but I think you mean SO2 amount here.}, converging to
+  \(\SI{-65}{\watt\metre^{-2}}\) (Eq.~\ref{eq:niemeier_exponential}). Even the
+  \(100\times\) Mt.\ Pinatubo super-volcano simulation by \citeA{jones2005}, which
+  obtained a peak RF of \(\SI{-60}{\watt\metre^{-2}}\), is below the suggested limit of
+  \(\SI{-65}{\watt\metre^{-2}}\). \annote[reviewer1]{Moreover,
+    \protect\citeA{timmreck2010} find a peak RF anomaly of
+    \(\SI{-18}{\watt\metre^{-2}}\) from a \(\SI{1700}{\tera\gram(\ce{SO2})}\) eruption
+    simulation, which corresponds well with the function estimated by
+    \citeA{niemeier2015} at the given \ce{SO2} level.}{this doesn't seem right, as -18
+    W/m2 seems quite small for a 1700 TgSO2 eruption if the scaling factor is 65 W/m2
+    per TgSO2?} Several studies have demonstrated a linear relationship of approximately
+  \(-\SI{20}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) between RF and AOD, although
+  substantial variability exists in the slope among studies
   \cite{mills2017,hansen2005,gregory2016,marshall2020,pitari2016b}. Moreover, a
   time-after-eruption dependence on the RF to AOD ratio is found in
   \citeA{marshall2020}, whereas \citeA{niemeier2015} revealed a non-linear relationship
@@ -259,19 +294,21 @@
   than IRF \cite{marvel2016,richardson2019}, more recent studies conclude that ECS
   cannot be constrained from volcanic eruption events \cite{pauling2023}.
 
-  Employing eruptions in the medium to super-volcano size enhances the signal-to-noise
-  ratio without necessitating an extensive and computationally expensive ensemble, and
-  as such, is a tempting way to mimic a large ensemble of smaller volcanic eruptions.
-  However, the AOD, RF, and temperature signatures are not necessarily a simple scaling
-  of that of smaller volcanic eruptions. Previous studies have simulated super-volcanoes
-  using AOD as the input forcing, where the AOD was that of Mt.\ Pinatubo scaled by a
-  factor of one hundred \cite{jones2005}. This approach may yield incorrect results,
-  both because the peak of the AOD may be too small or too big, but also because the
-  evolution of the AOD could be inappropriate. Likewise, a different AOD evolution may
-  be found from similar size eruptions, but at different latitudes. To investigate this
-  issue, our simulations are based on four levels of injected \ce{SO2} covering three
-  orders of magnitude and the inclusion of one high latitude eruption of the second
-  largest injected \ce{SO2} case.
+  \annote[reviewer1]{Employing eruptions in the medium to super-volcano size enhances
+    the signal-to-noise ratio without necessitating an extensive and computationally
+    expensive ensemble, and as such, is a tempting way to mimic a large ensemble of
+    smaller volcanic eruptions.}{I don't agree with this statement-a super eruption is
+    going to produce much different aerosol characteristics than a cluster of smaller
+    eruptions.} However, the AOD, RF, and temperature signatures are not necessarily a
+  simple scaling of that of smaller volcanic eruptions. Previous studies have simulated
+  super-volcanoes using AOD as the input forcing, where the AOD was that of
+  Mt.\ Pinatubo scaled by a factor of one hundred \cite{jones2005}. This approach may
+  yield incorrect results, both because the peak of the AOD may be too small or too big,
+  but also because the evolution of the AOD could be inappropriate. Likewise, a
+  different AOD evolution may be found from similar size eruptions, but at different
+  latitudes. To investigate this issue, our simulations are based on four levels of
+  injected \ce{SO2} covering three orders of magnitude and the inclusion of one high
+  latitude eruption of the second largest injected \ce{SO2} case.
 
   We conducted ensemble simulations of volcanic eruptions in the Community Earth System
   Model Version 2 (CESM2) coupled with the Whole Atmosphere Community Climate Model
@@ -289,6 +326,8 @@
   \section{Method}
 
   \label{sec:method}
+
+  \note[reviewer1]{The method section needs a description of how ERF was calculated.}
 
   \subsection{Model}
 
@@ -316,25 +355,35 @@
   The smallest eruption case, C2W\(\downarrow\), is similar in magnitude as compared to
   events like Mt.\ Pinatubo
   \cite<\(\sim10\)--\(\SI{20}{\tera\gram(\ce{SO2})}\);>[]{timmreck2018} and Mt.\ Tambora
-  \cite<\(\sim\SI{56.2}{\tera\gram(\ce{SO2})}\);>[]{zanchettin2016}. The intermediate
-  case, C2W\(-\), resembles the magnitude of the Samalas eruption in 1257
+  \cite<\(\sim\SI{56.2}{\tera\gram(\ce{SO2})}\);>[]{zanchettin2016}.
+  \annote[reviewer1]{The intermediate case, C2W-, resembles the magnitude of the Samalas
+    eruption in 1257}{Well, in order of magnitude sure, but there's a factor of about 2
+    difference, best to be clear about this.}
   \cite<\(\sim{144}\)--\(\SI{170}{\tera\gram(\ce{SO2})}\);>[]{vidal2016}, while the
   second largest and largest eruption cases, C2W\(\uparrow\) and
   C2W\(\uparrow\uparrow\), is in the likely range of the Young Toba Tuff (YTT) eruption
   occurring about \(\SI{72000}{\mathrm{yr}}\) ago
   \cite<\(100\)--\(\SI{10000}{\tera\gram(\ce{SO2})}\);>[]{jones2005}. All eruptions were
   situated at the equator (\(\SI{0}{\degree N}\), \(\SI{1}{\degree E}\)) with \ce{SO2}
-  injected between \(\SI{18}{\kilo\meter}\) and \(\SI{20}{\kilo\meter}\) altitude.
-  Collectively, the four tropical eruption cases C2W\(\downarrow\), C2W\(-\),
-  C2W\(\uparrow\), and C2W\(\uparrow\uparrow\) are referred to as C2WTrop. An additional
-  high-latitude eruption ensemble, labelled C2WN\(\uparrow\), of the same injected
-  \ce{SO2} magnitude as C2W\(\uparrow\) was simulated at \(\SI{56}{\degree N}\),
-  \(\SI{287.7}{\degree E}\) with a six-month separation (15 February and 15 August).
+  \annote[reviewer1]{injected between \protect\(\SI{18}{\kilo\meter}\) and
+    \(\SI{20}{\kilo\meter}\) altitude.}{Is the SO2 injected uniformly between these
+    altitudes?} Collectively, the four tropical eruption cases C2W\(\downarrow\),
+  C2W\(-\), C2W\(\uparrow\), and C2W\(\uparrow\uparrow\) are referred to as C2WTrop. An
+  additional high-latitude eruption ensemble, labelled C2WN\(\uparrow\), of the same
+  injected \ce{SO2} magnitude as C2W\(\uparrow\) was simulated at \(\SI{56}{\degree
+    N}\), \(\SI{287.7}{\degree E}\) with a six-month separation (15 February and 15
+  August).
 
   \begin{table*}
     \centering
 
-    \caption{Simulations done with the CESM2\(^{a}\)}\label{tab:simulation-overview}%
+    \caption{\note[reviewer1]{I find these ensemble labels very non-intuitive. Since all
+        experiments use CESM2(WACCM) the C2W can be left out of the labels. Arrows are
+        typically used to indicate directions, not relative magnitudes. I strongly
+        encourage the authors to use labels which more intuitively communicate the
+        relative magnitude of the eruption simulations and thus the differences between
+        the ensembles.}Simulations done with the
+      CESM2\(^{a}\)}\label{tab:simulation-overview}%
     \begin{center}
       \begin{tabular}[c]{cccccc}
         \toprule
@@ -401,17 +450,19 @@
   peak occurrence of the C2W\(\downarrow\) case compared to the larger eruption cases.
   The peak of C2W\(\downarrow\) arrives earlier for both AOD
   (Fig.~\ref{fig:1_compare_waveform}a) and temperature
-  (Fig.~\ref{fig:1_compare_waveform}c), while the RF time series in
-  Fig.~\ref{fig:1_compare_waveform}b are all indistinguishable. Cases C2W\(-\),
-  C2W\(\uparrow\), and C2W\(\uparrow\uparrow\) are indistinguishable in their
-  temperature development, and while C2W\(\downarrow\) peaks at an earlier time, it
-  decays similarly to the other cases. Interestingly, the same development between
+  (Fig.~\ref{fig:1_compare_waveform}c), \annote[reviewer1]{while the RF time series in
+    Fig.~\protect\ref{fig:1_compare_waveform}b are all indistinguishable}{importantly
+    it's the Normalized RF and temperature timeseries that are indistinguishable here.}.
+  Cases C2W\(-\), C2W\(\uparrow\), and C2W\(\uparrow\uparrow\) are indistinguishable in
+  their temperature development, and while C2W\(\downarrow\) peaks at an earlier time,
+  it decays similarly to the other cases. Interestingly, the same development between
   C2W\(-\) and C2W\(\uparrow\) is not found in the AOD time series. C2W\(\downarrow\)
   peaks at an earlier time, but also spends more time around the peak and as such decays
   at a later time post-eruption. Likewise, C2W\(-\) has a faster rise and slower decay
   compared to C2W\(\uparrow\), but where both peak at a similar time. C2W\(\uparrow\)
-  and C2W\(\uparrow\uparrow\) have similar AOD developments, but where
-  C2W\(\uparrow\uparrow\) show a slightly faster decay from the peak.
+  and C2W\(\uparrow\uparrow\) have \annote[reviewer1]{similar AOD developments}{again,
+    the normalized AOD}, but where C2W\(\uparrow\uparrow\) show a slightly faster decay
+  from the peak.
 
   The timescale of the perturbation of AOD and RF is shorter than that of the
   temperature. While the AOD and RF time series return to their equilibrium state within
@@ -553,13 +604,15 @@
   noted above, a decrease in aerosol forcing efficiency is found when analysing the M20
   data with seasonal resolution during the pre-peak period (first year post-eruption)
   while constraining the ensemble to only include eruptions within \(-10\) to
-  \(\SI{10}{\degree\mathrm{N}}\). The post-peak period shows an increasing aerosol
-  forcing efficiency, and during the full first three post-eruption years (pre-peak and
-  post-peak), both the tropical subset and the full M20 data yield an increasing
-  efficiency, as expected. Likewise, the first three post-eruption years of the
-  C2W\(-\), C2W\(\uparrow\uparrow\), and C2WN\(\uparrow\) cases show a weak negative
-  slope and thus an increasing efficiency, while C2W\(\downarrow\) shows an elevated
-  post-peak ratio as seen in Fig.~\ref{fig:3_rf_to_aod_ratios}b.
+  \(\SI{10}{\degree\mathrm{N}}\). \annote[reviewer1]{The post-peak period shows an
+    increasing aerosol forcing efficiency, and during the full first three post-eruption
+    years (pre-peak and post-peak), both the tropical subset and the full M20 data yield
+    an increasing efficiency, as expected.}{Here is one example where I expect this
+    result may change when you consider not AOD but exp(-AOD).} Likewise, the first
+  three post-eruption years of the C2W\(-\), C2W\(\uparrow\uparrow\), and
+  C2WN\(\uparrow\) cases show a weak negative slope and thus an increasing efficiency,
+  while C2W\(\downarrow\) shows an elevated post-peak ratio as seen in
+  Fig.~\ref{fig:3_rf_to_aod_ratios}b.
 
   We also note that while the aerosol forcing efficiency is decreasing for tropical M20
   data in the pre-peak period, the full dataset shows increasing efficiency. This is in
@@ -569,13 +622,17 @@
   \begin{figure}
     \centering \includegraphics{figure3}
 
-    \caption{(a): The ratio of RF to AOD, with time-after-eruption on the horizontal
-      axis. Straight lines indicate linear regression fits and are described in
-      table~\ref{tab:slope-gradients}, while shaded regions are the standard deviation
-      across the ensembles for each season. Regression fits and shadings are made for
-      the pre-peak and post-peak periods. (b): Same as in (a), but where the underlying
-      AOD and RF time series have been scaled to have peak values at unity. Shown are
-      data from table~\ref{tab:simulation-overview} along with tropical eruptions from
+    \caption{\note[reviewer1]{It looks like in this plot all ensemble members are
+        plotted, as well as a standard deviation range of the ensemble. This seems
+        redundant, either all the members or the mean and SD would seem to be sufficient
+        and would improve the readability of the plot.}(a): The ratio of RF to AOD, with
+      time-after-eruption on the horizontal axis. Straight lines indicate linear
+      regression fits and are described in table~\ref{tab:slope-gradients}, while shaded
+      regions are the standard deviation across the ensembles for each season.
+      Regression fits and shadings are made for the pre-peak and post-peak periods. (b):
+      Same as in (a), but where the underlying AOD and RF time series have been scaled
+      to have peak values at unity. Shown are data from
+      table~\ref{tab:simulation-overview} along with tropical eruptions from
       M20.}\label{fig:3_rf_to_aod_ratios}%
   \end{figure}
 
@@ -611,12 +668,13 @@
   \begin{figure*}
     \centering \includegraphics[width=\textwidth]{figure4}
 
-    \caption{(a) AOD, (b) RF, and (c) temperature anomaly as a function of injected
-      \ce{SO2}\@. (d) RF and (e) temperature anomaly as a function of AOD. (f)
-      Temperature anomaly as a function of RF. Blue diamonds labelled C2WTrop represent
-      tropical cases (C2W\(\downarrow\), C2W\(-\), C2W\(\uparrow\),
-      C2W\(\uparrow\uparrow\)), the brown three-branched twig signifies the
-      C2WN\(\uparrow\) case, and green downward triangles denote OB16 data from
+    \caption{\note[reviewer1]{everything that is a peak value should be referred to as
+        such on figure axis labels in in caption.}(a) AOD, (b) RF, and (c) temperature
+      anomaly as a function of injected \ce{SO2}\@. (d) RF and (e) temperature anomaly
+      as a function of AOD. (f) Temperature anomaly as a function of RF. Blue diamonds
+      labelled C2WTrop represent tropical cases (C2W\(\downarrow\), C2W\(-\),
+      C2W\(\uparrow\), C2W\(\uparrow\uparrow\)), the brown three-branched twig signifies
+      the C2WN\(\uparrow\) case, and green downward triangles denote OB16 data from
       \citeA{ottobliesner2016}. The red thin diamonds labelled M20 display the
       \citeA{marshall2020dataset} data. Black star and plus indicate Mt.\ Pinatubo and
       Mt.\ Tambora estimates based on observations. The pink square labelled J05 refers
@@ -683,8 +741,10 @@
   \(\SI{1700}{\tera\gram(\ce{SO2})}\) eruption, while J05 records a substantially larger
   maximum temperature anomaly of \(\SI{-10.7}{\kelvin}\). Since the M20 experiment was
   conducted with prescribed sea-surface temperatures \cite{marshall2020}, preventing the
-  temperature from being fully perturbed, we do not focus on the M20 data in the
-  temperature plots but include them for completeness.
+  temperature from being fully perturbed, \annote[reviewer1]{we do not focus on the M20
+    data in the temperature plots but include them for completeness.}{I'd argue that the
+    temperature anomalies from a simulation with fixed SSTs are close to meaningless in
+    comparison with coupled ocean simulations.}
 
   In Fig.~\ref{fig:4_parameter_scan}d, we revisit the relationship between RF and AOD,
   focusing on peak values rather than annual and seasonal averages. As previously
@@ -721,10 +781,14 @@
 
   This relationship, along with the functional relationships between all other
   parameters shown in Fig.~\ref{fig:4_parameter_scan}, are illustrated in
-  Fig.~\ref{fig:5_diagram_of_function_relations}. There, we show that from assuming a
-  linear dependency of AOD on injected \ce{SO2} (\(ax+b\)), and of temperature on RF
-  (\(cx+d\)), we must have that \(f\), \(g\), \(h\), and \(k\) all have the same
-  functional form, where \(f: \ce{SO2} \to \mathrm{RF}\), \(g: \mathrm{AOD} \to
+  Fig.~\ref{fig:5_diagram_of_function_relations}. There, \annote[reviewer1]{we show that
+    from assuming a linear dependency of AOD on injected \protect\ce{SO2}}{why is this
+    being assumed when it has been shown this isn't very valid?}
+  \annote[reviewer1]{\protect(\(ax+b\)), and of temperature on RF (\(cx+d\))}{It seems
+    as if x is referring to different quantities in the different equations. Much more
+    attention to detail needed if this mathematical framework is to be explained in
+    sufficient detail.}, we must have that \(f\), \(g\), \(h\), and \(k\) all have the
+  same functional form, where \(f: \ce{SO2} \to \mathrm{RF}\), \(g: \mathrm{AOD} \to
   \mathrm{T}\), \(h: \ce{SO2} \to \mathrm{T}\), and \(k: \mathrm{AOD} \to \mathrm{RF}\).
   From this, we deduce that \(f(x)=k(ax+b)\) and \(h(x)=f(cx+d)=g(ax+b)\), and finally
   that \(h(x)=k(acx+ad+b)\), concluding that \(f\), \(g\), \(h\), and \(k\) have the
@@ -761,8 +825,9 @@
   denoted as \(\rho\), and the transient climate response parameter (TCRP) \(1/\rho\)
   (where \(\mathrm{TCS}=F_{2\times\ce{CO2}}\times \mathrm{TCRP}\) is the transient
   climate sensitivity and \(F_{2\times\ce{CO2}}\) is the forcing due to a doubling of
-  pre-industrial \ce{CO2} concentration). As the forcing of volcanic eruptions typically
-  lasts for about a year, a duration too short for \(F=\rho T\) to remain valid, an
+  pre-industrial \ce{CO2} concentration). \annote[reviewer1]{As the forcing of volcanic
+    eruptions typically lasts for about a year}{Volcanic forcing definitely lasts for
+    more than a year!}, a duration too short for \(F=\rho T\) to remain valid, an
   alternative approach using a time-integral form introduced by \citeA{merlis2014} is
   applied:
 
@@ -796,9 +861,13 @@
   Importantly, our estimate agrees well with G16, while the J05 estimate of \(\alpha
   \simeq \SI{4}{\watt\metre^{-2}\kelvin^{-1}}\) is still notably higher. Since the
   temperature perturbation obtained by J05 was larger than in any of our CESM2 cases, it
-  indicates that the forcing used by J05 must be stronger. The peak value of the J05 RF
-  is similar to the C2W\(\uparrow\) case, and as such, the overall stronger forcing must
-  originate from the development of the forcing time series rather than the peak value.
+  indicates that the forcing used by J05 must be stronger. \annote[reviewer1]{The peak
+    value of the J05 RF is similar to the C2W\protect{\(\uparrow\)} case, and as such,
+    the overall stronger forcing must originate from the development of the forcing time
+    series rather than the peak value.}{It's quite well known that simply scaling up the
+    forcing for Pinatubo is not a good representation of forcing from super eruptions,
+    see e.g. Timmreck et al. (2009) and Timmreck et al. (2010). That the AOD used in
+    Jones et al. leads to a too strong RF is therefore not very surprising.}
 
   \begin{table}
     \centering
