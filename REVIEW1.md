@@ -299,8 +299,8 @@ comments, and a list of references to take care of below.
 
 - MAM3 add on changes for stratospheric aerosols need to cite Mills et al (2016) Mills,
   M. J., et al. (2016), Global volcanic aerosol properties derived from emissions,
-  1990-2014, using CESM1(WACCM), J. Geophys. Res. Atmos., 121, doi:10.1002/
-  2015JD024290.
+  1990-2014, using CESM1(WACCM), J. Geophys. Res. Atmos., 121,
+  <https://doi.org/10.1002/2015JD024290>.
 
 - Fig. 1 and ff Figs.: Which temperature field is plotted here; does it make sense if
   the ocean/sea-ice is prescribed?
@@ -338,7 +338,7 @@ comments, and a list of references to take care of below.
 - [ ] Forster, P. M., T. Richardson, A. C. Maycock, C. J. Smith, B. H. Samset, G. Myhre,
       T. Andrews, R. Pincus, and M. Schulz (2016), Recommendations for diagnosing
       effective radiative forcing from climate models for CMIP6, J. Geophys. Res.
-      Atmos., 121, 12,460-12,475, doi:10.1002/ 2016JD025320.
+      Atmos., 121, 12,460-12,475, <https://doi.org/10.1002/2016JD025320>.
 - [x] Marshall et al 2021 - Unknown Eruption Source Parameters Cause Large Uncertainty
       in Historical Volcanic Radiative Forcing Reconstructions - Journal of Geophysical
       Research: Atmospheres
@@ -362,10 +362,10 @@ comments, and a list of references to take care of below.
 - [ ] Osipov, S., G. Stenchikov, K. Tsigaridis, A.N. LeGrande, S.E. Bauer, M. Fnais, and
       J. Lelieveld, 2021: The Toba supervolcano eruption caused severe tropical
       stratospheric ozone depletion. Communications Earth Environ., 2, no. 1, 71,
-      doi:10.1038/s43247-021-00141-7.
+      <https://doi.org/10.1038/s43247-021-00141-7>.
 - [ ] Robock, A., C.M. Ammann, L. Oman, D. Shindell, S. Levis, and G. Stenchikov, 2009:
       Did the Toba volcanic eruption of ∼74k BP produce widespread glaciation? J.
-      Geophys. Res., 114, D10107, doi:10.1029/2008JD011652.
+      Geophys. Res., 114, D10107, <https://doi.org/10.1029/2008JD011652>.
 - [x] Timmreck et al 2010, Aerosol size confines climate response to volcanic
       super‐eruptions -Geophysical Research Letters
 - [ ] Timmreck et al, Climate response to the Tobasuper-eruption: Regional changes,
@@ -390,7 +390,7 @@ comments, and a list of references to take care of below.
       Poulain, A. Robock, E. Rozanov, A. Stenke, T. Sukhodolov, S. Tilmes, K.
       Tsigaridis, and F. Tummon, 2018: Multi-model comparison of the volcanic sulfate
       deposition from the 1815 eruption of Mt. Tambora. Atmos. Chem. Phys., 18,
-      2307-2328, doi:10.5194/acp-18-2307-2018.
+      2307-2328, <https://doi.org/10.5194/acp-18-2307-2018>.
 
 #### Different size/strength of eruptions on AOD, RF, climate
 
@@ -425,7 +425,7 @@ comments, and a list of references to take care of below.
 - [ ] Schneider, D. P., C. M. Ammann, B. L. Otto-Bliesner, and D. S. Kaufman (2009),
       Climate response to large, high-latitude and low-latitude volcanic eruptions in
       the Community Climate System Model, J. Geophys. Res., 114, D15101,
-      doi:10.1029/2008JD011222.
+      <https://doi.org/10.1029/2008JD011222>.
 - [ ] Zhuo, Z. et al: Initial atmospheric conditions control transport of volcanic
       volatiles, forcing and impacts, Atmos. Chem. Phys., 24, 6233-6249,
       <https://doi.org/10.5194/acp-24-6233-2024>, 2024.
