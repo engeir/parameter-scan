@@ -4,12 +4,10 @@
 
 [![Build history](https://buildstats.info/github/chart/engeir/parameter-scan?branch=main)](https://github.com/engeir/parameter-scan/actions)
 
-<!-- dprint-ignore-start -->
 > [!NOTE]
 >
 > I compile this using an installation of [tinytex] via [mise]. No additional packages
 > need to be installed with `tlmgr` after this.
-<!-- dprint-ignore-end -->
 
 To run the continuous compiler, use the command
 
@@ -37,7 +35,7 @@ tectonic -Z shell-escape --keep-intermediates agujournaltemplate.tex
 <!-- dprint-ignore-end -->
 
 > For my own convenience, a comparison table comprising symbols used across the papers
-> [G16], [M14] and [J05]. They all use $T$ for the temperature and $N$ for the net
+> [G16], [M14] and [J05]. They all use $T$for the temperature and $N$for the net
 > downward radiative heat flux at TOA.
 >
 > | Name                         | [G16]              | [M14]                       | [J05]       |

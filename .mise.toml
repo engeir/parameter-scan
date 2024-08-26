@@ -1,16 +1,56 @@
 [tools]
 tinytex = "latest"
 
+[tasks.install]
+description = "Install the tectonic-typesetting binary"
+run = "curl --proto '=https' --tlsv1.2 -fsSL https://drop-sh.fullyjustified.net | sh"
+
 [tasks.build]
 description = "Build the project"
-run = "latexmk -cd -pdf agujournaltemplate.tex"
-alias = "b"
+run = "tectonic -X compile ./agujournaltemplate.tex --keep-logs --keep-intermediates"
+alias = ["b", "c", "compile"]
+sources = [
+  "agujournaltemplate.tex",
+  "agujournaltemplate.bib",
+  "figure1.png",                # Fig 1
+  "figure2.png",                # Fig 2
+  "figure3.png",                # Fig 3
+  "figure4.png",                # Fig 4
+]
+outputs = ["./agujournaltemplate.pdf", "./agujournaltemplate.bbl"]
+
+[tasks.copy]
+description = "Move generated files from the python source code"
+env = { OUT_DIR = "../paper1-code/generated_files", LATEX_DIR = "./" }
+run = [
+  "test -d $OUT_DIR",
+  "cp -x --preserve=timestamps $OUT_DIR/figure1.png $LATEX_DIR",
+  "cp -x --preserve=timestamps $OUT_DIR/figure2.png $LATEX_DIR",
+  "cp -x --preserve=timestamps $OUT_DIR/figure3.png $LATEX_DIR",
+  "cp -x --preserve=timestamps $OUT_DIR/figure4.png $LATEX_DIR",
+  "cp -x --preserve=timestamps $OUT_DIR/reff.png $LATEX_DIR",
+]
 
 [tasks.clean]
 description = "Clean up after compiling PDF"
 run = "latexmk -c"
 depends = ["build"]
 
-[tasks.tectonic]
-description = "Build the JGR template with Tectonic"
-run = "tectonic ./agujournaltemplate.tex"
+[tasks.png2jpg]
+description = "Convert PNG images to JPG format"
+run = """
+#!/usr/bin/env bash
+fd -e png -x convert {} {.}.jpg
+fd -e png -x rm {}
+"""
+alias = "p2j"
+
+[tasks."diff:create"]
+description = "Create a latex diff between the submitted and revised manuscript."
+run = "latexdiff ../parameter-scan-submitted/agujournaltemplate.tex ./agujournaltemplate.tex >diff.tex"
+sources = ["../parameter-scan-submitted/agujournaltemplate.tex", "./agujournaltemplate.tex"]
+outputs = ["./diff.tex"]
+
+[tasks."diff:compile"]
+description = "Compile the diff.tex to a PDF."
+run = "latexmk -pdf diff.tex"
