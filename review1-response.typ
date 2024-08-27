@@ -85,9 +85,10 @@ analysis is done.
   mapped to $~ 1$. Please find below the figures 1 to 4 with AOD adjusted. Since we are
   mostly interested in the more extreme AOD values, where $"AOD">1$, this region will be
   mapped to a very narrow range, and thus we found more use of the version using AOD
-  directly. Fig3a show perhaps a more clear structure, but for consistency was kept as
-  AOD as well. However, if you find they should be included we are open to including the
-  adjusted figures as well.
+  directly. Fig3a show perhaps a more clear structure, but as the pre-peak period is
+  close to unity in AOD, the structure is mostly from the pre-peak period of the ERF
+  time series. Thus, for consistency also Fig3 was kept as AOD, however if you find they
+  should be included we are open to including the adjusted figures as well.
 
   #box(
     width: 100%,
@@ -125,8 +126,8 @@ study. Failing this, at least the importance of aerosol size should be included 
 introduction and discussion sections.
 
 #reply[
-  This has been valuable input which now better explains our results and conclusions,
-  specifically in relation to Fig. 4f.
+  This has been valuable input which now give better background and explanation of our
+  results and conclusions, specifically in relation to Fig. 4f.
 
   As Brenna et al. (2020) run similar simulations and go deeper into effective radius,
   we do not provide a deeper analysis here other than to mention the importance of
@@ -137,8 +138,8 @@ introduction and discussion sections.
   is included, as this is the only effective radius that was run by McGraw et al. (2024)
   across the full SO2 range.
 
-  Below is also shown a plot of effective radius from four new simulations (original
-  model output from the initial single-eruption simulations has unfortunately been
+  Below is also shown a plot of effective radius from four new simulations (the original
+  model output from the initial single-eruption simulations has unfortunately been due
   deleted to limited data storage). These simulations show equatorial double-eruptions
   of 26&26 and 400&400 TgSO2, with separation of two and four years.
   #figure(
@@ -150,55 +151,67 @@ introduction and discussion sections.
 
 === Specific comments
 
-- [x] L11: Here and throughout, be careful whether to refer to "super-volcanoes" or
+- L11: Here and throughout, be careful whether to refer to "super-volcanoes" or
   "super-eruptions". A supervolcano is just a volcano that has produced a super eruption
   at some point in its history. Volcanoes are just mountains most of the time. An
   eruption is what puts sulfur and other stuff into the atmosphere.
 
   #reply[Text has been adjusted to use "supereruption".]
 
-- [x] L15: Radiative forcing (RF) is a general term, effective radiative forcing (ERF)
+- L15: Radiative forcing (RF) is a general term, effective radiative forcing (ERF)
   and instantaneous radiative forcing (IRF) are two types of RF. If you are specifically
   dealing with ERF, I would suggest using this more specific name and acronym
   throughout.
 
-- [x] L25: The evolution is SO2 is rather simple to describe, it is chemically converted
+- L25: The evolution is SO2 is rather simple to describe, it is chemically converted
   to H2SO4. The evolution of sulfate aerosol is more complicated as it involves the
   formation and growth of the aerosol size distribution. I assume it's the evolution of
   aerosol that is most important to the radiative forcing and climate impacts in the
   simulations?
 
-- [x] L31: Unfortunately for our intro sentences, the eruptions don't directly emit
+- L31: Unfortunately for our intro sentences, the eruptions don't directly emit
   sulfate aerosols (at least not very much), they emit gases which produce aerosols.
   Best to be accurate even if it costs a few more words.
 
-- [x] L33: the ERF is not quite the change in energy balance at TOA - it is that when
+- L33: the ERF is not quite the change in energy balance at TOA - it is that when
   surface temperature is held fixed.
 
-- [x] L55: the origin of RF=-25*AOD is #cite(<hansen2005b>, form: "prose"), best to cite
+// #cite(<hansen2005b>, form: "prose")
+- L55: the origin of RF=-25*AOD is Hansen et al. (2005), best to cite
   that study here. It is also relevant that this scaling has been used in subsequent
   IPCC reports, but that is worth its own statement.
 
-- [x] L63: Robock (2000) is a review paper, better to cite direct observational studies
+- L63: Robock (2000) is a review paper, better to cite direct observational studies
   to support this estimate of the SO2 lifetime.
 
-- [x] L63: the peak in AOD (at 500 nm) and thus the RF depends also on the aerosol size
+- L63: the peak in AOD (at 500 nm) and thus the RF depends also on the aerosol size
   distribution, which evolves on a longer time scale than the conversion of SO2 to
   aerosol.
 
-- [x] L75: I don't remember Sigl et al. (2022) quantifying the impact of eruptions vs
+- L75: I don't remember Sigl et al. (2022) quantifying the impact of eruptions vs
   other sources of variability. Schurer et al. (2013) might be a more appropriate
   citation here.
 
-- [x] L94: I believe the standard format would be to use the plus/minus symbol rather
+- L94: I believe the standard format would be to use the plus/minus symbol rather
   than brackets on these numbers.
 
-- [ ] L95: These are stratospheric aerosol simulations, not volcano simulations.
+- L95: These are stratospheric aerosol simulations, not volcano simulations.
 
-- [x] L104: SO2 injection rate would be mass per unit time, but I think you mean SO2
+  #reply[
+    I'm not sure if I really understand this comment. Perhaps I missed a detail, but in
+    that paragraph I only discuss the estimated ERF to AOD values? I removed the
+    specification of "caused by volcanic eruptions" which I assume was the inaccuracy.
+  ]
+
+- L104: SO2 injection rate would be mass per unit time, but I think you mean SO2
   amount here.
 
-- [x] L107: this doesn't seem right, as -18 W/m^2 seems quite small for a 1700 TgSO2
+  #reply[
+    This was referring to the continuous injection simulations by Niemeier and Timmreck
+    (2015). The paragraph has been slightly rewritten to be more clear.
+  ]
+
+- L107: this doesn't seem right, as -18 W/m^2 seems quite small for a 1700 TgSO2
   eruption if the scaling factor is 65 W/m^2 per TgSO2?
 
   #reply[
@@ -222,7 +235,7 @@ introduction and discussion sections.
     in Timmreck et al. (2010). This has hopefully been made more clear in the text now.
   ]
 
-- [x] L135: I don't agree with this statement-a super eruption is going to produce much
+- L135: I don't agree with this statement-a super eruption is going to produce much
   different aerosol characteristics than a cluster of smaller eruptions.
 
   #reply[
@@ -234,7 +247,7 @@ introduction and discussion sections.
     anomaly. The section has been re-phrased to better highlight this.
   ]
 
-- [x] Table 1: I find these ensemble labels very non-intuitive. Since all experiments
+- Table 1: I find these ensemble labels very non-intuitive. Since all experiments
   use CESM2(WACCM) the C2W can be left out of the labels. Arrows are typically used to
   indicate directions, not relative magnitudes. I strongly encourage the authors to use
   labels which more intuitively communicate the relative magnitude of the eruption
@@ -243,29 +256,29 @@ introduction and discussion sections.
   #reply[Ensembles are now specified as `S<TgSO2>` and an extra `N` for the Northern
     latitude eruption ensemble.]
 
-- [x] L157: The method section needs a description of how ERF was calculated.
+- L157: The method section needs a description of how ERF was calculated.
 
-- [x] L178: Well, in order of magnitude sure, but there's a factor of about 2
+- L178: Well, in order of magnitude sure, but there's a factor of about 2
   difference, best to be clear about this.
 
-- [x] L182: Is the SO2 injected uniformly between these altitudes?
+- L182: Is the SO2 injected uniformly between these altitudes?
 
   #reply[Adjusted to now specify how it is ramped up/down over three vertical levels.]
 
-- [x] L197: Importantly it's the Normalized RF and temperature timeseries that are
+- L197: Importantly it's the Normalized RF and temperature timeseries that are
   indistinguishable here.
 
-- [x] L204: again, the normalized AOD
+- L204: again, the normalized AOD
 
-- [x] Figure 3: It looks like in this plot all ensemble members are plotted, as well as
+- Figure 3: It looks like in this plot all ensemble members are plotted, as well as
   a standard deviation range of the ensemble. This seems redundant, either all the
   members or the mean and SD would seem to be sufficient and would improve the
   readability of the plot.
 
-- [x] L269: Here is one example where I expect this result may change when you consider
+- L269: Here is one example where I expect this result may change when you consider
   not AOD but exp(-AOD).
 
-- [x] L338: I'd argue that the temperature anomalies from a simulation with fixed SSTs
+- L338: I'd argue that the temperature anomalies from a simulation with fixed SSTs
   are close to meaningless in comparison with coupled ocean simulations.
 
   #reply[
@@ -273,7 +286,7 @@ introduction and discussion sections.
     figure more clear.
   ]
 
-- [x] Fig. 4: everything that is a peak value should be referred to as such on figure
+- Fig. 4: everything that is a peak value should be referred to as such on figure
   axis labels in in caption.
 
   #reply[
@@ -283,13 +296,13 @@ introduction and discussion sections.
 
 - [ ] L364: why is this being assumed when it has been shown this isn't very valid?
 
-- [ ] L365: It seems as if x is referring to different quantities in the different
+  [ ] L365: It seems as if x is referring to different quantities in the different
   equations. Much more attention to detail needed if this mathematical framework is to
   be explained in sufficient detail.
 
-- [x] L378: Volcanic forcing definitely lasts for more than a year!
+- L378: Volcanic forcing definitely lasts for more than a year!
 
-- [x] L398: It's quite well known that simply scaling up the forcing for Pinatubo is not
+- L398: It's quite well known that simply scaling up the forcing for Pinatubo is not
   a good representation of forcing from super eruptions, see e.g. Timmreck et al. (2009)
   and Timmreck et al. (2010). That the AOD used in Jones et al. leads to a too strong RF
   is therefore not very surprising.
@@ -297,40 +310,40 @@ introduction and discussion sections.
   #reply[
     The aim of this section was to put more confidence into the lower bound (upper in
     Fig4) of the temperature perturbation. This has been slightly re-worded and an extra
-    citation to aerosol effective radius studies has been included to hopefully make
-    this more precise.
+    citation to aerosol effective radius studies has been included to make this more
+    precise.
   ]
 
 === References
 
-- [ ] Timmreck, C., Lorenz, S. J., Crowley, T. J., Kinne, S., Raddatz, T. J., Thomas, M.
+- Timmreck, C., Lorenz, S. J., Crowley, T. J., Kinne, S., Raddatz, T. J., Thomas, M.
   A., and Jungclaus, J. H.: Limited temperature response to the very large AD 1258
   volcanic eruption, Geophys. Res. Lett., 36,
   #link("https://doi.org/10.1029/2009GL040083"), 2009.
-- [x] Timmreck, C., Graf, H.-F., Lorenz, S. J., Niemeier, U., Zanchettin, D., Matei, D.,
+- Timmreck, C., Graf, H.-F., Lorenz, S. J., Niemeier, U., Zanchettin, D., Matei, D.,
   Jungclaus, J. H., and Crowley, T. J.: Aerosol size confines climate response to
   volcanic super-eruptions, Geophys. Res. Lett., 37, L24705,
   #link("https://doi.org/10.1029/2010GL045464"), 2010. @timmreck2010
-- [ ] Schurer, A. P., Hegerl, G. C., Mann, M. E., Tett, S. F. B., and Phipps, S. J.:
+- Schurer, A. P., Hegerl, G. C., Mann, M. E., Tett, S. F. B., and Phipps, S. J.:
   Separating Forced from Chaotic Climate Variability over the Past Millennium, J.
   Clim., 26, 6954-6973, #link("https://doi.org/10.1175/JCLI-D-12-00826.1"), 2013.
-- [ ] Pinto, J. P., Turco, R. P., and Toon, O. B.: Self-limiting physical and chemical
+- Pinto, J. P., Turco, R. P., and Toon, O. B.: Self-limiting physical and chemical
   effects in volcanic eruption clouds, J. Geophys. Res., 94, 11165,
   #link("https://doi.org/10.1029/JD094iD08p11165"), 1989.
-- [ ] Lacis, A., Hansen, J., and Sato, M.: Climate forcing by stratospheric aerosols,
+- Lacis, A., Hansen, J., and Sato, M.: Climate forcing by stratospheric aerosols,
   Geophys. Res. Lett., 19, 1607, #link("https://doi.org/10.1029/92GL01620"), 1992.
-- [ ] Clyne, M., Lamarque, J. F., Mills, M. J., Khodri, M., Ball, W., Bekki, S., Dhomse,
+- Clyne, M., Lamarque, J. F., Mills, M. J., Khodri, M., Ball, W., Bekki, S., Dhomse,
   S. S., Lebas, N., Mann, G., Marshall, L., Niemeier, U., Poulain, V., Robock, A.,
   Rozanov, E., Schmidt, A., Stenke, A., Sukhodolov, T., Timmreck, C., Toohey, M.,
   Tummon, F., Zanchettin, D., Zhu, Y., and Toon, O. B.: Model physics and chemistry
   causing intermodel disagreement within the VolMIP-Tambora Interactive
   Stratospheric Aerosol ensemble, Atmos. Chem. Phys., 21, 3317-3343,
   #link("https://doi.org/10.5194/ACP-21-3317-2021"), 2021.
-- [x] Marshall, L. R., Smith, C. J., Forster, P. M., Aubry, T. J., Andrews, T., and
+- Marshall, L. R., Smith, C. J., Forster, P. M., Aubry, T. J., Andrews, T., and
   Schmidt, A.: Large variations in volcanic aerosol forcing efficiency due to
   eruption source parameters and rapid adjustments, Geophys. Res. Lett., 47,
   #link("https://doi.org/10.1029/2020gl090241"), 2020. @marshall2020
-- [ ] #cite(<hansen2005b>, form: "full")
+- #cite(<hansen2005b>, form: "full")
 
 == Reviewer \#3 Evaluations
 
@@ -385,7 +398,7 @@ take care of below.
   as Pinatubo (which are here called small).
   #reply[
     Re-worded slightly to specify the validity up to Mt. Pinatubo-sized eruption, and
-    that it is known that non-linearities are found for even larger eruptiona.
+    that it is known that non-linearities are found for even larger eruptions.
   ]
 - The authors need to introduce and define the concept of Effective Radiative Forcing in
   contrast to Radiative Forcing used in other studies.
@@ -428,9 +441,8 @@ take care of below.
 - Timing of maximum AOD, RF, climate for tropical versus high-latitude eruptions see
   Zhuo et al 2024.
   #reply[
-    We now also included the results from Zhuo et al. (2024) in the introduction. We
-    hope that it is more clear from the text now that this is not a main focus of the
-    manuscript.
+    We now also included the results from Zhuo et al. (2024) in the introduction. The
+    manuscript have been re-phrased so that this topic get a smaller focus.
   ]
 - How can you address surface temperature response if the ocean-sea ice is prescribed?
   I suggest taking this field out or using lower tropospheric temperature instead as
@@ -444,33 +456,40 @@ take care of below.
   thus a longer lifetime of and large AOD, RF and climate than the other existing
   aerosols climate models (Fig. 3a Zanchettin et al 2016).
   #reply[
-    This has been a valuable addition to the manuscript, and how our results compared to
-    results from other studies are now placed in the context of how CESM(WACCM) has been
-    found to simulate aerosol effective radius. In particular, Brenna et al. (2020) who
-    used the same model with similar experiments provides a good comparison to our
-    results, and includes effective radius in their analysis that we refer to.
+    This has been a valuable addition to the manuscript. The comparison of our results
+    to the results from other studies are now placed in the context of how CESM(WACCM)
+    has been found to simulate aerosol effective radius. In particular, Brenna et al.
+    (2020) who used the same model with similar experiments provides a good comparison
+    to our results, and includes effective radius in their analysis that we refer to.
   ]
 - Figs 2-4: Need to include the other existing Pinatubo-strength and supereruption
   studies and data (see references).
   #reply[
     Fig2 for peak values is shown in Fig4d, and for Fig3 we have kept only the data we
     have been able to get full time series of, so Fig2 and Fig3 are therefore the same.
-    Several new studies have been included to Fig.4 in response to your comment.
+    Several new studies have been included to Fig.4 in response to this comment.
   ]
 
 === Minor comments
 
-- [x] "Super-eruption" but not super-volcano eruption (see f.e. Wilson et al 2021).
-- [x] Define super eruption and other strength of eruptions. Pinatubo is not a "small"
+- "Super-eruption" but not super-volcano eruption (see f.e. Wilson et al 2021).
+- Define super eruption and other strength of eruptions. Pinatubo is not a "small"
   eruption. (cf. Metzner et al 2014; Schmidt & Black 2022).
-- [x] Model experiments details such as fixed SST and sea ice, 1850 conditions need to go
+  #reply[
+    We now specify the eruption sizes using the framework of Schmidt and Black (2022).
+  ]
+- Model experiments details such as fixed SST and sea ice, 1850 conditions need to go
   into Section 2.2 as they are important for the interpretation of the results.
-- [x] MAM3 add on changes for stratospheric aerosols need to cite Mills et al (2016) Mills,
+- MAM3 add on changes for stratospheric aerosols need to cite Mills et al (2016) Mills,
   M. J., et al. (2016), Global volcanic aerosol properties derived from emissions,
   1990-2014, using CESM1(WACCM), J. Geophys. Res. Atmos., 121,
   #link("https://doi.org/10.1002/2015JD024290").
-- [x] Fig. 1 and ff Figs.: Which temperature field is plotted here; does it make sense if
+- Fig. 1 and ff Figs.: Which temperature field is plotted here; does it make sense if
   the ocean/sea-ice is prescribed?
+  #reply[
+    We try in the methods section to now be more concise when describing the model
+    output fields we use, and from what type of simulation they are obtained from.
+  ]
 
 === References
 

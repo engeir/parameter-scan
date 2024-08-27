@@ -131,7 +131,7 @@
   limit, and that the peak temperature response follows linearly with the peak energy
   imbalance, also reaching a limiting value.
 
-  % FIXME: related to this, there is an index that can be added during publishing. Find
+  % NOTE: related to this, there is an index that can be added during publishing. Find
   % the list here:
   % https://www.agu.org/publish-with-agu/publish/author-resources/index-terms
   % 8409 - Atmospheric effects (0370)
@@ -218,14 +218,13 @@
 
   Previous studies of both Mt.\ Pinatubo \cite{mills2017,hansen2005} and volcanoes
   within the instrumental era \cite{gregory2016} have been used to estimate the
-  relationship between the ERF energy imbalance and change in AOD caused by volcanic
-  eruptions. While \citeA{myhre2013} employ a formula scaling ERF by AOD to obtain
+  relationship between the ERF energy imbalance and change in AOD. While
+  \citeA{myhre2013} employ a formula scaling ERF by AOD to obtain
   \(\SI{-25}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\), recent literature reports estimates
   down to \note[reviewer1]{L94}{\(\SI{-19.0(5)}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\)}
-  \annote[reviewer1]{\protect\cite{gregory2016} and
-    \(\SI{-18.3(10)}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) \cite{mills2017}}{These are
-    stratospheric aerosol simulations, not volcano simulations.}. Synthetic volcano
-  simulations in \citeA{marshall2020} yield a scaling factor of
+  \note[reviewer1]{L95} \cite{gregory2016} and
+  \(\SI{-18.3(10)}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) \cite{mills2017}. Synthetic
+  volcano simulations in \citeA{marshall2020} yield a scaling factor of
   \(\SI{-20.5(2)}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) across an ensemble of \(82\)
   simulations featuring varying injection heights and latitudes of volcanic emissions,
   with injected \ce{SO2} ranging from \(10\) to \(\SI{100}{\tera\gram(\ce{SO2})}\).
@@ -519,6 +518,7 @@
   \begin{figure}
     \centering \includegraphics{figure2}
 
+    % FIXME: the P100 should be labelled J05 for consistency.
     \caption{ERF as a function of AOD, yearly means. Data from the five simulations
       listed in table~\ref{tab:simulation-overview} (S26, S400, S1629, S1629N, and
       S3000) are shown along with the data from the HadCM3 sstPiHistVol simulation by
@@ -538,18 +538,17 @@
   eruptions from \citeA{marshall2020dataset} (\(6\) of \(82\) eruptions), labelled M20
   and described in Appendix B, section~\ref{ap:m20}. The S1629 case is similar to S3000
   as indicated in table~\ref{tab:slope-gradients}, but is not shown in the plot to
-  % FIXME: when deciding which figure to use, update the below [Fig 3a or Fig3]
   better highlight S1629N. In Fig.~\ref{fig:3_rf_to_aod_ratios}a, lines are linear
   regression fits to the seasonal means across all ensemble members, summarised in
   table~\ref{tab:slope-gradients}. Shaded regions are the standard deviation around the
-  seasonal means. A similar shading is plotted in Fig.~\ref{fig:3_rf_to_aod_ratios}b,
-  but where the regression fits have been omitted for clarity. As the AOD and ERF time
-  series start from zero, the ratio from the first season is not included. Likewise,
-  after three years both time series are almost fully equilibrated
-  (Fig.~\ref{fig:1_compare_waveform}a,b). The data is further divided into two periods;
-  a pre-peak period where the peak of both the AOD and the ERF is included (consisting
-  of the first post-eruption year), and a post-peak period for the decaying part
-  (consisting of the second and third post-eruption years).
+  seasonal means. A similar plot is presented in Fig.~\ref{fig:3_rf_to_aod_ratios}b, but
+  where the AOD and ERF time series were scaled to have peak values at unity before
+  computing the ratio. As the AOD and ERF time series start from zero, the ratio from
+  the first season is not included. Likewise, after three years both time series are
+  almost fully equilibrated (Fig.~\ref{fig:1_compare_waveform}a,b). The data is further
+  divided into two periods; a pre-peak period where the peak of both the AOD and the ERF
+  is included (consisting of the first post-eruption year), and a post-peak period for
+  the decaying part (consisting of the second and third post-eruption years).
 
   Although the ratio changes across the eruption magnitudes, we find that all the
   tropical cases follow a positive slope during the pre-peak period, as seen in
@@ -585,7 +584,7 @@
       & S26 & \(0.18\pm0.12\) & \(-0.07\pm0.16\) \\
       & M20 & \(0.33\pm0.07\) & \(-0.02\pm0.08\) \\
       \toprule
-      \multicolumn{4}{l}{\parbox{\linewidth}{\(^{a}\)The regression fits in the top half of the table are for
+      \multicolumn{4}{l}{\parbox{0.6\linewidth}{\(^{a}\)The regression fits in the top half of the table are for
           Fig.~\ref{fig:3_rf_to_aod_ratios}a, while the bottom half is for
           Fig.~\ref{fig:3_rf_to_aod_ratios}b. The columns ``pre-peak'' and ``post-peak'' refer to
           the two periods as shown in Fig.~\ref{fig:3_rf_to_aod_ratios}. The ensembles are the
@@ -621,8 +620,7 @@
   a clear aerosol forcing efficiency decrease during the pre-peak period.
 
   \begin{figure}
-    \centering \includegraphics[width=0.49\linewidth]{figure3}
-    \includegraphics[width=0.49\linewidth]{figure3-alt}
+    \centering \includegraphics[width=0.49\linewidth]{figure3-alt}
 
     \caption{\note[reviewer1]{Figure 3}(a): The ratio of ERF to AOD, with
       time-after-eruption on the horizontal axis. Straight lines indicate linear
@@ -631,8 +629,10 @@
       Regression fits and shadings are made for the pre-peak and post-peak periods. (b):
       Same as in (a), but where the underlying AOD and ERF time series have been scaled
       to have peak values at unity. Shown are data from
-      table~\ref{tab:simulation-overview} along with tropical eruptions from
-      M20.}\label{fig:3_rf_to_aod_ratios}%
+      table~\ref{tab:simulation-overview} along with tropical eruptions from M20. Values
+      from each ensemble member is omitted for clarity, but we note that S26 include
+      some outliers at positive ratio after the start of the second post-eruption
+      year.}\label{fig:3_rf_to_aod_ratios}%
   \end{figure}
 
   \subsection{Parameter scan}
@@ -693,7 +693,8 @@
       indicated by purple upward twigs and orange diamonds, while pink circle and dashed
       line represent T10 and N15. Black star and plus indicate Mt.\ Pinatubo and
       Mt.\ Tambora estimates based on observations, and brown thin diamonds denote E13.
-    }\label{fig:4_parameter_scan}%
+      Note that all the data points in the legend do not provide all four parameters,
+      and are thus not part of every subfigure.}\label{fig:4_parameter_scan}%
   \end{figure*}
 
   \citeA{niemeier2015} conducted simulations of continuous sulphur injections up to

@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL ../parameter-scan-submitted/agujournaltemplate.tex   Tue Aug 20 09:09:54 2024
-%DIF ADD ./agujournaltemplate.tex                             Tue Aug 27 09:36:39 2024
+%DIF ADD ./agujournaltemplate.tex                             Tue Aug 27 20:34:22 2024
 % AGUJournalTemplate.tex: this template file is for articles formatted with LaTeX
 %
 % This file includes commands and instructions
@@ -161,7 +161,7 @@
     AOD, and a longer-lasting \DIFdelbegin \DIFdel{temperature }\DIFdelend \DIFaddbegin \DIFadd{GMST }\DIFaddend response while the time evolution of \DIFdelbegin \DIFdel{RF }\DIFdelend \DIFaddbegin \DIFadd{ERF }\DIFaddend remains
     similar between the two eruption types. \DIFaddbegin \DIFadd{We find that the peak ERF approaches a
     limiting value, and that the peak GMST response follows linearly, effectively
-    bounding the GMST to at most \(\sim\SI{-12}{\kelvin}\). }\DIFaddend When including the results
+    bounding the GMST to at most \(\sim\SI{-10}{\kelvin}\). }\DIFaddend When including the results
     of previous studies, we find that relating \ce{SO2} to any other parameter is
     inconsistent across models compared to the relationships between AOD, \DIFdelbegin \DIFdel{RF, and temperature
     anomaly}\DIFdelend \DIFaddbegin \DIFadd{ERF, and GMST}\DIFaddend .
@@ -209,7 +209,8 @@
   limit, and that the peak temperature response follows linearly with the peak energy
   imbalance, also reaching a limiting value.
 
-  % FIXME: related to this, there is an index that can be added during publishing. Find
+  %DIF <  FIXME: related to this, there is an index that can be added during publishing. Find
+  %DIF >  NOTE: related to this, there is an index that can be added during publishing. Find
   % the list here:
   % https://www.agu.org/publish-with-agu/publish/author-resources/index-terms
   % 8409 - Atmospheric effects (0370)
@@ -335,17 +336,23 @@
 
   Previous studies of both Mt.\ Pinatubo \cite{mills2017,hansen2005} and volcanoes
   within the instrumental era \cite{gregory2016} have been used to estimate the
-  relationship between the \DIFdelbegin \DIFdel{RF }\DIFdelend \DIFaddbegin \DIFadd{ERF }\DIFaddend energy imbalance and change in AOD caused by volcanic
-  eruptions. While \citeA{myhre2013} employ a formula scaling \DIFdelbegin \DIFdel{RF }\DIFdelend \DIFaddbegin \DIFadd{ERF }\DIFaddend by AOD to obtain
+  relationship between the \DIFdelbegin \DIFdel{RF }\DIFdelend \DIFaddbegin \DIFadd{ERF }\DIFaddend energy imbalance and change in AOD\DIFdelbegin \DIFdel{caused by volcanic
+  eruptions}\DIFdelend . While
+  \citeA{myhre2013} employ a formula scaling \DIFdelbegin \DIFdel{RF }\DIFdelend \DIFaddbegin \DIFadd{ERF }\DIFaddend by AOD to obtain
   \(\SI{-25}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\), recent literature reports estimates
   down to \DIFdelbegin %DIFDELCMD < \annote[reviewer1]{\protect\(\SI{-19.0(5)}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\)}{I
 %DIFDELCMD <     believe the standard format would be to use the plus/minus symbol rather than
-%DIFDELCMD <     brackets on these numbers.} %%%
+%DIFDELCMD <     brackets on these numbers.} \annote[reviewer1]{\protect\cite{gregory2016} and
+%DIFDELCMD <     \(\SI{-18.3(10)}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) \cite{mills2017}}{These are
+%DIFDELCMD <     stratospheric aerosol simulations, not volcano simulations.}%%%
 \DIFdelend \DIFaddbegin \note[reviewer1]{L94}{\(\SI{-19.0(5)}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\)}
-  \DIFaddend \annote[reviewer1]{\protect\cite{gregory2016} and
-    \(\SI{-18.3(10)}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) \cite{mills2017}}{These are
-    stratospheric aerosol simulations, not volcano simulations.}. Synthetic volcano
-  simulations in \citeA{marshall2020} yield a scaling factor of
+  \note[reviewer1]{L95} \DIFadd{\mbox{%DIFAUXCMD
+\cite{gregory2016} }\hskip0pt%DIFAUXCMD
+and
+  \(\SI{-18.3(10)}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) \mbox{%DIFAUXCMD
+\cite{mills2017}}\hskip0pt%DIFAUXCMD
+}\DIFaddend . Synthetic
+  volcano simulations in \citeA{marshall2020} yield a scaling factor of
   \(\SI{-20.5(2)}{\watt\metre^{-2}\mathrm{AOD}^{-1}}\) across an ensemble of \(82\)
   simulations featuring varying injection heights and latitudes of volcanic emissions,
   with injected \ce{SO2} ranging from \(10\) to \(\SI{100}{\tera\gram(\ce{SO2})}\).
@@ -720,6 +727,7 @@ however
   \begin{figure}
     \centering \includegraphics{figure2}
 
+    %DIF >  FIXME: the P100 should be labelled J05 for consistency.
     \caption{\DIFdelbeginFL \DIFdelFL{RF }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{ERF }\DIFaddendFL as a function of AOD, yearly means. Data from the five simulations
       listed in table~\ref{tab:simulation-overview} (\DIFdelbeginFL \DIFdelFL{C2W\(\downarrow\)}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{S26}\DIFaddendFL , \DIFdelbeginFL \DIFdelFL{C2W\(-\)}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{S400}\DIFaddendFL , \DIFdelbeginFL \DIFdelFL{C2W\(\uparrow\)}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{S1629}\DIFaddendFL , \DIFdelbeginFL \DIFdelFL{C2WN\(\uparrow\)}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{S1629N}\DIFaddendFL , and
       \DIFdelbeginFL \DIFdelFL{C2W\(\uparrow\uparrow\)}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{S3000}\DIFaddendFL ) are shown along with the data from the HadCM3 sstPiHistVol simulation by
@@ -739,18 +747,18 @@ however
   eruptions from \citeA{marshall2020dataset} (\(6\) of \(82\) eruptions), labelled M20
   and described in Appendix B, section~\ref{ap:m20}. The \DIFdelbegin \DIFdel{C2W\(\uparrow\) }\DIFdelend \DIFaddbegin \DIFadd{S1629 }\DIFaddend case is similar to \DIFdelbegin \DIFdel{C2W\(\uparrow\uparrow\) }\DIFdelend \DIFaddbegin \DIFadd{S3000
   }\DIFaddend as indicated in table~\ref{tab:slope-gradients}, but is not shown in the plot to
-  \DIFdelbegin \DIFdel{better highlight C2WN\(\uparrow\)}\DIFdelend %DIF >  FIXME: when deciding which figure to use, update the below [Fig 3a or Fig3]
-  \DIFaddbegin \DIFadd{better highlight S1629N}\DIFaddend . In Fig.~\ref{fig:3_rf_to_aod_ratios}a, lines are linear
+  better highlight \DIFdelbegin \DIFdel{C2WN\(\uparrow\)}\DIFdelend \DIFaddbegin \DIFadd{S1629N}\DIFaddend . In Fig.~\ref{fig:3_rf_to_aod_ratios}a, lines are linear
   regression fits to the seasonal means across all ensemble members, summarised in
   table~\ref{tab:slope-gradients}. Shaded regions are the standard deviation around the
-  seasonal means. A similar shading is plotted in Fig.~\ref{fig:3_rf_to_aod_ratios}b,
-  but where the regression fits have been omitted for clarity. As the AOD and \DIFdelbegin \DIFdel{RF }\DIFdelend \DIFaddbegin \DIFadd{ERF }\DIFaddend time
-  series start from zero, the ratio from the first season is not included. Likewise,
-  after three years both time series are almost fully equilibrated
-  (Fig.~\ref{fig:1_compare_waveform}a,b). The data is further divided into two periods;
-  a pre-peak period where the peak of both the AOD and the \DIFdelbegin \DIFdel{RF }\DIFdelend \DIFaddbegin \DIFadd{ERF }\DIFaddend is included (consisting
-  of the first post-eruption year), and a post-peak period for the decaying part
-  (consisting of the second and third post-eruption years).
+  seasonal means. A similar \DIFdelbegin \DIFdel{shading
+  is plotted }\DIFdelend \DIFaddbegin \DIFadd{plot is presented }\DIFaddend in Fig.~\ref{fig:3_rf_to_aod_ratios}b, but
+  where the \DIFdelbegin \DIFdel{regression fits have been omitted for clarity}\DIFdelend \DIFaddbegin \DIFadd{AOD and ERF time series were scaled to have peak values at unity before
+  computing the ratio}\DIFaddend . As the AOD and \DIFdelbegin \DIFdel{RF }\DIFdelend \DIFaddbegin \DIFadd{ERF }\DIFaddend time series start from zero, the ratio from
+  the first season is not included. Likewise, after three years both time series are
+  almost fully equilibrated (Fig.~\ref{fig:1_compare_waveform}a,b). The data is further
+  divided into two periods; a pre-peak period where the peak of both the AOD and the \DIFdelbegin \DIFdel{RF }\DIFdelend \DIFaddbegin \DIFadd{ERF
+  }\DIFaddend is included (consisting of the first post-eruption year), and a post-peak period for
+  the decaying part (consisting of the second and third post-eruption years).
 
   Although the ratio changes across the eruption magnitudes, we find that all the
   tropical cases follow a positive slope during the pre-peak period, as seen in
@@ -786,13 +794,24 @@ however
       & \DIFdelbeginFL \DIFdelFL{C2W\(\downarrow\) }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{S26 }\DIFaddendFL & \(0.18\pm0.12\) & \(-0.07\pm0.16\) \\
       & M20 & \(0.33\pm0.07\) & \(-0.02\pm0.08\) \\
       \toprule
-      \multicolumn{4}{l}{\parbox{\linewidth}{\(^{a}\)The regression fits in the top half of the table are for
+      \multicolumn{4}{l}{\DIFdelbeginFL \parbox{\linewidth}{\DIFdelFL{\(^{a}\)The regression fits in the top half of the table are for
           Fig.~\ref{fig:3_rf_to_aod_ratios}a, while the bottom half is for
           Fig.~\ref{fig:3_rf_to_aod_ratios}b. The columns ``pre-peak'' and ``post-peak'' refer to
           the two periods as shown in Fig.~\ref{fig:3_rf_to_aod_ratios}. The ensembles are the
           same as those given in table~\ref{tab:simulation-overview}, in addition to the \(6\)
           tropical eruptions from the \(82\) member ensemble in
-          \citeA{marshall2020}.}} \\
+          \mbox{%DIFAUXCMD
+\citeA{marshall2020}}\hskip0pt%DIFAUXCMD
+.}}%DIFAUXCMD
+\DIFdelendFL \DIFaddbeginFL \parbox{0.6\linewidth}{\DIFaddFL{\(^{a}\)The regression fits in the top half of the table are for
+          Fig.~\ref{fig:3_rf_to_aod_ratios}a, while the bottom half is for
+          Fig.~\ref{fig:3_rf_to_aod_ratios}b. The columns ``pre-peak'' and ``post-peak'' refer to
+          the two periods as shown in Fig.~\ref{fig:3_rf_to_aod_ratios}. The ensembles are the
+          same as those given in table~\ref{tab:simulation-overview}, in addition to the \(6\)
+          tropical eruptions from the \(82\) member ensemble in
+          \mbox{%DIFAUXCMD
+\citeA{marshall2020}}\hskip0pt%DIFAUXCMD
+.}}\DIFaddendFL } \\
     \end{tabular}
   \end{table}
 
@@ -829,8 +848,7 @@ however
   \begin{figure}
     \centering \DIFdelbeginFL %DIFDELCMD < \includegraphics{figure3}
 %DIFDELCMD < %%%
-\DIFdelendFL \DIFaddbeginFL \includegraphics[width=0.49\linewidth]{figure3}
-    \includegraphics[width=0.49\linewidth]{figure3-alt}
+\DIFdelendFL \DIFaddbeginFL \includegraphics[width=0.49\linewidth]{figure3-alt}
 \DIFaddendFL 
 
     \caption{\DIFdelbeginFL %DIFDELCMD < \note[reviewer1]{It looks like in this plot all ensemble members are
@@ -844,8 +862,10 @@ however
       Regression fits and shadings are made for the pre-peak and post-peak periods. (b):
       Same as in (a), but where the underlying AOD and \DIFdelbeginFL \DIFdelFL{RF }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{ERF }\DIFaddendFL time series have been scaled
       to have peak values at unity. Shown are data from
-      table~\ref{tab:simulation-overview} along with tropical eruptions from
-      M20.}\label{fig:3_rf_to_aod_ratios}%
+      table~\ref{tab:simulation-overview} along with tropical eruptions from M20. \DIFaddbeginFL \DIFaddFL{Values
+      from each ensemble member is omitted for clarity, but we note that S26 include
+      some outliers at positive ratio after the start of the second post-eruption
+      year.}\DIFaddendFL }\label{fig:3_rf_to_aod_ratios}%
   \end{figure}
 
   \subsection{Parameter scan}
@@ -894,29 +914,35 @@ however
 \citeA{jones2005} }\hskip0pt%DIFAUXCMD
 labelled }\DIFdelend \DIFaddbegin \DIFadd{other simulations of large \ce{SO2} magnitudes (}\DIFaddend J05\DIFdelbegin \DIFdel{and \mbox{%DIFAUXCMD
 \citeA{timmreck2010} }\hskip0pt%DIFAUXCMD
-labelled }\DIFdelend \DIFaddbegin \DIFadd{, }\DIFaddend T10\DIFdelbegin \DIFdel{. The J05 is a simulation of a super-volcano based on a \(100\) times scaling of the AOD from Mt.
-\
-  Pinatubo, while T10 is a simulation of the YTT eruption based on \ce{SO2} injections.
-}\DIFdelend \DIFaddbegin \DIFadd{, E13, B20, Os20)
-  show a larger spread, specifically to weaker AOD response.
-}\DIFaddend 
+labelled }\DIFdelend \DIFaddbegin \DIFadd{, E13, }\DIFaddend T10\DIFdelbegin \DIFdel{. The J05 is a simulation of a super-volcano based on a \(100\) times scaling of the AOD from Mt. \
+  Pinatubo, while T10 is a simulation of the YTT eruption based on \ce{SO2} injections}\DIFdelend \DIFaddbegin \DIFadd{, Os20) show
+  a larger spread, specifically to weaker AOD response. B20 align well with STrop, which
+  also used the CESM2(WACCM6) climate model. Even though E13 did use a similar yet
+  simpler and older model in WACCM3, their AOD peak values are significantly smaller
+  than what we find here. From the largest eruption simulation by E13 they obtain a peak
+  aerosol effective radius of \(R_{\mathrm{EFF}}=\SI{1.9}{\micro\meter}\), which is much
+  bigger than the \(R_{\mathrm{EFF}}=\SI{0.7}{\micro\meter}\) obtained by B20 for
+  eruptions injecting half as much \ce{SO2} as E13, and using the same climate model as
+  us}\DIFaddend .
 
   In Fig.~\ref{fig:4_parameter_scan}b, \DIFdelbegin \DIFdel{RF }\DIFdelend \DIFaddbegin \DIFadd{ERF }\DIFaddend plotted against injected \ce{SO2} (with the
   absolute value of \DIFdelbegin \DIFdel{RF }\DIFdelend \DIFaddbegin \DIFadd{ERF }\DIFaddend on the \(y\)-axis) indicates a substantial damping effect on \DIFdelbegin \DIFdel{RF
   }\DIFdelend \DIFaddbegin \DIFadd{ERF
   }\DIFaddend as injected \ce{SO2} increases for the \DIFdelbegin \DIFdel{C2W }\DIFdelend \DIFaddbegin \DIFadd{STrop }\DIFaddend data, in agreement with results from
-  \citeA{ottobliesner2016}, labelled OB16. The OB16 data come from a \(2500\) year long
-  simulation using historic volcanoes as the only external forcing. The analysis details
-  of OB16 can be found in Appendix B, section~\ref{ap:ob16}. Despite the model
-  complexity difference, \citeA{ottobliesner2016}'s simulations using Community Earth
-  System Model version 1 (CESM1) with a low-top atmosphere (CAM5) produce \DIFdelbegin \DIFdel{RFs }\DIFdelend \DIFaddbegin \DIFadd{ERFs
-  }\DIFaddend comparable to our findings. \DIFaddbegin \DIFadd{Both B20 and McG24 align well with STrop, and while B20
-  uses the same climate model, McG24 uses the GISS ModelE2.1 but where a fixed aerosol
-  effective radius of \(R_{\text{EFF}}=\SI{0.6}{\micro\meter}\) was used. This
-  \(R_{\text{EFF}}\) is at the lower end of their simulations, which is shown by
-  \mbox{%DIFAUXCMD
+  \DIFdelbegin \DIFdel{\mbox{%DIFAUXCMD
+\citeA{ottobliesner2016}}\hskip0pt%DIFAUXCMD
+, labelled }\DIFdelend OB16. The OB16 data come from a \(2500\) year long simulation using historic volcanoes
+  as the only external forcing. The analysis details of OB16 can be found in Appendix B,
+  section~\ref{ap:ob16}. Despite the model complexity difference,
+  \citeA{ottobliesner2016}'s simulations using Community Earth System Model version 1
+  (CESM1) with a low-top atmosphere (CAM5) produce \DIFdelbegin \DIFdel{RFs }\DIFdelend \DIFaddbegin \DIFadd{ERFs }\DIFaddend comparable to our findings. \DIFaddbegin \DIFadd{Both
+  B20 and McG24 align well with STrop, and while B20 uses the same climate model, McG24
+  uses the GISS ModelE2.1 but where a fixed aerosol effective radius of
+  \(R_{\text{EFF}}=\SI{0.6}{\micro\meter}\) was used. This \(R_{\text{EFF}}\) is at the
+  lower end of their simulations, which is shown by \mbox{%DIFAUXCMD
 \citeA{mcgraw2024} }\hskip0pt%DIFAUXCMD
-to produce the most extreme ERF and GMST perturbations.
+to produce the
+  most extreme ERF and GMST perturbations.
 }\DIFaddend 
 
   \begin{figure*}
@@ -930,19 +956,33 @@ to produce the most extreme ERF and GMST perturbations.
       }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{GMST }\DIFaddendFL as a function of AOD. (f)
       \DIFdelbeginFL \DIFdelFL{Temperature anomaly }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{GMST }\DIFaddendFL as a function of \DIFdelbeginFL \DIFdelFL{RF}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{ERF}\DIFaddendFL . Blue diamonds labelled \DIFdelbeginFL \DIFdelFL{C2WTrop }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{STrop }\DIFaddendFL represent tropical cases
       (\DIFdelbeginFL \DIFdelFL{C2W\(\downarrow\)}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{S26}\DIFaddendFL , \DIFdelbeginFL \DIFdelFL{C2W\(-\)}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{S400}\DIFaddendFL , \DIFdelbeginFL \DIFdelFL{C2W\(\uparrow\)}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{S1629}\DIFaddendFL , \DIFdelbeginFL \DIFdelFL{C2W\(\uparrow\uparrow\)}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{S3000}\DIFaddendFL ), the brown three-branched twig signifies the \DIFdelbeginFL \DIFdelFL{C2WN\(\uparrow\) }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{S1629N
-      }\DIFaddendFL case, and green downward triangles denote OB16 data from \citeA{ottobliesner2016}.
-      The red thin diamonds labelled M20 display the \citeA{marshall2020dataset} data.
-      Black star and plus indicate Mt.\ Pinatubo and Mt.\ Tambora estimates based on
-      observations. The pink square labelled J05 refers to the one-hundred times
-      Mt.\ Pinatubo super-volcano from \citeA{jones2005}, and the pink disk labelled T10
-      represents the YTT super-volcano from \citeA{timmreck2010}. The pink dashed line
-      labelled N15 is from \citeA{niemeier2015}, indicating the function in
-      Eq.~\ref{eq:niemeier_exponential}.}\label{fig:4_parameter_scan}%
+      }\DIFaddendFL case, and green downward triangles denote OB16 \DIFdelbeginFL \DIFdelFL{data from
+      \mbox{%DIFAUXCMD
+\citeA{ottobliesner2016}}\hskip0pt%DIFAUXCMD
+}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{while green upward triangles denote
+      B20}\DIFaddendFL . The \DIFaddbeginFL \DIFaddFL{pink square is J05 and the }\DIFaddendFL red thin diamonds \DIFdelbeginFL \DIFdelFL{labelled }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{are }\DIFaddendFL M20\DIFdelbeginFL \DIFdelFL{display the
+      \mbox{%DIFAUXCMD
+\citeA{marshall2020dataset} }\hskip0pt%DIFAUXCMD
+data}\DIFdelendFL . \DIFaddbeginFL \DIFaddFL{McG24 and Os20 are
+      indicated by purple upward twigs and orange diamonds, while pink circle and dashed
+      line represent T10 and N15. }\DIFaddendFL Black star and plus indicate Mt.\ Pinatubo and
+      Mt.\ Tambora estimates based on observations\DIFdelbeginFL \DIFdelFL{. The pink square labelled J05 refers
+      to the one-hundred times Mt.\ Pinatubo super-volcano from \mbox{%DIFAUXCMD
+\citeA{jones2005}}\hskip0pt%DIFAUXCMD
+}\DIFdelendFL , and \DIFdelbeginFL \DIFdelFL{the pink disk labelled T10 represents the YTT super-volcano from
+      \mbox{%DIFAUXCMD
+\citeA{timmreck2010}}\hskip0pt%DIFAUXCMD
+}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{brown thin diamonds denote E13}\DIFaddendFL .
+      \DIFdelbeginFL \DIFdelFL{The pink dashed line labelled N15 is from
+      \mbox{%DIFAUXCMD
+\citeA{niemeier2015}}\hskip0pt%DIFAUXCMD
+, indicating }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Note that all }\DIFaddendFL the \DIFdelbeginFL \DIFdelFL{function }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{data points }\DIFaddendFL in \DIFdelbeginFL \DIFdelFL{Eq}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{the legend do not provide all four parameters,
+      and are thus not part of every subfigure}\DIFaddendFL .\DIFdelbeginFL \DIFdelFL{~\ref{eq:niemeier_exponential}.}\DIFdelendFL }\label{fig:4_parameter_scan}%
   \end{figure*}
 
-  % INFO: the conversion between S and SO2 is confirmed by Niemeier and Timmreck (2015)'s
-  % reference to the Bekki et al. (1996) paper. Bekki uses 6000 Mt SO2, Niemeier uses 3000
-  % Tg(S).
+  %DIF <  INFO: the conversion between S and SO2 is confirmed by Niemeier and Timmreck (2015)'s
+  %DIF <  reference to the Bekki et al. (1996) paper. Bekki uses 6000 Mt SO2, Niemeier uses 3000
+  %DIF <  Tg(S).
   \citeA{niemeier2015} conducted simulations of continuous sulphur injections up to
   \(\SI{200}{\tera\gram(\ce{SO2})\mathrm{yr}^{-1}}\) in the ECHAM5's middle atmosphere
   version \cite{giorgetta2006} with aerosol microphysics from HAM \cite{stier2005}. They
@@ -1042,7 +1082,9 @@ to produce the most extreme ERF and GMST perturbations.
   outlined in Appendix B, section~\ref{ap:ob16}. This, along with considerable noise,
   results in the analysis of OB16 \DIFdelbegin \DIFdel{temperature }\DIFdelend \DIFaddbegin \DIFadd{GMST }\DIFaddend anomalies being less reliable. \DIFdelbegin \DIFdel{As in Fig.~\ref{fig:4_parameter_scan}e, the C2WN\(\uparrow\) case along
   with both the T10 and }\DIFdelend \DIFaddbegin \DIFadd{All other cases
-  (S1629N, }\DIFaddend J05\DIFdelbegin \DIFdel{cases }\DIFdelend \DIFaddbegin \DIFadd{, T10, B20, McG24) }\DIFaddend closely follow the \DIFdelbegin \DIFdel{temperature to RF dependence of C2WTrop}\DIFdelend \DIFaddbegin \DIFadd{GMST to ERF dependence of STrop}\DIFaddend .
+  (S1629N, }\DIFaddend J05\DIFdelbegin \DIFdel{cases }\DIFdelend \DIFaddbegin \DIFadd{, T10, B20, McG24) }\DIFaddend closely follow the \DIFdelbegin \DIFdel{temperature to RF dependence of
+  C2WTrop}\DIFdelend \DIFaddbegin \DIFadd{linear GMST to ERF dependence of
+  STrop}\DIFaddend .
 
   The almost linear relationship between AOD and injected \ce{SO2} for the \DIFdelbegin \DIFdel{C2WTrop }\DIFdelend \DIFaddbegin \DIFadd{STrop }\DIFaddend data in
   Fig.~\ref{fig:4_parameter_scan}a suggests a comparable trend for \DIFdelbegin \DIFdel{RF }\DIFdelend \DIFaddbegin \DIFadd{ERF }\DIFaddend versus injected
@@ -1192,8 +1234,10 @@ is too extreme.
       \DIFdelbeginFL \DIFdelFL{C2W\(\downarrow\) }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{S26 }\DIFaddendFL & \(\num{2.9\pm0.6}\) & \(\num{0.36\pm0.07}\) \\
       Total & \(\num{2.5\pm0.4}\) & \(\num{0.41\pm0.05}\) \\
       \toprule
-      \multicolumn{3}{l}{\parbox{\linewidth}{\(^{a}\)Estimates are based on ensembles with four members and \(\tau
-          =\SI{20}{\mathrm{yr}}\) using Eq.~\ref{eq:climate-resistance}.}} \\
+      \multicolumn{3}{l}{\DIFdelbeginFL \parbox{\linewidth}{\DIFdelFL{\(^{a}\)Estimates are based on ensembles with four members and \(\tau
+          =\SI{20}{\mathrm{yr}}\) using Eq.~\ref{eq:climate-resistance}.}}%DIFAUXCMD
+\DIFdelendFL \DIFaddbeginFL \parbox{0.5\linewidth}{\DIFaddFL{\(^{a}\)Estimates are based on ensembles with four members and \(\tau
+          =\SI{20}{\mathrm{yr}}\) using Eq.~\ref{eq:climate-resistance}.}}\DIFaddendFL } \\
     \end{tabular}
   \end{table}
 
@@ -1263,7 +1307,7 @@ is too extreme.
   approximation of \DIFdelbegin \DIFdel{RF }\DIFdelend \DIFaddbegin \DIFadd{ERF }\DIFaddend dependence on AOD for eruptions similar to or smaller than Mt.\
   Pinatubo, additional factors must be considered for larger eruptions. These factors,
   such as \ce{OH} scarcity and aerosol growth, influence reflectance and their
-  gravitational pull, substantially impacting both AOD and \DIFdelbegin \DIFdel{RF }\DIFdelend \DIFaddbegin \DIFadd{ERF }\DIFaddend evolution, is highlighted
+  gravitational pull, substantially impacting both AOD and \DIFdelbegin \DIFdel{RF evolution, is }\DIFdelend \DIFaddbegin \DIFadd{ERF evolution, as }\DIFaddend highlighted
   by \citeA{timmreck2010}. The large difference in ratio found when comparing eruption
   magnitudes suggests that injected \ce{SO2} is crucial when estimating the time-average
   of the \DIFdelbegin \DIFdel{RF }\DIFdelend \DIFaddbegin \DIFadd{ERF }\DIFaddend to AOD ratio. However, latitude and, in particular, aerosol dispersion are
@@ -1280,7 +1324,7 @@ is too extreme.
   dependence found between the parameters in Fig.~\ref{fig:4_parameter_scan}, and a
   strong signature across both eruption magnitudes and latitudes, but also across highly
   different climate models. Thus, from a maximum \DIFdelbegin \DIFdel{RF }\DIFdelend \DIFaddbegin \DIFadd{ERF }\DIFaddend of \(\SI{-65}{\watt\metre^{-2}}\),
-  we expect \DIFdelbegin \DIFdel{temperature }\DIFdelend \DIFaddbegin \DIFadd{GMST }\DIFaddend anomalies to reach at most \(\sim\SI{-12}{\kelvin}\)\DIFaddbegin \DIFadd{, in support of
+  we expect \DIFdelbegin \DIFdel{temperature }\DIFdelend \DIFaddbegin \DIFadd{GMST }\DIFaddend anomalies to reach at most \DIFdelbegin \DIFdel{\(\sim\SI{-12}{\kelvin}\)}\DIFdelend \DIFaddbegin \DIFadd{\(\sim\SI{-10}{\kelvin}\), in support of
   \mbox{%DIFAUXCMD
 \citeA{english2013} }\hskip0pt%DIFAUXCMD
 who suggested that large eruptions can be self-limiting}\DIFaddend .
@@ -1355,7 +1399,17 @@ Moreover, having a small ensemble of large eruptions to represent smaller erupti
   complexity of volcanic impacts on climate, demonstrating significant differences in
   climatic response depending on eruption magnitude and latitude.
 
-  We find that the AOD peak arrives later for larger eruptions than for smaller ones,
+  \DIFaddbegin \DIFadd{A clear trend across all simulations performed here and across several previous
+  studies is a linear relationship between peek GMST and ERF. Further, the peak values
+  seem to stagnate with no ERF peaks breaking the suggested lower bound of
+  \(\text{ERF}=\SI{-65}{\watt\metre^{-2}}\) by \mbox{%DIFAUXCMD
+\citeA{niemeier2015}}\hskip0pt%DIFAUXCMD
+. Thus, we expect
+  supereruptions to be self-limiting with the most extreme GMST perturbations reaching
+  at most \(~\sim \SI{-10}{\kelvin}\).
+}
+
+  \DIFaddend We find that the AOD peak arrives later for larger eruptions than for smaller ones,
   and also that larger eruptions produce a sharper peak in the AOD time series. The \DIFdelbegin \DIFdel{RF
   }\DIFdelend \DIFaddbegin \DIFadd{ERF
   }\DIFaddend time series are similar across all eruption sizes, and while the smallest eruption
