@@ -100,7 +100,7 @@
     AOD, and a longer-lasting GMST response while the time evolution of ERF remains
     similar between the two eruption types. We find that the peak ERF approaches a
     limiting value, and that the peak GMST response follows linearly, effectively
-    bounding the GMST to at most \(\sim\SI{-12}{\kelvin}\). When including the results
+    bounding the GMST to at most \(\sim\SI{-10}{\kelvin}\). When including the results
     of previous studies, we find that relating \ce{SO2} to any other parameter is
     inconsistent across models compared to the relationships between AOD, ERF, and GMST.
     Thus, we expect the largest uncertainty in model codes to relate to
@@ -657,22 +657,29 @@
   display a similar pattern, with AOD exhibiting close to linear dependence on injected
   \ce{SO2}, but with latitude introducing a spread in AOD. Peak values from
   Mt.\ Pinatubo (P) and Mt.\ Tambora (T) align well with simulation data, while peak
-  values from other simulations of large \ce{SO2} magnitudes (J05, T10, E13, B20, Os20)
-  show a larger spread, specifically to weaker AOD response.
+  values from other simulations of large \ce{SO2} magnitudes (J05, E13, T10, Os20) show
+  a larger spread, specifically to weaker AOD response. B20 align well with STrop, which
+  also used the CESM2(WACCM6) climate model. Even though E13 did use a similar yet
+  simpler and older model in WACCM3, their AOD peak values are significantly smaller
+  than what we find here. From the largest eruption simulation by E13 they obtain a peak
+  aerosol effective radius of \(R_{\mathrm{EFF}}=\SI{1.9}{\micro\meter}\), which is much
+  bigger than the \(R_{\mathrm{EFF}}=\SI{0.7}{\micro\meter}\) obtained by B20 for
+  eruptions injecting half as much \ce{SO2} as E13, and using the same climate model as
+  us.
 
   In Fig.~\ref{fig:4_parameter_scan}b, ERF plotted against injected \ce{SO2} (with the
   absolute value of ERF on the \(y\)-axis) indicates a substantial damping effect on ERF
   as injected \ce{SO2} increases for the STrop data, in agreement with results from
-  \citeA{ottobliesner2016}, labelled OB16. The OB16 data come from a \(2500\) year long
-  simulation using historic volcanoes as the only external forcing. The analysis details
-  of OB16 can be found in Appendix B, section~\ref{ap:ob16}. Despite the model
-  complexity difference, \citeA{ottobliesner2016}'s simulations using Community Earth
-  System Model version 1 (CESM1) with a low-top atmosphere (CAM5) produce ERFs
-  comparable to our findings. Both B20 and McG24 align well with STrop, and while B20
-  uses the same climate model, McG24 uses the GISS ModelE2.1 but where a fixed aerosol
-  effective radius of \(R_{\text{EFF}}=\SI{0.6}{\micro\meter}\) was used. This
-  \(R_{\text{EFF}}\) is at the lower end of their simulations, which is shown by
-  \citeA{mcgraw2024} to produce the most extreme ERF and GMST perturbations.
+  OB16. The OB16 data come from a \(2500\) year long simulation using historic volcanoes
+  as the only external forcing. The analysis details of OB16 can be found in Appendix B,
+  section~\ref{ap:ob16}. Despite the model complexity difference,
+  \citeA{ottobliesner2016}'s simulations using Community Earth System Model version 1
+  (CESM1) with a low-top atmosphere (CAM5) produce ERFs comparable to our findings. Both
+  B20 and McG24 align well with STrop, and while B20 uses the same climate model, McG24
+  uses the GISS ModelE2.1 but where a fixed aerosol effective radius of
+  \(R_{\text{EFF}}=\SI{0.6}{\micro\meter}\) was used. This \(R_{\text{EFF}}\) is at the
+  lower end of their simulations, which is shown by \citeA{mcgraw2024} to produce the
+  most extreme ERF and GMST perturbations.
 
   \begin{figure*}
     \centering \includegraphics[width=\textwidth]{figure4}
@@ -681,19 +688,14 @@
       function of injected \ce{SO2}\@. (d) ERF and (e) GMST as a function of AOD. (f)
       GMST as a function of ERF. Blue diamonds labelled STrop represent tropical cases
       (S26, S400, S1629, S3000), the brown three-branched twig signifies the S1629N
-      case, and green downward triangles denote OB16 data from \citeA{ottobliesner2016}.
-      The red thin diamonds labelled M20 display the \citeA{marshall2020dataset} data.
-      Black star and plus indicate Mt.\ Pinatubo and Mt.\ Tambora estimates based on
-      observations. The pink square labelled J05 refers to the one-hundred times
-      Mt.\ Pinatubo super-volcano from \citeA{jones2005}, and the pink disk labelled T10
-      represents the YTT super-volcano from \citeA{timmreck2010}. The pink dashed line
-      labelled N15 is from \citeA{niemeier2015}, indicating the function in
-      Eq.~\ref{eq:niemeier_exponential}.}\label{fig:4_parameter_scan}%
+      case, and green downward triangles denote OB16 while green upward triangles denote
+      B20. The pink square is J05 and the red thin diamonds are M20. McG24 and Os20 are
+      indicated by purple upward twigs and orange diamonds, while pink circle and dashed
+      line represent T10 and N15. Black star and plus indicate Mt.\ Pinatubo and
+      Mt.\ Tambora estimates based on observations, and brown thin diamonds denote E13.
+    }\label{fig:4_parameter_scan}%
   \end{figure*}
 
-  % INFO: the conversion between S and SO2 is confirmed by Niemeier and Timmreck (2015)'s
-  % reference to the Bekki et al. (1996) paper. Bekki uses 6000 Mt SO2, Niemeier uses 3000
-  % Tg(S).
   \citeA{niemeier2015} conducted simulations of continuous sulphur injections up to
   \(\SI{200}{\tera\gram(\ce{SO2})\mathrm{yr}^{-1}}\) in the ECHAM5's middle atmosphere
   version \cite{giorgetta2006} with aerosol microphysics from HAM \cite{stier2005}. They
@@ -774,7 +776,8 @@
   OB16. However, potential biases exist in the values from the analysis of OB16, as
   outlined in Appendix B, section~\ref{ap:ob16}. This, along with considerable noise,
   results in the analysis of OB16 GMST anomalies being less reliable. All other cases
-  (S1629N, J05, T10, B20, McG24) closely follow the GMST to ERF dependence of STrop.
+  (S1629N, J05, T10, B20, McG24) closely follow the linear GMST to ERF dependence of
+  STrop.
 
   The almost linear relationship between AOD and injected \ce{SO2} for the STrop data in
   Fig.~\ref{fig:4_parameter_scan}a suggests a comparable trend for ERF versus injected
@@ -887,7 +890,7 @@
       S26 & \(\num{2.9\pm0.6}\) & \(\num{0.36\pm0.07}\) \\
       Total & \(\num{2.5\pm0.4}\) & \(\num{0.41\pm0.05}\) \\
       \toprule
-      \multicolumn{3}{l}{\parbox{\linewidth}{\(^{a}\)Estimates are based on ensembles with four members and \(\tau
+      \multicolumn{3}{l}{\parbox{0.5\linewidth}{\(^{a}\)Estimates are based on ensembles with four members and \(\tau
           =\SI{20}{\mathrm{yr}}\) using Eq.~\ref{eq:climate-resistance}.}} \\
     \end{tabular}
   \end{table}
@@ -949,7 +952,7 @@
   approximation of ERF dependence on AOD for eruptions similar to or smaller than Mt.\
   Pinatubo, additional factors must be considered for larger eruptions. These factors,
   such as \ce{OH} scarcity and aerosol growth, influence reflectance and their
-  gravitational pull, substantially impacting both AOD and ERF evolution, is highlighted
+  gravitational pull, substantially impacting both AOD and ERF evolution, as highlighted
   by \citeA{timmreck2010}. The large difference in ratio found when comparing eruption
   magnitudes suggests that injected \ce{SO2} is crucial when estimating the time-average
   of the ERF to AOD ratio. However, latitude and, in particular, aerosol dispersion are
@@ -964,7 +967,7 @@
   dependence found between the parameters in Fig.~\ref{fig:4_parameter_scan}, and a
   strong signature across both eruption magnitudes and latitudes, but also across highly
   different climate models. Thus, from a maximum ERF of \(\SI{-65}{\watt\metre^{-2}}\),
-  we expect GMST anomalies to reach at most \(\sim\SI{-12}{\kelvin}\), in support of
+  we expect GMST anomalies to reach at most \(\sim\SI{-10}{\kelvin}\), in support of
   \citeA{english2013} who suggested that large eruptions can be self-limiting.
 
   % Models vary in their SO2 to H2SO4 chemistry/physics, but are comparatively
@@ -1026,6 +1029,13 @@
   particularly as a function of time-after-eruption. These findings emphasise the
   complexity of volcanic impacts on climate, demonstrating significant differences in
   climatic response depending on eruption magnitude and latitude.
+
+  A clear trend across all simulations performed here and across several previous
+  studies is a linear relationship between peek GMST and ERF. Further, the peak values
+  seem to stagnate with no ERF peaks breaking the suggested lower bound of
+  \(\text{ERF}=\SI{-65}{\watt\metre^{-2}}\) by \citeA{niemeier2015}. Thus, we expect
+  supereruptions to be self-limiting with the most extreme GMST perturbations reaching
+  at most \(~\sim \SI{-10}{\kelvin}\).
 
   We find that the AOD peak arrives later for larger eruptions than for smaller ones,
   and also that larger eruptions produce a sharper peak in the AOD time series. The ERF
