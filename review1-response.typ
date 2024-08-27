@@ -37,16 +37,6 @@
   ],
 )
 
-== Main takeaways
-
-- Change AOD into exp(-tau) (where tau refers to optical depth as typically used in the
-  Beer-Lambert law, so tau=AOD)
-- More emphasis on aerosol size (aerosol effective radius is output from CESM2 as
-  `REFF_AERO`)
-- Consideration of AOD, ERF and GMST in reference to volcanic eruptions and their
-  radiation and climate impact (long-standing question), not only of AOD and ERF and
-  their relationship (known)
-
 == Reviewer \#1 Evaluations
 
 - Recommendation: Return to author for major revisions
