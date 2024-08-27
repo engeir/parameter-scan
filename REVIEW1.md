@@ -2,7 +2,8 @@
 
 ## Main takeaways
 
-- Change AOD into exp(-tau) (but what is tau?)
+- Change AOD into exp(-tau) (where tau refers to optical depth as typically used in the
+  Beer-Lambert law, so tau=AOD)
 - More emphasis on aerosol size
 - Consideration of AOD, ERF and GMST in reference to volcanic eruptions and their
   radiation and climate impact (long-standing question), not only of AOD and ERF and
