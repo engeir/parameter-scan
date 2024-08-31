@@ -1,5 +1,29 @@
 # Changelog
 
+## [0.10.0](https://github.com/engeir/parameter-scan/compare/v0.9.0...v0.10.0) (2024-08-31)
+
+
+### Features
+
+* first complete draft of the paper after review ([190be08](https://github.com/engeir/parameter-scan/commit/190be087eb848de4b5a40d744340fae123facf0f))
+* **review:** clean up review reply doc and small changes to MS ([dbce038](https://github.com/engeir/parameter-scan/commit/dbce038a00d02e190246768bf598a17f6ea141a5))
+* **review:** ready for submission ([80a77a9](https://github.com/engeir/parameter-scan/commit/80a77a945f98cf7c8691bc9d893b0aa59dc5e71b))
+* **review:** update response doc ([65f5408](https://github.com/engeir/parameter-scan/commit/65f5408b72d4fdeea8578f39af9eca7831e54fd0))
+
+
+### Bug Fixes
+
+* too long key points ([5922c36](https://github.com/engeir/parameter-scan/commit/5922c36da804240af668d6dd697dabc0149da33d))
+* use the local bib file ([704926f](https://github.com/engeir/parameter-scan/commit/704926fa26d7cc215209ac9c59adf461502a7cef))
+
+
+### Miscellaneous
+
+* backup ([736a209](https://github.com/engeir/parameter-scan/commit/736a20936631c9722fa4454177844b3bb1e1ee7f))
+* delete tectonic ([1f6b22b](https://github.com/engeir/parameter-scan/commit/1f6b22b957488abc3b17ecf3fed26be07688d56d))
+* **review:** remove small comment ([fad3d8a](https://github.com/engeir/parameter-scan/commit/fad3d8a5202dcbb30bfc767b91da6cfa08ceb8e0))
+* **review:** update fig4 and the text around ([513ae8b](https://github.com/engeir/parameter-scan/commit/513ae8ba0ac26d36c13f3152e7e591abcad28a53))
+
 ## [0.9.0](https://github.com/engeir/parameter-scan/compare/v0.8.1...v0.9.0) (2024-08-07)
 
 
