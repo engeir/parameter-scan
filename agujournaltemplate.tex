@@ -80,7 +80,7 @@
     \item
     The ERF to AOD ratio has a time-after-eruption dependence on eruption latitude
     \item
-    Temperature and ERF peak values has a linear dependence and reaches an upper limit
+    Temperature and ERF peak values has a linear relationship and reach an upper limit
   \end{keypoints}
 
   \begin{abstract}
@@ -116,14 +116,14 @@
 
   Volcanic eruptions can have a significant impact on the Earth's climate. Eruptions
   large enough that \note[reviewer1]{L31} the aerosols that form from the gases they
-  emit reach the stratosphere cause a cooling effect by reflecting sunlight. Typically,
-  an eruption is measured by its impact on the opacity of the stratosphere and the
+  emit reach the stratosphere cause a cooling effect by reflecting sunlight. The gases from volcanic eruptions form aerosols. If the eruption is large enough, these aerosols may reach the stratosphere where they may cause a cooling effect by reflecting sunlight.
+  Typically, an eruption is measured by its impact on the opacity of the stratosphere and the
   change in the \note[reviewer1]{L33} energy balance at the top of the atmosphere when
   the surface temperature is held fixed. The two measures are often assumed to be
   linearly related, but the linearity is useful only for eruptions of sizes seen in the
   last two millennia. We use a coupled climate model to simulate the impact of eruptions
   of sizes up to the largest known eruptions. The smallest eruptions we simulate are
-  still large enough to cause global climate effects. In addition to a non-linear
+  still large enough to cause global climate effects. In addition to the expected non-linear
   relationship between energy imbalance and stratospheric opacity with increasing
   eruption magnitude, our simulations and supporting data shows that the eruption
   latitude significantly influences the development of the relationship with time after
@@ -704,11 +704,11 @@
   exponential, which converges to \(\SI{-65}{\watt\meter^{-2}}\), depicted in
   Fig.~\ref{fig:4_parameter_scan}b as the stippled pink line labelled N15 and given as;
   \begin{equation}
-    \Delta R_{\mathrm{TOA}} = -\SI{65}{\watt\metre^{-2}}
+    \Delta R_{\mathrm{TOA}}(x) = -\SI{65}{\watt\metre^{-2}}
     \exp\left[-{\left(\frac{\SI{2246}{\tera\gram(S)yr^{-1}}}{x}\right)}^{0.23}\right].
     \label{eq:niemeier_exponential}
   \end{equation}
-  The results by N15, on which Eq.~\ref{eq:niemeier_exponential} is based, are all
+  Here, x is... The results by N15, on which Eq.~\ref{eq:niemeier_exponential} is based, are all
   averages over at least three years of steady sulphur burdens, substantially longer
   than the time it takes for ERF to reach peak values after an eruption. Combined with
   their lack of a full chemistry model \cite{niemeier2015}, a direct comparison between
@@ -875,7 +875,7 @@
   possible to achieve even a warming of the GMST. However, as our model results align
   well with the results of \citeA{mcgraw2024} using a small aerosol effective radius of
   \(R_{\mathrm{eff}}=\SI{0.6}{\micro\meter}\), we expect the peak GMST from
-  CESM2(WACCM6) to be close to a lower bound, and as such that the even colder GMST
+  CESM2(WACCM6) to be close to a lower bound, and as such the even colder GMST
   perturbation of \citeA{jones2005} is too extreme.
 
   \begin{table}
@@ -964,9 +964,8 @@
   not violated by any eruption simulation, and most notably that the GMST peak value
   follow the ERF trend in reaching a limiting value. The STrop cases follow a close to
   linear GMST dependency on ERF, with S1629N, J05, T10, B20, and McG24 all aligning
-  close to the same slope. The linear relationship between GMST and ERF is the strongest
-  dependence found between the parameters in Fig.~\ref{fig:4_parameter_scan}, and a
-  strong signature across both eruption magnitudes and latitudes, but also across highly
+  close to the same slope. The linear relationship between GMST and ERF is the clearest
+  dependence found between the parameters in Fig.~\ref{fig:4_parameter_scan}, both eruption magnitudes and latitudes, but also across highly
   different climate models. Thus, from a maximum ERF of \(\SI{-65}{\watt\metre^{-2}}\),
   we expect GMST anomalies to reach at most \(\sim\SI{-10}{\kelvin}\), in support of
   \citeA{english2013} who suggested that large eruptions can be self-limiting.
