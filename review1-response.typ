@@ -21,7 +21,7 @@
   ..args,
 )
 
-#let title = [Response to reviewer]
+#let title = [Response to Reviewer]
 
 #set page(
   header: align(
@@ -36,6 +36,12 @@
     *#title*
   ],
 )
+
+== General comment to the review
+
+_I want to thank both reviewers for providing good and valuable reviews of the
+manuscript. This has made the focus more narrow as well as improving especially the
+discussion of the results, which now includes more recent studies of great relevance._
 
 == Reviewer \#1 Evaluations
 
@@ -66,7 +72,7 @@ publication.
 === General comments
 
 The assumption of linearity between AOD and radiative forcing has been around for a long
-time, e.g. #cite(<hansen2005b>, form: "prose"). What was not often stated is that this
+time, e.g. Hansen et al. (2005). What was not often stated is that this
 assumption is physically justified only for smaller eruptions, since by Beer's law, the
 reduction in radiation for a given AOD tau is exp(-tau). For small tau, we can
 approximate exp(-tau) as 1-tau, giving a linear relationship. If tau gets large, then
@@ -169,6 +175,10 @@ introduction and discussion sections.
   aerosol that is most important to the radiative forcing and climate impacts in the
   simulations?
 
+  #reply[
+  Yes, this has now been corrected.
+  ]
+
 - L31: Unfortunately for our intro sentences, the eruptions don't directly emit
   sulfate aerosols (at least not very much), they emit gases which produce aerosols.
   Best to be accurate even if it costs a few more words.
@@ -176,7 +186,6 @@ introduction and discussion sections.
 - L33: the ERF is not quite the change in energy balance at TOA - it is that when
   surface temperature is held fixed.
 
-// #cite(<hansen2005b>, form: "prose")
 - L55: the origin of RF=-25*AOD is Hansen et al. (2005), best to cite
   that study here. It is also relevant that this scaling has been used in subsequent
   IPCC reports, but that is worth its own statement.
@@ -253,10 +262,15 @@ introduction and discussion sections.
   labels which more intuitively communicate the relative magnitude of the eruption
   simulations and thus the differences between the ensembles.
 
-  #reply[Ensembles are now specified as `S<TgSO2>` and an extra `N` for the Northern
-    latitude eruption ensemble.]
+  #reply[I agree. Ensembles are now specified as `S<TgSO2>` and an extra `N` for the
+  Northern latitude eruption ensemble.]
 
 - L157: The method section needs a description of how ERF was calculated.
+
+  #reply[
+    This description has been moved into the methods section, as well as slightly
+    re-phrased to hopefully be more complete.
+  ]
 
 - L178: Well, in order of magnitude sure, but there's a factor of about 2
   difference, best to be clear about this.
@@ -294,9 +308,16 @@ introduction and discussion sections.
     stated in the figure caption.
   ]
 
-- [ ] L364: why is this being assumed when it has been shown this isn't very valid?
+- L364: why is this being assumed when it has been shown this isn't very valid?
 
-  [ ] L365: It seems as if x is referring to different quantities in the different
+  #reply[
+    This was included in the analysis prior the simulation of the strongest eruption of
+    3000 Tg(SO2), when the AOD to SO2 relationship was much more linear. Unfortunately
+    we forgot to update the paragraph accordingly, and decided now to remove the
+    paragraph.
+  ]
+
+- L365: It seems as if x is referring to different quantities in the different
   equations. Much more attention to detail needed if this mathematical framework is to
   be explained in sufficient detail.
 
@@ -323,7 +344,7 @@ introduction and discussion sections.
 - Timmreck, C., Graf, H.-F., Lorenz, S. J., Niemeier, U., Zanchettin, D., Matei, D.,
   Jungclaus, J. H., and Crowley, T. J.: Aerosol size confines climate response to
   volcanic super-eruptions, Geophys. Res. Lett., 37, L24705,
-  #link("https://doi.org/10.1029/2010GL045464"), 2010. @timmreck2010
+  #link("https://doi.org/10.1029/2010GL045464"), 2010.
 - Schurer, A. P., Hegerl, G. C., Mann, M. E., Tett, S. F. B., and Phipps, S. J.:
   Separating Forced from Chaotic Climate Variability over the Past Millennium, J.
   Clim., 26, 6954-6973, #link("https://doi.org/10.1175/JCLI-D-12-00826.1"), 2013.
@@ -342,8 +363,15 @@ introduction and discussion sections.
 - Marshall, L. R., Smith, C. J., Forster, P. M., Aubry, T. J., Andrews, T., and
   Schmidt, A.: Large variations in volcanic aerosol forcing efficiency due to
   eruption source parameters and rapid adjustments, Geophys. Res. Lett., 47,
-  #link("https://doi.org/10.1029/2020gl090241"), 2020. @marshall2020
-- #cite(<hansen2005b>, form: "full")
+  #link("https://doi.org/10.1029/2020gl090241"), 2020.
+- Hansen, J., Sato, M., Ruedy, R., Nazarenko, L., Lacis, A., Schmidt, G. A., Russell,
+  G., Aleinov, I., Bauer, M., Bauer, S., Bell, N., Cairns, B., Canuto, V., Chandler, M.,
+  Cheng, Y., Genio, A. D., Faluvegi, G., Fleming, E., Friend, A., Hall, T., Jackman, C.,
+  Kelley, M., Kiang, N., Koch, D., Lean, J., Lerner, J., Lo, K., Menon, S., Miller, R.,
+  Minnis, P., Novakov, T., Oinas, V., Perlwitz, J., Perlwitz, J., Rind, D., Romanou, A.,
+  Shindell, D., Stone, P., Sun, S., Tausnev, N., Thresher, D., Wielicki, B., Wong, T.,
+  Yao, M., & Zhang, S. (2005). Eﬃcacy of climate forcings. Journal of Geophysical
+  Research: Atmospheres, 110(D18). #link("https://doi.org/10.1029/2005JD005776")
 
 == Reviewer \#3 Evaluations
 
@@ -403,7 +431,7 @@ take care of below.
 - The authors need to introduce and define the concept of Effective Radiative Forcing in
   contrast to Radiative Forcing used in other studies.
   #reply[
-    This is now included in the introduction.
+    This is now included in the beginning of the introduction.
   ]
 - There are several super-eruptions publications which are relevant for this study, but
   they are not included and referred to: Bekki et al 1996; Robock et al 2009; Timmreck
@@ -441,8 +469,7 @@ take care of below.
 - Timing of maximum AOD, RF, climate for tropical versus high-latitude eruptions see
   Zhuo et al 2024.
   #reply[
-    We now also included the results from Zhuo et al. (2024) in the introduction. The
-    manuscript have been re-phrased so that this topic get a smaller focus.
+    We now also included the results from Zhuo et al. (2024) in the introduction.
   ]
 - How can you address surface temperature response if the ocean-sea ice is prescribed?
   I suggest taking this field out or using lower tropospheric temperature instead as
@@ -487,7 +514,7 @@ take care of below.
 - Fig. 1 and ff Figs.: Which temperature field is plotted here; does it make sense if
   the ocean/sea-ice is prescribed?
   #reply[
-    We try in the methods section to now be more concise when describing the model
+    We try in the methods section to now be more precise when describing the model
     output fields we use, and from what type of simulation they are obtained from.
   ]
 
@@ -527,7 +554,7 @@ take care of below.
   Atmos., 121, 12,460-12,475, #link("https://doi.org/10.1002/2016JD025320").
 - Marshall et al 2021 - Unknown Eruption Source Parameters Cause Large Uncertainty
   in Historical Volcanic Radiative Forcing Reconstructions - Journal of Geophysical
-  Research: Atmospheres @marshall2021
+  Research: Atmospheres
 
 ==== Super eruptions
 
@@ -540,7 +567,7 @@ take care of below.
 - Brenna et al 2021 Decadal Disruption of the QBO by Tropical Volcanic
   Supereruptions - Geophysical Research Letters
 - English et al 2013 - Microphysical simulations of large volcanic eruptions:
-  Pinatubo and Toba - Journal of Geophysical Research: Atmospheres @english2013
+  Pinatubo and Toba - Journal of Geophysical Research: Atmospheres
 - McGraw, Z., K. DallaSanta, L. M. Polvani, K. Tsigaridis, C. Orbe, and S. E. Bauer,
   2024: Severe Global Cooling After Volcanic Super-Eruptions? The Answer Hinges on
   Unknown Aerosol Size. J. Climate, 37, 1449-1464,
@@ -553,7 +580,7 @@ take care of below.
   Did the Toba volcanic eruption of ∼74k BP produce widespread glaciation? J.
   Geophys. Res., 114, D10107, #link("https://doi.org/10.1029/2008JD011652").
 - Timmreck et al 2010, Aerosol size confines climate response to volcanic
-  super‐eruptions -Geophysical Research Letters @timmreck2010
+  super‐eruptions -Geophysical Research Letters
 - Timmreck et al, Climate response to the Tobasuper-eruption: Regional changes,
   Quaternary International, Volume 258,
   #link("https://doi.org/10.1016/j.quaint.2011.10.008."), 2012
@@ -570,7 +597,7 @@ take care of below.
   K., and Tummon, F.: The Model Intercomparison Project on the climatic response to
   Volcanic forcing (VolMIP): experimental design and forcing input data for CMIP6,
   Geosci. Model Dev., 9, 2701-2719,
-  #link("https://doi.org/10.5194/gmd-9-2701-2016"), 2016. @zanchettin2016
+  #link("https://doi.org/10.5194/gmd-9-2701-2016"), 2016.
 - Marshall, L., A. Schmidt, M. Toohey, K.S. Carslaw, G.W. Mann, M. Sigl, M. Khodri,
   C. Timmreck, D. Zanchettin, W. Ball, S. Bekki, J.S.A. Brooke, S. Dhomse, C.
   Johnson, J.-F. Lamarque, A. LeGrande, M.J. Mills, U. Niemeier, J.O. Pope, V.
@@ -594,7 +621,7 @@ take care of below.
 
 - Toohey, M. et al: The influence of eruption season on the global aerosol evolution
   and radiative impact of tropical volcanic eruptions, Atmos. Chem. Phys., 11,
-  12351-12367, #link("https://doi.org/10.5194/acp-11-12351-2011"), 2011. @toohey2011
+  12351-12367, #link("https://doi.org/10.5194/acp-11-12351-2011"), 2011.
 - Toohey et al 2013 - Volcanic sulfate deposition to Greenland and Antarctica: A
   modeling sensitivity study - Journal of Geophysical Research: Atmospheres
 
@@ -602,10 +629,10 @@ take care of below.
 
 - Marshall et al 2019 Exploring How Eruption Source Parameters Affect Volcanic
   Radiative Forcing Using Statistical Emulation - Journal of Geophysical Research:
-  Atmospheres @marshall2019
+  Atmospheres
 - Toohey, M. et al. Disproportionately strong climate forcing from extratropical
   explosive volcanic eruptions. Nature Geosci 12, 100-107 (2019).
-  #link("https://doi.org/10.1038/s41561-018-0286-2") @toohey2019
+  #link("https://doi.org/10.1038/s41561-018-0286-2")
 
 ==== Different latitudes of eruptions - impacts on climate
 
@@ -625,5 +652,3 @@ take care of below.
 - Zhuo, Z. et al.: Initial atmospheric conditions control transport of volcanic
   volatiles, forcing and impacts, Atmos. Chem. Phys., 24, 6233-6249,
   #link("https://doi.org/10.5194/acp-24-6233-2024"), 2024.
-
-#bibliography("./agujournaltemplate.bib", style: "apa")

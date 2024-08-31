@@ -24,11 +24,11 @@ description = "Move generated files from the python source code"
 env = { OUT_DIR = "../paper1-code/generated_files", LATEX_DIR = "./" }
 run = [
   "test -d $OUT_DIR",
-  "cp -x --preserve=timestamps $OUT_DIR/figure1.png $LATEX_DIR",
-  "cp -x --preserve=timestamps $OUT_DIR/figure2.png $LATEX_DIR",
-  "cp -x --preserve=timestamps $OUT_DIR/figure3.png $LATEX_DIR",
-  "cp -x --preserve=timestamps $OUT_DIR/figure4.png $LATEX_DIR",
-  "cp -x --preserve=timestamps $OUT_DIR/reff.png $LATEX_DIR",
+  "cp -x --preserve=timestamps $OUT_DIR/figure1.pdf $LATEX_DIR",
+  "cp -x --preserve=timestamps $OUT_DIR/figure2.pdf $LATEX_DIR",
+  "cp -x --preserve=timestamps $OUT_DIR/figure3.pdf $LATEX_DIR",
+  "cp -x --preserve=timestamps $OUT_DIR/figure4.pdf $LATEX_DIR",
+  "cp -x --preserve=timestamps $OUT_DIR/reff.pdf $LATEX_DIR",
 ]
 
 [tasks.clean]
