@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL ../parameter-scan-submitted/agujournaltemplate.tex   Tue Aug 20 09:09:54 2024
-%DIF ADD ./agujournaltemplate.tex                             Sat Aug 31 18:31:35 2024
+%DIF ADD ./agujournaltemplate.tex                             Sat Aug 31 19:05:18 2024
 % AGUJournalTemplate.tex: this template file is for articles formatted with LaTeX
 %
 % This file includes commands and instructions
@@ -130,17 +130,14 @@
     The \DIFdelbegin \DIFdel{linear RF dependence on AOD breaks down for eruptions larger than Mt. Pinatubo
     }%DIFDELCMD < \item
 %DIFDELCMD <     %%%
-\DIFdel{The RF }\DIFdelend \DIFaddbegin \DIFadd{ERF }\DIFaddend to AOD ratio has a time-after-eruption dependence on eruption latitude\DIFaddbegin \DIFadd{, with
-    tropical eruptions showing a significant decrease in forcing efficiency during the
-    first post-eruption year.
+\DIFdel{The RF }\DIFdelend \DIFaddbegin \DIFadd{ERF }\DIFaddend to AOD ratio has a time-after-eruption dependence on eruption latitude\DIFaddbegin \DIFadd{.
     }\DIFaddend \item
     \DIFdelbegin \DIFdel{Temperature and RF }\DIFdelend \DIFaddbegin \DIFadd{No simulations across several climate models are found to produce ERF perturbations
     beyond \(\SI{-65}{\watt\meter^{-2}}\).
     }\item
-    \DIFadd{Temperature and ERF }\DIFaddend peak values has a linear dependence and \DIFdelbegin \DIFdel{reaches an upper limit
-  }\DIFdelend \DIFaddbegin \DIFadd{as such supereruptions
-    are self-limiting, with maximum temperature perturbations of \(\sim
-    \SI{-10}{\kelvin}\).
+    \DIFadd{Temperature and ERF }\DIFaddend peak values has a linear dependence \DIFdelbegin \DIFdel{and reaches an upper limit
+  }\DIFdelend \DIFaddbegin \DIFadd{with maximum temperature
+    perturbations of \(\sim \SI{-10}{\kelvin}\).
 }
 
     %DIF >  \item
@@ -1108,8 +1105,8 @@ data}\DIFdelendFL . \DIFaddbeginFL \DIFaddFL{McG24 and Os20 are indicated by
 %DIFDELCMD <     temperature anomalies from a simulation with fixed SSTs are close to meaningless in
 %DIFDELCMD <     comparison with coupled ocean simulations.}
 %DIFDELCMD < %%%
-\DIFdelend \DIFaddbegin \DIFadd{we do not focus on the M20
-  data in the GMST plots but include them for completeness.
+\DIFdelend \DIFaddbegin \DIFadd{we do not focus on the M20 data in the GMST plots but
+  include them for completeness.
 }\DIFaddend 
 
   In Fig.~\ref{fig:4_parameter_scan}d, we revisit the relationship between \DIFdelbegin \DIFdel{RF }\DIFdelend \DIFaddbegin \DIFadd{ERF }\DIFaddend and AOD,
@@ -1253,13 +1250,13 @@ data}\DIFdelendFL . \DIFaddbeginFL \DIFaddFL{McG24 and Os20 are indicated by
   parameter) with our climate resistance, denoted as \(\rho\), and the transient climate
   response parameter (TCRP) \(1/\rho\) (where \(\mathrm{TCS}=F_{2\times\ce{CO2}}\times
   \mathrm{TCRP}\) is the transient climate sensitivity and \(F_{2\times\ce{CO2}}\) is
-  the forcing due to a doubling of pre-industrial \ce{CO2} concentration).
-  \DIFdelbegin %DIFDELCMD < \annote[reviewer1]{As the forcing of volcanic
+  the forcing due to a doubling of pre-industrial \ce{CO2} concentration). \DIFdelbegin %DIFDELCMD < \annote[reviewer1]{As the forcing of volcanic
 %DIFDELCMD <     eruptions typically lasts for about a year}{Volcanic forcing definitely lasts for
 %DIFDELCMD <     more than a year!}%%%
-\DIFdel{, a duration too short }\DIFdelend \DIFaddbegin \DIFadd{As the forcing of volcanic eruptions last for too short time
-  }\DIFaddend for \(F=\rho T\) to remain valid, an alternative approach using a time-integral form
-  introduced by \citeA{merlis2014} is applied:
+\DIFdel{, a duration too short }\DIFdelend \DIFaddbegin \DIFadd{As the
+  forcing of volcanic eruptions last for too short time }\DIFaddend for \(F=\rho T\) to remain
+  valid, an alternative approach using a time-integral form introduced by
+  \citeA{merlis2014} is applied:
 
   \begin{equation}
     \int_0^{\tau}F \mathrm{d}t=\rho\int_{0}^{\tau}T \mathrm{d}t
@@ -1299,19 +1296,19 @@ data}\DIFdelendFL . \DIFaddbeginFL \DIFaddFL{McG24 and Os20 are indicated by
 %DIFDELCMD <     see e.g. Timmreck et al. (2009) and Timmreck et al. (2010). That the AOD used in
 %DIFDELCMD <     Jones et al. leads to a too strong RF is therefore not very surprising.}
 %DIFDELCMD < %%%
-\DIFdelend \DIFaddbegin \DIFadd{The peak value
-  of the J05 ERF is similar to the S1629 case, and as such, the overall stronger forcing
-  must originate from the development of the forcing time series rather than the peak
-  value. This is in line with previous results showing that from larger eruptions, the
-  aerosol effective radius peak increase, as well as the aerosol effective radius
-  experiencing a shorter \(e\)-folding time \mbox{%DIFAUXCMD
+\DIFdelend \DIFaddbegin \DIFadd{The peak value of the J05 ERF is
+  similar to the S1629 case, and as such, the overall stronger forcing must originate
+  from the development of the forcing time series rather than the peak value. This is in
+  line with previous results showing that from larger eruptions, the aerosol effective
+  radius peak increase, as well as the aerosol effective radius experiencing a shorter
+  \(e\)-folding time \mbox{%DIFAUXCMD
 \cite{clyne2021}}\hskip0pt%DIFAUXCMD
-. This result in a sharper
-  peak in AOD and ERF, with the peak values increasing sublinearly with increasing
-  \ce{SO2} \mbox{%DIFAUXCMD
+. This result in a sharper peak in AOD and ERF,
+  with the peak values increasing sublinearly with increasing \ce{SO2}
+  \mbox{%DIFAUXCMD
 \cite{english2013,timmreck2009,zanchettin2016,clyne2021}}\hskip0pt%DIFAUXCMD
-. In addition,
-  \ce{OH} scarcity is assumed to limit the \ce{SO2} oxidation, delaying the AOD peak for
+. In addition, \ce{OH}
+  scarcity is assumed to limit the \ce{SO2} oxidation, delaying the AOD peak for
   sufficiently large eruptions \mbox{%DIFAUXCMD
 \cite{timmreck2010}}\hskip0pt%DIFAUXCMD
 . Further, \mbox{%DIFAUXCMD
@@ -1747,14 +1744,14 @@ found for the same climate model and larger than the
     Model Version 5 \acro{CESM1} Community Earth System Model Version 1 \acro{CESM2}
     Community Earth System Model Version 2 \acro{ECS} equilibrium climate sensitivity
     \acro{ERF} effective radiative forcing \acro{FLNT} ``net longwave flux at the top of
-    the model'' \acro{FSNT} ``net solar flux at the top of the model'' \acro{IRF}
-    instantaneous radiative forcing \acro{MAM3} three mode version of the Modal Aerosol
-    Module \acro{MA} middle atmosphere \acro{POP2} Parallel Ocean Program Version 2
-    \DIFdelbegin %DIFDELCMD < \acro{RF} %%%
-\DIFdelend \DIFaddbegin \acro{ERF} \DIFaddend effective radiative forcing \acro{TCRP} transient climate response
-    parameter \acro{TOA} top-of-the-atmosphere \acro{TREFHT} ``reference height
-    temperature'' \acro{WACCM6} Whole Atmosphere Community Climate Model Version 6
-    \acro{YTT} Young Toba Tuff
+    the model'' \acro{FSNT} ``net solar flux at the top of the model'' \DIFaddbegin \acro{GMST}
+    \DIFadd{global mean surface temperature }\DIFaddend \acro{IRF} instantaneous radiative forcing
+    \acro{MAM3} three mode version of the Modal Aerosol Module \acro{MA} middle
+    atmosphere \acro{POP2} Parallel Ocean Program Version 2 \DIFdelbegin %DIFDELCMD < \acro{RF} %%%
+\DIFdelend \DIFaddbegin \acro{ERF} \DIFaddend effective
+    radiative forcing \acro{TCRP} transient climate response parameter \acro{TOA}
+    top-of-the-atmosphere \acro{TREFHT} ``reference height temperature'' \acro{WACCM6}
+    Whole Atmosphere Community Climate Model Version 6 \acro{YTT} Young Toba Tuff
   \end{acronyms}
 
   \section*{Open Research Section}
