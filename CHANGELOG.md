@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.10.1](https://github.com/engeir/parameter-scan/compare/v0.10.0...v0.10.1) (2024-09-04)
+
+
+### Bug Fixes
+
+* **code-statement:** cite all relevant code to their Zenodo archives ([0f46cbc](https://github.com/engeir/parameter-scan/commit/0f46cbc9b2406f44de28fbbacd444e1e655c0311))
+
+
+### Miscellaneous
+
+* **bib:** specify the type on software citations ([77ea9db](https://github.com/engeir/parameter-scan/commit/77ea9dbb79a0112142be919f9198a97bff60e8e2))
+* **overleaf:** change 'software' to 'misc' to make overleaf happy ([b82884c](https://github.com/engeir/parameter-scan/commit/b82884c829bccd3e81d7209138a9bf221b40d156))
+
 ## [0.10.0](https://github.com/engeir/parameter-scan/compare/v0.9.0...v0.10.0) (2024-08-31)
 
 
