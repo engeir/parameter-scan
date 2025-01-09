@@ -1,0 +1,974 @@
+\documentclass{reviewresponse}
+
+\usepackage{caption,enumitem,hyperref}
+\usepackage{apacite}
+\let\cite\shortcite %xx So get et al. with three authors the first time.
+\let\citeA\shortciteA %xx Ditto.
+\bibliographystyle{apacite}%
+\DeclareCaptionFont{gray}{\color{gray}}%
+\captionsetup{ labelfont={gray}, textfont={gray} }
+\usepackage{siunitx}
+
+\usepackage[version=4]{mhchem}
+
+\definecolor{colorevalfg}{RGB}{70 0 87}% rgb(70 0 87)
+\definecolor{colorevalbg}{RGB}{243 221 249}% rgb(243 221 249)
+\definecolor{colorevalframe}{RGB}{124 0 155}% rgb(124 0 155)
+\definecolor{colorcommentbg}{HTML}{e0f0f6}% #e0f0f6
+\definecolor{colorcommentresolved}{RGB}{155 0 0}
+
+\newenvironment{evaluation}{%
+  \begin{tcolorbox}[attach title to upper, title={Evaluations}, after title={.\enskip},
+    fonttitle={\bfseries}, coltitle={colorevalfg}, colback={colorevalbg},
+    colframe={colorevalframe},]
+  }{
+  \end{tcolorbox}
+}
+
+% Check mark list
+\usepackage{amssymb}
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label=$\square$}
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}
+%
+\newcommand{\xmark}{\ding{55}}
+%
+\newcommand{\done}{\rlap{\raisebox{0.3ex}{\hspace{0.4ex}\small \cmark}}$\square$}
+\newcommand{\wontfix}{\rlap{\raisebox{0.3ex}{\hspace{0.4ex}\small \xmark}}$\square$}
+
+\title{Radiative forcing by supereruptions}
+\author{Eirik Rolland Enger, Rune Graversen, Audun Theodorsen}
+\journal{Journal of Geophysical Research --- Atmospheres} \manuscript{\#2024JD041098R}
+\editorname{Yafang Cheng}
+
+% \affiliation{1}{UiT The Arctic University of Norway, Tromsø, Norway}
+% \affiliation{2}{Norwegian Meteorological Institute, Troms\o, Norway}
+
+\begin{document}
+
+  \maketitle
+
+  \begin{itemize}
+    \item
+    \emph{Stuff to-do}
+  \end{itemize}
+
+  \editor % Response to editor
+  \subsection*{Associate Editor Evaluations}
+  \begin{evaluation}
+    \begin{itemize}[leftmargin=4.5cm,noitemsep]
+      \item
+      [\textbf{Accurate Key Points:}] No
+    \end{itemize}
+  \end{evaluation}
+  \begin{generalcomment}
+    Thank you for submitting ``Radiative forcing by supereruptions'' [Paper
+      \#2024JD041098R] to Journal of Geophysical Research - Atmospheres. I have received
+    3 reviews of your manuscript, which are included below and/or attached. As you can
+    see, the reviews indicate that major revisions are needed before we can consider
+    proceeding with your paper. I am therefore returning the paper to you so that you
+    can make the necessary changes.
+  \end{generalcomment}
+  \begin{revresponse}[We appreciate your handling of the review process.]
+    According to the reviewers' comments, we have checked our manuscript and addressed
+    them in the following way:
+    \begin{enumerate}
+      \item
+      We added content.
+      \item
+      We removed our wrong statements in Section~I.
+    \end{enumerate}
+  \end{revresponse}
+  \begin{concludingresponse}[to the Editor]
+    Thank you for your valuable comments on our manuscript. We have done our best to
+    incorporate changes to reflect the suggestions, which allowed us to improve the
+    quality of our work.
+  \end{concludingresponse}
+
+  % Reviewer 3
+  \reviewer[3]
+
+  They want:
+  \begin{itemize}
+    \item
+    Overall goal is still unclear
+    \item
+    Make simulations more clear (how many in ensembles for example)
+    \item
+    Why this (heavy) model specifically?
+    \item
+    Should ERF and RF be mixed?
+    \item
+    Why are some papers are used in some figs, but others not?
+    \item
+    Remove geoengineering results from the figure and only keep it in the discussion
+    \item
+    Why are certain behaviours modelled? (timing of AOD and ERF)
+    \item
+    Discuss the caveats of the model study
+    \item
+    Why include the outdated Jones et al. 2005?
+    \item
+    Adjust the title
+  \end{itemize}
+
+  \subsection*{Reviewer \#3 Evaluations}
+
+  \begin{evaluation}
+    \begin{itemize}[leftmargin=4.5cm,noitemsep]
+      \item
+      [\textbf{Recommendation}] Return to author for major revisions
+      \item
+      [\textbf{Significant}] The paper has some unclear or incomplete reasoning but will
+      likely be a significant contribution with revision and clarification.
+      \item
+      [\textbf{Supported}] Mostly yes, but some further information and/or data are
+      needed.
+      \item
+      [\textbf{Referencing}] Mostly yes, but some additions are necessary.
+      \item
+      [\textbf{Quality}] The organization of the manuscript and presentation of the data
+      and results need some improvement.
+      \item
+      [\textbf{Data}] Please Select
+      \item
+      [\textbf{Accurate Key Points}] Please Select
+    \end{itemize}
+  \end{evaluation}
+  \subsection*{Reviewer \#3 Formal Review for Author (shown to authors)}
+  \begin{generalcomment}
+
+    I would like to thank the authors to have addressed many of my comments. Here is now
+    my second review on the revised manuscript which still needs substantial revisions.
+    Pls take all my comments into account.
+  \end{generalcomment}
+
+  \subsection*{Reviewer \#3 Specific Comments}
+  \begin{revresponse}[Thank you for your feedback.]
+    We have carefully addressed all the issues item by item as follows.
+  \end{revresponse}
+
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    There are still unclear parts in what the overall goal of your study is. F.e. the
+    climate sensitivity in the introduction and 3.4 is not taken up in the
+    Conclusion-Summary and Abstract. So, what is the take home message of this part also
+    in relation to the rest of the results?
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    The model runs details are now becoming clearer, thanks for explaining these, but
+    some others still remain unresolved such as:
+
+    \begin{itemize}[noitemsep]
+      \item
+      Why not adding the simulations for the ERF calculations into Table 1 as well to
+      make your two-step model approach clearer?
+      \item
+      How many ensembles have you run per SO2 injection experiments?
+      \item
+      How many years do you run? Which initial state (ENSO, QBO, AMOC, NAO, polar
+      vortex) have you chosen and why?
+      \item
+      Were all started from the same initial state? Is the QBO included in the set-up?
+    \end{itemize}
+  \end{revcomment}
+  \begin{revresponse}
+    \emph{Check \citeA{toohey2014}.}
+  \end{revresponse}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    Why have you run and setup this computational heavy CESM2WACCM6 model? Why do you
+    need exactly this model version? The motivation for this is still not becoming clear
+    as you are also comparing with model studies with prescribed aerosols which are
+    linear scaled to Pinatubo. I feel explaining this will help to define the aim of
+    your study better.
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    It would be interesting to see what the difference in ERF-AOD and RF-AOD is between
+    your two different model set-ups. Following this line of thought in Fig. 4 you have
+    added RF values as ERF from other studies (Os20, B20, T10...). Is this appropriate
+    to mix? I guess not as you explain now in your introduction. So I suggest to clean
+    up and only add studies with an ERF model set-up and calculations which may explain
+    some of your limitations to use certain studies and others not.
+  \end{revcomment}
+  \begin{revresponse}
+    \emph{Can cite probably also \citeA{oconnor2021}.}
+  \end{revresponse}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    Related to the previous bullet point. It is not becoming clear to me why certain
+    studies are included in some of your figures and argumentation lines and some others
+    are neglected. It would rather help to understand your argumentation flow better why
+    you have done so. F.e. why is \citeA{jones2005} in Figs.\ 2 \& 4 but not
+    \citeA{timmreck2010} (T10)? Why is \citeA{robock2009} overall neglected? Be
+    consistent throughout the ms and in all figures or explain why this is impossible.
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    The geoengineering study is mixed within the context of the volcanic modelling
+    studies, which I think is not appropriate as continuously SO2 injections give
+    different results. Thus, I suggest to take \citeA{niemeier2015} out of the main
+    context and all figures and include it instead solely at the end of the discussion.
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    Why are you modelling certain behaviors (Figs. 1-3) such as the different timing of
+    AOD and ERF? Details are not shown and explained with your own results but instead
+    discussed based on other models and CESM model studies.
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    Discuss the caveats of your own model study: model set up, model comparison, \ldots
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    Why including the outdated study by \citeA{jones2005}? I think there is enough more
+    recent papers with prognostic aerosol schemes which are more suitable here. Or
+    motivate why you need to focus exactly on \citeA{jones2005}.
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    Reference style needs to be corrected to JGR style.
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    Wording: ``observe'' for model studies shall be rather model/simulate/project
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    Include \citeA{english2013,robock2009,metzner2014}
+  \end{revcomment}
+
+  \subsubsection*{Minor comments}
+
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    Title to be adjusted to address the new and main aim of the paper along the lines of
+    f.e. ``the focus regarding the non-linearity relationship between AOD and ERF is on
+    the development over time in the post eruption period'' (from your Reply to Reviewer
+    3).
+  \end{revcomment}
+
+  \subsubsection*{Abstract}
+
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    ``Volcanic activity'' should to be ``Volcanic eruptions''
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    ``Where the climate effect is only loosely tied to the magnitude of the eruption.''
+    \citeA{metzner2014} has covered this in detail before; see also my below comments.
+    So, this sentence needs to be rewritten. Be specific what you mean with the
+    magnitude. The magnitude in volcanology is based on the mass of the erupted magma
+    but I guess you mean the release of SO2 here?
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L34: peek {\textgreater} peak
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L36-37: Change ``While the largest uncertainty in the models is found to relate to
+    the chemistry and physics of aerosol evolution''. This is not a new finding, what is
+    new and different in your study?
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L43: ``where they cause a {\textgreater}surface{\textless} cooling''
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L46: The two measures {\textgreater}which?
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L48: seen {\textgreater} occurring
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L49: Pls add to be correct: up to the largest know eruptions . F.e. the Siberian
+    Trap volcanism was larger.
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L55: ``for larger eruptions the ratio is also found to also change over time''. Be
+    more specific what you mean here. Why does this matter?
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L56-57: Do you mean ``reaches limit of ...''? The linear aspect is well known from
+    before. Also reaching a limiting value {\textless}of ...{\textgreater}?
+  \end{revcomment}
+
+  \subsubsection*{Introduction}
+
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L61: AOD is defined for the whole atmosphere unless otherwise specified, Pls clarify
+    what you mean here.
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L64-71: Thanks for including the ERF background here, which I think could be a bit
+    shortened.
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L71-72: ``and a general assumption of linearly dependence is commonly adopted.'' I
+    strongly disagree here. To which kind of studies are you referring here?
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L73-76: ``of volcanic eruptions'' For which sizes and periods? Be specific.
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L80-81: small eruption with AOD ... at most 0.7: These are not small eruptions.
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L98: ``are readily removed by wet deposition''. Really only wet?
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    The original reference that climate variability is forced by volcanic eruptions
+    during the past millennium is \citeA{hegerl2006} next to \citeA{schurer2013}. For
+    the Holocene period you need to add \citeA{vandijk2024}.
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L111: observe {\textgreater} model/ simulates
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L126-142: Structure and content to be reworked. Separate geoengineering study
+    \citeA{niemeier2015} from volcanic studies. Next, I suggest structuring the
+    paragraph along earlier studies with prescribed aerosols which are linear scaled AOD
+    from the more sophisticated prognostic aerosol climate (chemistry) models studies.
+    This will allow a better flow in case you really need to add both.
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L143-144: \citeA{metzner2014} has done this before with a two-step model approach
+    using MAECHAM5HAM with varying SO2 injections from 0.4 to 687 Tg SO2 to derive
+    aerosols, AOD, RF and then fed this into the CLIMBER model to calculate the climate
+    response. The model results were then compared to the traditional linear approach
+    (see Table 3, Figs. 6-8 of \citeA{metzner2014}). So, you need to include this study
+    here as well to introduce what has been done before.
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L145-163: Do you need this ECS paragraph for your study? Consider shortening and
+    clearly relating it to the results of your study here. There is Section 3.4 but not
+    much in the Discussion, Conclusion-Summary nor Abstract.
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L164: ``Magnitude or more greater'': See my above comment. Magnitude has a specific
+    meaning in volcanology based on the erupted magma mass which I assume you do not
+    refer to here or?
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L176: Needs to add \citeA{toohey2019} as this is the key paper in this context here.
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L184: Why have you chosen these erupted SO2 masses, any motivation?
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L189-190: Cut here. Separate geoengineering \citeA{niemeier2015} from the volcanic
+    studies and put it into a separate discussion at the end.
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    Introduction: Introduce different SO2 strength of eruptions and their climate
+    impacts \cite{miles2004,metzner2014,schmidt2022}. To just cite SB22 is not enough.
+  \end{revcomment}
+
+  \subsubsection*{Method}
+
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L201: MAM3: It is MAM4 in WACCM6 \cite{liu2016,gettleman2019}.
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L210-211: So for what do these long component names stand, their context? Be
+    specific and explain details for the non CESM model experts.
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L215: How did you inject the SO2 mass; into one grid point at one time step? Please
+    be specific and explain your model experimental set-up in more details as this
+    matters.
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L229: Why have you chosen these dates starting on the 15 Feb...? Pinatubo erupted on
+    June 12th, unknown eruptions are put on Jan eruption month in PIMP4. So why those
+    dates?
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L235: A 400 Tg SO2 eruptions does not represent a 144-170 Tg SO2 eruption. Pls
+    reword.
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    Table 1 is not complete: Pls also add the simulations with prescribed ocean sea ice.
+    Don't you have a control run? How many ensembles? Initial states?...
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L239: Why citing \citeA{jones2005}? You should add \citeA{robock2009} as well.
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L239-242: Your injection height has likely a significant impact on your results,
+    which needs to be motivated and discussed. Can you show your vertical SO2 injection
+    distribution in the supplement? Why have you chosen it that way? The motivation for
+    this is missing. Why not at 24 km altitude as was observed for Pinatubo?
+  \end{revcomment}
+  \begin{revresponse}
+    The default CESM2 historic (link to file) uses altitudes 18-20 for Pinatubo.
+  \end{revresponse}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L267: show{\textless}s{\textgreater}
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    Fig. 1: Why the different temporal behavior for S26 compared to the others?
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    Fig. 2: grey lines are showing what? STrop? Make the link to the Gregory study/ECS
+    more clear; how does this relate to the rest of your study? What is the take home
+    message of it?
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    Fig. 3 Why adding linear fits?
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    Fig. 4 Exclude N15 line and markers. Include in the discussion.
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L514-519: How realistic is a Reff {\textgreater}2.5 um \citeA{mcgraw2024}? ``good
+    model agreement'': Well which model did McGraw use...?
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L525-526: Include \citeA{metzner2014} here.
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L534: Include \citeA{marshall2018} here as well.
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L548ff: Discuss considering the \citeA{toohey2019} and \citeA{zhuo2024} results.
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L556-559: Cite original studies such as \citeA{pinto1989,bekki1995} here as well.
+    (commented before)
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L574-576: Cut. I suggest to not relate and cite \citeA{jones2005} here anymore.
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L594: ``is in contrast ... MAM 3'' Isn't it MAM4 \citeA{liu2016,gettleman2019}?
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L595-596: Distinguish between modal schemes and line by line schemes. Take out N15.
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L614: ensembles? How many ensembles did you run per SO2 injection experiment?
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    L626-627: Not a new finding see \citeA{zhuo2024}.
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    \citeA{brenna2020} does not use the same model configuration f.e. they use 1 deg
+    resolution, which may matter for the aerosol evolution.
+  \end{revcomment}
+
+  \begin{concludingresponse}[]
+    Thank you for your valuable comments on our manuscript.
+  \end{concludingresponse}
+
+  % Reviewer 4
+  \reviewer[4] \label{rev:4}
+
+  They want:
+  \begin{itemize}
+    \item
+    Specify model/method better
+    \item
+    Better describe ERF, IRF, SARF
+    \item
+    Use correct longitude notation
+    \item
+    Clarify figure
+  \end{itemize}
+
+  \subsection*{Reviewer \#4 Evaluations}
+
+  \begin{evaluation}
+    \begin{itemize}[leftmargin=4.5cm,noitemsep]
+      \item
+      [\textbf{Recommendation}] Return to author for minor revisions
+      \item
+      [\textbf{Significant}] Yes, the paper is a significant contribution and worthy of
+      prompt publication.
+      \item
+      [\textbf{Supported}] Yes
+      \item
+      [\textbf{Referencing}] Yes
+      \item
+      [\textbf{Quality}] Yes, it is well-written, logically organized, and the figures
+      and tables are appropriate.
+      \item
+      [\textbf{Data}] Yes
+      \item
+      [\textbf{Accurate Key Points}] Yes
+    \end{itemize}
+  \end{evaluation}
+
+  \subsection*{Reviewer \#4 Formal Review for Author (shown to authors)}
+  \begin{generalcomment}
+    This paper is a modeling study investigating the non-linear response of effective
+    radiative forcing (ERF) to stratospheric aerosol injection due to supereruptions.
+    Supereruptions in this paper refer to eruptions with a Volcano-Climate Index (VCI)
+    ranging from 3 to 6. The authors perform simulations with 4 levels of injected
+    sulfur encompassing the range of supereruptions inclusive of and larger than Mt.
+    Pinatubo, thereby extending the understanding of the climate effects of volcanic
+    eruptions. The temporal variation and sensitivity to SO2 injection magnitude of ERF
+    and GMST were determined, and comparisons with previous studies' and model findings
+    were included for corroboration.
+
+    This work is relevant to the journal and may also be of interest to the broader
+    scientific community, as geoengineering applications of stratospheric aerosols
+    continue to be explored. I recommend this work for publication with a few minor
+    revisions.
+  \end{generalcomment}
+
+  \subsection*{Reviewer \#4 Specific Comments}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    Line 47, ``ocean and sea-ice is held fixed.'': Please clarify what aspect is being
+    held fixed.
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    Line 49, ``While ERF takes into account rapid adjustments'': It may be helpful to
+    briefly describe the differences between how ERF, IRF and SARF are determined.
+  \end{revcomment}
+  \begin{revresponse}
+    \emph{Use \citeA{oconnor2021}.}
+  \end{revresponse}
+  \begin{revcomment}
+    Line 135, ``cilmate'': Correct to ``climate''
+  \end{revcomment}
+  \begin{revresponse}[Fixed.]
+  \end{revresponse}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    Line 225, ``287.7{degree sign}E'': The longitude should lie between 0 and 180
+    degrees East. Please clarify what this coordinate means and why 56{degree sign}N was
+    chosen for the high-latitude simulation.
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    Figure 2: Please clarify how many yearly means are included in the plot for each of
+    the STrop simulations. Is it every year from eruption to year 20? What about the
+    season of eruption?
+  \end{revcomment}
+  \begin{revcomment}[colframe={colorcommentresolved}]
+    Figure 4: It may be worth mentioning that the quantities described in the plots
+    (ERF, GMST) are absolute values, since most of them are actually negative.
+  \end{revcomment}
+  \begin{revcomment}
+    Line 554, ``peek'': Correct to ``peak''
+  \end{revcomment}
+  \begin{revresponse}[Fixed.]
+  \end{revresponse}
+
+  % Reviewer 5
+  \reviewer[5] \label{rev:5}
+
+  They want:
+  \begin{itemize}
+    \item
+    Better model/method description
+    \item
+    Improve language
+  \end{itemize}
+
+  \subsection*{Reviewer \#5 Evaluations}
+
+  \begin{evaluation}
+    \begin{itemize}[leftmargin=4.5cm,noitemsep]
+      \item
+      [\textbf{Recommendation}] Return to author for minor revisions
+      \item
+      [\textbf{Significant}] The paper has some unclear or incomplete reasoning but will
+      likely be a significant contribution with revision and clarification.
+      \item
+      [\textbf{Supported}] Mostly yes, but some further information and/or data are
+      needed.
+      \item
+      [\textbf{Referencing}] Yes
+      \item
+      [\textbf{Quality}] Yes, it is well-written, logically organized, and the figures
+      and tables are appropriate.
+      \item
+      [\textbf{Data}] Yes
+      \item
+      [\textbf{Accurate Key Points}] Yes
+    \end{itemize}
+  \end{evaluation}
+
+  \subsection*{Reviewer \#5 Formal Review for Author (shown to authors)}
+  \begin{generalcomment}
+    Review of ``Radiative forcing by supereruptions'' by Eirik R. Enger et al. (revised
+    MS for JGR, following earlier peer-review of initial-MS submission to the same
+    journal.)
+
+    This manuscript presents an analysis of interactive stratospheric aerosol model
+    experiments to predict the radiative forcing that would result from so-called
+    ``super-volcanic eruptions'', i.e. from emission of sulfur more than 10 times larger
+    than Pinatubo.
+
+    The model simulations apply the WACCM6-MAM3 model, within the CESM model framework,
+    and explore ensembles of simulations at 400, 1600 and 3000Tg of SO2, i.e. around 25,
+    100 and 200 times the sulfur emission from Pinatubo. The MAM3 model is an aerosol
+    microphysics scheme, and for such very large eruptions, this model capability is
+    particuarly important, to capture a key ``self-limiting effect'' within
+    supervolcano-climate impacts. Such microphysics schemes are able to represent how
+    the high sulfur generates much larger sulphate particles, with then a reduced
+    lifetime in the stratosphere, for a short-lived, and also less severe surface
+    cooling effect.
+
+    Although there have been other model studies published quite recently on this topic
+    (e.g. \citeA{mcgraw2024}), there can be quite large differences between predictions
+    with different interactive stratospheric aerosol models, and this study is very
+    valuable, for providing further experiments to quantify volcano-climate impacts in
+    this super-eruption regime.
+
+    The \citeA{mcgraw2024} study applied aerosol microphysics scheme also within a
+    similar (but different) GCM, the NASA-GISS ModelE, with a different modal aerosol
+    microphysics scheme ``MATRIX''. With there being relatively few studies to have
+    explored the self-limiting effect, and the curve for how the effective radiative
+    forcing and aerosol optical depth vary for SO2 injection larger than Pinatubom it is
+    important these results are published.
+
+    This manuscript is a revised version, from an initial version already reviewed by 3
+    reviewers. I was not one of the initial reviewers, but have read through the
+    reviewer comments, and the replies from the author team, and have referred also to
+    the track changes manuscript (which indicates the changes from the original
+    version).
+
+    Whilst my review focuses on this latest manuscript, without prejudice from referring
+    to the reviews, I can see that the authors have made substantial changes to the
+    Abstract, Plain Language Summary, and the Introduction, to address the comments from
+    the 3 reviewers, and I can see then that the manuscript is much improved from the
+    original submission.
+
+    I was initially quite surprised that there are only 4 Figures within this submission
+    to JGR, but the authors have included, within the key synthesis Figure 4, results
+    from a remarkable number of other studies, further putting the results from this
+    study into then a useful broader context, including the recent similar curves for
+    ModelE-MATRIX from \citeA{mcgraw2024}.
+
+    There is an encouraging consistency in the results from the two models, for the
+    curves of ERF vs emitted SO2 (Figure 4b) and global cooling (delta-GMST) vs emitted
+    SO2 (Figure 4c). There is good alignment also with the \citeA{osipov2020} study, but
+    that applied the same ModelE-MATRIX model from the \citeA{mcgraw2024} study, so the
+    alternate model predictions presented here will be of substantial interest to the
+    community.
+
+    The authors improved the labelling of the model experiments to better communicate
+    the relative magnitude of the SO2 emission and hemisphere-focus, and whilst my
+    review identifies still a substantial number of minor revisions are required, these
+    are straight-forward to make, and remain at a minor level overall, the
+    recommendation then to publish after minor revisions.
+
+    The main area of the manuscript that still requires substantial revision, is the
+    description of the model (section 2.1) and the model experiments (section 2.2), and
+    these are the first 2 of the 5 ``main minor comments'' I raise in this review.
+
+    Within those initial 2 ``main minor comments'', I list there specific sets of
+    revisions required, in each case, to enact the substantial improvement required to
+    sections 2.1 and 2.2 respectively.
+
+    I can understand the focus has been to address the main comments from the prior
+    review, but these earlier sections, to describe the model and its experiments are
+    important, to ensure reproducibility and traceability for the model experiments
+    forming the analysis.
+
+    Overall, the manuscript is much improved, and my judgement is that the manuscript is
+    now within ``minor revisions'', to then be able to be published once this specific
+    set of revisions set out below are addressed.
+  \end{generalcomment}
+
+  \subsection*{Reviewer \#5 Specific Comments}
+
+  \subsubsection*{Main minor comments}
+
+  \begin{revcomment}[after title={: M1},colframe={colorcommentresolved}]
+    Section 2.1, lines 174-185 -- set of minor revisions to improve the model
+    description.
+
+    \begin{enumerate}
+      \item
+      [M1.1] Lines 174-178 refer to the fully coupled atmosphere-ocean configuration of
+      CESM2, and lines 187 refers to applying ``the coupled model version BWma1850
+      component setup'', but then line 189 explains also the fixed SST version is also
+      used
+      \item
+      [M1.2] Line 178 add a sentence to this first para to give the chemistry scheme
+      used. The aerosol scheme is explained in lines 179-185 but readers need to be
+      aware also of how the SO2 oxidation is calculated in the model. Are the
+      simulations applying interactive stratospheric chemistry, as well as interactive
+      aerosol? Or are these ``specified chemistry'' simulations, based on climatological
+      or ``prescribed'' oxidant fields?
+      \item
+      [M1.3] Line 181 Further to comment M1.2, the text here says ``default setting'',
+      but this needs to be clarified which settings are ``default'' here. I am assuming
+      this refers to the aerosol setting, and am guessing maybe this refers to the
+      specified geomtric standard deviation (sometimes referred to as ``mode width''),
+      which are specified then within the MAM3 scheme. I see the text here refers to Liu
+      et al. (2016), but that is a tropospheric aerosol paper, and I'm aware some models
+      (e.g. MA-ECHAM-HAM) use different mode widths for when simulating volcanic aerosol
+      clouds, to those used when the model predicts tropospheric sulphate aerosol. Note
+      that the \citeA{liu2016} paper is re: MAM4, the 4-mode version, not the 3-mode
+      version. Please check this, and re: the \citeA{mills2017} paper, applying MAM3.
+
+      Please clarify what is meant here by ``default setting'' and suggest to change to
+      ``modal settings'' if that is the case, adding ``(for the MAM3 aerosol
+      microphysics scheme)''. Rather than the \citeA{liu2016}, better to cite a paper
+      applying MAM3 for stratospheric aerosol, such as \citeA{mills2017}. Further to
+      comment above, is the approach here equivalent to one of the ``specified
+      chemistry'' runs within that paper? Or is the SO2 oxidation calculated from
+      interactive sulfur chemistry?
+      \item
+      [M1.4] Line 181 Further to comment M3 below, add a sentence to the end of this
+      paragraph, to state explicitly that the model predictions here include, from the
+      MAM3 aerosol microphysics, the key self-limiting effect of reduced stratospheric
+      residence time from larger sulphate aerosol particles
+      \cite<e.g.>{pinto1989,rampino1982,turco1979}.
+    \end{enumerate}
+  \end{revcomment}
+  \begin{revcomment}[after title={: M2},colframe={colorcommentresolved}]
+    Section 2.2, lines 187-195
+
+    \begin{enumerate}
+      \item
+      [M2.1] Line 187 -- ``We are using'' is too colloqial for JGR article, revise to
+      ``For predicting the super-eruption impacts, we use the ..'' and suggest to add
+      ``pre-industrial setting'' before ``coupled model version'' (assuming that is the
+      case, re: the 1850 there).
+      \item
+      [M2.2] Line 187 -- ``coupled model version BWma1850 component setup'' -- whilst
+      this labelling here will mean something to the group of modellers running CESM,
+      this needs to be re-worded. Is this ``BWma1850'' referring to the year 1850, and
+      then that greenhouse gases and ozone depleting substances etc. are set at
+      pre-industrial levels within the GCM? Please just state what the corresponding
+      ``setup'' corresponds to, referring to the basic forcings within the climate
+      model. I guess the 2 main aspects of the ``setup'' will be the greenhouse gases
+      and the anthropogenic precursor emissions (for tropospheric ozone and aerosol).
+      Please provide the specifics of this 1850 setup here.
+      \item
+      [M2.3] Lines 188-189 -- Similarly, ``an accompanying'' is too colloquial, change
+      ``and an accompanying fixed sea-surface...'' to ``with a 2nd ensemble applying
+      fixed sea-surface temperatures''. Delete the word ``version'' there, as this could
+      be confusing, it's the same version of the atmosphere model, just the boundary
+      condition is different. So avoid ``version'' (unless it's actually a different
+      version of one of the model components).
+      \item
+      [M2.4] Lines 190-192 -- For JGR article it is not appropriate to specify variable
+      names from a code or script, even within the model description text. This sentence
+      here seems to be explaining what is different about ``fSST1850'', but my
+      understanding is that is just a label for the fact that the model is using
+      climatological sea-surface temperatures from a previous pre-industrial control run
+      of the fully coupled atmosphere-ocean model. If that's the case, replace the
+      current sentence with a sentence that states that.
+    \end{enumerate}
+  \end{revcomment}
+  \begin{revcomment}[after title={: M3},colframe={colorcommentresolved}]
+    Introduction, lines 76-79 (and suggest to join-up with 81-82).
+
+    Whilst the authors have replied to the reviewer comments acknowledging the role of
+    aerosol microphysics, and effective radius, the Introduction in the revised
+    manuscript still does not include any sentences explaining about this, only the 3
+    words ``including aerosol size'' on line 73.
+
+    The simulations here apply the MAM3 aerosol microphysics scheme, and then the
+    predicted AOD and ERF include the key self-limiting effect of a shortened residence
+    time of volcanic aerosol from these very large SO2 emission cases.
+
+    My suggestion here is to add the following 2 sentences about this
+
+    ``Within very high SO2 eruptions, a key effect identified since the late 1970s
+    \cite{rossow1977,rossow1978,turco1979} is a self-limiting particle-size effect
+    implicit within the microphysics of the volcanic aerosol. In summary, for larger
+    amounts of emitted SO2, particles in the aerosol cloud are larger, to then have
+    greater fall speed, and reduced residence time in the stratosphere.''
+
+    These sentences (or similar 2 sentences about this) could be incorporated into the
+    text via adding a paragraph break before ``In the case of tropical eruptions''
+
+    The 2 new sentences would follow-on well after the current 2 sentences there (the
+    first being ``In the case of \ldots'' and the second being ``Upon descending below
+    the \ldots''). The 4 sentences would then be a paragraph referring to the processes
+    and transport within the stratospheric circulation.
+
+    See also main minor revision M1.4 above, to also add a sentence to the model
+    description to be clear this effect is resolved in the model predictions here.
+  \end{revcomment}
+  \begin{revcomment}[after title={: M4},colframe={colorcommentresolved}]
+    Introduction, lines 108-113
+
+    Whilst volcanic forcing is often given as a natural analogue for geoengineering, and
+    certainly shares common processes with impacts from a one-off volcanic SO2 emission,
+    the continued emission from SAI may result in a quite different resultant size
+    increase.
+
+    The studies on lines 108-113 are from continuous SO2 emission, and although that's
+    interesting to consider, then with the inverse exponential relationship also
+    indicating a self-limiting effect, the effect may not be comparable to one-off
+    super-eruption case.
+
+    This paragraph from lines 108 to 125 is a long paragraph, and suggest to have the
+    text ``Even the 100 x Pinatubo \ldots'' be the start of a new paragraph (but
+    re-worded to begin simply ``The 100 x Pinatubo \ldots''
+
+    That then gives space to add a sentence after line 113, to note this, something
+    similar to the 1st sentence above, re-worded slightly (delete ``certainly'' for
+    example).
+  \end{revcomment}
+  \begin{revcomment}[after title={: M5},colframe={colorcommentresolved}]
+    Results line 230-231
+
+    The sentence here refers to ``means across the ensembles'', but the section 2 hasn't
+    given any information about the ensembles
+
+    See ``other minor revision'' O15) (comment \ref{revcom:5-o15}) below, where I've
+    suggested to delete the sentence beginning ``The AOD \ldots'' on lines 204-207, this
+    being superfluous. Doing so would then give space within section 2.2 to give
+    information about the model ensembles.
+
+    I am assuming that there are 2 types of ensemble, one within the alternate fixed-SST
+    configuration, and other other in coupled atmos-ocean model configurations (from the
+    explanation in section 2.1).
+
+    With the additional variability in the ocean, I am assuming the ensemble woudl need
+    to be larger for the coupled atmos-ocean ensemble, unless the sampling protocol has
+    prior state, to then be enacting only a limited ocean variation within the coupled
+    ensemble? Please clarify how the ensembles are set-up from the prior coupled
+    atmos-ocean 1850 control.
+  \end{revcomment}
+
+  \subsubsection*{List of other minor comments}
+
+  \begin{revcomment}[after title={: O1}]
+    Manuscript title, line 1
+
+    The authors have revised the title, replacing ``super-volcano eruptions'' with
+    ``supereruptions'', which is OK, except that the word supereruptions would be much
+    easier to read if hyphenated as ``super-eruptions''. I notice hyphenated spelling
+    ``super-eruption'' is used quite extensively, although certainly not exclusively,
+    and for example see this BBC article
+    \url{https://www.bbc.co.uk/sn/tvradio/programmes/supervolcano/article.shtml}
+    consistently has the hyphenated spelling. In my opinion it is much easier to read
+    that way.
+
+    Please change all instances of ``supereruption'' to ``super-eruption''. Thanks.
+  \end{revcomment}
+  \begin{revresponse}[Fixed.]
+  \end{revresponse}
+  \begin{revcomment}[after title={: O2},colframe={colorcommentresolved}]
+    Introduction, line 45 -- ``are crucial metrics used to \ldots'' the word ``crucial''
+    is hyperbole, and not really appropriate for a JGR article. Perhaps ``the main
+    climate-relevant metrics''?
+  \end{revcomment}
+  \begin{revcomment}[after title={: O3}]
+    Introduction, line 46 -- change ``represent the opacity'' to ``represents the
+    opacity''
+  \end{revcomment}
+  \begin{revresponse}[Fixed.]
+  \end{revresponse}
+  \begin{revcomment}[after title={: O4}]
+    Introduction, line 46 -- change ``while ERF specifically is the energy imbalance''.
+    I get what you mean by ``imbalance'', in that the forcing agent causes a difference.
+    But it's not necessarily moving the system towards an imbalanced state. Better to
+    refer to the ERF simply as a difference in radiative flux or ``flux difference''.
+    Suggest then to re-word to ``while the ERF is the energy flux-difference at the
+    top-of-the-atmosphere'' or similar.
+  \end{revcomment}
+  \begin{revresponse}[Fixed.]
+  \end{revresponse}
+  \begin{revcomment}[after title={: O5},colframe={colorcommentresolved}]
+    Introduction, lines 47-49 -- change ``Radiative forcing can however be calculated
+    differently''. That wording there is not specific enough, and the follow-on ``an
+    agreed-upon methodology has thus not always existed'' is a strange thing to say. One
+    could say ``has not always existed'' about any scientific quantity. Suggest to
+    re-word, to explain instead the difference between instantaneous radiative forcing
+    and effective radiative forcing (i.e. re: rapid adjustments within the atmosphere
+    system).
+  \end{revcomment}
+  \begin{revcomment}[after title={: O6},colframe={colorcommentresolved}]
+    Introduction, line 53 -- ``the most precise indicator'' -- it's not really correct
+    to refer to an issue of ``precision'' here. Any calculation can be precise or
+    imprecise. Maybe you meant ``a reliable indicator''? But even then, I'd say that's
+    not really the issue, it's more accounting for the energy changes at the top of the
+    atmosphere, rather than any predictabillity of surface temperature change.
+  \end{revcomment}
+  \begin{revcomment}[after title={: O7},colframe={colorcommentresolved}]
+    Introduction, line 59 -- Re-word ``Yet, a wide spread in the estimated aerosol
+    forcing efficiencies''. The word ``Yet'' there doesn't really make sense. The models
+    are making different predictions, but they're all predicting that based on different
+    simulated clouds etc., so whether there's a linear relationship or not isn't really
+    relevant to the spread in the model predicted forcings. It's certainly relevant to
+    the magnitude of any 1 model's prediction, but it's not really relevant to the
+    spread between different model predicted forcings. Basically the spread among
+    different models isn't really relevant to this discussion about the relationship
+    between ERF and AOD. One can consider any 1 model has some error bar associated with
+    its predictions, and then that is relevant, but multi-model spread is a different
+    issue.
+  \end{revcomment}
+  \begin{revcomment}[after title={: O8}]
+    Introduction, line 67 -- delete ``molecules'' there, and suggest to change
+    ``transformation'' also, instead to ``reaction''
+  \end{revcomment}
+  \begin{revresponse}[Fixed.]
+  \end{revresponse}
+  \begin{revcomment}[after title={: O9},colframe={colorcommentresolved}]
+    Introduction, line 68 -- suggest here to simply refer to sulphate aerosol (rather
+    than sulphuric acid).
+  \end{revcomment}
+  \begin{revcomment}[after title={: O10}]
+    Introduction, line 123 -- change ``revealed'' to ``found''.
+  \end{revcomment}
+  \begin{revresponse}[Fixed.]
+  \end{revresponse}
+  \begin{revcomment}[after title={: O11},colframe={colorcommentresolved}]
+    Section 2.2, lines 197-207
+
+    These sentences beginning ``ERF is calculated as the \ldots'' need to be re-worded
+    to avoid referring to variable names in the code. The explanation is OK, but for JGR
+    article, needs to refer to the actual quantities, rather than variable names in the
+    code. It's also not quite correct to refer to an ``energy imbalance'', it's better
+    just to explain the forcing as the difference in the radiative flux at the top of
+    the atmosphere caused by the forcing agent. Please discuss with the co-author team,
+    and replace with a revised wording here.
+
+    The text beginning ``The AOD'' on lines 204-207 is superfluous, and can be deleted.
+    See main minor revision 5, I've suggested to delete this text, and give information
+    here instead about how the ensembles are set-up, within the alternate fixed-SST and
+    coupled atmos-ocean model configurations explained in section 2.1
+  \end{revcomment}
+  \begin{revcomment}[after title={: O12},colframe={colorcommentresolved}]
+    Line 208 -- Further to the comment earlier about ensemble -- suggest to include in
+    Appendix A the detailed description of how the ensembles are set up, and then in the
+    text (within lines 230-231) can simply refer to the Appendix A for details, perhaps
+    with a label for each ensemble such as ``FixedSST\_ENS10'' and ``CoupledAO\_ENS30''
+    or similar (the 10 or 30 indicating the ensemble size).
+  \end{revcomment}
+  \begin{revcomment}[after title={: O13},colframe={colorcommentresolved}]
+    Table 1 -- Change the column ``Eruption months'' instead to ``Eruption timing''. (To
+    be clear it's not simply a sampling at different months in the year, it's when the
+    eruption is enacted in the model).
+  \end{revcomment}
+  \begin{revcomment}[after title={: O14},colframe={colorcommentresolved}]
+    \label{revcom:5-o14} Table 1 caption -- the text here states ``The three smallest in
+    eruption magnitude tropical ensembles have four members, indicated by the number of
+    eruption months''. But presumably each eruption month has more than 1 ensemble
+    member, right? These are composition-climate model predictions so the ensembles are
+    presumably of a reasonable number of members, not just 1 per eruption month? Please
+    clarify, I'm assuming the ensembles are comparable in magnitude to the ensembles
+    within \citeA{mcgraw2024}, right?
+  \end{revcomment}
+  \begin{revcomment}[after title={: O15},colframe={colorcommentresolved}]
+    \label{revcom:5-o15} Figure 1 legend -- add ``Wm-2'' and delete the 3 characters ``C
+    = ''. (It's important to communicate the units of the normalisation constant here.)
+    Changing the ``18.27'' and ``12.43'' to ``18.3'' and ``12.4'' here will give an
+    extra 4th character, then sufficient space to add `` Wm-2'' where the ``-2'' is
+    super-script. and do the same in panel b), for ``-71.42'' and ``-63.71'' to
+    ``-71.4'' and ``-63.7''. This also ensures numbers are all reported to 3 significant
+    figures).
+  \end{revcomment}
+  \begin{revcomment}[after title={: O16},colframe={colorcommentresolved}]
+    Figure 1c -- it's important to be able to see the tick-marks on the right-hand inset
+    Figure. You could give the values to 1 decimal place for the S3000 and S1629 to give
+    then room for the Wm-2, after also deleting the ``C = '' (only 2 significant figures
+    is fine here).
+  \end{revcomment}
+  \begin{revcomment}[after title={: O17},colframe={colorcommentresolved}]
+    Figure 1 caption -- Change ``The time series have been normalised to have peak
+    values at unity'' instead to ``Each time series has been normalised to the peak
+    value''. You don't need to say ``at unity'', people will understand that's what you
+    mean by ``normalised''. Also change ``, where C is the normalisation constant''
+    instead to ``, values of C given in the legend.''. The value of C is more
+    significant than simply a normalisation constant, and better just to give this
+    without that labelling.
+  \end{revcomment}
+  \begin{revcomment}[after title={: O18},colframe={colorcommentresolved}]
+    Figure 1 caption -- The ``across the ensembles'' is not clear. See
+    comment~\ref{revcom:5-o14}: O14, the text currently does not communicate
+    sufficiently what each ensemble is representing, and once this is clarified the
+    Figure needs to be amended to refer to the label for each ensemble. Please also add
+    the number of ensemble members within the fixed SST and coupled-ocean ensembles (or
+    clarify which are shown in this Figure).
+  \end{revcomment}
+  \bibliography{/home/een023/science/ref/ref} % don't specify bibliographystyle
+\end{document}

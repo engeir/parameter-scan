@@ -708,11 +708,12 @@
   observed an ERF dependence on \ce{SO2} injection rate following an inverse
   exponential, which converges to \(\SI{-65}{\watt\meter^{-2}}\), depicted in
   Fig.~\ref{fig:4_parameter_scan}b as the stippled pink line labelled N15 and given as;
-  \begin{equation}
-    \Delta R_{\mathrm{TOA}}(x) = -\SI{65}{\watt\metre^{-2}}
-    \exp\left[-{\left(\frac{\SI{2246}{\tera\gram(S)yr^{-1}}}{x}\right)}^{0.23}\right].
-    \label{eq:niemeier_exponential}
-  \end{equation}
+  \begin{linenomath*}
+    \begin{equation}
+      \Delta R_{\mathrm{TOA}}(x) = -\SI{65}{\watt\metre^{-2}} \exp\left[-{\left(\frac{\SI{2246}{\tera\gram(S)yr^{-1}}}{x}\right)}^{0.23}\right].
+      \label{eq:niemeier_exponential}
+    \end{equation}
+  \end{linenomath*}
   Here, \(x\) represents injected \ce{S} per year in \(\si{\tera\gram}\), where injected
   mass in \(\si{\tera\gram(\mathrm{SO_{2}})}\) is \(2\times\si{\tera\gram(S)}\). The
   results by N15, on which Eq.~\ref{eq:niemeier_exponential} is based, are all averages
@@ -841,14 +842,18 @@
   valid, an alternative approach using a time-integral form introduced by
   \citeA{merlis2014} is applied:
 
-  \begin{equation}
-    \int_0^{\tau}F \mathrm{d}t=\rho\int_{0}^{\tau}T \mathrm{d}t
-    \label{eq:climate-resistance-orig}
-  \end{equation}
-  \begin{equation}
-    \rho=\frac{\int_0^{\tau}F \mathrm{d}t}{\int_{0}^{\tau}T \mathrm{d}t}.
-    \label{eq:climate-resistance}
-  \end{equation}
+  \begin{linenomath*}
+    \begin{equation}
+      \int_0^{\tau}F \mathrm{d}t=\rho\int_{0}^{\tau}T \mathrm{d}t
+      \label{eq:climate-resistance-orig}
+    \end{equation}
+  \end{linenomath*}
+  \begin{linenomath*}
+    \begin{equation}
+      \rho=\frac{\int_0^{\tau}F \mathrm{d}t}{\int_{0}^{\tau}T \mathrm{d}t}.
+      \label{eq:climate-resistance}
+    \end{equation}
+  \end{linenomath*}
 
   If the upper bound of the integral, \(\tau\), is sufficiently large, so that the upper
   ocean heat content is the same at \(t=0\) and \(t=\tau\) (\citeA{merlis2014} used
