@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.0.0](https://github.com/engeir/parameter-scan/compare/v0.10.1...v1.0.0) (2025-01-09)
+
+
+### ⚠ BREAKING CHANGES
+
+* **review:** the previous release was submitted after review 1, this will go into a new submission as review 2
+
+### Features
+
+* **review:** start the second review ([20eb0b4](https://github.com/engeir/parameter-scan/commit/20eb0b4b95ed6346922118a32ad09efe199ea6f1))
+
 ## [0.10.1](https://github.com/engeir/parameter-scan/compare/v0.10.0...v0.10.1) (2024-09-04)
 
 
